@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Standard Deviation Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Calculate standard deviation, variance, mean, and sum for a data set. Visualizes the normal distribution curve.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/standard-deviation-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Standard Deviation Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Calculate standard deviation, variance, mean, and sum for a data set. Visualizes the normal distribution curve.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/standard-deviation-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Standard Deviation Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Calculate standard deviation, variance, mean, and sum for a data set. Visualizes the normal distribution curve.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Standard Deviation Calculator","description":"Calculate standard deviation, variance, mean, and sum for a data set. Visualizes the normal distribution curve.","url":"https://mxcalculator.com/calculators/standard-deviation-calculator.html","applicationCategory":"EducationApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Standard Deviation Calculator","item":"https://mxcalculator.com/calculators/standard-deviation-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#7126d9">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237126d9'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/standard-deviation-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/standard-deviation-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" x2="18" y1="20" y2="10"></line>
+            <line x1="12" x2="12" y1="20" y2="4"></line>
+            <line x1="6" x2="6" y1="20" y2="14"></line>
+          </svg>
+        </div>
+        <div>
+          <h1>Standard Deviation Calculator</h1>
+          <p>Compute SD, Variance, Mean, and Sum</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Enter your data points separated by commas, spaces, or new lines. Select Population or Sample mode.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" x2="12" y1="22.08" y2="12"></line>
+              </svg>
+            </div>
+            Data Input
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Type Selection -->
+          <div class="form-group">
+              <label class="form-label">Data Type</label>
+              <div class="toggle-group">
+                 <button type="button" class="toggle-btn active" id="btnSample" onclick="setMode('sample')">Sample</button>
+                 <button type="button" class="toggle-btn" id="btnPop" onclick="setMode('population')">Population</button>
+              </div>
+          </div>
+
+          <!-- Data Area -->
+          <div class="form-group">
+            <label class="form-label" for="dataInput">Data Set</label>
+            <textarea id="dataInput" placeholder="e.g. 10, 20, 30, 40, 50"></textarea>
+            <p class="data-hint">Separated by comma (,), space, or new line.</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M3 3v18h18"></path>
+               <path d="m19 9-5 5-4-4-3 3"></path>
+             </svg>
+          </div>
+          <h3>Result preview</h3>
+          <p>Calculations will appear here</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+          <div class="results-hero">
+             <div class="result-value" id="resStdDev">--</div>
+             <div class="result-label" id="resLabel">Standard Deviation (s)</div>
+          </div>
+
+          <!-- Summary Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+               <table class="breakdown-table">
+                  <tbody>
+                      <tr>
+                          <td>Variance (<span id="varSymbol">s²</span>)</td>
+                          <td id="resVariance">--</td>
+                      </tr>
+                      <tr>
+                          <td>Mean (Average)</td>
+                          <td id="resMean">--</td>
+                      </tr>
+                      <tr>
+                          <td>Sum</td>
+                          <td id="resSum">--</td>
+                      </tr>
+                      <tr>
+                          <td>Count (n)</td>
+                          <td id="resCount">--</td>
+                      </tr>
+                       <tr>
+                          <td>Standard Error</td>
+                          <td id="resError">--</td>
+                      </tr>
+                  </tbody>
+               </table>
+            </div>
+          </div>
+
+          <!-- Chart -->
+          <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Normal Distribution</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                  <canvas id="distributionChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+        <h2>About Standard Deviation</h2>
+        <p>Standard deviation is a measure of the amount of variation or dispersion of a set of values. A low standard deviation indicates that the values tend to be close to the mean (also called the expected value) of the set, while a high standard deviation indicates that the values are spread out over a wider range.</p>
+
+        <h3>Population vs. Sample</h3>
+        <p><b>Population Standard Deviation (<span style="font-family:serif">σ</span>):</b> Used when the data set includes the entire population of interest. The divisor is <i>n</i>.</p>
+        <p><b>Sample Standard Deviation (s):</b> Used when the data set is a sample of a larger population. The divisor is <i>n-1</i> (Bessel's correction) to provide an unbiased estimator.</p>
+
+        <h3>Formulas</h3>
+        <p>
+           Sample: s = √ [ Σ (x - x̄)² / (n - 1) ] <br>
+           Population: σ = √ [ Σ (x - μ)² / n ]
+        </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Standard Deviation Calculator | Statistics Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

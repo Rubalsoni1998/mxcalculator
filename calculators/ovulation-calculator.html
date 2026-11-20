@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ovulation Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Estimate your ovulation date and fertile window from your last period and cycle length, with the next three cycles and an estimated due date.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/ovulation-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Ovulation Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Estimate your ovulation date and fertile window from your last period and cycle length, with the next three cycles and an estimated due date.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/ovulation-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ovulation Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Estimate your ovulation date and fertile window from your last period and cycle length, with the next three cycles and an estimated due date.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Ovulation Calculator","description":"Estimate your ovulation date and fertile window from your last period and cycle length, with the next three cycles and an estimated due date.","url":"https://mxcalculator.com/calculators/ovulation-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Ovulation Calculator","item":"https://mxcalculator.com/calculators/ovulation-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#d02597">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23d02597'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/health-calc.css">
+  <link rel="stylesheet" href="../assets/css/pages/ovulation-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/health-engine.js"></script>
+  <script defer src="../assets/js/pages/ovulation-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+        </div>
+        <div>
+          <h1>Ovulation Calculator</h1>
+          <p>Fertile window and ovulation date</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p>Enter the first day of your last period and your usual cycle length to estimate when you are most likely to ovulate.</p>
+    </div>
+
+    <div class="main-grid">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div>
+            Your Cycle
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="form-group"><label class="form-label" for="lmp">First day of last period</label><input type="date" id="lmp" data-default-days="-14"></div>
+          <div class="form-group"><div class="input-row"><div class="u-flex1"><label class="form-label" for="cycle">Cycle length (days)</label><input type="number" id="cycle" value="28" min="21" max="45" step="1" inputmode="decimal"></div><div class="u-flex1"><label class="form-label" for="luteal">Luteal phase (days)</label><input type="number" id="luteal" value="14" min="10" max="16" step="1" inputmode="decimal"></div></div></div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+          <div class="form-err" id="formError" role="alert"></div>
+        </div>
+      </div>
+
+      <div id="resultsContainer" class="animate-slide-up" aria-live="polite">
+        <div id="resultsPlaceholder" class="card results-placeholder hidden">
+          <div class="results-placeholder-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></div>
+          <h3>Enter your details</h3>
+          <p>Results will appear here</p>
+        </div>
+        <div id="resultsContent" class="hidden"></div>
+      </div>
+    </div>
+
+    <div class="calc-description">
+        <h2>How ovulation is estimated</h2>
+        <p>Ovulation is when an ovary releases an egg. In a typical 28-day cycle it happens around day 14, but the real timing depends on your cycle length. This calculator counts back from your expected next period using your luteal phase, which is usually about 14 days.</p>
+        <h3>Your fertile window</h3>
+        <p>Sperm can survive for up to five days, while an egg lives for about a day. That is why the fertile window runs from five days before ovulation through the day after, with the two or three days before ovulation being most fertile.</p>
+        <p>If your cycles vary by more than a few days, the estimate will be less accurate. A doctor can help if you have been trying to conceive for a year (six months if over 35).</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Ovulation Calculator | Health &amp; Fitness Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+</body>
+</html>

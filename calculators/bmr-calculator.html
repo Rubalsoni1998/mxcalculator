@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMR Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Calculate your Basal Metabolic Rate (BMR) and daily calorie needs based on your activity level using the Mifflin-St Jeor equation.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/bmr-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="BMR Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Calculate your Basal Metabolic Rate (BMR) and daily calorie needs based on your activity level using the Mifflin-St Jeor equation.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/bmr-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BMR Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Calculate your Basal Metabolic Rate (BMR) and daily calorie needs based on your activity level using the Mifflin-St Jeor equation.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"BMR Calculator","description":"Calculate your Basal Metabolic Rate (BMR) and daily calorie needs based on your activity level using the Mifflin-St Jeor equation.","url":"https://mxcalculator.com/calculators/bmr-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"BMR Calculator","item":"https://mxcalculator.com/calculators/bmr-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#994ce6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23994ce6'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/bmr-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/bmr-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21a9 9 0 0 0 9-9c0-4.97-4.03-9-9-9a9 9 0 0 0-9 9c0 4.97 4.03 9 9 9Z"></path>
+            <path d="M12 7v5l3 3"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>BMR Calculator</h1>
+          <p>Basal Metabolic Rate & Daily Calorie Needs</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>The Basal Metabolic Rate (BMR) is the amount of energy needed while resting in a temperate environment when the digestive system is inactive.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            Your Details
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Unit Tabs -->
+          <div class="tabs">
+            <button type="button" class="tab-btn active" id="tabUS" onclick="setUnits('us')">US Units</button>
+            <button type="button" class="tab-btn" id="tabMetric" onclick="setUnits('metric')">Metric Units</button>
+          </div>
+
+          <!-- Gender & Age -->
+          <div class="form-group">
+            <div class="input-row">
+                 <div class="u-flex1">
+                     <label class="form-label" for="gender">Gender</label>
+                     <select id="gender">
+                         <option value="male" selected>Male</option>
+                         <option value="female">Female</option>
+                     </select>
+                </div>
+                <div class="u-flex1">
+                     <label class="form-label" for="age">Age</label>
+                     <input type="number" id="age" value="25" min="15" max="80">
+                </div>
+             </div>
+          </div>
+
+          <!-- Height -->
+          <div class="form-group">
+            <label class="form-label" for="heightFeet">Height</label>
+
+            <!-- US Height Inputs -->
+            <div class="input-row" id="heightUS">
+               <div class="input-wrapper u-flex1">
+                  <input type="number" id="heightFeet" placeholder="5" value="5">
+               </div>
+               <span class="u-px5">ft</span>
+               <div class="input-wrapper u-flex1">
+                  <input type="number" id="heightInches" placeholder="10" value="10">
+               </div>
+               <span class="u-px5">in</span>
+            </div>
+
+            <!-- Metric Height Input -->
+            <div class="input-row hidden" id="heightMetric">
+               <div class="input-wrapper u-flex1">
+                  <input type="number" id="heightCm" placeholder="180">
+               </div>
+               <span class="u-px5">cm</span>
+            </div>
+          </div>
+
+          <!-- Weight -->
+          <div class="form-group">
+            <label class="form-label" for="weight">Weight</label>
+            <div class="input-row">
+               <div class="input-wrapper u-flex1">
+                  <input type="number" id="weight" value="160" placeholder="160">
+               </div>
+               <span class="u-px5" id="weightUnitLabel">lb</span>
+            </div>
+          </div>
+
+          <!-- Formula Setting -->
+           <div class="form-group">
+             <label class="form-label">Settings</label>
+             <div class="settings-group">
+                 <label class="radio-label">
+                     <input type="radio" name="formula" value="mifflin" checked> Mifflin-St Jeor (Recommended)
+                 </label>
+             </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+            </svg>
+          </div>
+          <h3>Enter your details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+          <div class="results-hero">
+             <div class="result-subtitle">BMR</div>
+             <div class="result-value" id="bmrValueDisplay">--</div>
+             <div class="result-subtitle">Calories/Day</div>
+          </div>
+
+          <!-- Reference Table -->
+          <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Daily Calorie Needs</div>
+            </div>
+            <div class="card-content">
+              <div class="schedule-table-wrapper u-mt0">
+                <table class="schedule-table">
+                  <thead>
+                    <tr>
+                      <th>Activity Level</th>
+                      <th>Calories</th>
+                    </tr>
+                  </thead>
+                  <tbody id="bmrTableBody">
+                     <!-- Dynamic Rows -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+        <h2>About BMR</h2>
+        <p>The Basal Metabolic Rate (BMR) represents the number of calories your body burns while at rest to maintain basic physiological functions like breathing, circulation, and cell production.</p>
+
+        <h3>Mifflin-St Jeor Equation</h3>
+        <p>This calculator uses the Mifflin-St Jeor equation, which is considered one of the most accurate methods for estimating BMR.
+        <br>For Men: BMR = 10W + 6.25H - 5A + 5
+        <br>For Women: BMR = 10W + 6.25H - 5A - 161
+        </p>
+
+        <h3>Activity Multipliers</h3>
+        <p>To determine total daily energy expenditure (TDEE), the BMR is multiplied by an activity factor:
+        <br><b>Sedentary:</b> BMR x 1.2
+        <br><b>Lightly active:</b> BMR x 1.375
+        <br><b>Moderately active:</b> BMR x 1.465
+        <br><b>Active:</b> BMR x 1.55
+        <br><b>Very active:</b> BMR x 1.725
+        <br><b>Extra active:</b> BMR x 1.9
+        </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>BMR Calculator | Health Assessment Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

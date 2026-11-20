@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hours Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Calculate total work hours, breaks, and gross pay. Weekly timesheet calculator for employees and freelancers.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/hours-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Hours Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Calculate total work hours, breaks, and gross pay. Weekly timesheet calculator for employees and freelancers.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/hours-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hours Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Calculate total work hours, breaks, and gross pay. Weekly timesheet calculator for employees and freelancers.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Hours Calculator","description":"Calculate total work hours, breaks, and gross pay. Weekly timesheet calculator for employees and freelancers.","url":"https://mxcalculator.com/calculators/hours-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Hours Calculator","item":"https://mxcalculator.com/calculators/hours-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#1162d4">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231162d4'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/hours-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/hours-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h1>Hours Calculator</h1>
+          <p>Track work hours and calculate wages</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <p>Enter start and end times for each day. The calculator handles breaks and total pay automatically.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+            </div>
+            Weekly Timesheet
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="timesheet-header">
+              <div>Start Time</div>
+              <div>End Time</div>
+              <div>Break (min)</div>
+          </div>
+
+          <div id="timesheetRows">
+              <!-- JS will populate rows -->
+              <div class="timesheet-row">
+                  <span class="day-label">Monday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+              <div class="timesheet-row">
+                  <span class="day-label">Tuesday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+              <div class="timesheet-row">
+                  <span class="day-label">Wednesday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+              <div class="timesheet-row">
+                  <span class="day-label">Thursday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+              <div class="timesheet-row">
+                  <span class="day-label">Friday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+             <label class="form-label" for="hourlyRate">Hourly Rate (<span class="dynamic-symbol">$</span>)</label>
+             <input type="number" id="hourlyRate" placeholder="0.00" value="25.00">
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M12 20v-6M6 20V10M18 20V4"></path>
+             </svg>
+          </div>
+          <h3>Result preview</h3>
+          <p>Calculations will appear here</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Total Pay</div>
+             <div class="result-value" id="totalPayDisplay">--</div>
+          </div>
+
+          <!-- Detailed Breakdown -->
+          <div class="breakdown-table-wrapper" id="breakdownGrid">
+               <table class="breakdown-table">
+                  <tbody id="breakdownBody">
+                      <tr>
+                          <td>Total Hours</td>
+                          <td id="totalHoursDisplay">--</td>
+                      </tr>
+                      <tr>
+                          <td>Decimal Hours</td>
+                          <td id="decimalHoursDisplay">--</td>
+                      </tr>
+                      <tr>
+                          <td>Total Minutes</td>
+                          <td id="totalMinutesDisplay">--</td>
+                      </tr>
+                  </tbody>
+               </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+        <h2>About Hours Calculator</h2>
+        <p>This calculator helps employees and freelancers track their weekly work hours and estimate gross pay. It handles standard time formats and allows for break deductions per shift.</p>
+
+        <h3>How it Works</h3>
+        <p>Enter your start and end times for each day. If a shift extends past midnight (e.g., 10:00 PM to 6:00 AM), the calculator automatically detects this and adds 24 hours to the end time for accurate duration calculation.</p>
+
+        <h3>Decimal Hours</h3>
+        <p>Payroll is often calculated using decimal hours. For example, 8 hours and 30 minutes is equal to 8.5 decimal hours. This conversion happens automatically here.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Hours Calculator | Productivity Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Calculate the duration between two times or add/subtract days, hours, minutes, and seconds from a date.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/time-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Time Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Calculate the duration between two times or add/subtract days, hours, minutes, and seconds from a date.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/time-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Time Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Calculate the duration between two times or add/subtract days, hours, minutes, and seconds from a date.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Time Calculator","description":"Calculate the duration between two times or add/subtract days, hours, minutes, and seconds from a date.","url":"https://mxcalculator.com/calculators/time-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Time Calculator","item":"https://mxcalculator.com/calculators/time-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#f27f0d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f27f0d'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/time-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/time-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+             <circle cx="12" cy="12" r="10"></circle>
+             <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h1>Time Calculator</h1>
+          <p>Add time or find duration</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <p>Calculate the exact duration between two times or add hours/minutes to a date.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            Time Details
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Tabs -->
+          <div class="tabs">
+            <button type="button" class="tab-btn active" id="tabAddSub" onclick="setMode('addsub')">Add / Subtract Time</button>
+            <button type="button" class="tab-btn" id="tabDuration" onclick="setMode('duration')">Time Duration</button>
+          </div>
+
+          <!-- Mode 1: Add / Subtract -->
+          <div id="formAddSub" class="form-section">
+               <div class="form-group">
+                <label class="form-label" for="baseDate">Start Date & Time</label>
+                <div class="date-time-row">
+                    <input type="date" id="baseDate">
+                    <input type="time" id="baseTime" value="12:00">
+                </div>
+              </div>
+
+              <div class="form-group">
+                  <label class="form-label">Operation</label>
+                  <div class="toggle-group">
+                     <button type="button" class="toggle-btn active" id="opAdd" onclick="setOp('add')">Add (+)</button>
+                     <button type="button" class="toggle-btn" id="opSub" onclick="setOp('sub')">Subtract (-)</button>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <div class="input-row">
+                      <input type="number" id="addDays" placeholder="0"> <span>Days</span>
+                      <input type="number" id="addHours" placeholder="0"> <span>Hours</span>
+                  </div>
+                  <div class="input-row" style="margin-top:0.5rem">
+                      <input type="number" id="addMinutes" placeholder="0"> <span>Min</span>
+                      <input type="number" id="addSeconds" placeholder="0"> <span>Sec</span>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Mode 2: Duration -->
+          <div id="formDuration" class="form-section hidden">
+              <div class="form-group">
+                <label class="form-label" for="startDate">Start Date & Time</label>
+                <div class="date-time-row">
+                    <input type="date" id="startDate">
+                    <input type="time" id="startTime" value="09:00">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="endDate">End Date & Time</label>
+                <div class="date-time-row">
+                    <input type="date" id="endDate">
+                    <input type="time" id="endTime" value="17:00">
+                </div>
+              </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M12 20v-6M6 20V10M18 20V4"></path>
+             </svg>
+          </div>
+          <h3>Result preview</h3>
+          <p>Calculations will appear here</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Result Time</div>
+             <div class="result-value" id="mainResultDisplay">--</div>
+             <div class="result-subtitle" id="subResultDisplay">--</div>
+          </div>
+
+          <!-- Detailed Breakdown -->
+          <div class="breakdown-table-wrapper hidden" id="breakdownGrid">
+               <table class="breakdown-table">
+                  <tbody id="breakdownBody">
+                      <!-- Dynamic Rows -->
+                  </tbody>
+               </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+        <h2>Time Calculation</h2>
+        <p>Use this calculator to add or subtract time (days, hours, minutes, seconds) from a starting date and time. You can also calculate the exact duration between two specific points in time.</p>
+
+        <h3>Applications</h3>
+        <ul>
+            <li>Calculating work hours or shift durations.</li>
+            <li>Determining an exact end time for an event or project.</li>
+            <li>Planning schedules by adding travel time to a start time.</li>
+        </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Time Calculator | Utility Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

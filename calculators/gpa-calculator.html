@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GPA Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Calculate your semester and cumulative GPA easily. Add courses, credits, and grades to get your Grade Point Average.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/gpa-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="GPA Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Calculate your semester and cumulative GPA easily. Add courses, credits, and grades to get your Grade Point Average.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/gpa-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GPA Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Calculate your semester and cumulative GPA easily. Add courses, credits, and grades to get your Grade Point Average.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"GPA Calculator","description":"Calculate your semester and cumulative GPA easily. Add courses, credits, and grades to get your Grade Point Average.","url":"https://mxcalculator.com/calculators/gpa-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"GPA Calculator","item":"https://mxcalculator.com/calculators/gpa-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#0d40a5">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d40a5'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/gpa-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/gpa-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10v6"></path>
+            <path d="M12 20h9"></path>
+            <path d="M12 18h9"></path>
+            <path d="M12 22h9"></path>
+            <path d="M12 2 2 7l10 5 10-5-10-5Z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>GPA Calculator</h1>
+          <p>Grade Point Average Estimator</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Enter your course grades and credits to calculate your semester GPA.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+              </svg>
+            </div>
+            Course Details
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="course-header">
+              <div>Course Name (Optional)</div>
+              <div>Grade</div>
+              <div>Credits</div>
+              <div></div>
+          </div>
+
+          <div id="courseList">
+              <!-- JS will populate default rows -->
+          </div>
+
+          <button type="button" class="add-row-btn" onclick="addCourseRow()">
+              + Add Another Course
+          </button>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M12 20v-6M6 20V10M18 20V4"></path>
+             </svg>
+          </div>
+          <h3>Result preview</h3>
+          <p>Calculations will appear here</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+          <div class="results-hero">
+             <div class="result-subtitle">Your GPA</div>
+             <div class="result-value" id="gpaDisplay">--</div>
+             <div class="result-subtitle" id="totalCreditsDisplay">--</div>
+          </div>
+
+          <!-- GPA Meter -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+                <p style="font-size:0.875rem; font-weight:600; margin-bottom:0.5rem">Performance Scale (4.0)</p>
+                <div class="gpa-meter-container">
+                    <div class="gpa-bar">
+                        <div id="gpaMarker" class="gpa-marker" style="left: 0%;"></div>
+                    </div>
+                    <div class="gpa-labels">
+                        <span>0.0</span>
+                        <span>1.0</span>
+                        <span>2.0</span>
+                        <span>3.0</span>
+                        <span>4.0</span>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Detailed Breakdown -->
+          <div class="breakdown-table-wrapper u-mt">
+               <table class="breakdown-table">
+                  <thead>
+                      <tr>
+                          <th>Summary</th>
+                          <th>Value</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Total Grade Points</td>
+                          <td id="totalPointsDisplay">--</td>
+                      </tr>
+                      <tr>
+                          <td>Total Credits</td>
+                          <td id="totalCreditsTable">--</td>
+                      </tr>
+                  </tbody>
+               </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+        <h2>About GPA Calculation</h2>
+        <p>This calculator uses the standard 4.0 scale used by most colleges and universities in the US.</p>
+
+        <h3>Letter Grade Points</h3>
+        <ul>
+            <li>A = 4.0 (93-100%)</li>
+            <li>A- = 3.7 (90-92%)</li>
+            <li>B+ = 3.3 (87-89%)</li>
+            <li>B = 3.0 (83-86%)</li>
+            <li>B- = 2.7 (80-82%)</li>
+            <li>C+ = 2.3 (77-79%)</li>
+            <li>C = 2.0 (73-76%)</li>
+            <li>D = 1.0 (60-66%)</li>
+            <li>F = 0.0 (Below 60%)</li>
+        </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>GPA Calculator | Education Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

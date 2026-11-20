@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Calculate the future value of your investment with contributions, compounding, and inflation adjustments.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/investment-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Investment Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Calculate the future value of your investment with contributions, compounding, and inflation adjustments.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/investment-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Investment Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Calculate the future value of your investment with contributions, compounding, and inflation adjustments.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Investment Calculator","description":"Calculate the future value of your investment with contributions, compounding, and inflation adjustments.","url":"https://mxcalculator.com/calculators/investment-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Investment Calculator","item":"https://mxcalculator.com/calculators/investment-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#10b77f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2310b77f'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/investment-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/investment-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20"></path>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Investment Calculator</h1>
+          <p>Estimate future value and investment growth</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Calculate potential investment returns based on contributions, interest rate, and time.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="1" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            Investment Parameters
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Starting Amount -->
+          <div class="form-group">
+            <label class="form-label" for="startAmount">
+              Starting Amount
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="startAmount" class="has-icon" value="10000" placeholder="10,000">
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label class="form-label" for="investmentTerm">
+              After (Years)
+            </label>
+            <div class="input-row">
+                <input min="0" max="100" type="number" id="investmentTerm" value="10" placeholder="10">
+                <span>years</span>
+            </div>
+          </div>
+
+          <!-- Return Rate -->
+          <div class="form-group">
+            <label class="form-label">
+              Return Rate
+              <span class="help-icon tooltip" data-tooltip="Expected annual rate of return.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-row">
+              <input min="0" max="100" type="number" id="returnRate" value="6" step="0.01" placeholder="6">
+              <span>%</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+             <label class="form-label" for="compoundFreq">Compound Frequency</label>
+             <div class="input-row">
+                 <select id="compoundFreq">
+                     <option value="1">Annually</option>
+                     <option value="2">Semiannually</option>
+                     <option value="4">Quarterly</option>
+                     <option value="12" selected>Monthly</option>
+                     <option value="365">Daily</option>
+                 </select>
+             </div>
+          </div>
+
+          <!-- More Options -->
+          <button type="button" class="more-options-btn" id="moreOptionsBtn" onclick="toggleMoreOptions()">
+            <span>+ Contributions</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <div id="moreOptionsContent" class="more-options-content">
+             <div class="form-group">
+                <label class="form-label" for="additionalContrib">Additional Contribution</label>
+                <div class="input-wrapper input-icon-wrapper">
+                  <span class="input-icon dynamic-symbol">$</span>
+                  <input type="number" id="additionalContrib" class="has-icon" value="500">
+                </div>
+            </div>
+
+             <div class="form-group">
+                 <label class="form-label" for="contribFreq">Contribution Frequency</label>
+                 <div class="input-row">
+                     <select id="contribFreq">
+                         <option value="12" selected>Monthly</option>
+                         <option value="1">Annually</option>
+                         <option value="26">Bi-Weekly</option>
+                     </select>
+                 </div>
+              </div>
+
+               <div class="form-group">
+                 <label class="form-label">Contribute at</label>
+                 <div class="input-row">
+                     <div class="toggle-group" style="width: 100%;">
+                         <button type="button" class="toggle-btn active u-flex1" id="contribBeginning" onclick="setContribTiming('beginning')">Beginning</button>
+                         <button type="button" class="toggle-btn u-flex1" id="contribEnd" onclick="setContribTiming('end')">End</button>
+                     </div>
+                 </div>
+              </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3>Enter investment details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle">End Balance</div>
+             <div class="result-value" id="endBalanceDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Component</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Pie Chart -->
+           <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+              </div>
+              <div class="chart-legend" id="chartLegend"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Amortization/Chart Section -->
+    <div id="amortizationSection" class="amortization-section" style="display: none;">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="schedule-header-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                <polyline points="16 7 22 7 22 13"></polyline>
+              </svg>
+            </div>
+            Annual Growth Schedule
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Line Chart -->
+          <div class="line-chart-container">
+            <canvas id="lineChart"></canvas>
+          </div>
+
+          <!-- Schedule Table -->
+          <div class="schedule-table-wrapper u-mt">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Interest</th>
+                  <th>Total Interest</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleTableBody">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+        <h2>Investment Calculator</h2>
+        <p>This calculator helps you determine how much your investment will be worth in the future, given a return rate, contribution amounts, and compounding frequency.</p>
+
+        <h3>Return Rate</h3>
+        <p>The rate of return is the profit on an investment over a period of time, expressed as a proportion of the original investment. For example, if you invest $1,000 and it grows to $1,100 in one year, your return rate is 10%.</p>
+
+        <h3>Compounding</h3>
+        <p>Compounding is the process where interest is credited to an existing principal amount as well as to interest already paid. It essentially means "interest on interest". The more frequent the compounding, the greater the final return.</p>
+
+        <h3>Contributions</h3>
+        <p>Regular contributions to an investment account can significantly increase the final value. Dollar-cost averaging, or investing a fixed dollar amount at regular intervals, is a common strategy to build wealth over time.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Investment Calculator | Financial Growth Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

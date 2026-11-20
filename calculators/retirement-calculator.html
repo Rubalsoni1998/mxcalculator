@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retirement Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Plan your financial future with our free retirement calculator. Estimate how much you need to save to retire comfortably.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/retirement-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Retirement Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Plan your financial future with our free retirement calculator. Estimate how much you need to save to retire comfortably.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/retirement-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Retirement Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Plan your financial future with our free retirement calculator. Estimate how much you need to save to retire comfortably.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Retirement Calculator","description":"Plan your financial future with our free retirement calculator. Estimate how much you need to save to retire comfortably.","url":"https://mxcalculator.com/calculators/retirement-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Retirement Calculator","item":"https://mxcalculator.com/calculators/retirement-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#1b9849">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b9849'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/retirement-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/retirement-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20"></path>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Retirement Calculator</h1>
+          <p>Plan your financial future and retirement goals</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Estimate how much you need to save to retire comfortably given your current plan.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
+              </svg>
+            </div>
+            Your Plan
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Age Inputs -->
+          <div class="form-group">
+            <label class="form-label" for="currentAge">Current Age & Retirement Age</label>
+            <div class="input-row">
+              <div class="input-wrapper u-flex1">
+                 <input type="number" id="currentAge" value="30" placeholder="Current">
+              </div>
+              <span class="u-px5">to</span>
+              <div class="input-wrapper u-flex1">
+                 <input type="number" id="retirementAge" value="65" placeholder="Retire">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="lifeExpectancy">Life Expectancy</label>
+            <div class="input-row">
+               <input type="number" id="lifeExpectancy" value="85" placeholder="85">
+               <span>years</span>
+            </div>
+          </div>
+
+          <!-- Income & Savings -->
+          <div class="form-group">
+            <label class="form-label" for="currentIncome">
+              Current Annual Income
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="currentIncome" class="has-icon" value="60000" placeholder="60,000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="currentSavings">
+              Current Retirement Savings
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="currentSavings" class="has-icon" value="40000" placeholder="40,000">
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label class="form-label" for="savingsPercent">
+               Annual Savings Contribution
+            </label>
+            <div class="input-row">
+                <input type="number" id="savingsPercent" value="15" placeholder="15">
+                <span>% of Income</span>
+            </div>
+          </div>
+
+          <!-- More Options -->
+          <button type="button" class="more-options-btn" id="moreOptionsBtn" onclick="toggleMoreOptions()">
+            <span>+ Advanced Assumptions</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <div id="moreOptionsContent" class="more-options-content">
+             <div class="form-group">
+                <label class="form-label" for="incomeIncrease">Annual Income Increase</label>
+                <div class="input-row">
+                    <input type="number" id="incomeIncrease" value="2" step="0.1">
+                    <span>%</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="incomeRequiredPct">Income Required at Retirement</label>
+                <div class="input-row">
+                    <input type="number" id="incomeRequiredPct" value="80">
+                    <span>% of final income</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="preRate">Pre-Retirement Investment Return</label>
+                <div class="input-row">
+                    <input type="number" id="preRate" value="7" step="0.1">
+                    <span>%</span>
+                </div>
+            </div>
+
+             <div class="form-group">
+                <label class="form-label" for="postRate">Post-Retirement Investment Return</label>
+                <div class="input-row">
+                    <input type="number" id="postRate" value="4" step="0.1">
+                    <span>%</span>
+                </div>
+            </div>
+
+             <div class="form-group">
+                <label class="form-label" for="inflationRate">Inflation Rate</label>
+                <div class="input-row">
+                    <input min="-50" max="100" type="number" id="inflationRate" value="3" step="0.1">
+                    <span>%</span>
+                </div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3>Enter your retirement plan</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle">Savings at Retirement (Age <span id="resRetireAge"></span>)</div>
+             <div class="result-value" id="finalBalance">$0.00</div>
+             <div id="statusMessage" class="status-badge status-success">Plan Looks Good</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>At Age</th>
+                      <th>Balance</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Amortization/Chart Section -->
+    <div id="amortizationSection" class="amortization-section" style="display: none;">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="schedule-header-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                <polyline points="16 7 22 7 22 13"></polyline>
+              </svg>
+            </div>
+            Retirement Projection
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Line Chart -->
+          <div class="line-chart-container">
+            <canvas id="lineChart"></canvas>
+          </div>
+
+          <!-- Schedule Table -->
+          <div class="schedule-table-wrapper u-mt">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Age</th>
+                  <th>Income/Draw</th>
+                  <th>Savings/Interest</th>
+                  <th>End Balance</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleTableBody">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+        <h2>Retirement Planning</h2>
+        <p>Retirement planning is the process of determining retirement income goals and the actions and decisions necessary to achieve those goals. It includes identifying sources of income, estimating expenses, implementing a savings program, and managing assets and risk.</p>
+
+        <h3>How Much Do I Need?</h3>
+        <p>A common rule of thumb is that you will need 70% to 80% of your pre-retirement income to maintain your standard of living in retirement. This calculator helps you see if your current savings rate will get you there.</p>
+
+        <h3>The Power of Compound Interest</h3>
+        <p>Starting early allows your investments more time to grow. Even small contributions early in your career can grow significantly over 30 or 40 years due to compounding returns.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Retirement Calculator | Planning for your future</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

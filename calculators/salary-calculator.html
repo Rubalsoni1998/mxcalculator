@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Convert your salary between hourly, weekly, bi-weekly, monthly, and annual amounts. Adjust for holidays and vacation days.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/salary-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Salary Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Convert your salary between hourly, weekly, bi-weekly, monthly, and annual amounts. Adjust for holidays and vacation days.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/salary-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Salary Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Convert your salary between hourly, weekly, bi-weekly, monthly, and annual amounts. Adjust for holidays and vacation days.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"Salary Calculator","description":"Convert your salary between hourly, weekly, bi-weekly, monthly, and annual amounts. Adjust for holidays and vacation days.","url":"https://mxcalculator.com/calculators/salary-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Salary Calculator","item":"https://mxcalculator.com/calculators/salary-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#0da2e7">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230da2e7'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/salary-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/salary-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="12" x="2" y="6" rx="2"></rect>
+            <circle cx="12" cy="12" r="2"></circle>
+            <path d="M6 12h.01M18 12h.01"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Salary Calculator</h1>
+          <p>Convert annual, monthly, weekly, and hourly pay</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Estimate your paycheck adjustments and see equivalent rates across different time periods.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="2" y2="22"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            Earnings Details
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Amount Input -->
+          <div class="form-group">
+            <label class="form-label" for="salaryAmount">
+              Salary Amount
+            </label>
+            <div class="input-row">
+               <div class="input-wrapper" style="flex:2">
+                  <span class="input-icon dynamic-symbol">$</span>
+                  <input type="number" id="salaryAmount" class="has-icon" value="50000" placeholder="50,000">
+               </div>
+               <div class="u-flex1">
+                   <select id="salaryFrequency">
+                       <option value="year" selected>Per Year</option>
+                       <option value="month">Per Month</option>
+                       <option value="biweekly">Bi-Weekly</option>
+                       <option value="week">Per Week</option>
+                       <option value="day">Per Day</option>
+                       <option value="hour">Per Hour</option>
+                   </select>
+               </div>
+            </div>
+          </div>
+
+          <!-- Work Schedule -->
+          <div class="form-group">
+             <div class="input-row">
+                <div class="u-flex1">
+                     <label class="form-label" for="hoursPerWeek">Hours per Week</label>
+                     <input type="number" id="hoursPerWeek" value="40">
+                </div>
+                 <div class="u-flex1">
+                     <label class="form-label" for="daysPerWeek">Days per Week</label>
+                     <input type="number" id="daysPerWeek" value="5">
+                </div>
+             </div>
+          </div>
+
+          <!-- More Options (Time Off) -->
+          <button type="button" class="more-options-btn" id="moreOptionsBtn" onclick="toggleMoreOptions()">
+            <span>+ Holidays & Vacation</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <div id="moreOptionsContent" class="more-options-content">
+             <div class="form-group">
+                <label class="form-label" for="holidays">Holidays per Year (Days)</label>
+                <input type="number" id="holidays" value="0">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="vacation">Vacation Days per Year</label>
+                <input type="number" id="vacation" value="0">
+            </div>
+             <p class="text-muted" style="font-size:0.8rem">These days will be subtracted from the "Adjusted" calculation.</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20"></path>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Enter your salary details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Annual Salary</div>
+             <div class="result-value" id="resultValueDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Period</th>
+                      <th>Unadjusted</th>
+                      <th>Adjusted</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Chart -->
+           <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Annual Comparison</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="salaryChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+        <h2>Salary Calculations</h2>
+        <p>This calculator helps you convert salary amounts between different frequencies. It also allows you to see the impact of unpaid time off (like holidays or vacations if unpaid) on your effective hourly or annual rate.</p>
+
+        <h3>Unadjusted vs. Adjusted</h3>
+        <ul>
+            <li><b>Unadjusted:</b> Assumes a standard 52-week year with no time off. This is typical for salaried employees who get paid holidays and vacation.</li>
+            <li><b>Adjusted:</b> Subtracts the specified holidays and vacation days from the total working days. This is useful for hourly contractors or employees who do not receive paid time off.</li>
+        </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Salary Calculator | Income Conversion Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GFR Calculator – Free Online Calculator | Mx Calculator</title>
+  <meta name="description" content="Estimate glomerular filtration rate (eGFR) with the CKD-EPI 2021 and MDRD equations from age, sex and serum creatinine.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/gfr-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="GFR Calculator – Free Online Calculator | Mx Calculator">
+  <meta property="og:description" content="Estimate glomerular filtration rate (eGFR) with the CKD-EPI 2021 and MDRD equations from age, sex and serum creatinine.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/gfr-calculator.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GFR Calculator – Free Online Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Estimate glomerular filtration rate (eGFR) with the CKD-EPI 2021 and MDRD equations from age, sex and serum creatinine.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"GFR Calculator","description":"Estimate glomerular filtration rate (eGFR) with the CKD-EPI 2021 and MDRD equations from age, sex and serum creatinine.","url":"https://mxcalculator.com/calculators/gfr-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"GFR Calculator","item":"https://mxcalculator.com/calculators/gfr-calculator.html"}]}]}</script>
+  <meta name="theme-color" content="#257ad0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23257ad0'/%3E%3Cpath d='M9 12h14M9 20h14' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/health-calc.css">
+  <link rel="stylesheet" href="../assets/css/pages/gfr-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/health-engine.js"></script>
+  <script defer src="../assets/js/pages/gfr-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg>
+        </div>
+        <div>
+          <h1>GFR Calculator</h1>
+          <p>Estimated kidney function (eGFR)</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p>eGFR estimates how well your kidneys filter blood, using a blood creatinine result. Enter the value from your lab report.</p>
+    </div>
+
+    <div class="main-grid">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg></div>
+            Lab Details
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="tabs">
+            <button type="button" class="tab-btn active" id="tabUS" onclick="setUnits('us')">US Units</button>
+            <button type="button" class="tab-btn" id="tabMetric" onclick="setUnits('metric')">Metric Units</button>
+          </div>
+          <div class="form-group"><div class="input-row"><div class="u-flex1"><label class="form-label" for="age">Age</label><input type="number" id="age" value="45" min="18" max="110" step="1" inputmode="decimal"></div><div class="u-flex1"><label class="form-label" for="gender">Gender</label><select id="gender"><option value="male" selected>Male</option><option value="female">Female</option></select></div></div></div>
+          <div class="form-group" data-kind="creat" data-id="creat"><label class="form-label" for="creat">Serum creatinine</label><div class="input-row"><div class="input-wrapper u-flex1"><input type="number" id="creat" value="1.0" step="any" inputmode="decimal"></div><span class="u-px5" data-us="mg/dL" data-metric="µmol/L">mg/dL</span></div></div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+          <div class="form-err" id="formError" role="alert"></div>
+        </div>
+      </div>
+
+      <div id="resultsContainer" class="animate-slide-up" aria-live="polite">
+        <div id="resultsPlaceholder" class="card results-placeholder hidden">
+          <div class="results-placeholder-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg></div>
+          <h3>Enter your details</h3>
+          <p>Results will appear here</p>
+        </div>
+        <div id="resultsContent" class="hidden"></div>
+      </div>
+    </div>
+
+    <div class="calc-description">
+        <h2>What is GFR?</h2>
+        <p>The glomerular filtration rate (GFR) measures how much blood your kidneys filter each minute. A healthy young adult has an eGFR of about 100 mL/min/1.73 m², and it declines slowly with age.</p>
+        <p>Because measuring GFR directly is complicated, labs estimate it from the creatinine level in your blood, along with your age and sex. This calculator uses the 2021 CKD-EPI equation, which no longer includes a race factor, and also shows the older MDRD equation for comparison.</p>
+        <h3>Understanding the stages</h3>
+        <p>Stages G1 to G5 describe how much function is reduced. A single low reading does not mean you have kidney disease: dehydration, intense exercise, high meat intake and some medicines can raise creatinine temporarily.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>GFR Calculator | Health &amp; Fitness Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+</body>
+</html>
