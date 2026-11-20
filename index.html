@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mx Calculator – Free Online Calculators for Finance, Health &amp; Math</title>
+    <meta name="description" content="Free online calculators for mortgages, loans, BMI, percentages, dates and more. Fast, accurate and private: your numbers never leave your browser.">
+
+    <link rel="canonical" href="https://mxcalculator.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mx Calculator">
+    <meta property="og:title" content="Mx Calculator – Free Online Calculators">
+    <meta property="og:description" content="Free online calculators for finance, health, math and everyday tools.">
+    <meta property="og:url" content="https://mxcalculator.com/">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Mx Calculator","url":"https://mxcalculator.com/","potentialAction":{"@type":"SearchAction","target":"https://mxcalculator.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+
+    <!-- Import Modern Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Mx Calculator home">
+                <img src="assets/img/logo.png" alt="" class="logo-img" width="54" height="44">
+                <span class="logo-name"><strong>Mx Calculator</strong><small>Calculate Everything</small></span>
+            </a>
+            <nav>
+                <a href="#categories" class="nav-link" onclick="toggleModal(); return false;">All calculators</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- TOP SECTION: Calculator Left, Search/Hero Right -->
+        <div class="top-split-layout">
+
+            <!-- 1. Left Side: Scientific Calculator -->
+            <div class="calc-section">
+                <div class="calc-wrapper">
+                    <div class="calc-display">
+                        <div class="calc-history" id="history"></div>
+                        <div class="calc-current" id="output">0</div>
+                    </div>
+
+                    <div class="calc-controls">
+                        <div class="mode-toggle">
+                            <label><input type="radio" name="angle" value="deg" checked> Deg</label>
+                            <label><input type="radio" name="angle" value="rad"> Rad</label>
+                        </div>
+                        <span>Scientific Mode</span>
+                    </div>
+
+                    <div class="calc-keys">
+                        <!-- Row 1 -->
+                        <button class="btn func" onclick="calcFunc('sin')">sin</button>
+                        <button class="btn func" onclick="calcFunc('cos')">cos</button>
+                        <button class="btn func" onclick="calcFunc('tan')">tan</button>
+                        <button class="btn func" onclick="calcFunc('pi')">π</button>
+                        <button class="btn func" onclick="calcFunc('e')">e</button>
+                        <button class="btn clear" onclick="clearCalc()">AC</button>
+
+                        <!-- Row 2 -->
+                        <button class="btn func" onclick="calcFunc('asin')">sin⁻¹</button>
+                        <button class="btn func" onclick="calcFunc('acos')">cos⁻¹</button>
+                        <button class="btn func" onclick="calcFunc('atan')">tan⁻¹</button>
+                        <button class="btn func" onclick="insert('^')">xʸ</button>
+                        <button class="btn func" onclick="calcFunc('sqrt')">√</button>
+                        <button class="btn op" onclick="insert('/')">÷</button>
+
+                        <!-- Row 3 -->
+                        <button class="btn func" onclick="calcFunc('ln')">ln</button>
+                        <button class="btn func" onclick="calcFunc('log')">log</button>
+                        <button class="btn num" onclick="insert(7)">7</button>
+                        <button class="btn num" onclick="insert(8)">8</button>
+                        <button class="btn num" onclick="insert(9)">9</button>
+                        <button class="btn op" onclick="insert('*')">×</button>
+
+                        <!-- Row 4 -->
+                        <button class="btn func" onclick="insert('(')">(</button>
+                        <button class="btn func" onclick="insert(')')">)</button>
+                        <button class="btn num" onclick="insert(4)">4</button>
+                        <button class="btn num" onclick="insert(5)">5</button>
+                        <button class="btn num" onclick="insert(6)">6</button>
+                        <button class="btn op" onclick="insert('-')">−</button>
+
+                        <!-- Row 5 -->
+                        <button class="btn func" onclick="calcFunc('1/x')">1/x</button>
+                        <button class="btn func" onclick="calcFunc('sq')">x²</button>
+                        <button class="btn num" onclick="insert(1)">1</button>
+                        <button class="btn num" onclick="insert(2)">2</button>
+                        <button class="btn num" onclick="insert(3)">3</button>
+                        <button class="btn op" onclick="insert('+')">+</button>
+
+                        <!-- Row 6 -->
+                        <button class="btn func" onclick="insert('E')">EXP</button>
+                        <button class="btn num" onclick="insert('.')">.</button>
+                        <button class="btn num zero" onclick="insert(0)">0</button>
+                        <button class="btn equal" onclick="calculate()">=</button>
+                    </div>
+                </div>
+
+                <button class="all-tools-btn" onclick="toggleModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Browse All Calculators
+                </button>
+            </div>
+
+            <!-- 2. Right Side: Hero Content & Search -->
+            <div class="hero-content">
+                <h1 class="hero-title">Calculator for everything</h1>
+                <p class="hero-subtitle">Fast, free, and accurate online calculators for finance, fitness, math, and more. Simplifying your daily calculations.</p>
+
+                <form class="search-container" id="searchForm" role="search">
+                    <input type="search" id="searchInput" class="search-input" placeholder="Search calculators (e.g. Mortgage)..." aria-label="Search calculators" autocomplete="off">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+                <div class="popular"><span>Popular:</span><a href="calculators/mortgage-calculator.html">Mortgage</a><a href="calculators/loan-calculator.html">Loan</a><a href="calculators/bmi-calculator.html">BMI</a><a href="calculators/percent-calculator.html">Percentage</a><a href="calculators/age-calculator.html">Age</a><a href="calculators/compound-interest-calculator.html">Compound Interest</a><a href="calculators/gpa-calculator.html">GPA</a><a href="calculators/password-generator.html">Password</a></div>
+            </div>
+
+        </div>
+
+        <!-- 3. Category Grid -->
+        <div class="category-section" id="categories">
+            <div class="section-heading">Browse by Category</div>
+
+            <div class="grid-layout">
+                <!-- Financial Card -->
+                <article class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Financial</h3>
+                    <ul>
+                        <li><a href="calculators/mortgage-calculator.html">Mortgage Calculator</a></li>
+                        <li><a href="calculators/loan-calculator.html">Loan Calculator</a></li>
+                        <li><a href="calculators/auto-loan-calculator.html">Auto Loan Calculator</a></li>
+                        <li><a href="calculators/interest-calculator.html">Interest Calculator</a></li>
+                        <li><a href="calculators/payment-calculator.html">Payment Calculator</a></li>
+                        <li><a href="calculators/retirement-calculator.html">Retirement Calculator</a></li>
+                        <li><a href="calculators/amortization-calculator.html">Amortization Calculator</a></li>
+                        <li><a href="calculators/investment-calculator.html">Investment Calculator</a></li>
+                        <li><a href="calculators/inflation-calculator.html">Inflation Calculator</a></li>
+                        <li><a href="calculators/finance-calculator.html">Finance Calculator</a></li>
+                        <li><a href="calculators/tax-calculator.html">Income Tax Calculator</a></li>
+                        <li><a href="calculators/compound-interest-calculator.html">Compound Interest Calculator</a></li>
+                        <li><a href="calculators/salary-calculator.html">Salary Calculator</a></li>
+                        <li><a href="calculators/interest-rate-calculator.html">Interest Rate Calculator</a></li>
+                        <li><a href="calculators/sales-tax-calculator.html">Sales Tax Calculator</a></li>
+                    </ul>
+                </article>
+
+                <!-- Fitness Card -->
+                <article class="card">
+                    <div class="card-icon">❤️</div>
+                    <h3>Fitness & Health</h3>
+                    <ul>
+                        <li><a href="calculators/bmi-calculator.html">BMI Calculator</a></li>
+                        <li><a href="calculators/calorie-calculator.html">Calorie Calculator</a></li>
+                        <li><a href="calculators/body-fat-calculator.html">Body Fat Calculator</a></li>
+                        <li><a href="calculators/bmr-calculator.html">BMR Calculator</a></li>
+                        <li><a href="calculators/ideal-weight-calculator.html">Ideal Weight Calculator</a></li>
+                        <li><a href="calculators/pace-calculator.html">Pace Calculator</a></li>
+                        <li><a href="calculators/pregnancy-calculator.html">Pregnancy Calculator</a></li>
+                        <li><a href="calculators/pregnancy-conception-calculator.html">Pregnancy Conception Calculator</a></li>
+                        <li><a href="calculators/due-date-calculator.html">Due Date Calculator</a></li>
+                        <li><a href="calculators/macro-calculator.html">Macro Calculator</a></li>
+                        <li><a href="calculators/pregnancy-weight-gain-calculator.html">Pregnancy Weight Gain Calculator</a></li>
+                        <li><a href="calculators/army-body-fat-calculator.html">Army Body Fat Calculator</a></li>
+                        <li><a href="calculators/carbohydrate-calculator.html">Carbohydrate Calculator</a></li>
+                        <li><a href="calculators/lean-body-mass-calculator.html">Lean Body Mass Calculator</a></li>
+                        <li><a href="calculators/healthy-weight-calculator.html">Healthy Weight Calculator</a></li>
+                        <li><a href="calculators/calories-burned-calculator.html">Calories Burned Calculator</a></li>
+                        <li><a href="calculators/one-rep-max-calculator.html">One Rep Max Calculator</a></li>
+                        <li><a href="calculators/target-heart-rate-calculator.html">Target Heart Rate Calculator</a></li>
+                        <li><a href="calculators/protein-calculator.html">Protein Calculator</a></li>
+                        <li><a href="calculators/fat-intake-calculator.html">Fat Intake Calculator</a></li>
+                        <li><a href="calculators/tdee-calculator.html">TDEE Calculator</a></li>
+                        <li><a href="calculators/ovulation-calculator.html">Ovulation Calculator</a></li>
+                        <li><a href="calculators/conception-calculator.html">Conception Calculator</a></li>
+                        <li><a href="calculators/period-calculator.html">Period Calculator</a></li>
+                        <li><a href="calculators/gfr-calculator.html">GFR Calculator</a></li>
+                        <li><a href="calculators/body-type-calculator.html">Body Type Calculator</a></li>
+                        <li><a href="calculators/body-surface-area-calculator.html">Body Surface Area Calculator</a></li>
+                        <li><a href="calculators/bac-calculator.html">BAC Calculator</a></li>
+                        <li><a href="calculators/overweight-calculator.html">Overweight Calculator</a></li>
+                    </ul>
+                </article>
+
+                <!-- Math Card -->
+                <article class="card">
+                    <div class="card-icon">📐</div>
+                    <h3>Math</h3>
+                    <ul>
+                        <li><a href="calculators/scientific-calculator.html">Scientific Calculator</a></li>
+                        <li><a href="calculators/fraction-calculator.html">Fraction Calculator</a></li>
+                        <li><a href="calculators/percent-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="calculators/random-number-generator.html">Random Number Generator</a></li>
+                        <li><a href="calculators/triangle-calculator.html">Triangle Calculator</a></li>
+                        <li><a href="calculators/standard-deviation-calculator.html">Standard Deviation</a></li>
+                    </ul>
+                </article>
+
+                <!-- Other Card -->
+                <article class="card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Other Tools</h3>
+                    <ul>
+                        <li><a href="calculators/age-calculator.html">Age Calculator</a></li>
+                        <li><a href="calculators/date-calculator.html">Date Calculator</a></li>
+                        <li><a href="calculators/time-calculator.html">Time Calculator</a></li>
+                        <li><a href="calculators/hours-calculator.html">Hours Calculator</a></li>
+                        <li><a href="calculators/gpa-calculator.html">GPA Calculator</a></li>
+                        <li><a href="calculators/grade-calculator.html">Grade Calculator</a></li>
+                        <li><a href="calculators/concrete-calculator.html">Concrete Calculator</a></li>
+                        <li><a href="calculators/ip-subnet-calculator.html">IP Subnet Calculator</a></li>
+                        <li><a href="calculators/password-generator.html">Random Password Generator</a></li>
+                        <li><a href="calculators/conversion-calculator.html">Conversion Calculator</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="modal-overlay" onclick="toggleModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+                <h2 style="font-size:1.5rem; font-weight:700;">All Calculators</h2>
+                <button onclick="toggleModal()" aria-label="Close" style="background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+            </div>
+            <div id="modalList"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mx Calculator. Designed with precision.</p>
+        <p style="margin-top:10px; font-size:0.85rem;">
+            <a href="privacy.html" style="color:var(--primary); text-decoration:none; margin:0 10px;">Privacy</a>
+            <a href="terms.html" style="color:var(--primary); text-decoration:none; margin:0 10px;">Terms</a>
+        </p>
+    </footer>
+    <script defer src="assets/js/home.js"></script>
+    <script defer src="assets/js/responsive.js"></script>
+</body>
+</html>
