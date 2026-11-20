@@ -1,0 +1,6 @@
+:root {
+  --primary: hsl(335, 70%, 48%);
+  --accent: hsl(335, 60%, 96%);
+  --accent-foreground: hsl(335, 70%, 24%);
+  --shadow-glow: 0 0 40px hsla(335, 70%, 48%, 0.15);
+}
