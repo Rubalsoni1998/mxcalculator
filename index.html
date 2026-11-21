@@ -20,8 +20,8 @@
     <meta property="og:title" content="Mx Calculator – Free Online Calculators">
     <meta property="og:description" content="Free online calculators for finance, health, math and everyday tools.">
     <meta property="og:url" content="https://mxcalculator.com/">
-    <meta name="twitter:card" content="summary">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Mx Calculator","url":"https://mxcalculator.com/","potentialAction":{"@type":"SearchAction","target":"https://mxcalculator.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mxcalculator.com/#org","name":"Mx Calculator","url":"https://mxcalculator.com/","logo":{"@type":"ImageObject","url":"https://mxcalculator.com/assets/img/favicon-512.png","width":512,"height":512},"image":"https://mxcalculator.com/assets/img/og-image.png"},{"@type":"WebSite","@id":"https://mxcalculator.com/#website","name":"Mx Calculator","url":"https://mxcalculator.com/","publisher":{"@id":"https://mxcalculator.com/#org"},"potentialAction":{"@type":"SearchAction","target":"https://mxcalculator.com/?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
 
     <!-- Import Modern Font (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,8 +30,20 @@
 
     <link rel="stylesheet" href="assets/css/home.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
-  <meta name="theme-color" content="#2563eb">
-  <link rel="icon" href="data:,">
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#1dafa2">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
 
@@ -39,7 +51,7 @@
     <header>
         <div class="header-inner">
             <a href="index.html" class="logo" aria-label="Mx Calculator home">
-                <img src="assets/img/logo.png" alt="" class="logo-img" width="54" height="44">
+                <img src="assets/img/logo.png" alt="" class="logo-img" width="59" height="48">
                 <span class="logo-name"><strong>Mx Calculator</strong><small>Calculate Everything</small></span>
             </a>
             <nav>
@@ -130,7 +142,7 @@
                 <p class="hero-subtitle">Fast, free, and accurate online calculators for finance, fitness, math, and more. Simplifying your daily calculations.</p>
 
                 <form class="search-container" id="searchForm" role="search">
-                    <input type="search" id="searchInput" class="search-input" placeholder="Search calculators (e.g. Mortgage)..." aria-label="Search calculators" autocomplete="off">
+                    <input type="search" id="searchInput" class="search-input" placeholder="Search calculators…" aria-label="Search calculators" autocomplete="off">
                     <button type="submit" class="search-btn">Search</button>
                 </form>
                 <div class="popular"><span>Popular:</span><a href="calculators/mortgage-calculator.html">Mortgage</a><a href="calculators/loan-calculator.html">Loan</a><a href="calculators/bmi-calculator.html">BMI</a><a href="calculators/percent-calculator.html">Percentage</a><a href="calculators/age-calculator.html">Age</a><a href="calculators/compound-interest-calculator.html">Compound Interest</a><a href="calculators/gpa-calculator.html">GPA</a><a href="calculators/password-generator.html">Password</a></div>
@@ -140,7 +152,7 @@
 
         <!-- 3. Category Grid -->
         <div class="category-section" id="categories">
-            <div class="section-heading">Browse by Category</div>
+            <h2 class="section-heading">Browse by Category</h2>
 
             <div class="grid-layout">
                 <!-- Financial Card -->
@@ -169,7 +181,7 @@
                 <!-- Fitness Card -->
                 <article class="card">
                     <div class="card-icon">❤️</div>
-                    <h3>Fitness & Health</h3>
+                    <h3>Fitness &amp; Health</h3>
                     <ul>
                         <li><a href="calculators/bmi-calculator.html">BMI Calculator</a></li>
                         <li><a href="calculators/calorie-calculator.html">Calorie Calculator</a></li>
@@ -241,10 +253,10 @@
 
     <!-- Modal Overlay -->
     <div id="modalOverlay" class="modal-overlay" onclick="toggleModal()">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-                <h2 style="font-size:1.5rem; font-weight:700;">All Calculators</h2>
-                <button onclick="toggleModal()" aria-label="Close" style="background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="event.stopPropagation()">
+            <div class="modal-head">
+                <h2 id="modalTitle">All Calculators</h2>
+                <button class="modal-close" onclick="toggleModal()" aria-label="Close">&times;</button>
             </div>
             <div id="modalList"></div>
         </div>
