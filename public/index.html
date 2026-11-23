@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage, Sales Tax &amp; Income Tax Calculators | Mx Calculator</title>
+    <meta name="description" content="Free US calculators for mortgage payments, sales tax, federal income tax, auto loans, 401(k)/IRA retirement and BMI. Private: your numbers stay in your browser.">
+
+    <link rel="canonical" href="https://mxcalculator.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mx Calculator">
+    <meta property="og:title" content="Mortgage, Sales Tax &amp; Income Tax Calculators | Mx Calculator">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:description" content="Free US calculators for your mortgage, sales tax, federal income tax, auto loan and retirement savings, plus health and everyday math.">
+    <meta property="og:url" content="https://mxcalculator.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mxcalculator.com/#org","name":"Mx Calculator","url":"https://mxcalculator.com/","logo":{"@type":"ImageObject","url":"https://mxcalculator.com/assets/img/favicon-512.png","width":512,"height":512},"image":"https://mxcalculator.com/assets/img/og-image.png"},{"@type":"WebSite","@id":"https://mxcalculator.com/#website","inLanguage":"en-US","name":"Mx Calculator","url":"https://mxcalculator.com/","publisher":{"@id":"https://mxcalculator.com/#org"},"potentialAction":{"@type":"SearchAction","target":"https://mxcalculator.com/?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
+
+    <!-- Import Modern Font (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+
+    <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#1dafa2">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Mx Calculator home">
+                <img src="assets/img/logo.png" alt="" class="logo-img" width="59" height="48">
+                <span class="logo-name"><strong>Mx Calculator</strong><small>Calculate Everything</small></span>
+            </a>
+            <nav>
+                <a href="#categories" class="nav-link" onclick="toggleModal(); return false;">All calculators</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- TOP SECTION: Calculator Left, Search/Hero Right -->
+        <div class="top-split-layout">
+
+            <!-- 1. Left Side: Scientific Calculator -->
+            <div class="calc-section">
+                <div class="calc-wrapper">
+                    <div class="calc-display">
+                        <div class="calc-history" id="history"></div>
+                        <div class="calc-current" id="output">0</div>
+                    </div>
+
+                    <div class="calc-controls">
+                        <div class="mode-toggle">
+                            <label><input type="radio" name="angle" value="deg" checked> Deg</label>
+                            <label><input type="radio" name="angle" value="rad"> Rad</label>
+                        </div>
+                        <span>Scientific Mode</span>
+                    </div>
+
+                    <div class="calc-keys">
+                        <!-- Row 1 -->
+                        <button class="btn func" onclick="calcFunc('sin')">sin</button>
+                        <button class="btn func" onclick="calcFunc('cos')">cos</button>
+                        <button class="btn func" onclick="calcFunc('tan')">tan</button>
+                        <button class="btn func" onclick="calcFunc('pi')">π</button>
+                        <button class="btn func" onclick="calcFunc('e')">e</button>
+                        <button class="btn clear" onclick="clearCalc()">AC</button>
+
+                        <!-- Row 2 -->
+                        <button class="btn func" onclick="calcFunc('asin')">sin⁻¹</button>
+                        <button class="btn func" onclick="calcFunc('acos')">cos⁻¹</button>
+                        <button class="btn func" onclick="calcFunc('atan')">tan⁻¹</button>
+                        <button class="btn func" onclick="insert('^')">xʸ</button>
+                        <button class="btn func" onclick="calcFunc('sqrt')">√</button>
+                        <button class="btn op" onclick="insert('/')">÷</button>
+
+                        <!-- Row 3 -->
+                        <button class="btn func" onclick="calcFunc('ln')">ln</button>
+                        <button class="btn func" onclick="calcFunc('log')">log</button>
+                        <button class="btn num" onclick="insert(7)">7</button>
+                        <button class="btn num" onclick="insert(8)">8</button>
+                        <button class="btn num" onclick="insert(9)">9</button>
+                        <button class="btn op" onclick="insert('*')">×</button>
+
+                        <!-- Row 4 -->
+                        <button class="btn func" onclick="insert('(')">(</button>
+                        <button class="btn func" onclick="insert(')')">)</button>
+                        <button class="btn num" onclick="insert(4)">4</button>
+                        <button class="btn num" onclick="insert(5)">5</button>
+                        <button class="btn num" onclick="insert(6)">6</button>
+                        <button class="btn op" onclick="insert('-')">−</button>
+
+                        <!-- Row 5 -->
+                        <button class="btn func" onclick="calcFunc('1/x')">1/x</button>
+                        <button class="btn func" onclick="calcFunc('sq')">x²</button>
+                        <button class="btn num" onclick="insert(1)">1</button>
+                        <button class="btn num" onclick="insert(2)">2</button>
+                        <button class="btn num" onclick="insert(3)">3</button>
+                        <button class="btn op" onclick="insert('+')">+</button>
+
+                        <!-- Row 6 -->
+                        <button class="btn func" onclick="insert('E')">EXP</button>
+                        <button class="btn num" onclick="insert('.')">.</button>
+                        <button class="btn num zero" onclick="insert(0)">0</button>
+                        <button class="btn equal" onclick="calculate()">=</button>
+                    </div>
+                </div>
+
+                <button class="all-tools-btn" onclick="toggleModal()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Browse All Calculators
+                </button>
+            </div>
+
+            <!-- 2. Right Side: Hero Content & Search -->
+            <div class="hero-content">
+                <h1 class="hero-title">Free mortgage, tax and everyday calculators</h1>
+                <p class="hero-subtitle">Estimate your mortgage payment, sales tax, federal income tax, auto loan and retirement savings in US dollars, with health tools in pounds, feet and inches. Fast, free and private.</p>
+
+                <form class="search-container" id="searchForm" role="search">
+                    <input type="search" id="searchInput" class="search-input" placeholder="Search: mortgage, sales tax, 401(k), BMI…" aria-label="Search calculators" autocomplete="off">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+                <div class="popular"><span>Popular:</span><a href="calculators/mortgage-calculator.html">Mortgage</a><a href="calculators/sales-tax-calculator.html">Sales Tax</a><a href="calculators/tax-calculator.html">Income Tax</a><a href="calculators/auto-loan-calculator.html">Auto Loan</a><a href="calculators/retirement-calculator.html">401(k) &amp; Retirement</a><a href="calculators/salary-calculator.html">Salary</a><a href="calculators/bmi-calculator.html">BMI</a><a href="calculators/percent-calculator.html">Percentage</a></div>
+            </div>
+
+        </div>
+
+        <!-- 3. Category Grid -->
+        <div class="category-section" id="categories">
+            <h2 class="section-heading">Browse by Category</h2>
+
+            <div class="grid-layout">
+                <!-- Financial Card -->
+                <article class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Mortgage, Loans &amp; Taxes</h3>
+                    <p class="card-desc">Home and car payments, sales tax, federal income tax and retirement savings, all in US dollars.</p>
+                    <ul>
+                        <li data-kw="home loan house payment pmi property tax"><a href="calculators/mortgage-calculator.html">Mortgage Calculator</a></li>
+                        <li data-kw="car loan vehicle payment"><a href="calculators/auto-loan-calculator.html">Auto Loan Calculator</a></li>
+                        <li data-kw="state sales tax purchase"><a href="calculators/sales-tax-calculator.html">Sales Tax Calculator</a></li>
+                        <li data-kw="irs 1040 tax brackets income tax"><a href="calculators/tax-calculator.html">Federal Income Tax Calculator</a></li>
+                        <li data-kw="401k 401(k) ira savings"><a href="calculators/retirement-calculator.html">Retirement Calculator (401(k)/IRA)</a></li>
+                        <li data-kw="paycheck hourly wage pay raise"><a href="calculators/salary-calculator.html">Salary Calculator</a></li>
+                        <li data-kw="personal loan student loan"><a href="calculators/loan-calculator.html">Loan Calculator</a></li>
+                        <li data-kw="monthly payment"><a href="calculators/payment-calculator.html">Payment Calculator</a></li>
+                        <li data-kw="payoff schedule"><a href="calculators/amortization-calculator.html">Amortization Calculator</a></li>
+                        <li data-kw="simple interest"><a href="calculators/interest-calculator.html">Interest Calculator</a></li>
+                        <li data-kw="savings growth apy"><a href="calculators/compound-interest-calculator.html">Compound Interest Calculator</a></li>
+                        <li data-kw="returns portfolio"><a href="calculators/investment-calculator.html">Investment Calculator</a></li>
+                        <li data-kw="cpi purchasing power"><a href="calculators/inflation-calculator.html">Inflation Calculator</a></li>
+                        <li data-kw="apr rate"><a href="calculators/interest-rate-calculator.html">Interest Rate Calculator</a></li>
+                        <li data-kw="time value of money tvm"><a href="calculators/finance-calculator.html">Finance Calculator</a></li>
+                        <li data-kw="private mortgage insurance down payment 20 percent home loan"><a href="calculators/pmi-calculator.html">PMI Calculator</a></li>
+                        <li data-kw="dividend income drip yield reinvest stocks passive income"><a href="calculators/dividend-calculator.html">Dividend Calculator</a></li>
+                        <li data-kw="capitalization rate noi rental property real estate investing"><a href="calculators/cap-rate-calculator.html">Cap Rate Calculator</a></li>
+                        <li data-kw="federal tax brackets marginal rate effective rate irs 2026 filing status"><a href="calculators/tax-bracket-calculator.html">Tax Bracket Calculator</a></li>
+                        <li data-kw="stocks crypto real estate sale profit long-term short-term niit 15 percent"><a href="calculators/capital-gains-tax-calculator.html">Capital Gains Tax Calculator</a></li>
+                        <li data-kw="ctc actc dependents kids refund 2200 family tax credit"><a href="calculators/child-tax-credit-calculator.html">Child Tax Credit Calculator</a></li>
+                        <li data-kw="home buying cash to close escrow title fees lender fees fha va"><a href="calculators/closing-cost-calculator.html">Closing Cost Calculator</a></li>
+                        <li data-kw="real estate tax mill rate assessed value homestead exemption state rates"><a href="calculators/property-tax-calculator.html">Property Tax Calculator</a></li>
+                        <li data-kw="EITC earned income credit refundable low income working families children tax credit 2026"><a href="calculators/eitc-calculator.html">Earned Income Tax Credit (EITC) Calculator</a></li>
+                        <li data-kw="powerball mega millions jackpot winnings lump sum annuity federal state withholding"><a href="calculators/lottery-tax-calculator.html">Lottery Tax Calculator (Powerball / Mega Millions)</a></li>
+                        <li data-kw="vehicle tax trade-in credit state local dmv registration buy car"><a href="calculators/car-sales-tax-calculator.html">Car Sales Tax Calculator</a></li>
+                        <li data-kw="how much car can i afford 20/4/10 rule auto loan budget income apr"><a href="calculators/car-affordability-calculator.html">Car Affordability Calculator</a></li>
+                        <li data-kw="irs refund owe withholding 1040 tips overtime senior deduction standard deduction 2026"><a href="calculators/tax-refund-estimator.html">Federal Tax Refund Estimator</a></li>
+                    </ul>
+                </article>
+
+                <!-- Fitness Card -->
+                <article class="card">
+                    <div class="card-icon">❤️</div>
+                    <h3>Fitness &amp; Health</h3>
+                    <p class="card-desc">BMI, calories, macros and body composition in pounds, feet and inches.</p>
+                    <ul>
+                        <li><a href="calculators/bmi-calculator.html">BMI Calculator</a></li>
+                        <li><a href="calculators/calorie-calculator.html">Calorie Calculator</a></li>
+                        <li><a href="calculators/body-fat-calculator.html">Body Fat Calculator</a></li>
+                        <li><a href="calculators/bmr-calculator.html">BMR Calculator</a></li>
+                        <li><a href="calculators/ideal-weight-calculator.html">Ideal Weight Calculator</a></li>
+                        <li><a href="calculators/pace-calculator.html">Pace Calculator</a></li>
+                        <li><a href="calculators/pregnancy-calculator.html">Pregnancy Calculator</a></li>
+                        <li><a href="calculators/pregnancy-conception-calculator.html">Pregnancy Conception Calculator</a></li>
+                        <li><a href="calculators/due-date-calculator.html">Due Date Calculator</a></li>
+                        <li><a href="calculators/macro-calculator.html">Macro Calculator</a></li>
+                        <li><a href="calculators/pregnancy-weight-gain-calculator.html">Pregnancy Weight Gain Calculator</a></li>
+                        <li><a href="calculators/army-body-fat-calculator.html">Army Body Fat Calculator</a></li>
+                        <li><a href="calculators/carbohydrate-calculator.html">Carbohydrate Calculator</a></li>
+                        <li><a href="calculators/lean-body-mass-calculator.html">Lean Body Mass Calculator</a></li>
+                        <li><a href="calculators/healthy-weight-calculator.html">Healthy Weight Calculator</a></li>
+                        <li><a href="calculators/calories-burned-calculator.html">Calories Burned Calculator</a></li>
+                        <li><a href="calculators/one-rep-max-calculator.html">One Rep Max Calculator</a></li>
+                        <li><a href="calculators/target-heart-rate-calculator.html">Target Heart Rate Calculator</a></li>
+                        <li><a href="calculators/protein-calculator.html">Protein Calculator</a></li>
+                        <li><a href="calculators/fat-intake-calculator.html">Fat Intake Calculator</a></li>
+                        <li><a href="calculators/tdee-calculator.html">TDEE Calculator</a></li>
+                        <li><a href="calculators/ovulation-calculator.html">Ovulation Calculator</a></li>
+                        <li><a href="calculators/conception-calculator.html">Conception Calculator</a></li>
+                        <li><a href="calculators/period-calculator.html">Period Calculator</a></li>
+                        <li><a href="calculators/gfr-calculator.html">GFR Calculator</a></li>
+                        <li><a href="calculators/body-type-calculator.html">Body Type Calculator</a></li>
+                        <li><a href="calculators/body-surface-area-calculator.html">Body Surface Area Calculator</a></li>
+                        <li><a href="calculators/bac-calculator.html">BAC Calculator</a></li>
+                        <li><a href="calculators/overweight-calculator.html">Overweight Calculator</a></li>
+                    </ul>
+                </article>
+
+                <!-- Math Card -->
+                <article class="card">
+                    <div class="card-icon">📐</div>
+                    <h3>Math</h3>
+                    <p class="card-desc">Percentages, fractions, scientific math and statistics.</p>
+                    <ul>
+                        <li><a href="calculators/scientific-calculator.html">Scientific Calculator</a></li>
+                        <li><a href="calculators/fraction-calculator.html">Fraction Calculator</a></li>
+                        <li><a href="calculators/percent-calculator.html">Percentage Calculator</a></li>
+                        <li><a href="calculators/random-number-generator.html">Random Number Generator</a></li>
+                        <li><a href="calculators/triangle-calculator.html">Triangle Calculator</a></li>
+                        <li><a href="calculators/standard-deviation-calculator.html">Standard Deviation</a></li>
+                        <li data-kw="percent increase percent decrease difference growth"><a href="calculators/percent-change-calculator.html">Percent Change Calculator</a></li>
+                    </ul>
+                </article>
+
+                <!-- Other Card -->
+                <article class="card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Other Tools</h3>
+                    <p class="card-desc">Age, dates, time, GPA and US customary unit conversions.</p>
+                    <ul>
+                        <li><a href="calculators/age-calculator.html">Age Calculator</a></li>
+                        <li><a href="calculators/date-calculator.html">Date Calculator</a></li>
+                        <li><a href="calculators/time-calculator.html">Time Calculator</a></li>
+                        <li><a href="calculators/hours-calculator.html">Hours Calculator</a></li>
+                        <li><a href="calculators/gpa-calculator.html">GPA Calculator</a></li>
+                        <li><a href="calculators/grade-calculator.html">Grade Calculator</a></li>
+                        <li><a href="calculators/concrete-calculator.html">Concrete Calculator</a></li>
+                        <li><a href="calculators/ip-subnet-calculator.html">IP Subnet Calculator</a></li>
+                        <li><a href="calculators/password-generator.html">Random Password Generator</a></li>
+                        <li data-kw="units inches feet pounds fahrenheit gallons"><a href="calculators/conversion-calculator.html">Unit Conversion Calculator</a></li>
+                        <li data-kw="thanksgiving roast oven thaw stuffed recipe cooking"><a href="calculators/turkey-cooking-time-calculator.html">Turkey Cooking Time Calculator</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+
+        <div class="category-section" id="guides">
+            <h2 class="section-heading">Guides &amp; Taxes by State</h2>
+            <div class="grid-layout">
+                <article class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Topic Guides</h3>
+                    <p class="card-desc">Every calculator on a subject, with short guidance on how to use them.</p>
+                    <ul>
+                        <li data-kw="home buying mortgage pmi closing"><a href="topics/home-buying-calculators.html">Home Buying Calculators</a></li>
+                        <li data-kw="tax irs refund credits"><a href="topics/tax-calculators.html">US Tax Calculators</a></li>
+                        <li data-kw="loans investing retirement"><a href="topics/loans-and-investing-calculators.html">Loan &amp; Investing Calculators</a></li>
+                        <li data-kw="health fitness pregnancy bmi"><a href="topics/health-and-fitness-calculators.html">Health &amp; Fitness Calculators</a></li>
+                        <li data-kw="math time school everyday"><a href="topics/everyday-calculators.html">Everyday Calculators</a></li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>Taxes by State</h3>
+                    <p class="card-desc">2026 sales tax and property tax for all 50 states, with a calculator for each.</p>
+                    <ul>
+                        <li data-kw="sales tax state rates"><a href="states/sales-tax-by-state.html">Sales Tax by State</a></li>
+                        <li data-kw="property tax state rates"><a href="states/property-tax-by-state.html">Property Tax by State</a></li>
+                        <li data-kw="texas"><a href="states/texas-sales-tax-calculator.html">Texas Sales Tax Calculator</a></li>
+                        <li data-kw="california"><a href="states/california-sales-tax-calculator.html">California Sales Tax Calculator</a></li>
+                        <li data-kw="florida"><a href="states/florida-property-tax-calculator.html">Florida Property Tax Calculator</a></li>
+                        <li data-kw="new york"><a href="states/new-york-sales-tax-calculator.html">New York Sales Tax Calculator</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modalOverlay" class="modal-overlay" onclick="toggleModal()">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="event.stopPropagation()">
+            <div class="modal-head">
+                <h2 id="modalTitle">All Calculators</h2>
+                <button class="modal-close" onclick="toggleModal()" aria-label="Close">&times;</button>
+            </div>
+            <div id="modalList"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Mx Calculator. Free calculators for the United States.</p>
+        <p style="margin-top:10px; font-size:0.85rem;">
+            <a href="privacy.html" style="color:var(--primary); text-decoration:none; margin:0 10px;">Privacy</a>
+            <a href="terms.html" style="color:var(--primary); text-decoration:none; margin:0 10px;">Terms</a>
+            <a href="states/sales-tax-by-state.html" style="color:var(--primary); text-decoration:none; margin:0 10px;">Sales tax by state</a>
+            <a href="states/property-tax-by-state.html" style="color:var(--primary); text-decoration:none; margin:0 10px;">Property tax by state</a>
+        </p>
+    </footer>
+    <script defer src="assets/js/home.js"></script>
+    <script defer src="assets/js/responsive.js"></script>
+</body>
+</html>
