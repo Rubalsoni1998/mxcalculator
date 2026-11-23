@@ -1,4 +1,4 @@
-name = "mx-calculator"
+name = "mxcalculator"
 main = "src/worker.js"
 compatibility_date = "2026-11-01"
 
@@ -33,7 +33,7 @@ ADMIN_USER = "admin"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "mx-calculator"
+database_name = "mxcalculator"
 database_id = "8f428a53-15c9-40dd-b6d2-eb33df0f87d5"
 migrations_dir = "migrations"
 
