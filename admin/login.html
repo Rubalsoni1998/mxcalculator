@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Sign in | Mx Calculator Admin</title>
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <form class="card login" id="form" autocomplete="on">
+      <div class="brand" style="padding:0"><span class="brand-mark">Mx</span><span>Mx Calculator<small>Admin panel</small></span></div>
+      <h1>Sign in</h1>
+      <p class="muted" style="margin:0 0 18px">Manage calculators and view visitor analytics.</p>
+      <div class="err hidden" id="err" role="alert"></div>
+      <div class="field"><label for="u">Username</label><input id="u" name="username" type="text" autocomplete="username" value="admin" required></div>
+      <div class="field"><label for="p">Password</label><input id="p" name="password" type="password" autocomplete="current-password" required autofocus></div>
+      <button class="btn primary" id="go" style="width:100%;justify-content:center;padding:10px">Sign in</button>
+    </form>
+  </div>
+  <script src="/admin/login.js"></script>
+</body>
+</html>
