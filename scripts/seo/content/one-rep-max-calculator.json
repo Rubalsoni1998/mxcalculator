@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Example: 200 lb for 5 Reps</h2>\n<p>If you lift 200 lb for 5 clean reps, the Epley formula (weight × (1 + reps ÷ 30)) gives an estimated one rep max of <strong>233 lb</strong>. The Brzycki formula (weight × 36 ÷ (37 − reps)) gives <strong>225 lb</strong>. Estimates differ by a few percent, and all are most reliable at 10 reps or fewer.</p>\n<h2>Turning 1RM Into a Training Plan</h2>\n<table><thead><tr><th>% of 1RM</th><th>Weight (using 233 lb)</th><th>Typical use</th></tr></thead><tbody><tr><td>85%</td><td>198 lb</td><td>Heavy sets, strength</td></tr><tr><td>75%</td><td>175 lb</td><td>Moderate sets, 8-10 reps</td></tr><tr><td>65%</td><td>152 lb</td><td>Higher reps, endurance</td></tr></tbody></table>\n<h2>Safety</h2>\n<ul><li>Estimating is safer than testing a true one-rep max, especially without a spotter.</li><li>Use sets you completed with good form; a grinding last rep skews the estimate.</li><li>Recalculate every few weeks as you get stronger.</li></ul>\n<p>Pair training with enough protein; see the <a href=\"protein-calculator.html\">protein calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "Which one rep max formula is the most accurate?",
+   "a": "No single formula is best for everyone. Epley and Brzycki are widely used and close to each other at low reps. Use the same formula consistently to track progress."
+  },
+  {
+   "q": "Is it safe to test a true 1RM?",
+   "a": "It carries more risk than submaximal sets. Use a spotter or safety bars and warm up thoroughly, or estimate from a lighter set instead."
+  },
+  {
+   "q": "Can beginners use a 1RM calculator?",
+   "a": "Yes, but form should come first. Estimates are less stable when technique is still changing."
+  }
+ ],
+ "sources": [],
+ "slug": "one-rep-max-calculator"
+}

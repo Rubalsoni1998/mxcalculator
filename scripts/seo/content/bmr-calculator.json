@@ -1,0 +1,32 @@
+{
+ "slug": "bmr-calculator",
+ "sections": "<h2>Two More Worked Examples</h2>\n<div class=\"example\"><p>Man, 40 years old, 178 cm, 80 kg. Mifflin-St Jeor: 10 \u00d7 80 + 6.25 \u00d7 178 \u2212 5 \u00d7 40 + 5 = 800 + 1,112.5 \u2212 200 + 5 = 1,717.5 calories per day.</p></div>\n<div class=\"example\"><p>Woman, 52 years old, 160 cm, 58 kg. 10 \u00d7 58 + 6.25 \u00d7 160 \u2212 5 \u00d7 52 \u2212 161 = 580 + 1,000 \u2212 260 \u2212 161 = 1,159 calories per day.</p></div>\n<p>Both results describe resting needs only. Your real daily burn will be several hundred calories higher once you add movement and food digestion.</p>\n<h2>Which Equation to Trust</h2>\n<p>Mifflin-St Jeor is widely used in clinical nutrition because it has held up well for people across a range of body sizes. Katch-McArdle can be more accurate for very lean or very muscular people, but only if your body fat percentage is reliable. A poor body fat estimate produces a poor Katch-McArdle result, so if you only have a rough guess, the Mifflin-St Jeor number is usually the safer choice. The two methods can differ by 100 to 200 calories, which is normal.</p>\n<h2>Common Mistakes</h2>\n<ul>\n<li><strong>Eating exactly your BMR to lose weight.</strong> BMR is a floor for the body's basic work, not a diet target. Very low intakes can cost muscle and nutrients.</li>\n<li><strong>Treating it as exact.</strong> Measured resting metabolic rate varies from person to person even after accounting for age, sex, height and weight. Use the figure as a starting estimate and adjust based on real results over several weeks.</li>\n<li><strong>Mixing units.</strong> Mifflin-St Jeor expects kilograms and centimeters. Converting pounds and inches incorrectly is a common cause of results that look far off.</li>\n<li><strong>Using an old weight.</strong> After a significant weight change, recalculate. BMR drops as body mass drops.</li>\n</ul>\n<h2>BMR, RMR and Why Labs Differ</h2>\n<p>Strictly, BMR is measured after sleep, fasting and complete rest in a thermoneutral room. Resting metabolic rate (RMR) is measured under looser conditions and is typically a little higher. Most equations, including those here, are really predicting RMR. If you want a measured value, some clinics and university labs offer indirect calorimetry, which measures oxygen use and carbon dioxide output.</p>\n<h2>Turning BMR Into a Plan</h2>\n<p>Take your BMR to the <a href=\"tdee-calculator.html\">TDEE calculator</a> to include activity, or use the <a href=\"calorie-calculator.html\">calorie calculator</a> to see targets for loss or gain. Thyroid conditions, medicines and pregnancy can change energy needs, so talk with a clinician or registered dietitian if your results and real-world weight trends do not match.</p><h2>How Age Changes the Result</h2>\n<p>In Mifflin-St Jeor, every extra year of age subtracts 5 calories from the daily estimate. Everything else equal, the 40-year-old man above would have a BMR about 50 calories higher at age 30, and about 50 calories lower at age 50. The decline is partly a loss of muscle, which is why staying active and doing strength work in midlife and later helps protect resting energy needs.</p>",
+ "extra_faqs": [
+  {
+   "q": "Is a higher BMR better?",
+   "a": "A higher BMR means your body uses more energy at rest, which gives you more room in your calorie budget. It is not a health score by itself. It mostly reflects body size, muscle mass, age and sex."
+  },
+  {
+   "q": "Can I increase my BMR?",
+   "a": "Building muscle through resistance training raises resting energy use modestly, since muscle tissue costs more energy than fat. Large boosts are unrealistic, and extreme dieting can lower BMR. Supplements marketed to raise metabolism have little reliable support."
+  },
+  {
+   "q": "Why is my BMR lower than my friend's?",
+   "a": "BMR depends on body size, muscle mass, age and sex. A smaller, older or less muscular person will usually have a lower BMR than a larger, younger or more muscular one, even with similar habits. Genetics also play a part."
+  },
+  {
+   "q": "Should I eat below my BMR to lose weight?",
+   "a": "Eating below BMR is generally not recommended without medical supervision. Aim for a moderate deficit below your total daily energy expenditure instead, and do not drop under commonly cited minimums of 1,200 calories for women or 1,500 for men unless a clinician advises it."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NIDDK: Healthy living and weight management",
+   "url": "https://www.niddk.nih.gov/"
+  },
+  {
+   "title": "Dietary Guidelines for Americans",
+   "url": "https://www.dietaryguidelines.gov/"
+  }
+ ]
+}

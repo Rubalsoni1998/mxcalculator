@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Handy Exact Conversions</h2>\n<table><thead><tr><th>Unit</th><th>Equals</th></tr></thead><tbody><tr><td>1 inch</td><td>2.54 cm (exact)</td></tr><tr><td>1 mile</td><td>1.609344 km (exact)</td></tr><tr><td>1 pound</td><td>0.45359237 kg (exact)</td></tr><tr><td>1 US gallon</td><td>3.785411784 L (exact)</td></tr></tbody></table>\n<h2>Temperature</h2>\n<p>°F = °C × 9/5 + 32. So 22.2°C = 72°F, and 0°C = 32°F. To go the other way, °C = (°F − 32) × 5/9: 72°F = 22.2°C.</p>\n<h2>Watch for US vs. Imperial Units</h2>\n<ul><li>The US gallon (3.785 L) is smaller than the imperial gallon (4.546 L).</li><li>US fluid ounces differ slightly from imperial ones.</li><li>The \"ton\" can mean short ton (2,000 lb, US), long ton or metric tonne.</li></ul>\n<p>NIST publishes official conversion factors for the US. For measuring materials, see the <a href=\"concrete-calculator.html\">concrete calculator</a>; for running speeds, the <a href=\"pace-calculator.html\">pace calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many centimeters are in an inch?",
+   "a": "Exactly 2.54 centimeters."
+  },
+  {
+   "q": "How do I convert pounds to kilograms?",
+   "a": "Multiply pounds by 0.45359237. For example, 150 lb is about 68.04 kg."
+  },
+  {
+   "q": "Why are US and UK gallons different?",
+   "a": "They come from different historical definitions: the US gallon is based on the old wine gallon, and the imperial gallon on the volume of 10 pounds of water."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NIST: Weights and measures",
+   "url": "https://www.nist.gov/pml/owm"
+  }
+ ],
+ "slug": "conversion-calculator"
+}

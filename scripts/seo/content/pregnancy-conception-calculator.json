@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: From a Conception Date</h2>\n<p>If conception happened on January 24, 2026, the estimated due date is 266 days later: <strong>October 17, 2026</strong>. That is the same date as counting 280 days from an LMP of January 10, 2026 in a 28-day cycle.</p>\n<h2>Gestational Age vs. Fetal Age</h2>\n<p>Providers state pregnancy length as gestational age, counted from the LMP, so a pregnancy is already about two weeks along at conception. The baby's actual (fetal) age is about two weeks younger. This is why your doctor says \"8 weeks\" when conception was about 6 weeks ago.</p>\n<h2>When Dates Do Not Match</h2>\n<ul><li>If you know your conception date from IVF or ovulation tracking, it can be more accurate than the LMP.</li><li>Large differences between methods are usually settled by an ultrasound.</li></ul>\n<p>Compare results with the <a href=\"due-date-calculator.html\">due date calculator</a> and the <a href=\"pregnancy-calculator.html\">pregnancy calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I calculate a due date from conception?",
+   "a": "Add 266 days (38 weeks) to the conception date."
+  },
+  {
+   "q": "Why is my pregnancy \"two weeks\" longer than the conception date suggests?",
+   "a": "Gestational age starts at the last period, about two weeks before conception."
+  },
+  {
+   "q": "Is conception date the same as the day of intercourse?",
+   "a": "Not always. Sperm can survive for days, so conception may occur several days after intercourse."
+  }
+ ],
+ "sources": [
+  {
+   "title": "ACOG: Patient resources on pregnancy",
+   "url": "https://www.acog.org/"
+  }
+ ],
+ "slug": "pregnancy-conception-calculator"
+}

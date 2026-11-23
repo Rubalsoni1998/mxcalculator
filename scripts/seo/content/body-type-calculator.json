@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: Waist-to-Hip Ratio</h2>\n<p>Waist-to-hip ratio is waist circumference divided by hip circumference. A 32-inch waist with 40-inch hips gives <strong>0.80</strong>. A 38-inch waist with 40-inch hips gives <strong>0.95</strong>. The World Health Organization lists a ratio of 0.90 or higher for men and 0.85 or higher for women as a marker of abdominal obesity.</p>\n<h2>How to Measure</h2>\n<ul><li>Measure waist at the narrowest point, or at the midpoint between the lowest rib and the top of the hip bone.</li><li>Measure hips at the widest part of the buttocks.</li><li>Stand relaxed, with the tape level and snug.</li></ul>\n<h2>What Body Shape Tells You</h2>\n<p>Shape labels like \"apple\" or \"pear\" describe where weight tends to be carried. They are not diagnoses. Fat around the abdomen is linked with higher health risk than fat on the hips and thighs, which is why waist measures are useful alongside BMI. See the <a href=\"bmi-calculator.html\">BMI calculator</a> and <a href=\"body-fat-calculator.html\">body fat calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "What is a healthy waist-to-hip ratio?",
+   "a": "The WHO cites below 0.90 for men and below 0.85 for women as lower-risk. Individual risk depends on other factors too."
+  },
+  {
+   "q": "Can I change my body shape?",
+   "a": "Genetics largely set where fat is stored, but overall fat loss and strength training can change measurements."
+  },
+  {
+   "q": "Is WHR better than BMI?",
+   "a": "They measure different things. WHR reflects fat distribution, while BMI compares weight with height. Using both gives a fuller picture."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NIDDK: Health information",
+   "url": "https://www.niddk.nih.gov/"
+  }
+ ],
+ "slug": "body-type-calculator"
+}

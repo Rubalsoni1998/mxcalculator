@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: Male, 70 in Tall</h2>\n<p>Take a man who is 70 inches tall with a 15.5 in neck and a 34 in waist (measured at the navel). The tape formula, 86.010 × log10(waist − neck) − 70.041 × log10(height) + 36.76, gives about <strong>16.5%</strong> body fat. If the waist were 32 in, the result would be about <strong>12.2%</strong>, so a two-inch change in the waist moves the estimate by roughly 4.3 points.</p>\n<h2>Measuring Correctly</h2>\n<ul><li>Measure the neck just below the larynx, with the tape sloping slightly downward.</li><li>Measure the waist at the navel for men; women's formulas also use hip circumference.</li><li>Keep the tape snug but not compressing the skin, and exhale normally.</li><li>Take each measurement three times and use the average.</li></ul>\n<h2>What the Result Means</h2>\n<p>The tape test is a screening estimate and can differ from DEXA or other direct methods by several percentage points. Official standards depend on age and sex and are set by the branch of service, so check the current regulation rather than relying on a general calculator. For a civilian view, see the <a href=\"body-fat-calculator.html\">body fat calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "Is the Army tape test accurate?",
+   "a": "It is a quick estimate. Accuracy depends on measuring technique and can differ from direct methods by several percentage points."
+  },
+  {
+   "q": "What measurements do women need for the tape test?",
+   "a": "Women are measured at the neck, waist and hips, in addition to height. Always confirm the current method in the official regulation."
+  },
+  {
+   "q": "Can muscle affect the tape result?",
+   "a": "The formula only uses circumferences, so a thick neck and a thin waist lower the estimate, while a larger waist raises it regardless of muscle."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NHLBI: Healthy weight resources",
+   "url": "https://www.nhlbi.nih.gov/"
+  }
+ ],
+ "slug": "army-body-fat-calculator"
+}

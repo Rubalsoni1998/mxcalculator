@@ -1,0 +1,32 @@
+{
+ "slug": "sales-tax-calculator",
+ "sections": "<h2>Why the Rate on Your Receipt Is a Combined Rate</h2>\n<p>The United States has no federal sales tax. Sales tax is set by states, and many counties, cities and special districts add their own on top. The rate you pay is the sum of all of them, and it can differ between two addresses a few miles apart. Some states charge no statewide sales tax, though local taxes may still apply. For the exact rate, check your state revenue department, or look at a recent receipt from the same store.</p>\n<h2>Worked Examples</h2>\n<div class=\"example\"><p><strong>Adding tax:</strong> A $249.99 item at 7.25 percent carries $18.12 of tax, so the total is <strong>$268.11</strong>. Sales tax is normally rounded to the nearest cent.</p></div>\n<div class=\"example\"><p><strong>Working backward:</strong> You paid $53.70 and know the rate was 7.5 percent. The pre-tax price is 53.70 ÷ 1.075 = <strong>$49.95</strong>, and the tax was $3.75. Dividing by 1.075 is correct; subtracting 7.5 percent of $53.70 is not, because the tax was calculated on the smaller base.</p></div>\n<div class=\"example\"><p><strong>Discount order:</strong> A $100 item at 20 percent off with 8.25 percent tax costs $80 + $6.60 = <strong>$86.60</strong>. Stores generally apply the store discount before tax, so the discount also reduces the tax.</p></div>\n<h2>What Is and Is Not Taxed</h2>\n<ul>\n<li><strong>Often exempt:</strong> Many states exempt groceries, prescription drugs or clothing, but the exact list varies widely.</li>\n<li><strong>Services:</strong> Some states tax certain services, others tax almost none.</li>\n<li><strong>Coupons and rebates:</strong> A store coupon usually lowers the taxable price. A manufacturer coupon may not, depending on state rules.</li>\n<li><strong>Online purchases:</strong> Most states now require online sellers to collect tax based on where the item is delivered.</li>\n</ul>\n<h2>Common Mistakes</h2>\n<p>Using the wrong rate is the biggest one. A state rate alone understates the total in most places. Another is forgetting that business buyers may be able to purchase tax-free for resale with a valid certificate. For vehicles, rules often differ, so see the <a href=\"car-sales-tax-calculator.html\">car sales tax calculator</a>. For tax on property rather than purchases, use the <a href=\"property-tax-calculator.html\">property tax calculator</a>. For a general discount, the <a href=\"percent-calculator.html\">percentage calculator</a> is useful.</p>",
+ "extra_faqs": [
+  {
+   "q": "Which states have no sales tax?",
+   "a": "Alaska, Delaware, Montana, New Hampshire and Oregon do not have a statewide sales tax. Alaska allows local sales taxes in some areas, and Montana has local resort taxes. Rules change, so confirm with your state's revenue department."
+  },
+  {
+   "q": "Is sales tax calculated before or after a discount?",
+   "a": "In most cases tax is calculated on the discounted price, so a store discount lowers the tax too. Manufacturer coupons may be treated differently in some states. Check the receipt to see how the store applied it."
+  },
+  {
+   "q": "How do I find the sales tax rate for my address?",
+   "a": "Look at your state department of revenue website, many of which offer rate lookup tools by address. A recent receipt from a local store also shows the combined rate. Rates can differ by city, county and district."
+  },
+  {
+   "q": "Do I pay sales tax on online orders?",
+   "a": "Usually yes. Since a 2018 Supreme Court decision, most states require large online sellers to collect tax based on the delivery address. If a seller does not collect it, some states expect you to report use tax yourself."
+  }
+ ],
+ "sources": [
+  {
+   "title": "US Census Bureau",
+   "url": "https://www.census.gov/"
+  },
+  {
+   "title": "IRS: Information for individuals",
+   "url": "https://www.irs.gov/individuals"
+  }
+ ]
+}

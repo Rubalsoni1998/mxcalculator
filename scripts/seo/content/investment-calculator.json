@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: $10,000 Plus $500 a Month</h2>\n<p>Start with $10,000 and add $500 every month for 20 years, with returns compounded monthly. Total contributions are $130,000. The ending balance depends heavily on the return you assume:</p>\n<table><thead><tr><th>Annual return</th><th>Ending balance</th><th>Growth beyond contributions</th></tr></thead><tbody><tr><td>5%</td><td>$232,643</td><td>$102,643</td></tr><tr><td>7%</td><td>$300,851</td><td>$170,851</td></tr><tr><td>9%</td><td>$394,035</td><td>$264,035</td></tr></tbody></table>\n<p>These are illustrations, not forecasts. Real returns vary from year to year and are never guaranteed.</p>\n<h2>Adjusting for Inflation</h2>\n<p>At a 7% nominal return and 3% inflation, the real return is about 3.9%, and the same plan is worth roughly <strong>$202,721</strong> in today's dollars. Use the inflation field in the calculator to see this directly, or read about the effect on the <a href=\"inflation-calculator.html\">inflation calculator</a> page.</p>\n<h2>What Moves the Result Most</h2>\n<ul><li><strong>Time.</strong> Starting earlier does more than saving more later, because growth compounds on earlier growth.</li><li><strong>Contributions.</strong> Regular deposits are the part you control.</li><li><strong>Fees.</strong> A fund charging 1% a year takes a meaningful share of long-term growth.</li><li><strong>Taxes.</strong> Taxable accounts, 401(k)s and IRAs are taxed differently. See the <a href=\"capital-gains-tax-calculator.html\">capital gains tax calculator</a> for taxable accounts.</li></ul>",
+ "extra_faqs": [
+  {
+   "q": "How much will $500 a month grow to?",
+   "a": "With monthly compounding at 7% for 20 years and no starting balance, $500 a month grows to about $260,463. Change the return, years and starting amount in the calculator to see your own figure."
+  },
+  {
+   "q": "What return should I assume?",
+   "a": "Use a range rather than one number, for example 4%, 6% and 8%. Long-term returns depend on what you hold, and past results do not guarantee future ones."
+  },
+  {
+   "q": "Is the result before or after tax?",
+   "a": "It is before tax unless you account for it. Taxes depend on the account type and your bracket, so treat the result as a pre-tax estimate."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Investor.gov: Compound interest calculator",
+   "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+  }
+ ],
+ "slug": "investment-calculator"
+}

@@ -1,0 +1,23 @@
+{
+ "slug": "random-number-generator",
+ "sections": "<h2>How the Numbers Are Produced</h2>\n<p>Each draw takes one 32-bit value from <code>crypto.getRandomValues</code> and scales it into your range. For whole numbers, the result is the minimum plus a random offset, and both ends of the range are included. A range of 1 to 6 can return 1 and 6. The scaling leaves an unevenness smaller than the range divided by about 4.3 billion, which is invisible for any range you would normally use.</p>\n<p>The decimal option returns values rounded to two decimal places. If you enter a decimal minimum or maximum while whole numbers are selected, the tool rounds the minimum up and the maximum down. A count can be anywhere from 1 to 1,000, and with no repeats you cannot ask for more numbers than the range contains.</p>\n<h2>Worked Examples</h2>\n<p><strong>Picking a winner.</strong> Number your entries 1 to N in a spreadsheet, then generate one number in that range. If 250 people entered, use 1 to 250 and count 1.</p>\n<p><strong>Rolling dice.</strong> Set 1 to 6 and generate two numbers with repeats allowed. There are 36 possible ordered results, and each has the same 1 in 36 chance, including a double six.</p>\n<p><strong>Lottery-style picks.</strong> A 6-of-49 game has 13,983,816 possible combinations. Choosing 1 to 49 with six numbers and no repeats gives one of them. Every combination, including 1-2-3-4-5-6, is equally likely, so a pattern is no better or worse than a scattered pick. The tool cannot raise your odds. For tax treatment of winnings, see the <a href=\"lottery-tax-calculator.html\">lottery tax calculator</a>.</p>\n<h2>Repeats, Sampling and Fairness</h2>\n<p>Allowing repeats is drawing with replacement, like rolling a die again. Turning repeats off is drawing without replacement, like pulling raffle tickets from a hat. Choose with replacement for independent events, and without replacement when each item can be chosen only once, such as selecting survey respondents from a numbered list.</p>\n<p>True randomness has streaks. Seeing 4 three times in a row does not mean the next number is \"due\" to change. Each draw is independent. If you want to describe how spread out a batch of results is, the <a href=\"standard-deviation-calculator.html\">standard deviation calculator</a> can help.</p>\n<h2>When Not to Rely on It</h2>\n<ul>\n<li><strong>Official drawings.</strong> Sweepstakes, raffles and promotions are regulated in many states, and the rules can cover registration, odds disclosure and who may run a drawing. Check state and platform rules. A fair generator does not make a promotion legal.</li>\n<li><strong>Passwords and keys.</strong> The randomness source is strong, but numbers shown on screen are not a secure way to create credentials. Use the <a href=\"password-generator.html\">password generator</a>.</li>\n<li><strong>Repeatable results.</strong> There is no seed option, so you cannot reproduce a run. If you need an auditable draw, record the numbers when you generate them.</li>\n</ul>",
+ "extra_faqs": [
+  {
+   "q": "Is this random number generator truly random?",
+   "a": "It uses your browser's cryptographically secure random source, which is suitable for games, drawings and sampling. Strictly, it is a high-quality pseudorandom generator seeded from unpredictable system data, not a physical random process."
+  },
+  {
+   "q": "How do I pick a random winner from a list?",
+   "a": "Number each entry from 1 to N, set the minimum to 1 and the maximum to N, and generate one number. For several winners, ask for that many numbers with no repeats so nobody wins twice."
+  },
+  {
+   "q": "What does no repeats mean in a random number generator?",
+   "a": "No repeats means each number can appear only once in a batch, like drawing tickets without putting them back. It requires the range to hold at least as many different whole numbers as you request."
+  },
+  {
+   "q": "Can the same number come up twice in a row?",
+   "a": "Yes, when repeats are allowed. Each draw is independent, so a repeat is as likely as any other specific value. With 1 to 10, the chance the next number matches the previous one is 1 in 10."
+  }
+ ],
+ "sources": []
+}

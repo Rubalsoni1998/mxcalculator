@@ -1,0 +1,32 @@
+{
+ "slug": "body-fat-calculator",
+ "sections": "<h2>Navy Method Example in Inches</h2>\n<div class=\"example\"><p>Man: 70 in tall, 34 in waist, 15.5 in neck. Waist minus neck is 18.5 in. The Navy equation gives 86.010 \u00d7 log10(18.5) \u2212 70.041 \u00d7 log10(70) + 36.76 = about 16.5 percent body fat.</p></div>\n<div class=\"example\"><p>Woman: 65 in tall, 30 in waist, 40 in hips, 13 in neck. Waist plus hips minus neck is 57 in. The equation gives 163.205 \u00d7 log10(57) \u2212 97.684 \u00d7 log10(65) \u2212 78.387 = about 31.1 percent body fat.</p></div>\n<h2>Where to Place the Tape</h2>\n<ul>\n<li><strong>Neck:</strong> just below the larynx, sloping slightly downward toward the front. Do not flare your neck or shrug.</li>\n<li><strong>Waist (men):</strong> at the navel, relaxed, after a normal breath out.</li>\n<li><strong>Waist (women):</strong> at the narrowest point of the torso, usually above the navel.</li>\n<li><strong>Hips (women):</strong> at the widest point around the buttocks.</li>\n</ul>\n<p>A half-inch error at the waist can move the result by roughly a percentage point or more, so consistency matters more than perfection. Use the same tape, same spots and same time of day.</p>\n<h2>Comparing Body Fat Methods</h2>\n<table><thead><tr><th>Method</th><th>What it needs</th><th>Typical limitation</th></tr></thead><tbody>\n<tr><td>Tape (Navy)</td><td>Tape measure</td><td>Misses fat distribution differences</td></tr>\n<tr><td>Skinfold calipers</td><td>Calipers, trained tester</td><td>Depends heavily on technique</td></tr>\n<tr><td>Bioelectrical impedance</td><td>Scale or handheld device</td><td>Swings with hydration</td></tr>\n<tr><td>DEXA scan</td><td>Clinic or imaging center</td><td>Cost and access; still an estimate</td></tr>\n</tbody></table>\n<h2>What Your Number Means for Health</h2>\n<p>Both too little and too much body fat carry risks. Essential fat is needed for hormones, organ protection and temperature control, and women need more of it than men. Higher body fat, especially around the abdomen, is linked with greater risk of type 2 diabetes and cardiovascular disease. Track the trend over months rather than reacting to one reading, and pair it with the <a href=\"bmi-calculator.html\">BMI calculator</a> or <a href=\"lean-body-mass-calculator.html\">lean body mass calculator</a> for context.</p>\n<p>Because every method has error, a doctor can interpret your number alongside blood pressure, lab values and family history.</p><h2>Common Mistakes</h2>\n<ul><li><strong>Pulling the tape tight.</strong> Compressing the skin lowers the waist reading and understates body fat.</li>\n<li><strong>Measuring after a large meal or workout.</strong> Bloating and a muscle pump change circumferences.</li>\n<li><strong>Chasing a very low number.</strong> Going below the essential fat range can disrupt hormones, bone health and energy. It is not a goal for most people.</li>\n<li><strong>Comparing different methods.</strong> A tape result and a scale-based result are not interchangeable. Pick one method for tracking.</li></ul>\n<h2>Habits That Make Tape Results Reliable</h2>\n<ol><li>Pick one time of day, ideally the morning, and stick to it.</li>\n<li>Take each measurement two or three times and average them.</li>\n<li>Record the numbers in a notebook rather than just the final percentage, so you can spot a measuring slip.</li>\n<li>Recheck every two to four weeks, not daily, since real change in body fat is slow.</li></ol>\n<p>If your waist shrinks while weight stays flat, that usually points to fat loss with some muscle gain, which the scale alone would miss.</p>",
+ "extra_faqs": [
+  {
+   "q": "How accurate is the tape measure body fat method?",
+   "a": "It is a reasonable estimate for most adults but can be off by several percentage points compared with a DEXA scan. It is most useful for tracking change over time when you measure the same way each time."
+  },
+  {
+   "q": "What is a healthy body fat percentage for my age?",
+   "a": "Healthy ranges rise gradually with age and are higher for women than men. As a rough guide, many adult women fall around 21 to 33 percent and men about 8 to 25 percent. Your doctor can tell you what suits your situation."
+  },
+  {
+   "q": "How can I lower my body fat percentage?",
+   "a": "Sustained, moderate calorie control combined with resistance training and enough protein helps preserve muscle while fat decreases. Aim for gradual change. Sleep, activity and medical conditions also matter, so ask a clinician before major diet changes."
+  },
+  {
+   "q": "Why does my body fat change from day to day?",
+   "a": "Daily readings shift with hydration, meals, tape placement and, for impedance devices, skin and water conditions. True fat change takes weeks. Compare averages taken under the same conditions rather than single measurements."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NIDDK: Healthy living and weight management",
+   "url": "https://www.niddk.nih.gov/"
+  },
+  {
+   "title": "NHLBI: Health topics on weight and heart health",
+   "url": "https://www.nhlbi.nih.gov/"
+  }
+ ]
+}

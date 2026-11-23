@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: 170 lb, 30 Minutes</h2>\n<p>The formula is calories per minute = MET × 3.5 × body weight in kg ÷ 200. For a 170 lb person (about 77.1 kg) over 30 minutes, using commonly published MET values:</p>\n<table><thead><tr><th>Activity</th><th>MET</th><th>Calories in 30 min</th></tr></thead><tbody><tr><td>Brisk walking (about 3.5 mph)</td><td>4.3</td><td>174</td></tr><tr><td>Cycling, moderate effort</td><td>8.0</td><td>324</td></tr><tr><td>Running (about 6 mph)</td><td>9.8</td><td>397</td></tr></tbody></table>\n<h2>Why Your Watch May Disagree</h2>\n<p>MET-based estimates use averages. Fitness level, terrain, wind, heart rate and technique all change the real number, and devices differ in how they estimate it. Treat any figure as a rough guide, not a precise count.</p>\n<h2>Using the Result</h2>\n<ul><li>Heavier people burn more for the same activity, so the figure rises with weight.</li><li>Do not treat exercise as a license to eat large amounts; the calories burned are often smaller than expected.</li><li>Combine this with your <a href=\"tdee-calculator.html\">TDEE</a> to see the larger picture.</li></ul>",
+ "extra_faqs": [
+  {
+   "q": "What is a MET?",
+   "a": "A MET, or metabolic equivalent, compares the energy cost of an activity with resting. One MET is the energy used sitting quietly, so a 4 MET activity uses about four times as much."
+  },
+  {
+   "q": "Which burns more calories, running or walking?",
+   "a": "Running burns more per minute at the same body weight. Walking can still add up, since people can sustain it for longer."
+  },
+  {
+   "q": "Does body weight change calories burned?",
+   "a": "Yes. A heavier person uses more energy for the same movement, so the same workout burns more calories."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NHLBI: Healthy lifestyle resources",
+   "url": "https://www.nhlbi.nih.gov/"
+  }
+ ],
+ "slug": "calories-burned-calculator"
+}

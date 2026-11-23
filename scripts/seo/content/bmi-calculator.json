@@ -1,0 +1,32 @@
+{
+ "slug": "bmi-calculator",
+ "sections": "<h2>Worked Example in US Units</h2>\n<div class=\"example\"><p>A person who is 5 ft 6 in (66 in) tall and weighs 150 lb has a BMI of 703 \u00d7 150 \u00f7 66\u00b2 = 105,450 \u00f7 4,356 = 24.2. That is in the healthy weight range of 18.5 to 24.9. If the same person gained 20 lb, BMI would be 703 \u00d7 170 \u00f7 4,356 = 27.4, which crosses into the overweight category.</p></div>\n<p>Notice how small changes near a cut-off can move you across a line. The categories are convenient thresholds, not sharp biological boundaries. A BMI of 24.8 and 25.2 describe nearly identical bodies.</p>\n<h2>How to Read Your Result</h2>\n<ul>\n<li><strong>Below 18.5:</strong> may indicate underweight. Ask a clinician whether it reflects unintended weight loss, an eating problem or a medical condition.</li>\n<li><strong>18.5 to 24.9:</strong> healthy weight range for most adults. It does not guarantee good health on its own.</li>\n<li><strong>25 to 29.9:</strong> overweight. Waist size, blood pressure, blood sugar and cholesterol say more about your actual risk than the label does.</li>\n<li><strong>30 and above:</strong> obesity, which health agencies often split into classes (30 to 34.9, 35 to 39.9, and 40 or above). Higher classes are linked with greater health risk, and a doctor can discuss evidence-based options.</li>\n</ul>\n<h2>Getting Accurate Inputs</h2>\n<p>Height and weight errors are the most common reason for a surprising result. Measure height without shoes, standing against a wall. Weigh yourself in the morning, after using the bathroom and before eating, on the same scale each time. Avoid using the height on an old driver's license, since many people report an inch more than they measure.</p>\n<h2>Groups Where BMI Needs Extra Care</h2>\n<ul>\n<li><strong>Athletes and very muscular people:</strong> muscle is dense, so BMI can read high without excess fat.</li>\n<li><strong>Older adults:</strong> loss of muscle and height can hide extra body fat behind a normal BMI.</li>\n<li><strong>People of Asian descent:</strong> some health organizations use lower BMI cut-offs because risk for type 2 diabetes can rise at lower values.</li>\n<li><strong>Pregnancy:</strong> standard adult categories do not apply. Use the <a href=\"pregnancy-weight-gain-calculator.html\">pregnancy weight gain calculator</a> and your obstetric provider's guidance.</li>\n</ul>\n<h2>Next Steps After You Calculate</h2>\n<p>If your BMI is outside the healthy range, measure your waist at the level of your navel, check your <a href=\"body-fat-calculator.html\">body fat percentage</a>, and bring both to your next checkup. To turn a BMI target into pounds, use the <a href=\"healthy-weight-calculator.html\">healthy weight calculator</a>. A clinician can order blood pressure, glucose and lipid tests, which are far more direct measures of health than any single index.</p><h2>BMI Versus Waist Measurement</h2>\n<p>Where fat sits matters. Fat stored around the abdomen is linked with higher cardiometabolic risk than fat stored on the hips and thighs. A common screening rule used by US health agencies is that a waist over 40 inches in men or over 35 inches in women adds risk, particularly when BMI is in the overweight range. Measure just above the hip bones after breathing out normally. Two people with an identical BMI can have different waist sizes, which is why doctors often record both.</p>",
+ "extra_faqs": [
+  {
+   "q": "Is BMI different for men and women?",
+   "a": "The adult BMI formula and category cut-offs are the same for men and women. Women typically carry more body fat than men at the same BMI, so the number can mean slightly different things for each, which is why waist size and body fat are useful additions."
+  },
+  {
+   "q": "What BMI is considered obese in the US?",
+   "a": "For adults, a BMI of 30 or higher is classified as obesity by US health agencies. It is commonly divided into class 1 (30 to 34.9), class 2 (35 to 39.9) and class 3 (40 or higher). A doctor makes any actual diagnosis."
+  },
+  {
+   "q": "How often should I check my BMI?",
+   "a": "Checking every few months is plenty for most adults, since weight changes slowly. Weekly checks add noise from water shifts. Your doctor will usually record BMI at routine visits, so you can compare trends over years."
+  },
+  {
+   "q": "Can I have a healthy BMI and still be unhealthy?",
+   "a": "Yes. BMI ignores diet, fitness, smoking, sleep, blood pressure, blood sugar and where you carry fat. Someone with a normal BMI can still have high blood pressure or excess abdominal fat, so BMI works best alongside other measures."
+  }
+ ],
+ "sources": [
+  {
+   "title": "CDC: About adult BMI",
+   "url": "https://www.cdc.gov/bmi/"
+  },
+  {
+   "title": "NHLBI: Health topics on weight and heart health",
+   "url": "https://www.nhlbi.nih.gov/"
+  }
+ ]
+}

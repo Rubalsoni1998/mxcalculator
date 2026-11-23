@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Example: What Do I Need on the Final?</h2>\n<p>Suppose homework is 20% of your grade (you have 92), the midterm is 30% (you scored 78) and the final is worth 50%. Your points so far are 0.20 × 92 + 0.30 × 78 = 41.8. To finish with an 85, you need a final score of (85 − 41.8) ÷ 0.50 = <strong>86.4%</strong>.</p>\n<h2>Checks Before You Rely on It</h2>\n<ul><li>Make sure the weights add up to 100%.</li><li>Confirm whether your instructor drops the lowest score or rounds up.</li><li>If the needed score is above 100, the target is not reachable without extra credit.</li></ul>\n<h2>Next Step</h2>\n<p>Convert grades into a GPA with the <a href=\"gpa-calculator.html\">GPA calculator</a>; for percentages, the <a href=\"percent-calculator.html\">percentage calculator</a> is handy.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I calculate a weighted grade?",
+   "a": "Multiply each category score by its weight, then add them. Weights should total 100%."
+  },
+  {
+   "q": "What grade do I need on the final to get an A?",
+   "a": "Enter your current grade, the final's weight and the grade you want; the calculator solves for the score needed."
+  },
+  {
+   "q": "Can I still pass if I failed the midterm?",
+   "a": "Possibly, depending on the weights. Enter your scores to see what the remaining work must be."
+  }
+ ],
+ "sources": [],
+ "slug": "grade-calculator"
+}

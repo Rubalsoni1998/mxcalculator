@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: $400,000 Home, 20% Down</h2>\n<p>Say you buy a $400,000 home with 20% down. The loan is $320,000. At 6.5% for 30 years, principal and interest come to about <strong>$2,022.62</strong> a month, and you would pay roughly <strong>$408,142</strong> in interest over the life of the loan. Property tax, homeowners insurance and any HOA dues come on top of that, which is why the calculator lets you add them.</p>\n<div class=\"example\"><p><strong>15 years instead of 30.</strong> Using an illustrative 5.75% rate (shorter terms usually price lower), the payment rises to about <strong>$2,657.31</strong>, but total interest falls to about <strong>$158,316</strong>. You pay roughly $635 more per month and save about $249,826 in interest.</p></div>\n<div class=\"example\"><p><strong>Adding $200 a month.</strong> On the 30-year loan above, an extra $200 toward principal each month pays the loan off in about 23 years and 5 months and cuts interest by roughly $105,429.</p></div>\n<p>The rates here are examples, not quotes. Use the rate on your own Loan Estimate.</p>\n<h2>Using the Calculator for Real Decisions</h2>\n<ul><li><strong>Compare loan offers on the same inputs.</strong> Change only the rate or term, so you see the true cost of each option.</li><li><strong>Test your budget with a rate cushion.</strong> Rerun the numbers 0.5 to 1 percentage point higher than today's rate to see whether the payment still fits.</li><li><strong>Include escrow items.</strong> Property tax and insurance vary a lot by state and county; see the <a href=\"property-tax-calculator.html\">property tax calculator</a> for typical effective rates.</li><li><strong>Check PMI.</strong> With less than 20% down, use the <a href=\"pmi-calculator.html\">PMI calculator</a> to see the added monthly cost and when it can end.</li></ul>\n<h2>Costs Beyond the Monthly Payment</h2>\n<p>The payment is only part of owning a home. Plan for closing costs (see the <a href=\"closing-cost-calculator.html\">closing cost calculator</a>), maintenance, utilities and a cash reserve. Many buyers also underestimate how much the escrow portion can change from year to year when taxes or insurance are reassessed.</p>",
+ "extra_faqs": [
+  {
+   "q": "How much is the monthly payment on a $300,000 mortgage?",
+   "a": "At 6.5% for 30 years, principal and interest on $300,000 is about $1,896.20 a month, before taxes, insurance and PMI. At other rates or terms, enter your numbers in the calculator above."
+  },
+  {
+   "q": "Does the calculator include property tax and insurance?",
+   "a": "Yes. Enter annual property tax, home insurance, PMI and HOA fees to see an estimated total monthly payment, not just principal and interest."
+  },
+  {
+   "q": "Where can I find the real rate and costs for my loan?",
+   "a": "Lenders must give you a Loan Estimate within three business days of your application. It lists the rate, monthly payment and closing costs so you can compare offers side by side."
+  }
+ ],
+ "sources": [
+  {
+   "title": "CFPB: Buying a house",
+   "url": "https://www.consumerfinance.gov/owning-a-home/"
+  }
+ ],
+ "slug": "mortgage-calculator"
+}

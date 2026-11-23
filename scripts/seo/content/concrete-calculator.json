@@ -1,0 +1,23 @@
+{
+ "slug": "concrete-calculator",
+ "sections": "<h2>What the Calculator Does and Does Not Include</h2>\n<p>The tool has two modes: <strong>slab</strong> (length and width in feet, thickness in inches) and <strong>column</strong> (diameter in inches, height in feet, and a quantity). It reports cubic feet, cubic yards and a bag count rounded up for 80 lb and 60 lb bags. It does not apply a waste percentage, so add your own margin to the result. A footing or a wall is also a rectangular box, so enter it in slab mode using its length, its width and its thickness.</p>\n<h2>Worked Examples</h2>\n<p><strong>Slab.</strong> A 12 ft by 16 ft pad, 4 inches thick, is 12 x 16 x (4/12) = 64 cubic feet, or 2.37 cubic yards. That is 107 bags of 80 lb mix. With a 10 percent margin it becomes 70.4 cubic feet, 2.61 yards, or 118 bags.</p>\n<p><strong>Footing.</strong> A 20 ft run, 2 ft wide and 12 inches deep, is 40 cubic feet, or 1.48 cubic yards. That is 67 bags of 80 lb mix.</p>\n<p><strong>Round columns.</strong> Six piers 12 inches across and 4 feet deep: the area of a 1-foot circle is about 0.785 square feet, times 4 feet times 6 gives 18.85 cubic feet, or 0.70 cubic yards. That is 32 bags, or 35 with a 10 percent margin.</p>\n<h2>Bags or Ready-Mix?</h2>\n<p>One cubic yard of ready-mix covers about 81 square feet at 4 inches thick (27 x 12 / 4). Bag yields are approximate, and the numbers in this tool assume 0.6 cubic feet per 80 lb bag and 0.45 for a 60 lb bag. Check the yield printed on the bag you actually buy. As a rule of thumb, a job needing more than a few dozen bags is often easier and more consistent with delivered concrete, since mixing a large pour by hand is hard to finish before the concrete sets. Ask suppliers about minimum loads, short-load fees and delivery charges, because those vary by region and company.</p>\n<p>Metric dimensions need converting to feet and inches first. The <a href=\"conversion-calculator.html\">conversion calculator</a> handles that, and the <a href=\"percent-calculator.html\">percent calculator</a> is useful for working out your waste margin.</p>\n<h2>Getting Accurate Dimensions</h2>\n<ul>\n<li><strong>Measure the finished thickness.</strong> Slab thickness is the poured depth, not the depth of the dug area. Gravel base and forms change the figure.</li>\n<li><strong>Allow for uneven ground.</strong> Sub-grades are rarely flat, and a slab that runs a quarter inch thick across the whole area adds more than you expect.</li>\n<li><strong>Break complex shapes into rectangles.</strong> Calculate each section, then add the totals.</li>\n<li><strong>Order a little extra.</strong> Running short mid-pour can leave a cold joint, which is a bigger problem than a surplus.</li>\n</ul>\n<p>Required thickness, reinforcement, footing depth below the frost line and permits depend on your local building code and soil. For anything structural, confirm with your local building department or a licensed contractor or engineer.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many 80 lb bags of concrete make a cubic yard?",
+   "a": "A cubic yard is 27 cubic feet. At about 0.6 cubic feet per 80 lb bag, that is 45 bags. Bag yields vary by brand, so check the label on the bag you buy."
+  },
+  {
+   "q": "How do I calculate concrete for a slab in square feet?",
+   "a": "Multiply the slab area in square feet by the thickness in feet, then divide by 27 for cubic yards. A 200 square foot slab at 4 inches is 200 x 0.333 = 66.7 cubic feet, or about 2.47 cubic yards."
+  },
+  {
+   "q": "How much extra concrete should I order?",
+   "a": "Many builders add roughly 5 to 10 percent to cover uneven ground, spillage and slight form movement. Go toward the high end for rough sub-grades or complex shapes, and confirm with your supplier."
+  },
+  {
+   "q": "How do I calculate concrete for a round column or post hole?",
+   "a": "Find the radius in feet (half the diameter, divided by 12 if in inches), square it, multiply by pi and by the depth in feet. Multiply by the number of holes, then divide by 27 for cubic yards."
+  }
+ ],
+ "sources": []
+}

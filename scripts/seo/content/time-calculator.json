@@ -1,0 +1,23 @@
+{
+ "slug": "time-calculator",
+ "sections": "<h2>Two Ways to Use This Tool</h2>\n<p>The calculator has two modes. <strong>Add or subtract</strong> starts from a date and clock time, then moves it forward or back by days, hours, minutes and seconds. <strong>Duration</strong> takes a start and an end and reports the gap in days, hours, minutes and seconds, plus the total in hours, minutes and seconds. The duration mode always returns a positive gap, so entering the two times in the wrong order does not produce a negative result.</p>\n<div class=\"example\"><p>Start Monday, November 23, 2026 at 9:00 AM and add 36 hours 20 minutes. The result is Tuesday, November 24, 2026 at 9:20 PM. The 36 hours carry past midnight by a full day and 12 hours, then the 20 minutes are added.</p></div>\n<h2>Worked Example: A Timesheet Day</h2>\n<p>Suppose you clock in at 8:45 AM and out at 5:20 PM with an unpaid 30-minute lunch. Run duration mode with a start of 8:45 and an end of 17:20. The gap is 8 hours 35 minutes. Subtract the 30-minute break and you have 8 hours 5 minutes of paid time.</p>\n<p>Payroll systems usually want decimal hours, not hours and minutes. Divide the minutes by 60 and add them to the hours: 5 minutes is 0.083 hours, so the day is 8.083 hours. Over five identical days that is 40.42 hours. Typing 8.5 into a timesheet when you worked 8 hours 5 minutes is the most common conversion slip, because 8:50 is not 8.50.</p>\n<table><thead><tr><th>Minutes</th><th>Decimal hours</th></tr></thead><tbody>\n<tr><td>15</td><td>0.25</td></tr><tr><td>25</td><td>0.417</td></tr><tr><td>30</td><td>0.50</td></tr><tr><td>45</td><td>0.75</td></tr></tbody></table>\n<p>If you are totaling a week of timesheet entries rather than clock times, the <a href=\"hours-calculator.html\">hours calculator</a> is built for that. To turn your hours into pay, use the <a href=\"salary-calculator.html\">salary calculator</a>.</p>\n<h2>Common Mistakes With Time Math</h2>\n<ul>\n<li><strong>Treating minutes as decimals.</strong> 1 hour 45 minutes is 1.75 hours, not 1.45.</li>\n<li><strong>Forgetting the 12-hour clock.</strong> Enter afternoon times in 24-hour form when possible. 5:20 PM is 17:20.</li>\n<li><strong>Ignoring daylight saving time.</strong> Results follow the time zone and daylight saving rules of the device you are using. Between two clock times that straddle a change, the true elapsed time can differ by one hour from what the wall clock suggests. In the United States the clocks change in March and November.</li>\n<li><strong>Mixing time zones.</strong> The tool has no time zone field. Convert both times to the same zone before you enter them.</li>\n<li><strong>Counting days instead of time.</strong> If you only need the number of days between two calendar dates, the <a href=\"date-calculator.html\">date calculator</a> is the better fit.</li>\n</ul>\n<h2>Reading the Result</h2>\n<p>In add or subtract mode the result is a specific moment shown as a clock time with a weekday and full date. Month lengths and leap years are handled for you, so adding 30 days to a date in February lands on the correct calendar day. In duration mode the headline figure is split into days, hours, minutes and seconds, and the table below it gives the same span as a single total, which is handy when a form asks for total minutes. A 23-day span, for example, is 552 hours.</p>\n<p>For billing or payroll, check how your employer or client rounds time. Rounding rules differ, and this calculator reports exact elapsed time without rounding.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I convert hours and minutes to decimal hours?",
+   "a": "Divide the minutes by 60 and add the result to the hours. For example, 7 hours 45 minutes is 7 + 45/60 = 7.75 hours. Quarter hours convert cleanly: 15 minutes is 0.25, 30 is 0.50, and 45 is 0.75."
+  },
+  {
+   "q": "How do I add 90 minutes to a time?",
+   "a": "Convert 90 minutes to 1 hour 30 minutes, then add. Starting at 2:15 PM, add the hour to reach 3:15 PM, then 30 minutes to reach 3:45 PM. In this calculator, enter 90 in the minutes box and the hours roll over automatically."
+  },
+  {
+   "q": "Does the time calculator account for daylight saving time?",
+   "a": "It uses your device's time zone and daylight saving rules. If a span crosses a clock change, the elapsed time can differ by an hour from simple wall-clock subtraction. For precise payroll or scheduling, check the result against the actual dates involved."
+  },
+  {
+   "q": "How many hours are in a week, and how many minutes in a day?",
+   "a": "A week has 168 hours (7 x 24) and 10,080 minutes. A day has 24 hours, 1,440 minutes or 86,400 seconds. These totals are useful for checking duration results quickly."
+  }
+ ],
+ "sources": []
+}

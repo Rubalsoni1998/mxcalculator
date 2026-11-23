@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: Boer Formula</h2>\n<p>For a man who is 70 in (178 cm) and 180 lb (81.6 kg), the Boer formula (0.407 × weight + 0.267 × height − 19.2) gives a lean body mass of about <strong>61.5 kg (136 lb)</strong>. The rest, about 20.1 kg, is estimated fat mass, or roughly 25% of body weight.</p>\n<h2>Using Lean Mass</h2>\n<ul><li>Protein targets are often set per kilogram of lean mass. See the <a href=\"protein-calculator.html\">protein calculator</a>.</li><li>Katch-McArdle BMR uses lean mass directly; see the <a href=\"bmr-calculator.html\">BMR calculator</a>.</li><li>Track change over time rather than one reading.</li></ul>\n<h2>Accuracy</h2>\n<p>These formulas estimate from height, weight and sex, so they miss differences in muscle and bone. DEXA scans and other clinical methods measure more directly. Use the result as a rough guide.</p>",
+ "extra_faqs": [
+  {
+   "q": "What is lean body mass?",
+   "a": "It is everything in your body except fat: muscle, bone, organs and water."
+  },
+  {
+   "q": "How do I increase lean body mass?",
+   "a": "Resistance training, enough protein and adequate calories and sleep support muscle gain. Results vary by person."
+  },
+  {
+   "q": "Is lean body mass the same as muscle mass?",
+   "a": "No. Lean body mass includes muscle plus bone, organs and body water."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NIDDK: Healthy living",
+   "url": "https://www.niddk.nih.gov/"
+  }
+ ],
+ "slug": "lean-body-mass-calculator"
+}

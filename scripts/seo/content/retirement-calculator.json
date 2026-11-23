@@ -1,0 +1,36 @@
+{
+ "slug": "retirement-calculator",
+ "sections": "<h2>A Worked Projection With Real Numbers</h2>\n<p>Suppose you are 35, have $50,000 saved, add $10,000 a year, and assume a 6 percent average annual return until age 65. Compounding the balance and the yearly contributions for 30 years gives roughly <strong>$1,077,756</strong>. That looks like a million-dollar result, but it is a nominal figure: it is measured in future dollars.</p>\n<div class=\"example\"><p><strong>Inflation check:</strong> At 3 percent inflation, $1,077,756 in 30 years buys about as much as <strong>$444,000</strong> does today (1,077,756 ÷ 1.03<sup>30</sup>). Always compare your target with your spending in today's dollars, or let the calculator inflate your desired income for you.</p></div>\n<h2>Choosing Realistic Inputs</h2>\n<ul>\n<li><strong>Return:</strong> Use a conservative long-run average, and test a lower number too. A portfolio of stocks and bonds will not return the same amount every year, so treat the figure as a planning assumption, not a promise.</li>\n<li><strong>Retirement income:</strong> Many people plan around a share of current pre-retirement income rather than a flat number. Housing, health care and taxes change in retirement, so adjust for your own situation.</li>\n<li><strong>Life expectancy:</strong> Plan past the average. A plan that runs to age 95 is safer than one that stops at 85 if you outlive it.</li>\n<li><strong>Social Security and pensions:</strong> Subtract expected benefits from the income you need before judging how much your own savings must cover. Your benefit estimate is on your account at ssa.gov.</li>\n</ul>\n<h2>Reading the Results</h2>\n<p>Look at two things: the balance at retirement and whether money lasts through your chosen life expectancy. If the chart shows the balance reaching zero before that age, you have a shortfall. The fastest levers are usually a later retirement age, higher contributions, or lower retirement spending. Changing one input at a time shows which lever matters most for you.</p>\n<h2>Common Mistakes</h2>\n<ul>\n<li>Ignoring inflation, which can cut purchasing power roughly in half over 25 years at 3 percent.</li>\n<li>Assuming a high return will last every year, including the first years of withdrawals, when a market drop does the most damage.</li>\n<li>Forgetting taxes. Withdrawals from traditional 401(k) and IRA accounts are generally taxed as ordinary income, while qualified Roth withdrawals are not. The <a href=\"tax-calculator.html\">federal income tax calculator</a> can help you estimate the bill.</li>\n<li>Leaving out health care costs before Medicare eligibility.</li>\n</ul>\n<h2>Limits of Any Calculator</h2>\n<p>A straight-line projection cannot capture market swings, job gaps, or changes in tax law. Contribution limits for 401(k)s and IRAs change often, so check the IRS website for the current year. To see how a lump sum grows by itself, try the <a href=\"compound-interest-calculator.html\">compound interest calculator</a>. For decisions about your own accounts, consider a fee-only financial planner.</p>",
+ "extra_faqs": [
+  {
+   "q": "How much should I have saved for retirement by 40?",
+   "a": "There is no single official number. Common rules of thumb suggest having a multiple of your salary saved by certain ages, but your target depends on spending, benefits and retirement age. Use the calculator to work backward from the income you want."
+  },
+  {
+   "q": "Is the 4 percent rule still safe?",
+   "a": "It is a rough starting point, not a guarantee. It was based on historical U.S. returns over about 30 years. Longer retirements, lower expected returns or high early market losses can make a lower starting withdrawal rate more prudent."
+  },
+  {
+   "q": "Should I use today's dollars or future dollars?",
+   "a": "Pick one and stay consistent. Using today's dollars with an inflation-adjusted return is easier to picture, because $60,000 means what $60,000 buys now. Future-dollar figures look larger but buy less."
+  },
+  {
+   "q": "When can I start collecting Social Security?",
+   "a": "You can claim retirement benefits as early as age 62, but the monthly amount is permanently reduced. Waiting until full retirement age, or up to age 70, increases it. Your full retirement age depends on your birth year; check ssa.gov."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Social Security Administration",
+   "url": "https://www.ssa.gov/"
+  },
+  {
+   "title": "IRS: Information for individuals",
+   "url": "https://www.irs.gov/individuals"
+  },
+  {
+   "title": "BLS: Consumer Price Index",
+   "url": "https://www.bls.gov/cpi/"
+  }
+ ]
+}

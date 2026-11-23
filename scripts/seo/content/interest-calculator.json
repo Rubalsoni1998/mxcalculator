@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Simple vs. Compound: $5,000 at 4% for 10 Years</h2>\n<table><thead><tr><th>Method</th><th>Ending amount</th><th>Interest earned</th></tr></thead><tbody><tr><td>Simple interest</td><td>$7,000.00</td><td>$2,000.00</td></tr><tr><td>Compounded yearly</td><td>$7,401.22</td><td>$2,401.22</td></tr><tr><td>Compounded monthly</td><td>$7,454.16</td><td>$2,454.16</td></tr></tbody></table>\n<p>Simple interest is earned only on the original amount. Compound interest is earned on the amount plus interest already added, so the gap widens the longer the money stays put.</p>\n<h2>Which One Applies to You?</h2>\n<ul><li><strong>Savings accounts, CDs and money market accounts</strong> usually compound daily or monthly.</li><li><strong>Credit cards</strong> typically compound daily on unpaid balances.</li><li><strong>Auto loans and many personal loans</strong> accrue interest on the remaining balance, which behaves like simple interest on each month's balance.</li><li><strong>Some short-term notes and bonds</strong> use simple interest.</li></ul>\n<h2>APR vs. APY</h2>\n<p>APR is the stated yearly rate. APY includes the effect of compounding, so it is higher than APR when interest compounds more than once a year. When comparing savings accounts, compare APY. For regular deposits, use the <a href=\"compound-interest-calculator.html\">compound interest calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "What is the formula for simple interest?",
+   "a": "Interest = principal × rate × time. For $5,000 at 4% for 10 years, that is 5,000 × 0.04 × 10 = $2,000."
+  },
+  {
+   "q": "What is the formula for compound interest?",
+   "a": "A = P × (1 + r/n)^(n×t), where P is the principal, r the annual rate, n the compounding periods per year and t the years."
+  },
+  {
+   "q": "How often should interest compound for the best return?",
+   "a": "More frequent compounding earns slightly more, but the difference between daily and monthly is small. The rate and the time matter far more."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Investor.gov: Compound interest calculator",
+   "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+  }
+ ],
+ "slug": "interest-calculator"
+}

@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Example: A Shift With a Break</h2>\n<p>A shift from 9:15 AM to 5:45 PM is 8 hours 30 minutes. Subtract a 30-minute unpaid break and you get <strong>8 hours</strong>. A shift from 8:00 AM to 4:50 PM with a 30-minute break is 8 hours 20 minutes, which is <strong>8.33 decimal hours</strong> (20 ÷ 60 = 0.33). Five such days add up to 41.67 hours.</p>\n<h2>Converting Minutes to Decimals</h2>\n<p>Payroll often uses decimals: 15 minutes = 0.25, 30 minutes = 0.50, 45 minutes = 0.75. Divide minutes by 60 for any other value.</p>\n<h2>Overtime Basics</h2>\n<p>Under the federal Fair Labor Standards Act, most hourly employees are owed at least 1.5 times their regular rate for hours over 40 in a workweek. Some states have stricter daily rules. Confirm your own rules with the Department of Labor or your state agency. Turn hours into pay with the <a href=\"salary-calculator.html\">salary calculator</a>, and add or subtract clock times with the <a href=\"time-calculator.html\">time calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I calculate hours worked?",
+   "a": "Subtract the start time from the end time, then subtract unpaid breaks. Convert minutes to decimals if you need payroll hours."
+  },
+  {
+   "q": "How do I convert 7 hours 45 minutes to decimal?",
+   "a": "45 ÷ 60 = 0.75, so 7 hours 45 minutes is 7.75 hours."
+  },
+  {
+   "q": "When is overtime owed in the US?",
+   "a": "Federal law requires overtime for covered, non-exempt employees after 40 hours in a workweek. Some states add daily limits."
+  }
+ ],
+ "sources": [],
+ "slug": "hours-calculator"
+}

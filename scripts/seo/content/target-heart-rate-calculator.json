@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: Age 40</h2>\n<p>Using the common formula 220 − age, a 40-year-old has an estimated maximum heart rate of <strong>180 beats per minute</strong>. A moderate-intensity zone of 50 to 70 percent is about <strong>90 to 126 bpm</strong>, and a vigorous zone of 70 to 85 percent is about <strong>126 to 153 bpm</strong>.</p>\n<div class=\"example\"><p><strong>Karvonen method.</strong> With a resting heart rate of 60, the heart rate reserve is 180−60 = 120. At 60% intensity the target is 60 + 0.60 × 120 = <strong>132 bpm</strong>; at 80% it is <strong>156 bpm</strong>.</p></div>\n<h2>Limits of the Formulas</h2>\n<p>Maximum heart rate varies from person to person by many beats per minute, so age-based formulas are rough. Medications such as beta-blockers lower heart rate and make these zones unreliable. If you have a heart condition, check zones with your doctor.</p>\n<h2>Using Zones</h2>\n<ul><li>Use the talk test: during moderate effort you can talk but not sing.</li><li>Check pace targets with the <a href=\"pace-calculator.html\">pace calculator</a>.</li><li>Estimate workout energy with the <a href=\"calories-burned-calculator.html\">calories burned calculator</a>.</li></ul>",
+ "extra_faqs": [
+  {
+   "q": "What is a good target heart rate for fat burning?",
+   "a": "There is no special fat-burning zone. Moderate effort, roughly 50 to 70 percent of maximum, is sustainable for longer sessions. Total energy use over time matters most."
+  },
+  {
+   "q": "Is 220 minus age accurate?",
+   "a": "It is an estimate with a wide margin of error for individuals. A supervised test gives a better measurement."
+  },
+  {
+   "q": "What is a normal resting heart rate?",
+   "a": "Adults commonly have a resting rate of 60 to 100 beats per minute, and well-trained people are often lower. Talk to a clinician about readings outside your usual range."
+  }
+ ],
+ "sources": [
+  {
+   "title": "American Heart Association: Target heart rates",
+   "url": "https://www.heart.org/en/healthy-living/fitness/fitness-basics/target-heart-rates"
+  }
+ ],
+ "slug": "target-heart-rate-calculator"
+}

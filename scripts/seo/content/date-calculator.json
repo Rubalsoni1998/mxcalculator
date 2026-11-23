@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Examples</h2>\n<div class=\"example\"><p><strong>Days between dates.</strong> From January 1, 2026 to December 25, 2026 is <strong>358 days</strong> (51 weeks and 1 days).</p></div>\n<div class=\"example\"><p><strong>Adding days.</strong> 90 days after November 23, 2026 is <strong>February 21, 2027</strong>.</p></div>\n<h2>Counting Rules to Watch For</h2>\n<ul><li>Whether the start date is counted. Contracts and deadlines often say \"within 30 days after\", which excludes the start day.</li><li>Month math: adding one month to January 31 gives the last day of February, since February is shorter.</li><li>Weekends and holidays are not skipped. For working days, subtract them separately.</li></ul>\n<h2>Where It Helps</h2>\n<p>Use it for countdowns, project deadlines, notice periods and due dates. For pregnancy specifically, see the <a href=\"due-date-calculator.html\">due date calculator</a>; for hours and minutes, the <a href=\"time-calculator.html\">time calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many days are there in a year?",
+   "a": "365 days, or 366 in a leap year. A leap year occurs every four years except most century years not divisible by 400."
+  },
+  {
+   "q": "How do I count business days between two dates?",
+   "a": "Take the total days, remove weekends, then subtract any holidays that fall on weekdays."
+  },
+  {
+   "q": "Does the calculator include the end date?",
+   "a": "Check the result label. Counting both ends adds one day compared with simple subtraction."
+  }
+ ],
+ "sources": [],
+ "slug": "date-calculator"
+}

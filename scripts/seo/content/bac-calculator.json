@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: Four Drinks in Two Hours</h2>\n<p>A 180 lb man who has four standard drinks (about 14 grams of alcohol each) over two hours has an estimated BAC of about <strong>0.071%</strong> using the Widmark formula with a 0.68 factor and 0.015% elimination per hour. That is already above the 0.08% limit that applies for driving in most US states.</p>\n<h2>Why Estimates Can Be Wrong</h2>\n<ul><li>Food, medications, health conditions, body fat and drinking pace all change real BAC.</li><li>Women typically reach a higher BAC than men of the same weight for the same drinks, which the calculator reflects with a different factor.</li><li>Drink size varies. A large pour or a strong craft beer can count as more than one standard drink.</li></ul>\n<h2>Safety</h2>\n<p>Impairment begins well before 0.08%. The only safe approach to driving is not to drink beforehand; plan a ride instead. Coffee, showers and food do not lower BAC faster. If someone cannot be woken or is breathing slowly, call 911.</p>",
+ "extra_faqs": [
+  {
+   "q": "How long does it take to sober up?",
+   "a": "The body clears roughly 0.015% BAC per hour on average, but this varies. Only time lowers BAC."
+  },
+  {
+   "q": "What counts as one standard drink?",
+   "a": "In the US it is about 14 grams of pure alcohol: 12 oz of regular beer, 5 oz of wine or 1.5 oz of 80-proof spirits."
+  },
+  {
+   "q": "Can I use this to decide if I can drive?",
+   "a": "No. It is an estimate and impairment can occur at lower levels. Do not drive after drinking."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NHTSA: Drunk driving",
+   "url": "https://www.nhtsa.gov/risky-driving/drunk-driving"
+  }
+ ],
+ "slug": "bac-calculator"
+}

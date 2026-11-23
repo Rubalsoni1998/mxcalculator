@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: Where Are You Today?</h2>\n<p>If your LMP was January 10, 2026, you reach week 12 on <strong>April 4, 2026</strong>, the usual start of the second trimester is around week 13 (April 11, 2026), and the third trimester starts around week 28 (July 25, 2026). The due date is <strong>October 17, 2026</strong>.</p>\n<h2>Trimesters at a Glance</h2>\n<ul><li><strong>First trimester:</strong> weeks 1 to 12, when major organs form.</li><li><strong>Second trimester:</strong> weeks 13 to 27, often when movement is first felt.</li><li><strong>Third trimester:</strong> weeks 28 to birth.</li></ul>\n<h2>Using the Dates</h2>\n<p>Use these dates to plan prenatal visits and screening, which providers schedule by gestational week. Weight guidance is on the <a href=\"pregnancy-weight-gain-calculator.html\">pregnancy weight gain calculator</a>, and dating details are on the <a href=\"due-date-calculator.html\">due date calculator</a> page. This tool does not replace medical care.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many weeks is a full pregnancy?",
+   "a": "Pregnancy is counted as about 40 weeks from the first day of the last period."
+  },
+  {
+   "q": "When does the second trimester start?",
+   "a": "Usually around week 13, although some sources count from week 14."
+  },
+  {
+   "q": "How far along am I?",
+   "a": "Count weeks from the first day of your last period, or from conception date plus two weeks. The calculator does this for you."
+  }
+ ],
+ "sources": [
+  {
+   "title": "ACOG: Patient resources on pregnancy",
+   "url": "https://www.acog.org/"
+  }
+ ],
+ "slug": "pregnancy-calculator"
+}

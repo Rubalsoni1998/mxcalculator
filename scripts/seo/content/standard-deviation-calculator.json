@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Example: Data 4, 8, 6, 5, 3</h2>\n<p>The mean is 5.2. Squared deviations from the mean are 1.44, 7.84, 0.64, 0.04, 4.84, which add up to 14.8. For a <strong>sample</strong>, divide by n − 1 = 4 to get a variance of 3.7 and a standard deviation of <strong>1.924</strong>. For a whole <strong>population</strong>, divide by n = 5, giving a variance of 2.96 and a standard deviation of <strong>1.720</strong>.</p>\n<h2>Sample or Population?</h2>\n<p>Use the population formula only when your data includes every member of the group you care about. When data is a subset, use the sample formula, which divides by n − 1 to avoid underestimating the spread.</p>\n<h2>Interpreting the Result</h2>\n<ul><li>A small standard deviation means values cluster near the mean.</li><li>In a roughly bell-shaped distribution, about 68% of values fall within one standard deviation of the mean and 95% within two.</li><li>Outliers pull the standard deviation up quickly.</li></ul>\n<p>Use the <a href=\"percent-calculator.html\">percentage calculator</a> or <a href=\"grade-calculator.html\">grade calculator</a> for related work.</p>",
+ "extra_faqs": [
+  {
+   "q": "What is the difference between variance and standard deviation?",
+   "a": "Standard deviation is the square root of variance, which puts the spread back into the original units of the data."
+  },
+  {
+   "q": "Why divide by n − 1?",
+   "a": "Dividing by n − 1 (Bessel's correction) corrects the bias when estimating population spread from a sample."
+  },
+  {
+   "q": "Can standard deviation be negative?",
+   "a": "No. It is a square root, so it is zero or positive."
+  }
+ ],
+ "sources": [],
+ "slug": "standard-deviation-calculator"
+}

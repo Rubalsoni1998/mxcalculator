@@ -1,0 +1,28 @@
+{
+ "slug": "tax-calculator",
+ "sections": "<h2>A Worked Example With Illustrative Brackets</h2>\n<p>The numbers below are made up to show the method, not real IRS brackets. Assume 10 percent applies up to $12,000, 12 percent from $12,000 to $48,000, and 22 percent above $48,000, and that your taxable income is $70,000.</p>\n<ul>\n<li>10% × $12,000 = $1,200</li>\n<li>12% × $36,000 = $4,320</li>\n<li>22% × $22,000 = $4,840</li>\n</ul>\n<div class=\"example\"><p>Total tax is <strong>$10,360</strong>. Your marginal rate is 22 percent, but your effective rate on taxable income is only 14.8 percent. Earning $1,000 more would add $220 of tax, not $10,360 × 22 percent.</p></div>\n<h2>Deductions Versus Credits</h2>\n<p>A deduction lowers taxable income, so its value depends on your bracket. A $1,000 deduction at a 22 percent marginal rate saves $220. A credit reduces the tax itself, dollar for dollar, so a $1,000 credit saves $1,000. Some credits are refundable, meaning they can produce a refund even if you owe no tax. To see how two popular credits work, try the <a href=\"child-tax-credit-calculator.html\">child tax credit calculator</a> and the <a href=\"eitc-calculator.html\">EITC calculator</a>.</p>\n<h2>Standard or Itemized Deduction</h2>\n<p>Most taxpayers take the standard deduction, which is a fixed amount set each year by filing status. You itemize only if your qualifying expenses, such as mortgage interest, state and local taxes up to the legal cap, and charitable gifts, add up to more. The amounts and brackets change every year, so use the tax year selector and confirm figures on IRS.gov.</p>\n<h2>What This Estimate Leaves Out</h2>\n<ul>\n<li><strong>Payroll taxes:</strong> Social Security and Medicare tax are separate from income tax.</li>\n<li><strong>State and local tax:</strong> Most states have their own income tax; some have none.</li>\n<li><strong>Special rates:</strong> Long-term capital gains and qualified dividends use different rates. See the <a href=\"capital-gains-tax-calculator.html\">capital gains tax calculator</a>.</li>\n<li><strong>Adjustments and other taxes:</strong> Retirement contributions, student loan interest, self-employment tax and the alternative minimum tax can all change the final number.</li>\n</ul>\n<h2>Withholding Is Not Your Final Bill</h2>\n<p>Your employer withholds tax from each paycheck based on your Form W-4. When you file, your actual tax is compared with what was withheld. If more was withheld, you get a refund; if less, you owe the difference. A large refund simply means you lent money to the government interest-free during the year. The <a href=\"tax-refund-estimator.html\">tax refund estimator</a> helps compare withholding against your calculated tax. For personal situations, a licensed tax professional or the IRS can give definitive answers.</p>",
+ "extra_faqs": [
+  {
+   "q": "What is the difference between gross income and taxable income?",
+   "a": "Gross income is everything you earn before adjustments. Taxable income is what remains after subtracting adjustments and either the standard or itemized deduction. Income tax brackets apply to taxable income, not gross income."
+  },
+  {
+   "q": "Do I pay the higher rate on all my income if I move up a bracket?",
+   "a": "No. Only the portion of taxable income above the bracket threshold is taxed at the higher rate. Income below it is still taxed at the lower rates, so a raise never reduces your pay on income you already earned."
+  },
+  {
+   "q": "How is the effective tax rate different from my bracket?",
+   "a": "Your bracket is the marginal rate on your last dollar of income. Your effective rate is total tax divided by income, and it is lower because lower brackets apply to earlier dollars. It better describes your overall tax burden."
+  },
+  {
+   "q": "Where do I find the current IRS tax brackets?",
+   "a": "The IRS publishes brackets, standard deduction amounts and other limits each year on irs.gov, usually announced in the fall for the following tax year. Search for the annual inflation adjustments or the instructions for Form 1040."
+  }
+ ],
+ "sources": [
+  {
+   "title": "IRS: Information for individuals",
+   "url": "https://www.irs.gov/individuals"
+  }
+ ]
+}

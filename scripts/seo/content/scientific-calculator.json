@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Common Gotchas</h2>\n<ul><li><strong>Degrees vs. radians.</strong> sin(30°) = <strong>0.5</strong>, but sin(30 radians) = <strong>-0.9880</strong>. Check the mode before using trig functions.</li><li><strong>Order of operations.</strong> 2 + 3 × 4 = 14, not 20. Use parentheses to group, for example (2 + 3) × 4 = 20.</li><li><strong>log vs. ln.</strong> log is base 10 and ln is base e. log(1000) = 3, ln(e) = 1.</li></ul>\n<h2>Quick Reference</h2>\n<table><thead><tr><th>Expression</th><th>Result</th></tr></thead><tbody><tr><td>2^10</td><td>1,024</td></tr><tr><td>10!</td><td>3,628,800</td></tr><tr><td>√144</td><td>12</td></tr><tr><td>π (3.14159…)</td><td>3.14159</td></tr></tbody></table>\n<h2>Related Tools</h2>\n<p>For fractions use the <a href=\"fraction-calculator.html\">fraction calculator</a>, for right triangles the <a href=\"triangle-calculator.html\">triangle calculator</a>, and for statistics the <a href=\"standard-deviation-calculator.html\">standard deviation calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "What does the factorial button do?",
+   "a": "n! multiplies all whole numbers from 1 to n. For example, 5! = 120."
+  },
+  {
+   "q": "How do I calculate a square root?",
+   "a": "Use the √ key, or raise the number to the power 0.5."
+  },
+  {
+   "q": "Why does my trig result look wrong?",
+   "a": "The calculator may be in radians when you expect degrees. Switch the mode and try again."
+  }
+ ],
+ "sources": [],
+ "slug": "scientific-calculator"
+}

@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Recommended Ranges</h2>\n<p>The Institute of Medicine guidelines, which ACOG uses, set total gain by pre-pregnancy BMI for a single baby:</p>\n<table><thead><tr><th>Pre-pregnancy BMI</th><th>Total gain</th><th>Weekly gain (2nd and 3rd trimesters)</th></tr></thead><tbody><tr><td>Under 18.5</td><td>28 to 40 lb</td><td>about 1 to 1.3 lb</td></tr><tr><td>18.5 to 24.9</td><td>25 to 35 lb</td><td>about 0.8 to 1 lb</td></tr><tr><td>25 to 29.9</td><td>15 to 25 lb</td><td>about 0.5 to 0.7 lb</td></tr><tr><td>30 or higher</td><td>11 to 20 lb</td><td>about 0.4 to 0.6 lb</td></tr></tbody></table>\n<p>Total gain is about 1 to 4.5 lb in the first trimester for most people.</p>\n<h2>Using the Numbers</h2>\n<ul><li>Ranges are guidelines. Your provider may set a different goal for you.</li><li>Twin pregnancies have higher ranges; for normal-weight women the IOM range is 37 to 54 lb.</li><li>Eating for two does not mean double the calories; extra needs are modest and begin in the second trimester.</li></ul>\n<p>Check your starting BMI with the <a href=\"bmi-calculator.html\">BMI calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How much weight should I gain in pregnancy?",
+   "a": "It depends on pre-pregnancy BMI. For a normal-weight person with one baby, the guideline is 25 to 35 pounds."
+  },
+  {
+   "q": "Where does the weight go?",
+   "a": "It includes the baby, placenta, amniotic fluid, larger breasts and uterus, extra blood and fluid, and fat stores."
+  },
+  {
+   "q": "What if I gain too much or too little?",
+   "a": "Talk to your provider. They can look at your health, your baby's growth and your nutrition rather than relying on the number alone."
+  }
+ ],
+ "sources": [
+  {
+   "title": "ACOG: Patient resources on pregnancy",
+   "url": "https://www.acog.org/"
+  }
+ ],
+ "slug": "pregnancy-weight-gain-calculator"
+}

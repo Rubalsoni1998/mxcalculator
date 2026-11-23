@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: A $15,000 Personal Loan</h2>\n<p>Borrow $15,000 at 9% APR. Over 5 years the payment is about <strong>$311.38</strong> a month and total interest is about <strong>$3,683</strong>. Shorten the term to 3 years and the payment rises to about <strong>$477.00</strong>, but interest drops to about <strong>$2,172</strong>.</p>\n<div class=\"example\"><p>The shorter loan costs about $166 more each month and saves about $1,511 in interest. The right choice depends on what your monthly budget can safely carry.</p></div>\n<h2>Comparing Loan Offers</h2>\n<ul><li><strong>Look at APR, not just the interest rate.</strong> APR includes certain fees, so it is the better number for comparing lenders.</li><li><strong>Check for an origination fee.</strong> Some lenders deduct it from the amount you receive, so you repay more than you actually get.</li><li><strong>Ask about prepayment penalties.</strong> Most personal loans have none, but confirm before signing.</li><li><strong>Compare total cost.</strong> A lower payment on a longer term often means a higher total cost.</li></ul>\n<h2>Before You Borrow</h2>\n<p>Lenders mainly look at your credit history, income and existing debt. A lower debt-to-income ratio and a higher credit score usually mean a lower rate. If you are borrowing for a car or a home, the <a href=\"auto-loan-calculator.html\">auto loan calculator</a> and <a href=\"mortgage-calculator.html\">mortgage calculator</a> add the costs specific to those loans.</p>",
+ "extra_faqs": [
+  {
+   "q": "How is the monthly loan payment calculated?",
+   "a": "It uses the amortization formula: payment = P × r ÷ (1 − (1 + r)^−n), where P is the amount borrowed, r is the monthly rate and n is the number of payments. Each payment covers that month's interest first, then reduces principal."
+  },
+  {
+   "q": "Is it better to take a shorter loan term?",
+   "a": "A shorter term costs less interest overall but raises the monthly payment. If the payment fits your budget comfortably, shorter is usually cheaper; if not, a longer term with extra payments when possible gives flexibility."
+  },
+  {
+   "q": "What is the difference between APR and interest rate?",
+   "a": "The interest rate is the cost of borrowing the principal. APR adds certain lender fees and expresses the total as a yearly rate, which makes offers easier to compare."
+  }
+ ],
+ "sources": [
+  {
+   "title": "CFPB: Consumer tools",
+   "url": "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+  }
+ ],
+ "slug": "loan-calculator"
+}

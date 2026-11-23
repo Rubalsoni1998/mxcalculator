@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Examples</h2>\n<div class=\"example\"><p><strong>Law of cosines.</strong> Two sides of 7 and 9 with a 60° angle between them: c² = 7² + 9² − 2 × 7 × 9 × cos 60° = 67, so the third side is <strong>8.185</strong>.</p></div>\n<div class=\"example\"><p><strong>Heron's formula.</strong> For sides 5, 6 and 7, s = 9 and the area is √(9 × 4 × 3 × 2) = <strong>14.70</strong> square units.</p></div>\n<div class=\"example\"><p><strong>Right triangle.</strong> Legs of 3 and 4 give a hypotenuse of 5, an area of 6, and a perimeter of 12.</p></div>\n<h2>Which Rule to Use</h2>\n<ul><li>Right triangle with two sides known: Pythagorean theorem.</li><li>Two angles and a side (AAS or ASA): law of sines.</li><li>Three sides (SSS) or two sides and the angle between them (SAS): law of cosines.</li><li>Two sides and a non-included angle (SSA) can have 0, 1 or 2 solutions.</li></ul>\n<h2>Check Your Inputs</h2>\n<p>The sum of any two sides must exceed the third, and angles must add to 180°. See the <a href=\"scientific-calculator.html\">scientific calculator</a> for trig functions and the <a href=\"concrete-calculator.html\">concrete calculator</a> for a practical use of area and volume.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I find the area of a triangle with three sides?",
+   "a": "Use Heron's formula: with s = (a + b + c) ÷ 2, area = √(s(s − a)(s − b)(s − c))."
+  },
+  {
+   "q": "What is the Pythagorean theorem?",
+   "a": "In a right triangle, a² + b² = c², where c is the hypotenuse."
+  },
+  {
+   "q": "Why does my triangle have no solution?",
+   "a": "The inputs may violate the triangle inequality or the angle sum, so no triangle can match them."
+  }
+ ],
+ "sources": [],
+ "slug": "triangle-calculator"
+}

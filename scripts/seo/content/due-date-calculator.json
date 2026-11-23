@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: From the Last Period</h2>\n<p>Doctors count pregnancy from the first day of the last menstrual period (LMP), and a full pregnancy is counted as 40 weeks, or 280 days. If your LMP was January 10, 2026, your estimated due date is <strong>October 17, 2026</strong> (LMP + 280 days, often called Naegele's rule).</p>\n<h2>Why Your Date Can Change</h2>\n<ul><li>Naegele's rule assumes a 28-day cycle with ovulation on day 14. With longer or shorter cycles, the date shifts.</li><li>An early ultrasound measures the fetus and may move the date if it differs from the LMP date by more than a few days.</li><li>IVF pregnancies use the embryo transfer date, which is precise.</li></ul>\n<h2>The Due Date Is an Estimate</h2>\n<p>Only a small share of babies are born on the exact due date. ACOG describes 39 weeks to 40 weeks 6 days as full term, so a birth two weeks either side of the date is normal. Track your week-by-week progress with the <a href=\"pregnancy-calculator.html\">pregnancy calculator</a>, and see the likely <a href=\"conception-calculator.html\">conception window</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How accurate is a due date?",
+   "a": "It is an estimate. Most births happen within a couple of weeks of the date. Your provider may adjust it after an early ultrasound."
+  },
+  {
+   "q": "What if my cycle is not 28 days?",
+   "a": "Enter your actual cycle length if the calculator offers it. Longer cycles usually mean later ovulation and a later due date."
+  },
+  {
+   "q": "When is a baby considered full term?",
+   "a": "ACOG defines full term as 39 weeks 0 days through 40 weeks 6 days."
+  }
+ ],
+ "sources": [
+  {
+   "title": "ACOG: Patient resources on pregnancy",
+   "url": "https://www.acog.org/"
+  }
+ ],
+ "slug": "due-date-calculator"
+}

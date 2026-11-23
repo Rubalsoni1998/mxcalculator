@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Examples</h2>\n<div class=\"example\"><p><strong>Adding.</strong> 3/4 + 5/6: use the common denominator 12. 9/12 + 10/12 = 19/12 = <strong>1 7/12</strong>.</p></div>\n<div class=\"example\"><p><strong>Dividing.</strong> 2/3 ÷ 4/9 = 2/3 × 9/4 = 18/12 = <strong>3/2</strong> (simplified).</p></div>\n<div class=\"example\"><p><strong>To a decimal.</strong> 7/8 = <strong>0.875</strong>.</p></div>\n<h2>Simplifying</h2>\n<p>Divide the numerator and denominator by their greatest common divisor. For 18/12 the GCD is 6, which gives 3/2. A fraction is fully simplified when the two numbers share no common factor other than 1.</p>\n<h2>Mixed Numbers</h2>\n<p>Convert a mixed number to an improper fraction before multiplying or dividing: 2 1/2 = 5/2. See the <a href=\"percent-calculator.html\">percentage calculator</a> for percents and the <a href=\"scientific-calculator.html\">scientific calculator</a> for more.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I add fractions with different denominators?",
+   "a": "Find a common denominator, convert each fraction, add the numerators, then simplify."
+  },
+  {
+   "q": "How do I divide fractions?",
+   "a": "Multiply by the reciprocal of the second fraction: a/b ÷ c/d = a/b × d/c."
+  },
+  {
+   "q": "How do I turn a fraction into a percent?",
+   "a": "Divide the numerator by the denominator and multiply by 100. For example, 3/4 = 0.75 = 75%."
+  }
+ ],
+ "sources": [],
+ "slug": "fraction-calculator"
+}

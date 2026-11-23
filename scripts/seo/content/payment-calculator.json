@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>How Term Length Changes the Payment</h2>\n<p>For a $25,000 loan at 7% APR, here is how the monthly payment and total interest change with the term:</p>\n<table><thead><tr><th>Term</th><th>Monthly payment</th><th>Total interest</th></tr></thead><tbody><tr><td>36 months</td><td>$771.93</td><td>$2,789</td></tr><tr><td>48 months</td><td>$598.66</td><td>$3,735</td></tr><tr><td>60 months</td><td>$495.03</td><td>$4,702</td></tr><tr><td>72 months</td><td>$426.23</td><td>$5,688</td></tr></tbody></table>\n<p>Stretching the term lowers the payment but increases total interest. That trade-off is the main thing the calculator helps you see.</p>\n<h2>Checking the Result by Hand</h2>\n<p>The monthly rate is the APR divided by 12. For 7% that is 0.5833%. Multiply it by the balance to get the first month's interest, which on $25,000 is about $145.83. Whatever remains of the payment reduces principal, so each month a little more goes to principal and a little less to interest.</p>\n<h2>When a Payment Calculator Is Not Enough</h2>\n<ul><li>Loans with variable rates change the payment when the rate resets.</li><li>Interest-only periods and balloon payments do not follow the standard formula.</li><li>For a full month-by-month breakdown, use the <a href=\"amortization-calculator.html\">amortization calculator</a>.</li></ul>",
+ "extra_faqs": [
+  {
+   "q": "How do I calculate a monthly payment without a calculator?",
+   "a": "Use payment = P × r ÷ (1 − (1 + r)^−n). Divide the annual rate by 12 for r, and use the number of months for n. A spreadsheet PMT function does the same thing."
+  },
+  {
+   "q": "Why does a longer loan cost more?",
+   "a": "Interest accrues on the remaining balance each month. A longer term keeps a larger balance outstanding for longer, so more interest builds up even though each payment is smaller."
+  },
+  {
+   "q": "Do extra payments lower my monthly payment?",
+   "a": "Usually they shorten the loan instead. Extra principal reduces the balance, so you owe less interest each month and finish earlier, unless the lender recasts the loan."
+  }
+ ],
+ "sources": [
+  {
+   "title": "CFPB: Consumer tools",
+   "url": "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+  }
+ ],
+ "slug": "payment-calculator"
+}

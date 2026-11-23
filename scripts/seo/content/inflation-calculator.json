@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: 3% Inflation for 20 Years</h2>\n<p>At a steady 3% a year, prices rise by a factor of 1.03<sup>20</sup> ≈ <strong>1.81</strong>. Something that costs $1,000 today would cost about <strong>$1,806</strong> in 20 years. Put the other way, $1,000 of cash would then buy only about <strong>$554</strong> of today's goods.</p>\n<div class=\"example\"><p>The rule of 72 gives a quick check: divide 72 by the inflation rate to estimate the years it takes prices to double. At 3% that is about 24 years; at 4% it is about 18.</p></div>\n<h2>Why Your Own Inflation Rate Differs</h2>\n<p>The Consumer Price Index measures an average basket of goods. Your household may spend more on housing, health care, tuition or food than that average, so the inflation you feel can be higher or lower. Treat the calculator as a way to test scenarios, not to predict the future.</p>\n<h2>Using Inflation in Planning</h2>\n<ul><li>Judge a raise in real terms: a 3% raise during 3% inflation does not increase buying power.</li><li>Think about \"real\" returns: an investment earning 6% while inflation runs 3% grows buying power by about 3% a year. See the <a href=\"investment-calculator.html\">investment calculator</a>.</li><li>Plan retirement spending in future dollars with the <a href=\"retirement-calculator.html\">retirement calculator</a>.</li></ul>",
+ "extra_faqs": [
+  {
+   "q": "Where do official US inflation numbers come from?",
+   "a": "The Bureau of Labor Statistics publishes the Consumer Price Index each month. Annual inflation is the percentage change in the CPI over 12 months."
+  },
+  {
+   "q": "What is the formula for inflation?",
+   "a": "Inflation rate = (new price level − old price level) ÷ old price level × 100. To project a future price, multiply today's price by (1 + rate) raised to the number of years."
+  },
+  {
+   "q": "Does inflation affect savings?",
+   "a": "Yes. If your savings earn less than the inflation rate, their buying power shrinks even though the dollar balance grows."
+  }
+ ],
+ "sources": [
+  {
+   "title": "BLS: Consumer Price Index",
+   "url": "https://www.bls.gov/cpi/"
+  }
+ ],
+ "slug": "inflation-calculator"
+}

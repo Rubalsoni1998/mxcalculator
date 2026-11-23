@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example</h2>\n<p>With a 30-day cycle starting January 10, 2026, ovulation is expected around day 16, on about <strong>January 26, 2026</strong>, and the fertile window runs from <strong>January 21, 2026</strong> to <strong>January 26, 2026</strong>. In a 28-day cycle, ovulation would come on day 14. Cycle length matters because ovulation is tied to the end of the cycle, not the start.</p>\n<h2>Combining a Calculator With Body Signals</h2>\n<ul><li>Cervical mucus often becomes clear and slippery before ovulation.</li><li>Ovulation predictor kits detect the LH surge, usually 24 to 36 hours before ovulation.</li><li>Basal body temperature rises slightly after ovulation, so it confirms it afterward rather than predicting it.</li></ul>\n<h2>When Predictions Are Less Reliable</h2>\n<p>Irregular cycles, recent hormonal contraception, breastfeeding, and conditions such as PCOS make calendar predictions less accurate. If you have been trying to conceive for 12 months (6 months if over 35), a clinician can help. See also the <a href=\"period-calculator.html\">period calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How long does ovulation last?",
+   "a": "The egg survives about 12 to 24 hours after release, but sperm can live up to five days, which is why the fertile window is about six days."
+  },
+  {
+   "q": "Can I get pregnant right after my period?",
+   "a": "It is less likely, but possible with short cycles because sperm can survive several days before ovulation."
+  },
+  {
+   "q": "Are ovulation calculators accurate?",
+   "a": "They estimate from your average cycle. Tracking signs or using predictor kits improves accuracy."
+  }
+ ],
+ "sources": [
+  {
+   "title": "ACOG: Patient resources on pregnancy",
+   "url": "https://www.acog.org/"
+  }
+ ],
+ "slug": "ovulation-calculator"
+}

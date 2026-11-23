@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: 170 cm and 70 kg</h2>\n<p>The Mosteller formula is √(height in cm × weight in kg ÷ 3600). For 170 cm and 70 kg that is √3.306, about <strong>1.82 m²</strong>. The DuBois formula gives about <strong>1.81 m²</strong>. The small difference is normal; formulas were derived differently.</p>\n<h2>Where BSA Is Used</h2>\n<p>Doctors use body surface area to dose some chemotherapy drugs, and to index measurements such as cardiac output or kidney function to body size. The calculator is for information only; clinical dosing must be set by the treating team.</p>\n<h2>Related Measures</h2>\n<ul><li>Kidney function is often reported per 1.73 m² of BSA; see the <a href=\"gfr-calculator.html\">GFR calculator</a>.</li><li>For height-weight screening, use the <a href=\"bmi-calculator.html\">BMI calculator</a>.</li></ul>",
+ "extra_faqs": [
+  {
+   "q": "What is a normal body surface area?",
+   "a": "Average adults are often cited around 1.7 m² for women and 1.9 m² for men, but it varies with size."
+  },
+  {
+   "q": "Which BSA formula is best?",
+   "a": "Mosteller is the easiest and widely used. Differences between common formulas are typically small for average adults."
+  },
+  {
+   "q": "Can I use this for medication doses?",
+   "a": "No. Doses must be prescribed and checked by a clinician or pharmacist."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NIDDK: Kidney disease information",
+   "url": "https://www.niddk.nih.gov/"
+  }
+ ],
+ "slug": "body-surface-area-calculator"
+}

@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Examples (CKD-EPI 2021)</h2>\n<p>For a 50-year-old with a serum creatinine of 1.0 mg/dL, the equation gives an eGFR of about <strong>92 mL/min/1.73 m²</strong> for a man and about <strong>69</strong> for a woman. If creatinine were 1.6 mg/dL, a 50-year-old man would have an eGFR of about <strong>52</strong>. The same creatinine means different eGFR values because muscle mass differs on average between sexes and across ages.</p>\n<h2>Reading the Result</h2>\n<p>Kidney function normally declines slowly with age. A single low eGFR does not by itself mean chronic kidney disease: doctors look for values that stay low for at least three months, along with urine tests for protein. Dehydration, medications, a very high-protein meal or intense exercise can temporarily change creatinine.</p>\n<h2>When eGFR May Mislead</h2>\n<ul><li>Very high or low muscle mass changes creatinine independent of kidney function.</li><li>Some conditions and drugs change creatinine without affecting the kidneys.</li><li>Pregnancy and acute illness need clinical interpretation.</li></ul>\n<p>This tool does not diagnose anything. Discuss results with your clinician. Related sizing: <a href=\"body-surface-area-calculator.html\">body surface area</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "What is a normal GFR?",
+   "a": "A GFR of 90 or above is generally considered normal, though it declines with age. Your clinician interprets it with other tests."
+  },
+  {
+   "q": "What is the difference between GFR and eGFR?",
+   "a": "GFR is the true filtration rate, which is hard to measure. eGFR is an estimate calculated from serum creatinine, age and sex."
+  },
+  {
+   "q": "Does the equation use race?",
+   "a": "The 2021 CKD-EPI creatinine equation removed the race variable. This calculator uses age, sex and creatinine only."
+  }
+ ],
+ "sources": [
+  {
+   "title": "NIDDK: Kidney disease",
+   "url": "https://www.niddk.nih.gov/"
+  }
+ ],
+ "slug": "gfr-calculator"
+}

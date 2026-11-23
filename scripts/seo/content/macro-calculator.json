@@ -1,0 +1,32 @@
+{
+ "slug": "macro-calculator",
+ "sections": "<h2>Choosing Protein, Carbs and Fat in the Right Order</h2>\n<p>Instead of picking a percentage split first, many people find it easier to set macros in a sequence. Start with calories, then protein, then fat, and let carbohydrate fill the rest. This ensures the two nutrients with the clearest minimums get covered before everything else.</p>\n<ol><li>Set daily calories for your goal.</li><li>Set protein in grams per kilogram of body weight, for example 1.6 g/kg.</li><li>Set fat at roughly 20 to 35 percent of calories.</li><li>Divide remaining calories by 4 to get carbohydrate grams.</li></ol>\n<h2>Worked Example: Building a Plan From Scratch</h2>\n<div class=\"example\"><p>An 80 kg (176 lb) person targets 2,400 calories. Protein at 1.6 g/kg is 80 &times; 1.6 = <strong>128 g</strong>, which is 512 calories. Fat at 30 percent is 2,400 &times; 0.30 &divide; 9 = <strong>80 g</strong>, which is 720 calories. Remaining calories: 2,400 &minus; 512 &minus; 720 = 1,168, so carbs are 1,168 &divide; 4 = <strong>292 g</strong>.</p></div>\n<p>That plan works out to about 49 percent carbs, 21 percent protein and 30 percent fat. Compare it with the percentage splits above and you will see percent-based and gram-based approaches reach similar places by different routes.</p>\n<h2>Tracking Without Burning Out</h2>\n<p>Precision tracking is a tool, not a requirement. A kitchen scale and the Nutrition Facts label give the best accuracy, but a few habits cover most of the benefit.</p>\n<ul><li>Log protein first, since it is the macro people most often undershoot.</li><li>Weigh foods raw or cooked consistently. Cooked rice and raw rice differ greatly in weight.</li><li>Use a weekly average. A high-carb Saturday and a low-carb Sunday can still hit the same weekly target.</li><li>Do not forget drinks. Alcohol supplies 7 calories per gram and fits none of the three macros.</li></ul>\n<h2>Common Mistakes</h2>\n<p>The most frequent error is treating macros as a substitute for calories. If calories are too high, a perfect split will not produce weight loss. Another is chasing a split from social media without checking that it suits your activity. Endurance athletes and strength athletes often settle on different carbohydrate levels. For a calorie estimate to feed into this tool, the <a href=\"tdee-calculator.html\">TDEE calculator</a> shows how total energy expenditure is built up.</p>\n<h2>When to Get Individual Help</h2>\n<p>If you have diabetes, kidney disease, an eating disorder history or are pregnant, set macro targets with a clinician or registered dietitian. General calculators cannot account for medications or lab results.</p><h2>Adjusting After Two to Four Weeks</h2>\n<p>Use real results to refine the plan. If your weight is moving in the direction you want at a pace you can sustain, leave things alone. If it is not, change calories first, usually by 100 to 200 per day, then rebalance macros so protein stays steady. Small, deliberate changes make it easy to see what worked.</p>\n<p>Also watch non-scale signs such as hunger, sleep, training performance and mood. A plan that looks perfect on paper but leaves you exhausted is not working. Adding carbohydrate around workouts or moving some fat to carbs often helps training days without changing total calories.</p>",
+ "extra_faqs": [
+  {
+   "q": "What is a good macro ratio for beginners?",
+   "a": "A balanced split such as 40 percent carbs, 30 percent protein and 30 percent fat is a reasonable start. Adjust after a few weeks based on hunger, energy and progress. The acceptable ranges in US guidelines are wide, so there is no single correct ratio."
+  },
+  {
+   "q": "How many grams of protein should be in my macros?",
+   "a": "Many active adults aim for 1.2 to 2.2 grams per kilogram of body weight, with the higher end for muscle gain or dieting. At 80 kg, that is about 96 to 176 grams. Needs vary with age and health."
+  },
+  {
+   "q": "Do macros matter if I am not counting calories?",
+   "a": "They still help. A protein-rich, fiber-rich diet tends to be more filling, which can make eating the right amount easier. But total calories decide whether you gain or lose weight, so the two work together."
+  },
+  {
+   "q": "Are macro targets different for men and women?",
+   "a": "The formula is the same, but calorie needs differ because average body size and muscle mass differ. Women who are pregnant or breastfeeding have different needs and should follow guidance from their obstetric provider or dietitian."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Dietary Guidelines for Americans",
+   "url": "https://www.dietaryguidelines.gov/"
+  },
+  {
+   "title": "NIDDK: Healthy living and nutrition",
+   "url": "https://www.niddk.nih.gov/"
+  }
+ ]
+}

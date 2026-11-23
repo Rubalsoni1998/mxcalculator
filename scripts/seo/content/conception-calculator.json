@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: A 30-Day Cycle</h2>\n<p>Ovulation usually occurs about 14 days before the next period starts. With an LMP of January 10, 2026 and a 30-day cycle, ovulation falls around day 16, about <strong>January 26, 2026</strong>. The most likely conception window is the five days before ovulation through ovulation day, here <strong>January 21, 2026 to January 26, 2026</strong>.</p>\n<h2>Working Backward From a Due Date</h2>\n<p>If you know the due date, subtract 266 days (38 weeks) to estimate conception, since pregnancy counted from LMP is about 14 days longer than the time since conception. This gives a single day, but the real window is wider because sperm can survive up to five days in the reproductive tract and the egg lives about 12 to 24 hours.</p>\n<h2>Limits</h2>\n<ul><li>The result is an estimate, especially with irregular cycles.</li><li>An early ultrasound is a more reliable way to date a pregnancy.</li><li>Calculating conception is not a way to establish paternity.</li></ul>\n<p>To convert in the other direction use the <a href=\"pregnancy-conception-calculator.html\">conception date to due date calculator</a>; track fertility with the <a href=\"ovulation-calculator.html\">ovulation calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many days after my period do I conceive?",
+   "a": "In a typical 28-day cycle, conception happens around day 14 to 16 counted from the first day of the last period. This varies with cycle length."
+  },
+  {
+   "q": "Can I conceive on any day of my cycle?",
+   "a": "Pregnancy is only possible during the fertile window, roughly five days before ovulation through the day after. Cycles vary, so timing can shift."
+  },
+  {
+   "q": "How does an ultrasound date conception?",
+   "a": "It measures the embryo or fetus and compares it with growth standards. In early pregnancy this is usually accurate to within a few days."
+  }
+ ],
+ "sources": [
+  {
+   "title": "ACOG: Patient resources on pregnancy",
+   "url": "https://www.acog.org/"
+  }
+ ],
+ "slug": "conception-calculator"
+}

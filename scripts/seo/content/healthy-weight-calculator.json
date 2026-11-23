@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: 5'6\"</h2>\n<p>The weight range for a BMI of 18.5 to 24.9 is found with weight (lb) = BMI × height² (in) ÷ 703. At 66 inches, that is about <strong>115 to 154 lb</strong>. Someone at 5'6\" and 180 lb has a BMI near 29.0, above that range.</p>\n<h2>Why a Range, Not a Number</h2>\n<p>Healthy bodies come in many sizes. A range recognizes differences in frame, muscle mass and age. Where you sit within it matters less than other signs of health such as blood pressure, blood sugar, fitness and how you feel.</p>\n<h2>Limits of the BMI Range</h2>\n<ul><li>BMI does not separate muscle from fat, so very muscular people can fall into \"overweight\" while being healthy.</li><li>Older adults may do better at the upper end of the range.</li><li>Ethnic background and body shape can change risk at a given BMI.</li><li>Waist size is a useful addition; see the <a href=\"body-type-calculator.html\">body type calculator</a>.</li></ul>\n<p>For your exact BMI, use the <a href=\"bmi-calculator.html\">BMI calculator</a>. Talk to your doctor about personal weight goals.</p>",
+ "extra_faqs": [
+  {
+   "q": "What is a healthy weight for my height?",
+   "a": "It is the weight that gives a BMI between 18.5 and 24.9. Enter your height and the calculator converts that into pounds or kilograms."
+  },
+  {
+   "q": "Is a BMI of 25 unhealthy?",
+   "a": "A BMI of 25 is the start of the overweight category, but it is only a screening measure. Waist size, fitness and lab results give a fuller view."
+  },
+  {
+   "q": "Does age change the healthy weight range?",
+   "a": "The standard BMI range is the same for adults, but some doctors accept slightly higher values in older adults. Ask your clinician what is right for you."
+  }
+ ],
+ "sources": [
+  {
+   "title": "CDC: About adult BMI",
+   "url": "https://www.cdc.gov/bmi/"
+  }
+ ],
+ "slug": "healthy-weight-calculator"
+}

@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: 5'9\" and 200 lb</h2>\n<p>BMI = 703 × 200 ÷ 69² ≈ <strong>29.5</strong>, in the overweight range (25 to 29.9). The top of the healthy range at this height (BMI 24.9) is about <strong>169 lb</strong>, so the amount above it is about <strong>31 lb</strong>.</p>\n<div class=\"example\"><p>Losing 5 to 10 percent of body weight, here 10 to 20 lb, is a common first goal, and is associated with health benefits for many people.</p></div>\n<h2>Setting Goals That Last</h2>\n<ul><li>Aim for gradual change, often 1 to 2 pounds a week at most.</li><li>Pick habits you can keep: regular activity, sleep, and food you enjoy.</li><li>Use the <a href=\"calorie-calculator.html\">calorie calculator</a> to set a moderate deficit.</li></ul>\n<h2>What This Number Cannot Say</h2>\n<p>Excess weight on a chart is not a diagnosis. Muscle mass, waist size and conditions such as high blood pressure or diabetes matter more for health decisions. Discuss goals with your doctor.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many pounds overweight am I?",
+   "a": "The calculator compares your weight with the top of the healthy BMI range for your height. The difference is the amount above it."
+  },
+  {
+   "q": "Is a BMI of 27 bad?",
+   "a": "It falls in the overweight range. Health risk depends on other factors, so ask your doctor to interpret it with your waist size and test results."
+  },
+  {
+   "q": "How fast should I lose weight?",
+   "a": "Slow, steady loss is generally easier to maintain. Many guidelines suggest around 1 to 2 pounds a week for adults, but individual advice should come from a clinician."
+  }
+ ],
+ "sources": [
+  {
+   "title": "CDC: About adult BMI",
+   "url": "https://www.cdc.gov/bmi/"
+  }
+ ],
+ "slug": "overweight-calculator"
+}

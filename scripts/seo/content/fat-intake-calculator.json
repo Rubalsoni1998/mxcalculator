@@ -1,0 +1,32 @@
+{
+ "slug": "fat-intake-calculator",
+ "sections": "<h2>Reading Your Fat Target in Grams</h2>\n<p>The calculator gives two numbers: a range for total fat and a ceiling for saturated fat. Both are daily limits averaged over several days, not a target to hit exactly at every meal. The Nutrition Facts label lists total fat, saturated fat and trans fat in grams per serving, so you can compare food against your range directly.</p>\n<h2>Worked Example at Two Calorie Levels</h2>\n<div class=\"example\"><p>At 2,000 calories, 20 to 35 percent from fat is 2,000 &times; 0.20 &divide; 9 = <strong>44 grams</strong> to 2,000 &times; 0.35 &divide; 9 = <strong>78 grams</strong>. Saturated fat under 10 percent is 2,000 &times; 0.10 &divide; 9 = about <strong>22 grams</strong>.</p><p>At 2,200 calories and 30 percent fat: 2,200 &times; 0.30 &divide; 9 = about <strong>73 grams</strong> of fat, with saturated fat capped near <strong>24 grams</strong>.</p></div>\n<p>Because fat has 9 calories per gram versus 4 for protein and carbohydrate, small amounts add up fast. One tablespoon of olive oil has roughly 120 calories and about 14 grams of fat.</p>\n<h2>Which Fats to Prioritize</h2>\n<p>Total grams only tell part of the story. The Dietary Guidelines for Americans recommend replacing saturated fat with unsaturated fat when possible. The American Heart Association and NHLBI also advise limiting trans fat, which comes from partially hydrogenated oils. The FDA has moved to remove artificial trans fat from the food supply, but small amounts can occur naturally in some meat and dairy, so check labels.</p>\n<ul><li><strong>Monounsaturated:</strong> olive oil, canola oil, avocado, most nuts</li><li><strong>Polyunsaturated:</strong> walnuts, flaxseed, sunflower seeds, salmon and other fatty fish (including omega-3 fats)</li><li><strong>Saturated:</strong> butter, cheese, fatty cuts of meat, coconut and palm oil</li></ul>\n<h2>Common Mistakes</h2>\n<ol><li><strong>Cutting fat too low.</strong> Going far below 20 percent of calories can make it harder to absorb vitamins A, D, E and K and to get essential fatty acids.</li><li><strong>Forgetting cooking fats.</strong> Oil, butter and dressing are easy to miss in a food log.</li><li><strong>Treating \"low fat\" labels as healthy.</strong> Many low-fat products add sugar, so compare calories and added sugars too.</li></ol>\n<h2>Pairing With Your Other Targets</h2>\n<p>Once you set fat, protein and carbohydrate fill the remaining calories. Use the <a href=\"protein-calculator.html\">protein calculator</a> to set protein first, then see what is left for carbs. If you have high LDL cholesterol or heart disease, your clinician or a registered dietitian may recommend a lower saturated fat limit than the general 10 percent guideline.</p><h2>Estimating Fat in Everyday Foods</h2>\n<p>It helps to have a few reference points. These are typical values; check labels because products vary.</p>\n<table><thead><tr><th>Food</th><th>Approx. total fat</th></tr></thead><tbody><tr><td>1 tablespoon olive oil</td><td>14 g</td></tr><tr><td>1 large egg</td><td>5 g</td></tr><tr><td>1 oz almonds (about 23 nuts)</td><td>14 g</td></tr><tr><td>1/2 medium avocado</td><td>10 to 15 g</td></tr><tr><td>1 tablespoon butter</td><td>11 g</td></tr></tbody></table>\n<p>A handful of nuts and a tablespoon of oil on a salad can account for roughly 30 grams, which is close to half of a 67 gram budget. Planning where your fat comes from keeps the day balanced.</p>\n<h2>Adjusting for Your Situation</h2>\n<p>Higher fat intakes within the range may suit people who prefer lower-carb eating, while very active people often keep fat nearer the lower end to leave room for carbohydrate. If you eat out often, restaurant meals can contain a day's saturated fat in one dish, so average over several days rather than judging a single meal.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many grams of fat should I eat to lose weight?",
+   "a": "There is no special fat number for weight loss. Set calories for a modest deficit, then keep fat within 20 to 35 percent of those calories. At 1,600 calories, that is about 36 to 62 grams per day."
+  },
+  {
+   "q": "Is the 20 to 35 percent fat range a minimum or a goal?",
+   "a": "It is an acceptable range for adults, not a target to hit. Staying inside it supports nutrient absorption while leaving room for protein and carbohydrate. Where you land inside the range depends on your food preferences and health needs."
+  },
+  {
+   "q": "How do I find saturated fat on a food label?",
+   "a": "Look at the Nutrition Facts panel under Total Fat. Saturated fat is indented beneath it, listed in grams, along with a percent Daily Value. Compare the grams with your daily saturated fat ceiling from the calculator."
+  },
+  {
+   "q": "Does eating fat raise cholesterol?",
+   "a": "Saturated fat tends to raise LDL cholesterol in many people, while replacing it with unsaturated fat generally helps. Responses vary. If you have high cholesterol, ask your clinician for a personal limit and have your lipids tested."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Dietary Guidelines for Americans",
+   "url": "https://www.dietaryguidelines.gov/"
+  },
+  {
+   "title": "NHLBI: Heart, lung and blood health",
+   "url": "https://www.nhlbi.nih.gov/"
+  }
+ ]
+}

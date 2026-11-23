@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: Devine Formula</h2>\n<p>The Devine formula starts at 50 kg for men or 45.5 kg for women at 5 feet and adds 2.3 kg for each inch above that. A woman who is 5'6\" gets 45.5 + 2.3 × 6 = <strong>59.3 kg (131 lb)</strong>. A man who is 5'10\" gets 50 + 2.3 × 10 = <strong>73.0 kg (161 lb)</strong>.</p>\n<p>Other formulas, such as Robinson, Miller and Hamwi, give somewhat different answers, which is why the calculator shows them side by side.</p>\n<h2>Where These Formulas Come From</h2>\n<p>Devine's formula was created in 1974 to help estimate medication doses, not to set weight goals. Several formulas have been in use since, each built on small samples. None accounts for muscle, bone structure or age.</p>\n<h2>A More Useful Way to Use the Result</h2>\n<ul><li>Treat it as a reference point, not a target you must hit.</li><li>Compare it with the healthy BMI range on the <a href=\"healthy-weight-calculator.html\">healthy weight calculator</a>.</li><li>Consider body composition with the <a href=\"body-fat-calculator.html\">body fat calculator</a>.</li></ul>",
+ "extra_faqs": [
+  {
+   "q": "Which ideal weight formula is most accurate?",
+   "a": "None is clearly the best. They all give an estimate based on height and sex. Use the spread across formulas as a range and rely on health measures too."
+  },
+  {
+   "q": "Does ideal body weight include muscle?",
+   "a": "Formulas ignore body composition, so an athletic person can weigh more than the result and still be healthy."
+  },
+  {
+   "q": "Why do the formulas give different results?",
+   "a": "They were created from different groups of people and for different purposes, so their assumptions about height and weight differ."
+  }
+ ],
+ "sources": [
+  {
+   "title": "CDC: About adult BMI",
+   "url": "https://www.cdc.gov/bmi/"
+  }
+ ],
+ "slug": "ideal-weight-calculator"
+}

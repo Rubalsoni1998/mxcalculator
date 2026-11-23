@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example: Finding the Rate You Are Really Paying</h2>\n<p>Suppose you borrow $20,000 and the lender asks for $400 a month for 60 months. The implied annual rate is about <strong>7.42%</strong>. A shorter case: $10,000 repaid at $300 a month for 36 months works out to about <strong>5.06%</strong>.</p>\n<div class=\"example\"><p>There is no closed-form formula for the rate, so the calculator searches for the rate at which the payments exactly repay the loan. That is the same approach spreadsheets use in their RATE function.</p></div>\n<h2>When This Is Useful</h2>\n<ul><li><strong>Dealer financing.</strong> Dealers often quote only a payment. Enter the price, term and payment to see the actual rate.</li><li><strong>Buy-here-pay-here or store credit.</strong> Offers that advertise a low payment can hide a high rate.</li><li><strong>Checking a loan document.</strong> Confirm the stated APR matches the payments you are asked to make.</li></ul>\n<h2>Limits of the Result</h2>\n<p>Fees paid at closing, rolled-in costs and variable rates all change the effective cost. If the lender finances fees as part of the loan, enter the full amount financed. For an official figure, the lender's APR disclosure under the Truth in Lending Act is the number to compare. You can test different loans with the <a href=\"loan-calculator.html\">loan calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I find the interest rate on a loan?",
+   "a": "Enter the loan amount, the term and the monthly payment. The calculator solves for the annual rate that makes those payments repay the loan exactly."
+  },
+  {
+   "q": "Is the rate shown the same as the APR?",
+   "a": "It is the effective annual rate implied by the amount financed and the payments. If fees are included in the amount you enter, it behaves like an APR. Always compare with the lender's disclosed APR."
+  },
+  {
+   "q": "Why is my calculated rate higher than the quoted one?",
+   "a": "Fees, insurance or add-on products financed in the loan raise the payment, which raises the implied rate. Make sure the amount you enter matches what you actually receive."
+  }
+ ],
+ "sources": [
+  {
+   "title": "CFPB: Consumer tools",
+   "url": "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+  }
+ ],
+ "slug": "interest-rate-calculator"
+}

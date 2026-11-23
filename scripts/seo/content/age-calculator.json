@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Example</h2>\n<p>Someone born on March 15, 1990 is, on November 22, 2026, <strong>36 years, 8 months and 7 days</strong> old. That is 13,401 days in total. Age is counted as completed years, so you turn a year older on your birthday, not before.</p>\n<h2>Leap Day Birthdays</h2>\n<p>People born on February 29 have a birthday only in leap years. In non-leap years the legal birthday varies by state and context, often treated as February 28 or March 1.</p>\n<h2>Uses and Related Tools</h2>\n<ul><li>Add or subtract time with the <a href=\"date-calculator.html\">date calculator</a>.</li><li>Many age-based rules, such as retirement benefits, use exact ages; check with the agency. See the <a href=\"retirement-calculator.html\">retirement calculator</a>.</li></ul>",
+ "extra_faqs": [
+  {
+   "q": "How do I calculate my age in days?",
+   "a": "Subtract the birth date from today. The calculator counts every day, including leap days."
+  },
+  {
+   "q": "How old will I be on a future date?",
+   "a": "Enter the future date in the comparison field to see your age on that day."
+  },
+  {
+   "q": "Is age counted differently in some countries?",
+   "a": "Yes. Some countries use traditional systems that count a person as one at birth. The US counts completed years."
+  }
+ ],
+ "sources": [],
+ "slug": "age-calculator"
+}

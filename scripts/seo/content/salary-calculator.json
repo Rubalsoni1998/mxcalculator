@@ -1,0 +1,32 @@
+{
+ "slug": "salary-calculator",
+ "sections": "<h2>Comparing Two Offers Fairly</h2>\n<p>A quoted rate only means something once you know the hours behind it. Take a $60,000 salary and a $30 hourly job. At 40 hours a week for 52 weeks, the hourly job pays 30 × 2,080 = <strong>$62,400</strong>. But if the salaried job is expected to run 45 hours a week, its real hourly rate is 60,000 ÷ (45 × 52) = <strong>$25.64</strong> rather than $28.85.</p>\n<div class=\"example\"><p><strong>Paid time off matters too.</strong> A $60,000 salary with 10 holidays and 15 vacation days leaves 2,080 − 200 = 1,880 working hours. Dividing by hours actually worked gives about <strong>$31.91 an hour</strong>, versus $28.85 if you ignore time off.</p></div>\n<h2>Hourly Pay and Overtime in the U.S.</h2>\n<p>Under the federal Fair Labor Standards Act, most non-exempt hourly employees must be paid at least one and a half times their regular rate for hours over 40 in a workweek. Salaried workers are only exempt if they meet both a salary threshold and a duties test, so a salary alone does not remove overtime rights. Some states add their own rules, such as daily overtime. Check the U.S. Department of Labor or your state labor agency if you are unsure how you are classified.</p>\n<h2>Gross Pay Is Not Take-Home Pay</h2>\n<p>Every figure here is before taxes and deductions. Your paycheck is reduced by federal income tax withholding, Social Security and Medicare (FICA) payroll taxes, any state and local taxes, and deductions such as health insurance and retirement contributions. To estimate the tax portion, use the <a href=\"tax-calculator.html\">federal income tax calculator</a>. For a quick check on how a raise changes your pay, the <a href=\"percent-change-calculator.html\">percent change calculator</a> works well.</p>\n<h2>Factors That Change the Real Value of a Job</h2>\n<ul>\n<li><strong>Benefits:</strong> Employer health premiums, 401(k) matching and paid leave can be worth thousands of dollars a year.</li>\n<li><strong>Commute and unpaid time:</strong> Long commutes or unpaid lunch breaks lower your effective hourly rate.</li>\n<li><strong>Pay frequency:</strong> Bi-weekly pay means 26 checks a year, while semi-monthly means 24. Two extra bi-weekly checks fall in some months.</li>\n<li><strong>Cost of living:</strong> The same salary stretches differently in different cities, mostly because of housing.</li>\n</ul>\n<h2>Common Mistakes</h2>\n<p>Do not multiply an hourly rate by 52 weeks if you will take unpaid time off. Do not divide a monthly figure by 4 to get a weekly one, because a year has about 4.33 weeks per month. And remember that part-time hours change the annual total directly: $25 an hour at 30 hours a week is $39,000, not $52,000.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many working hours are in a year?",
+   "a": "A standard full-time year has 2,080 hours: 40 hours a week times 52 weeks. After subtracting paid holidays and vacation, the hours actually worked are usually fewer, which raises the effective hourly rate for a salaried employee."
+  },
+  {
+   "q": "Is $25 an hour a good salary?",
+   "a": "At 40 hours a week for 52 weeks, $25 an hour equals $52,000 a year before taxes. Whether that is good depends on where you live, your benefits and your expenses. Compare it with local living costs rather than a national figure."
+  },
+  {
+   "q": "How do I convert a salary to an hourly wage?",
+   "a": "Divide your annual salary by the hours you work in a year. For a 40-hour week that is 2,080 hours. For example, $52,000 divided by 2,080 equals $25 an hour. Adjust the hours if you work more or take unpaid leave."
+  },
+  {
+   "q": "Why is my paycheck smaller than my salary divided by pay periods?",
+   "a": "Your salary is gross pay. Employers withhold federal income tax, Social Security and Medicare tax, usually state tax, and benefit deductions before paying you. The amount that reaches your account is called net or take-home pay."
+  }
+ ],
+ "sources": [
+  {
+   "title": "IRS: Information for individuals",
+   "url": "https://www.irs.gov/individuals"
+  },
+  {
+   "title": "Social Security Administration",
+   "url": "https://www.ssa.gov/"
+  }
+ ]
+}

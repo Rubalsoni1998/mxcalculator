@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Examples</h2>\n<div class=\"example\"><p><strong>Future value.</strong> Saving $200 a month for 10 years at 6% compounded monthly builds to about <strong>$32,776</strong>, of which $24,000 is your own deposits.</p></div>\n<div class=\"example\"><p><strong>Present value.</strong> To have $50,000 in 8 years with a 5% annual return and no deposits, you would need about <strong>$33,842</strong> today.</p></div>\n<div class=\"example\"><p><strong>Payment.</strong> To repay $25,000 at 7% over 60 months, the payment is about <strong>$495.03</strong> a month.</p></div>\n<h2>Sign Conventions</h2>\n<p>Time value of money problems track the direction of cash. Money you receive is positive and money you pay out is negative. If the result looks like it has the wrong sign, check whether the present value and the payment point the same way.</p>\n<h2>Choosing What to Solve For</h2>\n<ul><li>Solve for <strong>payment</strong> when planning loans or savings targets.</li><li>Solve for <strong>rate</strong> to check what return or interest cost a deal implies.</li><li>Solve for <strong>periods</strong> to see how long a goal will take.</li></ul>\n<p>For specific cases, the <a href=\"loan-calculator.html\">loan calculator</a> and <a href=\"investment-calculator.html\">investment calculator</a> are simpler.</p>",
+ "extra_faqs": [
+  {
+   "q": "What does TVM mean?",
+   "a": "TVM stands for time value of money: a dollar today is worth more than a dollar later because it can earn a return. The five linked values are present value, future value, payment, rate and number of periods."
+  },
+  {
+   "q": "What is the difference between present value and future value?",
+   "a": "Present value is what a future amount is worth today. Future value is what a present amount will grow to after earning a return for a set time."
+  },
+  {
+   "q": "Why is the payment negative?",
+   "a": "Finance calculators use cash-flow signs. A payment you make is an outflow and shows as negative, while a loan you receive is an inflow."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Investor.gov: Compound interest calculator",
+   "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+  }
+ ],
+ "slug": "finance-calculator"
+}

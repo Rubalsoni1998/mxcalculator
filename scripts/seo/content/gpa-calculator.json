@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example</h2>\n<p>Take four courses: an A (4.0) worth 3 credits, a B+ (3.3) worth 4, a B- (2.7) worth 3 and an A- (3.7) worth 2. Quality points are 12 + 13.2 + 8.1 + 7.4 = 40.7 over 12 credits, so the GPA is <strong>3.39</strong>.</p>\n<h2>Details That Change Your GPA</h2>\n<ul><li>Schools use different scales: some give no plus or minus, and A+ may be 4.0 or 4.3.</li><li>Weighted GPAs give extra points for honors or AP courses; a weighted GPA can exceed 4.0.</li><li>Repeated courses may replace or average with the old grade depending on policy.</li></ul>\n<h2>Planning Ahead</h2>\n<p>To raise a cumulative GPA, the effect of a new semester depends on how many credits you already have. Check the grade you need with the <a href=\"grade-calculator.html\">grade calculator</a>. For scholarship or graduation thresholds, confirm the rules with your school.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I calculate GPA?",
+   "a": "Multiply each grade point by the course credits, add those up, and divide by total credits."
+  },
+  {
+   "q": "What is a good GPA?",
+   "a": "It depends on the school and goals. Many scholarships and programs use thresholds such as 3.0 or 3.5; check each one."
+  },
+  {
+   "q": "What is the difference between weighted and unweighted GPA?",
+   "a": "Unweighted GPA ignores course difficulty and tops out at 4.0. Weighted GPA adds extra points for advanced courses."
+  }
+ ],
+ "sources": [
+  {
+   "title": "Federal Student Aid",
+   "url": "https://studentaid.gov/"
+  }
+ ],
+ "slug": "gpa-calculator"
+}

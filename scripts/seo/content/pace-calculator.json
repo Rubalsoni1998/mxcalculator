@@ -1,0 +1,19 @@
+{
+ "sections": "<h2>Worked Examples</h2>\n<div class=\"example\"><p><strong>5K goal.</strong> A 25:00 5K means running about <strong>8:03 per mile</strong> (5 km is 3.107 miles).</p></div>\n<div class=\"example\"><p><strong>10K at 8:30 per mile.</strong> A 10K is 6.214 miles, so the finish time is about <strong>52:49</strong> (minutes:seconds).</p></div>\n<div class=\"example\"><p><strong>Marathon in 4 hours.</strong> The marathon is 26.2 miles, so you need about <strong>9:09 per mile</strong>.</p></div>\n<h2>Pacing Tips</h2>\n<ul><li>Run the first mile slightly slower than goal pace; going out too fast is the most common mistake.</li><li>For races longer than a 10K, steady effort beats alternating fast and slow miles.</li><li>Hills and heat slow pace; adjust expectations on tough courses.</li></ul>\n<p>Check effort with <a href=\"target-heart-rate-calculator.html\">heart rate zones</a>, and use the <a href=\"conversion-calculator.html\">unit converter</a> for miles and kilometers.</p>",
+ "extra_faqs": [
+  {
+   "q": "How do I convert pace per mile to pace per kilometer?",
+   "a": "Divide minutes per mile by 1.609. For example, 8:00 per mile is about 4:58 per kilometer."
+  },
+  {
+   "q": "What is a good 5K time?",
+   "a": "It depends on age, experience and goals. Finishing comfortably is a good first target; use the calculator to set a realistic pace."
+  },
+  {
+   "q": "How many miles is a half marathon?",
+   "a": "A half marathon is 13.1 miles, or 21.1 kilometers."
+  }
+ ],
+ "sources": [],
+ "slug": "pace-calculator"
+}

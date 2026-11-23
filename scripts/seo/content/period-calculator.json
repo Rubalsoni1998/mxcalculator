@@ -1,0 +1,24 @@
+{
+ "sections": "<h2>Worked Example</h2>\n<p>If your last period started January 10, 2026 and your cycle averages 28 days, the next periods are predicted for February 7, 2026, March 7, 2026, April 4, 2026. Cycle length is counted from the first day of one period to the first day of the next.</p>\n<h2>What Counts as Normal</h2>\n<p>ACOG describes cycles of 21 to 35 days in adults as normal, with bleeding that lasts around 2 to 7 days. Cycles can vary by a few days each month, which is why the calculator gives an estimate rather than a promise.</p>\n<h2>Improving Predictions</h2>\n<ul><li>Record start dates for several months and use your average.</li><li>Stress, travel, illness, weight change and hormonal methods can shift the date.</li><li>If you are late and could be pregnant, take a pregnancy test and see the <a href=\"pregnancy-calculator.html\">pregnancy calculator</a>.</li></ul>\n<p>Estimate your fertile days with the <a href=\"ovulation-calculator.html\">ovulation calculator</a>.</p>",
+ "extra_faqs": [
+  {
+   "q": "How many days is a normal menstrual cycle?",
+   "a": "Adults commonly have cycles of 21 to 35 days. Teens may have slightly longer ones."
+  },
+  {
+   "q": "Why is my period late?",
+   "a": "Common reasons are stress, illness, weight changes, hormonal changes or pregnancy. See a clinician if it happens often or you have other symptoms."
+  },
+  {
+   "q": "When should I see a doctor about my period?",
+   "a": "Talk to a clinician if cycles are consistently shorter than 21 or longer than 35 days, bleeding is very heavy, or periods stop for 3 months or more."
+  }
+ ],
+ "sources": [
+  {
+   "title": "ACOG: Patient resources on pregnancy",
+   "url": "https://www.acog.org/"
+  }
+ ],
+ "slug": "period-calculator"
+}
