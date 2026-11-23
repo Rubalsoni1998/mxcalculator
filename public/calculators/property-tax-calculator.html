@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Tax Calculator by State | Mx Calculator</title>
+  <meta name="description" content="Estimate annual and monthly property tax using US state effective rates, a local rate or mill rate, with exemptions and a 10-year projection.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/property-tax-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Property Tax Calculator by State | Mx Calculator">
+  <meta property="og:description" content="Estimate annual and monthly property tax using US state effective rates, a local rate or mill rate, with exemptions and a 10-year projection.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/property-tax-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Property Tax Calculator by State | Mx Calculator">
+  <meta name="twitter:description" content="Estimate annual and monthly property tax using US state effective rates, a local rate or mill rate, with exemptions and a 10-year projection.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Property Tax Calculator","description":"Estimate annual and monthly property tax using US state effective rates, a local rate or mill rate, with exemptions and a 10-year projection.","url":"https://mxcalculator.com/calculators/property-tax-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Property Tax Calculator","item":"https://mxcalculator.com/calculators/property-tax-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is property tax calculated?","acceptedAnswer":{"@type":"Answer","text":"Your county multiplies your home's assessed value by the local tax rate. Assessed value is the market value times the assessment ratio, minus any exemptions. With a mill rate, you multiply the assessed value by the mill rate and divide by 1,000."}},{"@type":"Question","name":"What is a mill rate?","acceptedAnswer":{"@type":"Answer","text":"A mill is one dollar of tax for every $1,000 of assessed value. A rate of 15 mills means $15 per $1,000, or 1.5% of assessed value."}},{"@type":"Question","name":"Which states have the highest property taxes?","acceptedAnswer":{"@type":"Answer","text":"New Jersey and Illinois lead with effective rates of 1.88%, followed by Connecticut at 1.54%, Vermont at 1.51% and New Hampshire at 1.50%, based on 2024 Tax Foundation data."}},{"@type":"Question","name":"Which states have the lowest property taxes?","acceptedAnswer":{"@type":"Answer","text":"Hawaii has the lowest effective rate at 0.29%, then Alabama at 0.37%, with Utah and Arizona at 0.48% and South Carolina at 0.49%."}},{"@type":"Question","name":"Can I deduct property tax on my federal return?","acceptedAnswer":{"@type":"Answer","text":"Property tax can be part of the state and local tax (SALT) deduction if you itemize. The SALT deduction has a dollar cap and phases down at higher incomes, so check current IRS guidance or ask a tax professional."}},{"@type":"Question","name":"How do I appeal my property tax assessment?","acceptedAnswer":{"@type":"Answer","text":"Contact your county assessor for the appeal deadline and forms, then show that your assessed value is higher than the market value, using recent sales of similar homes nearby or a private appraisal."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#009999">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/property-tax-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/property-tax-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        </div>
+        <div>
+          <h1>Property Tax Calculator</h1>
+          <p>Estimate your annual property tax by state, mill rate or local rate</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p>Pick your state for a quick estimate, or enter your local tax rate or mill rate for a closer number. Uses the latest Tax Foundation effective rates for all 50 states.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            Property Details
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="form-group"><label class="form-label" for="homeValue">Home Value<span class="help-icon tooltip" data-tooltip="The market value of the home."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-wrapper input-icon-wrapper"><span class="input-icon">$</span><input type="number" id="homeValue" class="has-icon" value="350000" min="0" step="1000" inputmode="decimal"></div></div><div class="form-group"><label class="form-label" for="method">Estimate Method<span class="help-icon tooltip" data-tooltip="State average is the quickest. Use a local rate or mill rate if you know it from your tax bill."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><select id="method" onchange="onMethodChange()"><option value="state" selected>State average effective rate</option><option value="pct">My local tax rate (%)</option><option value="mill">My mill rate</option></select></div><div class="form-group m-state"><label class="form-label" for="stateSel">State<span class="help-icon tooltip" data-tooltip="Effective property tax rate, 2024 data from the Tax Foundation."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><select id="stateSel"></select></div><div class="form-group m-pct" style="display:none"><label class="form-label" for="localPct">Local Tax Rate<span class="help-icon tooltip" data-tooltip="Your total local property tax rate (city, county, school) as a percent of assessed value."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="localPct" value="1.2" min="0" max="10" step="0.001" inputmode="decimal"><span>%</span></div></div><div class="form-group m-mill" style="display:none"><label class="form-label" for="mills">Mill Rate<span class="help-icon tooltip" data-tooltip="Dollars of tax per $1,000 of assessed value. A mill rate of 12 means $12 per $1,000."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="mills" value="12" min="0" max="200" step="0.01" inputmode="decimal"><span>mills</span></div></div><div class="form-grid-2"><div class="form-group"><label class="form-label" for="assessRatio">Assessment Ratio<span class="help-icon tooltip" data-tooltip="Share of market value your county taxes. Many places use 100%. Some use a lower percent."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="assessRatio" value="100" min="0" max="100" step="1" inputmode="decimal"><span>%</span></div></div><div class="form-group"><label class="form-label" for="exemption">Exemption (optional)<span class="help-icon tooltip" data-tooltip="Homestead, senior or veteran exemption amount subtracted from value."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-wrapper input-icon-wrapper"><span class="input-icon">$</span><input type="number" id="exemption" class="has-icon" value="0" min="0" step="1000" inputmode="decimal"></div></div></div><div class="form-group"><label class="form-label" for="growth">Yearly Tax Growth<span class="help-icon tooltip" data-tooltip="Expected yearly increase in your tax bill for the projection."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="growth" value="3" min="0" max="20" step="0.1" inputmode="decimal"><span>% per year</span></div></div>
+          <div class="note">State averages blend many counties and assessment rules, so your real bill can differ a lot. Check your county assessor for exact rates, and see whether you qualify for homestead, senior or veteran exemptions.</div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"></path></svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h3>Enter property details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+            <div class="result-subtitle" id="resultLabel">Result</div>
+            <div class="result-value" id="resultValueDisplay">–</div>
+            <div class="result-note" id="resultNote"></div>
+          </div>
+          <div id="warnBox" class="note warn" style="display:none;"></div>
+
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr><th>Item</th><th>Value</th></tr>
+                  </thead>
+                  <tbody id="breakdownTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card u-mt">
+            <div class="card-header"><div class="card-title u-fs1">Same Home in Other States</div></div>
+            <div class="card-content u-pt"><div class="u-frame scroll-x"><table class="breakdown-table">
+              <thead><tr><th>State</th><th>Rate</th><th>Annual tax</th></tr></thead>
+              <tbody id="compareBody"></tbody></table></div></div>
+          </div>
+
+          <div class="card u-mt">
+            <div class="card-header">
+              <div class="card-title u-fs1">10-Year Property Tax Projection</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="mainChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Property Tax Calculator</h2>
+      <p>Property tax is a yearly tax that cities, counties and school districts charge on real estate. It pays for schools, roads, police, fire protection and other local services, and it is one of the biggest ongoing costs of owning a home. This calculator estimates your yearly and monthly property tax three ways: from your state's average effective rate, from your own local tax rate, or from a mill rate. It also compares your home across states and projects your bill over 10 years. Updated November 21, 2026.</p>
+
+      <h2>How Property Tax Is Calculated</h2>
+      <p><code>Assessed Value = Home Value × Assessment Ratio − Exemptions</code><br>
+      <code>Annual Tax = Assessed Value × Local Tax Rate</code><br>
+      <code>Annual Tax = Assessed Value ÷ 1,000 × Mill Rate</code></p>
+      <p>A <strong>mill</strong> is $1 of tax for every $1,000 of assessed value. A 12-mill rate on a $350,000 assessed home gives 350 × $12 = <strong>$4,200</strong> a year, or $350 a month.</p>
+      <div class="example">
+        <p><strong>Example:</strong> A $350,000 home in Texas, which has an average effective rate of 1.40%.</p>
+        <p>$350,000 × 1.40% = <strong>$4,900 a year</strong>, about $408 a month. The same home in New Jersey (1.88%) would owe about $6,580, and in Hawaii (0.29%) about $1,015.</p>
+      </div>
+
+      <h2>Effective Property Tax Rates by State</h2>
+      <p>The effective rate is the average tax paid as a share of home value. These are Tax Foundation figures for 2024, the latest full-year data, for the states with the highest and lowest rates.</p>
+      <div class="scroll-x"><table class="ref">
+        <thead><tr><th>Highest rates</th><th>Rate</th><th>Lowest rates</th><th>Rate</th></tr></thead>
+        <tbody>
+          <tr><td>New Jersey</td><td>1.88%</td><td>Hawaii</td><td>0.29%</td></tr>
+          <tr><td>Illinois</td><td>1.88%</td><td>Alabama</td><td>0.37%</td></tr>
+          <tr><td>Connecticut</td><td>1.54%</td><td>Utah</td><td>0.48%</td></tr>
+          <tr><td>Vermont</td><td>1.51%</td><td>Arizona</td><td>0.48%</td></tr>
+          <tr><td>New Hampshire</td><td>1.50%</td><td>South Carolina</td><td>0.49%</td></tr>
+          <tr><td>Nebraska</td><td>1.44%</td><td>Colorado, Idaho, Nevada</td><td>0.50%</td></tr>
+        </tbody></table></div>
+      <p>A low rate does not always mean a low bill. Hawaii has the lowest rate at 0.29%, yet its median home of about $841,000 still pays roughly $2,440 a year, more than West Virginia's median home at about $855.</p>
+
+      <h2>Why Your Bill Can Differ From the State Average</h2>
+      <ul>
+        <li><strong>Local rates:</strong> Counties, cities and school districts each add their own rate, so neighbors a few miles apart can pay very different amounts.</li>
+        <li><strong>Assessed value:</strong> Your county assigns a value that may be below market value, and some states cap how fast it can rise.</li>
+        <li><strong>Exemptions:</strong> Homestead, senior, veteran and disability exemptions reduce the taxable value.</li>
+        <li><strong>Reassessment:</strong> A sale, a major renovation or a county-wide revaluation can reset your assessed value.</li>
+      </ul>
+
+      <h2>Ways to Lower Your Property Tax</h2>
+      <ul>
+        <li><strong>Apply for every exemption</strong> you qualify for, such as homestead, senior and veteran relief. Deadlines are strict.</li>
+        <li><strong>Appeal your assessment</strong> if comparable homes sold for less than your assessed value. Bring recent sales and, if needed, a private appraisal.</li>
+        <li><strong>Check your bill for errors</strong> such as the wrong square footage, bedroom count or lot size.</li>
+        <li><strong>Plan for escrow:</strong> If your lender pays your tax from escrow, review the yearly statement, since rising tax raises your monthly payment.</li>
+      </ul>
+      <p>Sources: Tax Foundation state and county property tax data (2024), as reported by Rocket Mortgage (October 2026). Find your exact rate on your county assessor or tax collector website.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq"><details class="faq-item"><summary>How is property tax calculated?</summary><p>Your county multiplies your home's assessed value by the local tax rate. Assessed value is the market value times the assessment ratio, minus any exemptions. With a mill rate, you multiply the assessed value by the mill rate and divide by 1,000.</p></details><details class="faq-item"><summary>What is a mill rate?</summary><p>A mill is one dollar of tax for every $1,000 of assessed value. A rate of 15 mills means $15 per $1,000, or 1.5% of assessed value.</p></details><details class="faq-item"><summary>Which states have the highest property taxes?</summary><p>New Jersey and Illinois lead with effective rates of 1.88%, followed by Connecticut at 1.54%, Vermont at 1.51% and New Hampshire at 1.50%, based on 2024 Tax Foundation data.</p></details><details class="faq-item"><summary>Which states have the lowest property taxes?</summary><p>Hawaii has the lowest effective rate at 0.29%, then Alabama at 0.37%, with Utah and Arizona at 0.48% and South Carolina at 0.49%.</p></details><details class="faq-item"><summary>Can I deduct property tax on my federal return?</summary><p>Property tax can be part of the state and local tax (SALT) deduction if you itemize. The SALT deduction has a dollar cap and phases down at higher incomes, so check current IRS guidance or ask a tax professional.</p></details><details class="faq-item"><summary>How do I appeal my property tax assessment?</summary><p>Contact your county assessor for the appeal deadline and forms, then show that your assessed value is higher than the market value, using recent sales of similar homes nearby or a private appraisal.</p></details></div>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="mortgage-calculator.html">Mortgage Calculator</a></li><li><a href="closing-cost-calculator.html">Closing Cost Calculator</a></li><li><a href="pmi-calculator.html">PMI Calculator</a></li><li><a href="cap-rate-calculator.html">Cap Rate Calculator</a></li><li><a href="sales-tax-calculator.html">Sales Tax Calculator</a></li><li><a href="tax-calculator.html">Federal Income Tax Calculator</a></li><li><a href="../states/property-tax-by-state.html">Property Tax by State</a></li><li><a href="../topics/tax-calculators.html">US Tax Calculators</a></li></ul>
+      <p class="disclaimer">Estimates for general information using 2024 Tax Foundation state averages. Actual property tax depends on your county, city, school district, assessment rules and exemptions. This is not tax or financial advice; confirm with your county assessor.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Property Tax Calculator | Real Estate Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

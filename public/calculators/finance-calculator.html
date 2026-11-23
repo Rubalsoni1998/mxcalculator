@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Calculator: PV, FV, PMT, Rate | Mx Calculator</title>
+  <meta name="description" content="Solve time value of money problems: present value, future value, payment, interest rate or number of periods.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/finance-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Finance Calculator: PV, FV, PMT, Rate | Mx Calculator">
+  <meta property="og:description" content="Solve time value of money problems: present value, future value, payment, interest rate or number of periods.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/finance-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Finance Calculator: PV, FV, PMT, Rate | Mx Calculator">
+  <meta name="twitter:description" content="Solve time value of money problems: present value, future value, payment, interest rate or number of periods.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Finance Calculator","description":"Solve time value of money problems: present value, future value, payment, interest rate or number of periods.","url":"https://mxcalculator.com/calculators/finance-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Finance Calculator","item":"https://mxcalculator.com/calculators/finance-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does PV mean?","acceptedAnswer":{"@type":"Answer","text":"Present value: the worth today of money in the future."}},{"@type":"Question","name":"Why are some values negative?","acceptedAnswer":{"@type":"Answer","text":"Cash outflows are entered as negative and inflows as positive."}},{"@type":"Question","name":"What is the difference between end and begin mode?","acceptedAnswer":{"@type":"Answer","text":"End mode assumes payments at the end of each period (ordinary annuity); begin mode at the start (annuity due)."}},{"@type":"Question","name":"Can I use it for a loan?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter loan amount as PV, rate, number of periods and solve for payment."}},{"@type":"Question","name":"What does TVM mean?","acceptedAnswer":{"@type":"Answer","text":"TVM stands for time value of money: a dollar today is worth more than a dollar later because it can earn a return. The five linked values are present value, future value, payment, rate and number of periods."}},{"@type":"Question","name":"What is the difference between present value and future value?","acceptedAnswer":{"@type":"Answer","text":"Present value is what a future amount is worth today. Future value is what a present amount will grow to after earning a return for a set time."}},{"@type":"Question","name":"Why is the payment negative?","acceptedAnswer":{"@type":"Answer","text":"Finance calculators use cash-flow signs. A payment you make is an outflow and shows as negative, while a loan you receive is an inflow."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#5b2bee">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/finance-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/finance-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+            <line x1="2" x2="22" y1="10" y2="10"></line>
+            <path d="M12 15h.01"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Finance Calculator</h1>
+          <p>Time Value of Money (TVM) Calculations</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Select what you want to calculate below. The field will be solved based on your other inputs.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"></path>
+                <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"></path>
+                <path d="m2 16 6 6"></path>
+                <circle cx="16" cy="9" r="2.9"></circle>
+                <circle cx="6" cy="6" r="3"></circle>
+              </svg>
+            </div>
+            TVM Parameters
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Solve For -->
+          <div class="form-group" style="background: var(--accent); padding: 10px; border-radius: 8px;">
+            <label class="form-label" style="color: var(--primary);">Calculate (Solve For)</label>
+            <div class="input-row">
+              <select id="solveFor" onchange="updateFormState()">
+                <option value="FV" selected>Future Value (FV)</option>
+                <option value="PV">Present Value (PV)</option>
+                <option value="PMT">Payment (PMT)</option>
+                <option value="N">Number of Periods (N)</option>
+                <option value="RATE">Interest Rate (I/Y)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- N (Periods) -->
+          <div class="form-group" id="grp-N">
+            <label class="form-label" for="n-periods">
+              Number of Periods (N)
+            </label>
+            <div class="input-row">
+                <input type="number" id="n-periods" value="120" placeholder="e.g. 120">
+            </div>
+          </div>
+
+          <!-- Interest Rate -->
+          <div class="form-group" id="grp-RATE">
+            <label class="form-label" for="interestRate">
+              Interest Rate (I/Y)
+            </label>
+            <div class="input-row">
+              <input min="0" max="100" type="number" id="interestRate" value="6" step="0.01" placeholder="6">
+              <span>%</span>
+            </div>
+          </div>
+
+          <!-- PV -->
+          <div class="form-group" id="grp-PV">
+            <label class="form-label" for="presentValue">
+              Present Value (PV)
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="presentValue" class="has-icon" value="0">
+            </div>
+          </div>
+
+           <!-- PMT -->
+          <div class="form-group" id="grp-PMT">
+            <label class="form-label" for="payment">
+              Payment (PMT)
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="payment" class="has-icon" value="500">
+            </div>
+          </div>
+
+           <!-- FV -->
+          <div class="form-group" id="grp-FV">
+            <label class="form-label" for="futureValue">
+              Future Value (FV)
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="futureValue" class="has-icon" value="0" disabled style="background:var(--secondary); opacity:0.7;">
+            </div>
+          </div>
+
+          <!-- P/Y and C/Y -->
+          <div class="form-group">
+             <div class="input-row">
+                <div class="u-flex1">
+                     <label class="form-label" for="paymentsPerYear">Payments/Year</label>
+                     <input type="number" id="paymentsPerYear" value="12">
+                </div>
+                 <div class="u-flex1">
+                     <label class="form-label" for="compoundsPerYear">Compounding/Year</label>
+                     <input type="number" id="compoundsPerYear" value="12">
+                </div>
+             </div>
+          </div>
+
+          <!-- Mode Toggle -->
+          <div class="form-group">
+             <label class="form-label">Mode</label>
+             <div class="toggle-group">
+                 <button type="button" class="toggle-btn active" id="modeEnd" onclick="setMode('end')">End (Ordinary Annuity)</button>
+                 <button type="button" class="toggle-btn" id="modeBegin" onclick="setMode('begin')">Beginning (Due)</button>
+             </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20"></path>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Enter financial details</h3>
+          <p>Select what to solve for and click Calculate</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Future Value</div>
+             <div class="result-value" id="resultValueDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Input / Variable</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Line Chart -->
+           <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Balance Accumulation</div>
+            </div>
+            <div class="card-content">
+              <div class="line-chart-container">
+                <canvas id="lineChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Finance Calculator</h2>
+      <p>The time value of money says that money today is worth more than the same amount later, because it can earn interest. This finance calculator works like a standard financial calculator: fill in four of the five values and solve for the missing one.</p>
+      <p>It handles loans, annuities, savings plans and leases.</p>
+      <h2>How to Use the Finance Calculator</h2>
+      <ol><li>Choose which value to solve for: N, I/Y, PV, PMT or FV.</li><li>Fill in the other values, plus payments and compounding per year.</li><li>Select the payment mode (end or beginning) and click <strong>Calculate</strong>.</li></ol>
+      <h2>TVM Relationship</h2>
+      <p><code>PV + PMT × (1 − (1 + i)⁻ⁿ) ÷ i + FV × (1 + i)⁻ⁿ = 0</code>, where i is the rate per period. Cash you pay out is entered as negative, and cash you receive as positive.</p>
+      <div class="example"><p><strong>Example:</strong> Investing $10,000 (PV) at 5 percent for 10 years with no payments gives a future value of <strong>$16,288.95</strong>.</p></div>
+      <!--seo:expanded-->
+      <h2>Worked Examples</h2>
+<div class="example"><p><strong>Future value.</strong> Saving $200 a month for 10 years at 6% compounded monthly builds to about <strong>$32,776</strong>, of which $24,000 is your own deposits.</p></div>
+<div class="example"><p><strong>Present value.</strong> To have $50,000 in 8 years with a 5% annual return and no deposits, you would need about <strong>$33,842</strong> today.</p></div>
+<div class="example"><p><strong>Payment.</strong> To repay $25,000 at 7% over 60 months, the payment is about <strong>$495.03</strong> a month.</p></div>
+<h2>Sign Conventions</h2>
+<p>Time value of money problems track the direction of cash. Money you receive is positive and money you pay out is negative. If the result looks like it has the wrong sign, check whether the present value and the payment point the same way.</p>
+<h2>Choosing What to Solve For</h2>
+<ul><li>Solve for <strong>payment</strong> when planning loans or savings targets.</li><li>Solve for <strong>rate</strong> to check what return or interest cost a deal implies.</li><li>Solve for <strong>periods</strong> to see how long a goal will take.</li></ul>
+<p>For specific cases, the <a href="loan-calculator.html">loan calculator</a> and <a href="investment-calculator.html">investment calculator</a> are simpler.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What does PV mean?</summary><p>Present value: the worth today of money in the future.</p></details>
+        <details class="faq-item"><summary>Why are some values negative?</summary><p>Cash outflows are entered as negative and inflows as positive.</p></details>
+        <details class="faq-item"><summary>What is the difference between end and begin mode?</summary><p>End mode assumes payments at the end of each period (ordinary annuity); begin mode at the start (annuity due).</p></details>
+        <details class="faq-item"><summary>Can I use it for a loan?</summary><p>Yes. Enter loan amount as PV, rate, number of periods and solve for payment.</p></details>
+      <details class="faq-item"><summary>What does TVM mean?</summary><p>TVM stands for time value of money: a dollar today is worth more than a dollar later because it can earn a return. The five linked values are present value, future value, payment, rate and number of periods.</p></details><details class="faq-item"><summary>What is the difference between present value and future value?</summary><p>Present value is what a future amount is worth today. Future value is what a present amount will grow to after earning a return for a set time.</p></details><details class="faq-item"><summary>Why is the payment negative?</summary><p>Finance calculators use cash-flow signs. A payment you make is an outflow and shows as negative, while a loan you receive is an inflow.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound interest calculator</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li><li><a href="interest-calculator.html">Interest Calculator</a></li><li><a href="investment-calculator.html">Investment Calculator</a></li><li><a href="loan-calculator.html">Loan Calculator</a></li><li><a href="interest-rate-calculator.html">Interest Rate Calculator</a></li><li><a href="inflation-calculator.html">Inflation Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Results are estimates based on the figures you enter and are for general information only. This is not financial, tax or legal advice. Rates, fees and rules vary by lender and jurisdiction.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Finance Calculator | TVM Solver</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

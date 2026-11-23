@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Fat Calculator (US Navy Method) | Mx Calculator</title>
+  <meta name="description" content="Estimate body fat percentage with the US Navy tape method or BMI, and compare your result with healthy ranges for your age and sex.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/body-fat-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Body Fat Calculator (US Navy Method) | Mx Calculator">
+  <meta property="og:description" content="Estimate body fat percentage with the US Navy tape method or BMI, and compare your result with healthy ranges for your age and sex.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/body-fat-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Body Fat Calculator (US Navy Method) | Mx Calculator">
+  <meta name="twitter:description" content="Estimate body fat percentage with the US Navy tape method or BMI, and compare your result with healthy ranges for your age and sex.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Body Fat Calculator","description":"Estimate body fat percentage with the US Navy tape method or BMI, and compare your result with healthy ranges for your age and sex.","url":"https://mxcalculator.com/calculators/body-fat-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Body Fat Calculator","item":"https://mxcalculator.com/calculators/body-fat-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a healthy body fat percentage?","acceptedAnswer":{"@type":"Answer","text":"For most adults, roughly 14 to 24 percent for men and 21 to 31 percent for women is considered healthy or average. The right range depends on age, fitness goals and health."}},{"@type":"Question","name":"How accurate is the Navy body fat method?","acceptedAnswer":{"@type":"Answer","text":"It is a reasonable estimate for most people, usually within a few percentage points of lab methods, but it can be off for very lean or very heavy bodies."}},{"@type":"Question","name":"Is body fat percentage better than BMI?","acceptedAnswer":{"@type":"Answer","text":"It is more informative because it distinguishes fat from lean tissue, but it is harder to measure accurately at home."}},{"@type":"Question","name":"How often should I measure body fat?","acceptedAnswer":{"@type":"Answer","text":"Every two to four weeks is enough. Daily changes mostly reflect water and measurement error."}},{"@type":"Question","name":"Can I have low body fat and still be unhealthy?","acceptedAnswer":{"@type":"Answer","text":"Yes. Very low body fat can affect hormones, bones and energy. Essential fat is needed for normal body function."}},{"@type":"Question","name":"How accurate is the tape measure body fat method?","acceptedAnswer":{"@type":"Answer","text":"It is a reasonable estimate for most adults but can be off by several percentage points compared with a DEXA scan. It is most useful for tracking change over time when you measure the same way each time."}},{"@type":"Question","name":"What is a healthy body fat percentage for my age?","acceptedAnswer":{"@type":"Answer","text":"Healthy ranges rise gradually with age and are higher for women than men. As a rough guide, many adult women fall around 21 to 33 percent and men about 8 to 25 percent. Your doctor can tell you what suits your situation."}},{"@type":"Question","name":"How can I lower my body fat percentage?","acceptedAnswer":{"@type":"Answer","text":"Sustained, moderate calorie control combined with resistance training and enough protein helps preserve muscle while fat decreases. Aim for gradual change. Sleep, activity and medical conditions also matter, so ask a clinician before major diet changes."}},{"@type":"Question","name":"Why does my body fat change from day to day?","acceptedAnswer":{"@type":"Answer","text":"Daily readings shift with hydration, meals, tape placement and, for impedance devices, skin and water conditions. True fat change takes weeks. Compare averages taken under the same conditions rather than single measurements."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#ee2b8c">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/body-fat-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/body-fat-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18h8"></path>
+            <path d="M3 22h18"></path>
+            <path d="M14 22a7 7 0 1 0 0-14h-1"></path>
+            <path d="M9 14h2"></path>
+            <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"></path>
+            <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Body Fat Calculator</h1>
+          <p>Estimate Body Fat Percentage & Lean Mass</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Calculate your body fat percentage using the U.S. Navy Method based on your body measurements.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            Body Measurements
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Unit Tabs -->
+          <div class="tabs">
+            <button type="button" class="tab-btn active" id="tabUS" onclick="setUnits('us')">US Units</button>
+            <button type="button" class="tab-btn" id="tabMetric" onclick="setUnits('metric')">Metric Units</button>
+          </div>
+
+          <!-- Gender & Age -->
+          <div class="form-group">
+            <div class="input-row">
+                 <div class="u-flex1">
+                     <label class="form-label" for="gender">Gender</label>
+                     <select id="gender" onchange="updateFormForGender()">
+                         <option value="male" selected>Male</option>
+                         <option value="female">Female</option>
+                     </select>
+                </div>
+                <div class="u-flex1">
+                     <label class="form-label" for="age">Age</label>
+                     <input type="number" id="age" value="30" min="10" max="100">
+                </div>
+             </div>
+          </div>
+
+          <!-- Height -->
+          <div class="form-group">
+            <label class="form-label" for="heightFeet">Height</label>
+
+            <!-- US Height Inputs -->
+            <div class="input-row" id="heightUS">
+               <div class="input-wrapper u-flex1">
+                  <input type="number" id="heightFeet" placeholder="5" value="5">
+               </div>
+               <span class="u-px5">ft</span>
+               <div class="input-wrapper u-flex1">
+                  <input type="number" id="heightInches" placeholder="10" value="10">
+               </div>
+               <span class="u-px5">in</span>
+            </div>
+
+            <!-- Metric Height Input -->
+            <div class="input-row hidden" id="heightMetric">
+               <div class="input-wrapper u-flex1">
+                  <input type="number" id="heightCm" placeholder="178">
+               </div>
+               <span class="u-px5">cm</span>
+            </div>
+          </div>
+
+          <!-- Weight -->
+          <div class="form-group">
+            <label class="form-label" for="weight">Weight</label>
+            <div class="input-row">
+               <div class="input-wrapper u-flex1">
+                  <input type="number" id="weight" value="170" placeholder="170">
+               </div>
+               <span class="u-px5" id="weightUnitLabel">lb</span>
+            </div>
+          </div>
+
+          <!-- Neck -->
+          <div class="form-group">
+             <label class="form-label" for="neck">Neck</label>
+             <div class="input-row">
+                 <div class="input-wrapper u-flex1">
+                     <input type="number" id="neck" value="15" placeholder="15">
+                 </div>
+                 <span class="lengthUnitLabel u-px5">in</span>
+             </div>
+          </div>
+
+          <!-- Waist -->
+          <div class="form-group">
+             <label class="form-label" for="waist">Waist</label>
+             <div class="input-row">
+                 <div class="input-wrapper u-flex1">
+                     <input type="number" id="waist" value="35" placeholder="35">
+                 </div>
+                 <span class="lengthUnitLabel u-px5">in</span>
+             </div>
+             <p class="text-muted" style="font-size:0.75rem; margin-top:4px;">Measure at the navel</p>
+          </div>
+
+          <!-- Hip (Female Only) -->
+          <div class="form-group hidden" id="hipGroup">
+             <label class="form-label" for="hip">Hip</label>
+             <div class="input-row">
+                 <div class="input-wrapper u-flex1">
+                     <input type="number" id="hip" value="38" placeholder="38">
+                 </div>
+                 <span class="lengthUnitLabel u-px5">in</span>
+             </div>
+             <p class="text-muted" style="font-size:0.75rem; margin-top:4px;">Measure at the widest point</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+            </svg>
+          </div>
+          <h3>Enter your measurements</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+          <div class="results-hero">
+             <div class="result-subtitle">Body Fat Percentage</div>
+             <div class="result-value" id="bfValueDisplay">--</div>
+             <div id="bfCategoryDisplay" class="result-category">Fitness</div>
+          </div>
+
+          <div class="stats-grid">
+              <div class="stat-box">
+                  <div class="label">Body Fat Mass</div>
+                  <div class="value" id="fatMassDisplay">--</div>
+              </div>
+              <div class="stat-box">
+                  <div class="label">Lean Body Mass</div>
+                  <div class="value" id="leanMassDisplay">--</div>
+              </div>
+          </div>
+
+          <!-- Visual Gauge -->
+          <div class="card u-mt">
+             <div class="card-content u-pt">
+                 <p style="font-size:0.875rem; font-weight:600; margin-bottom:0.5rem">Body Fat Scale</p>
+                 <div class="bf-scale-wrapper">
+                     <div class="bf-bar">
+                         <div id="bfMarker" class="bf-marker" style="left: 0%;"></div>
+                     </div>
+                     <div class="bf-labels">
+                         <span>Low</span>
+                         <span>Fit</span>
+                         <span>Avg</span>
+                         <span>High</span>
+                     </div>
+                 </div>
+             </div>
+          </div>
+
+          <!-- Reference Table -->
+          <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">ACE Classification</div>
+            </div>
+            <div class="card-content">
+              <div class="schedule-table-wrapper u-mt0">
+                <table class="schedule-table">
+                  <thead>
+                    <tr>
+                      <th>Description</th>
+                      <th>Women</th>
+                      <th>Men</th>
+                    </tr>
+                  </thead>
+                  <tbody id="bfTableBody">
+                     <tr id="row-essential">
+                         <td>Essential Fat</td>
+                         <td>10-13%</td>
+                         <td>2-5%</td>
+                     </tr>
+                     <tr id="row-athletes">
+                         <td>Athletes</td>
+                         <td>14-20%</td>
+                         <td>6-13%</td>
+                     </tr>
+                     <tr id="row-fitness">
+                         <td>Fitness</td>
+                         <td>21-24%</td>
+                         <td>14-17%</td>
+                     </tr>
+                     <tr id="row-average">
+                         <td>Average</td>
+                         <td>25-31%</td>
+                         <td>18-24%</td>
+                     </tr>
+                     <tr id="row-obese">
+                         <td>Obese</td>
+                         <td>32%+</td>
+                         <td>25%+</td>
+                     </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Body Fat Calculator</h2>
+      <p>Body fat percentage is the share of your total weight that is fat. It is often more informative than the scale or BMI because it separates fat from muscle, bone and water.</p>
+      <p>This body fat calculator estimates your percentage from simple tape measurements using the U.S. Navy method, and also shows a BMI-based estimate. You get your body fat percentage, fat mass, lean mass and the range your result falls into.</p>
+      <h2>How to Use the Body Fat Calculator</h2>
+      <ol><li>Select your unit system, then enter your age and gender.</li><li>Enter your height and weight.</li><li>Measure your neck and waist with a soft tape (and hips if you are female) and enter them.</li><li>Click <strong>Calculate</strong> to see your body fat percentage and category.</li></ol>
+      <h2>How Body Fat Is Estimated</h2>
+      <p>The Navy method uses the log of circumference measurements: for men it uses waist minus neck and height, and for women it adds hips. The BMI method uses <code>Body fat % = 1.20 × BMI + 0.23 × age − 10.8 × sex − 5.4</code>, where sex is 1 for men and 0 for women. Both are estimates and can differ by several percentage points from a DEXA scan.</p>
+      <div class="example"><p><strong>Example:</strong> A man who weighs 80 kg and has 16 percent body fat carries about 12.8 kg of fat and 67.2 kg of lean mass.</p></div>
+      <h2>Body Fat Percentage Categories</h2>
+      <table><thead><tr><th>Category</th><th>Women</th><th>Men</th></tr></thead><tbody><tr><td>Essential fat</td><td>10–13%</td><td>2–5%</td></tr><tr><td>Athletes</td><td>14–20%</td><td>6–13%</td></tr><tr><td>Fitness</td><td>21–24%</td><td>14–17%</td></tr><tr><td>Average</td><td>25–31%</td><td>18–24%</td></tr><tr><td>Obese</td><td>32%+</td><td>25%+</td></tr></tbody></table>
+      <h2>Tips for Accurate Measurements</h2>
+      <ul><li>Measure in the morning before eating, using a flexible tape and no clothing bulk.</li><li>Keep the tape level and snug without compressing the skin.</li><li>Measure twice and use the average.</li></ul>
+      <!--seo:expanded-->
+      <h2>Navy Method Example in Inches</h2>
+<div class="example"><p>Man: 70 in tall, 34 in waist, 15.5 in neck. Waist minus neck is 18.5 in. The Navy equation gives 86.010 × log10(18.5) − 70.041 × log10(70) + 36.76 = about 16.5 percent body fat.</p></div>
+<div class="example"><p>Woman: 65 in tall, 30 in waist, 40 in hips, 13 in neck. Waist plus hips minus neck is 57 in. The equation gives 163.205 × log10(57) − 97.684 × log10(65) − 78.387 = about 31.1 percent body fat.</p></div>
+<h2>Where to Place the Tape</h2>
+<ul>
+<li><strong>Neck:</strong> just below the larynx, sloping slightly downward toward the front. Do not flare your neck or shrug.</li>
+<li><strong>Waist (men):</strong> at the navel, relaxed, after a normal breath out.</li>
+<li><strong>Waist (women):</strong> at the narrowest point of the torso, usually above the navel.</li>
+<li><strong>Hips (women):</strong> at the widest point around the buttocks.</li>
+</ul>
+<p>A half-inch error at the waist can move the result by roughly a percentage point or more, so consistency matters more than perfection. Use the same tape, same spots and same time of day.</p>
+<h2>Comparing Body Fat Methods</h2>
+<table><thead><tr><th>Method</th><th>What it needs</th><th>Typical limitation</th></tr></thead><tbody>
+<tr><td>Tape (Navy)</td><td>Tape measure</td><td>Misses fat distribution differences</td></tr>
+<tr><td>Skinfold calipers</td><td>Calipers, trained tester</td><td>Depends heavily on technique</td></tr>
+<tr><td>Bioelectrical impedance</td><td>Scale or handheld device</td><td>Swings with hydration</td></tr>
+<tr><td>DEXA scan</td><td>Clinic or imaging center</td><td>Cost and access; still an estimate</td></tr>
+</tbody></table>
+<h2>What Your Number Means for Health</h2>
+<p>Both too little and too much body fat carry risks. Essential fat is needed for hormones, organ protection and temperature control, and women need more of it than men. Higher body fat, especially around the abdomen, is linked with greater risk of type 2 diabetes and cardiovascular disease. Track the trend over months rather than reacting to one reading, and pair it with the <a href="bmi-calculator.html">BMI calculator</a> or <a href="lean-body-mass-calculator.html">lean body mass calculator</a> for context.</p>
+<p>Because every method has error, a doctor can interpret your number alongside blood pressure, lab values and family history.</p><h2>Common Mistakes</h2>
+<ul><li><strong>Pulling the tape tight.</strong> Compressing the skin lowers the waist reading and understates body fat.</li>
+<li><strong>Measuring after a large meal or workout.</strong> Bloating and a muscle pump change circumferences.</li>
+<li><strong>Chasing a very low number.</strong> Going below the essential fat range can disrupt hormones, bone health and energy. It is not a goal for most people.</li>
+<li><strong>Comparing different methods.</strong> A tape result and a scale-based result are not interchangeable. Pick one method for tracking.</li></ul>
+<h2>Habits That Make Tape Results Reliable</h2>
+<ol><li>Pick one time of day, ideally the morning, and stick to it.</li>
+<li>Take each measurement two or three times and average them.</li>
+<li>Record the numbers in a notebook rather than just the final percentage, so you can spot a measuring slip.</li>
+<li>Recheck every two to four weeks, not daily, since real change in body fat is slow.</li></ol>
+<p>If your waist shrinks while weight stays flat, that usually points to fat loss with some muscle gain, which the scale alone would miss.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What is a healthy body fat percentage?</summary><p>For most adults, roughly 14 to 24 percent for men and 21 to 31 percent for women is considered healthy or average. The right range depends on age, fitness goals and health.</p></details>
+        <details class="faq-item"><summary>How accurate is the Navy body fat method?</summary><p>It is a reasonable estimate for most people, usually within a few percentage points of lab methods, but it can be off for very lean or very heavy bodies.</p></details>
+        <details class="faq-item"><summary>Is body fat percentage better than BMI?</summary><p>It is more informative because it distinguishes fat from lean tissue, but it is harder to measure accurately at home.</p></details>
+        <details class="faq-item"><summary>How often should I measure body fat?</summary><p>Every two to four weeks is enough. Daily changes mostly reflect water and measurement error.</p></details>
+        <details class="faq-item"><summary>Can I have low body fat and still be unhealthy?</summary><p>Yes. Very low body fat can affect hormones, bones and energy. Essential fat is needed for normal body function.</p></details>
+      <details class="faq-item"><summary>How accurate is the tape measure body fat method?</summary><p>It is a reasonable estimate for most adults but can be off by several percentage points compared with a DEXA scan. It is most useful for tracking change over time when you measure the same way each time.</p></details><details class="faq-item"><summary>What is a healthy body fat percentage for my age?</summary><p>Healthy ranges rise gradually with age and are higher for women than men. As a rough guide, many adult women fall around 21 to 33 percent and men about 8 to 25 percent. Your doctor can tell you what suits your situation.</p></details><details class="faq-item"><summary>How can I lower my body fat percentage?</summary><p>Sustained, moderate calorie control combined with resistance training and enough protein helps preserve muscle while fat decreases. Aim for gradual change. Sleep, activity and medical conditions also matter, so ask a clinician before major diet changes.</p></details><details class="faq-item"><summary>Why does my body fat change from day to day?</summary><p>Daily readings shift with hydration, meals, tape placement and, for impedance devices, skin and water conditions. True fat change takes weeks. Compare averages taken under the same conditions rather than single measurements.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.niddk.nih.gov/" rel="noopener" target="_blank">NIDDK: Healthy living and weight management</a></li><li><a href="https://www.nhlbi.nih.gov/" rel="noopener" target="_blank">NHLBI: Health topics on weight and heart health</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="army-body-fat-calculator.html">Army Body Fat Calculator</a></li><li><a href="lean-body-mass-calculator.html">Lean Body Mass Calculator</a></li><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="body-type-calculator.html">Body Type Calculator</a></li><li><a href="macro-calculator.html">Macro Calculator</a></li><li><a href="tdee-calculator.html">TDEE Calculator</a></li><li><a href="../topics/health-and-fitness-calculators.html">Health & Fitness Calculators</a></li></ul>
+      <p class="disclaimer">This calculator provides general estimates and is not medical advice. Talk to a doctor or registered dietitian before making changes to your diet, exercise or health routine.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Body Fat Calculator | Health Assessment Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

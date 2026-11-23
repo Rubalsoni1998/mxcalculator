@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dividend Calculator with DRIP | Mx Calculator</title>
+  <meta name="description" content="Project dividend income, DRIP reinvestment, dividend growth, taxes and portfolio value year by year over any time period.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/dividend-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Dividend Calculator with DRIP | Mx Calculator">
+  <meta property="og:description" content="Project dividend income, DRIP reinvestment, dividend growth, taxes and portfolio value year by year over any time period.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/dividend-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dividend Calculator with DRIP | Mx Calculator">
+  <meta name="twitter:description" content="Project dividend income, DRIP reinvestment, dividend growth, taxes and portfolio value year by year over any time period.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Dividend Calculator","description":"Project dividend income, DRIP reinvestment, dividend growth, taxes and portfolio value year by year over any time period.","url":"https://mxcalculator.com/calculators/dividend-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Dividend Calculator","item":"https://mxcalculator.com/calculators/dividend-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate dividend income?","acceptedAnswer":{"@type":"Answer","text":"Multiply the number of shares you own by the dividend per share. Owning 500 shares that pay $0.60 per share each quarter gives $300 per quarter, or $1,200 per year, before taxes."}},{"@type":"Question","name":"What is a good dividend yield?","acceptedAnswer":{"@type":"Answer","text":"Many investors consider 2% to 5% a healthy range. Yields far above that can signal risk. A good yield also depends on dividend growth, payout ratio and the strength of the company."}},{"@type":"Question","name":"Is it better to reinvest dividends or take cash?","acceptedAnswer":{"@type":"Answer","text":"Reinvesting usually builds more wealth over the long term through compounding. Taking cash makes sense when you need the income now, such as in retirement. Use the DRIP option above to compare both outcomes."}},{"@type":"Question","name":"How are dividends taxed in the U.S.?","acceptedAnswer":{"@type":"Answer","text":"Qualified dividends are generally taxed at 0%, 15% or 20% depending on your taxable income, while ordinary dividends are taxed at your regular income tax rate. High earners may also owe a 3.8% net investment income tax. Dividends inside an IRA or 401(k) are not taxed until withdrawal, or never in a Roth."}},{"@type":"Question","name":"What is yield on cost?","acceptedAnswer":{"@type":"Answer","text":"Yield on cost compares your current yearly dividends to the total amount you invested. If you put in $20,000 and now receive $2,000 a year in dividends, your yield on cost is 10%, even if the stock's current yield is only 3%."}},{"@type":"Question","name":"Can a company cut its dividend?","acceptedAnswer":{"@type":"Answer","text":"Yes. Dividends are not guaranteed. A company can reduce, suspend or eliminate its dividend if profits fall, so treat projected income as an estimate."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#009999">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/dividend-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/dividend-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg>
+        </div>
+        <div>
+          <h1>Dividend Calculator</h1>
+          <p>Project dividend income and portfolio growth with reinvestment</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p>Enter your investment, yield and growth assumptions to see how dividends can compound over time.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg>
+            </div>
+            Investment Details
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="initial">Initial Investment<span class="help-icon tooltip" data-tooltip="Amount you invest on day one."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon">$</span>
+              <input type="number" id="initial" class="has-icon" value="10000" min="0" step="100" inputmode="decimal">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="monthly">Monthly Contribution<span class="help-icon tooltip" data-tooltip="Amount you add every month. Enter 0 for none."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon">$</span>
+              <input type="number" id="monthly" class="has-icon" value="200" min="0" step="10" inputmode="decimal">
+            </div>
+          </div>
+          </div>
+          <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="yield">Dividend Yield<span class="help-icon tooltip" data-tooltip="Annual dividend divided by share price at the start."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="yield" value="3.5" min="0" max="30" step="0.01" inputmode="decimal">
+              <span>%</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="divGrowth">Dividend Growth (per year)<span class="help-icon tooltip" data-tooltip="How fast the dividend per share is raised each year."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="divGrowth" value="5" min="0" max="30" step="0.01" inputmode="decimal">
+              <span>%</span>
+            </div>
+          </div>
+          </div>
+          <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="priceGrowth">Share Price Growth (per year)<span class="help-icon tooltip" data-tooltip="Expected yearly change in share price. Use a negative number for a decline."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="priceGrowth" value="6" min="-50" max="30" step="0.01" inputmode="decimal">
+              <span>%</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="years">Years to Grow<span class="help-icon tooltip" data-tooltip="Length of the investment period."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="years" value="20" min="1" max="60" step="1" inputmode="decimal">
+              <span>years</span>
+            </div>
+          </div>
+          </div>
+          <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="frequency">Dividend Frequency<span class="help-icon tooltip" data-tooltip="How often the stock or fund pays a dividend."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <select id="frequency"><option value="12">Monthly</option><option value="4" selected>Quarterly</option><option value="2">Semi-annual</option><option value="1">Annual</option></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="drip">Reinvest Dividends (DRIP)<span class="help-icon tooltip" data-tooltip="DRIP buys more shares with each dividend, which compounds your income."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <select id="drip"><option value="1" selected>Yes, reinvest</option><option value="0">No, take as cash</option></select>
+          </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="taxRate">Tax on Dividends<span class="help-icon tooltip" data-tooltip="Your estimated tax rate on dividend income. Qualified dividends are often taxed at 0%, 15% or 20% in the U.S.; use 0 to ignore tax."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="taxRate" value="15" min="0" max="50" step="0.01" inputmode="decimal">
+              <span>%</span>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"></path></svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"></circle><path d="M18.09 10.37A6 6 0 1 1 10.34 18"></path><path d="M7 6h1v4"></path><path d="m16.71 13.88.7.71-2.82 2.82"></path></svg>
+          </div>
+          <h3>Enter investment details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+            <div class="result-subtitle" id="resultLabel">Result</div>
+            <div class="result-value" id="resultValueDisplay">–</div>
+            <div class="result-note" id="resultNote"></div>
+          </div>
+          <div id="warnBox" class="note warn" style="display:none;"></div>
+
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr><th>Item</th><th>Value</th></tr>
+                  </thead>
+                  <tbody id="breakdownTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card u-mt">
+            <div class="card-header">
+              <div class="card-title u-fs1">Portfolio Growth</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="mainChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="card u-mt">
+            <div class="card-header">
+              <div class="card-title u-fs1">Year-by-Year Growth</div>
+            </div>
+            <div class="card-content">
+              <div class="u-frame scroll-x" style="max-height: 360px; overflow-y: auto;">
+                <table class="breakdown-table">
+                  <thead><tr><th>Year</th><th>Invested</th><th>Dividends (yr)</th><th>Value</th></tr></thead>
+                  <tbody id="yearTable"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Dividend Calculator</h2>
+      <p>A dividend is a share of a company's profit paid to its shareholders, usually in cash every month, quarter or year. Dividend investing is a popular way to build a stream of passive income, and the real power comes from reinvesting those payments so they buy more shares, which then pay more dividends of their own.</p>
+      <p>This calculator projects how an investment in a dividend stock, ETF or fund could grow over time. It accounts for your starting amount, monthly contributions, the starting dividend yield, yearly dividend increases, share price growth, payout frequency, dividend taxes and whether you reinvest. You get your final portfolio value, total dividends received, the annual dividend income you could be earning in the last year, and your yield on cost.</p>
+
+      <h2>How the Calculation Works</h2>
+      <p>The model runs month by month. It treats your holding as shares priced at $100 at the start, so a 3.5% yield means $3.50 of dividends per share per year.</p>
+      <p><code>Price(month) = Price(previous) × (1 + price growth)<sup>1/12</sup></code><br>
+      <code>Dividend per share (year y) = Start dividend × (1 + dividend growth)<sup>y</sup></code><br>
+      <code>Dividend payment = Shares × Dividend per share ÷ payouts per year</code><br>
+      <code>After-tax dividend = Payment × (1 − tax rate)</code></p>
+      <p>Each month your contribution buys shares at the current price. On payout months the after-tax dividend either buys more shares (DRIP on) or is collected as cash (DRIP off). Portfolio value is shares times price, plus any cash dividends collected.</p>
+      <div class="example">
+        <p><strong>Example:</strong> You invest $10,000 and add $200 a month into a stock yielding 3.5%. The dividend grows 5% a year, the share price grows 6% a year, dividends are paid quarterly and reinvested, and you pay 15% tax on dividends.</p>
+        <p>Over 20 years, your total contributions are $58,000. Because the dividends keep buying shares, the final portfolio is far larger than the amount you put in, and the yearly dividend income at the end is many times the first year's.</p>
+      </div>
+
+      <h2>Key Terms</h2>
+      <ul>
+        <li><strong>Dividend yield:</strong> Annual dividend per share divided by the current share price. A $2 dividend on a $50 stock is a 4% yield.</li>
+        <li><strong>Dividend growth rate:</strong> The yearly percentage increase in the dividend per share. Companies with long records of raises are often called dividend growth stocks.</li>
+        <li><strong>DRIP (dividend reinvestment plan):</strong> Automatically using dividends to buy more shares, usually without a commission.</li>
+        <li><strong>Yield on cost:</strong> Your current annual dividend income divided by what you have invested in total. It rises over time when dividends grow.</li>
+        <li><strong>Qualified dividends:</strong> Dividends that meet IRS holding-period rules and are taxed at lower long-term capital gains rates rather than ordinary income rates.</li>
+      </ul>
+
+      <h2>Tips for Dividend Investors</h2>
+      <ul>
+        <li><strong>Do not chase the highest yield.</strong> A very high yield can mean the market expects the dividend to be cut. Look at the payout ratio and earnings stability.</li>
+        <li><strong>Favor growth in the dividend.</strong> A lower yield that grows 8% a year can overtake a higher flat yield within a decade.</li>
+        <li><strong>Use tax-advantaged accounts.</strong> Holding dividend payers in an IRA or 401(k) can defer or remove the tax drag. Set the tax rate to 0 to see the difference.</li>
+        <li><strong>Diversify.</strong> Spread across sectors and companies so one dividend cut does not hurt your income much.</li>
+        <li><strong>Stay consistent.</strong> Regular contributions and reinvestment drive most of the long-term result.</li>
+      </ul>
+      <p>This is a projection from the assumptions you enter. Real dividends and prices vary, and dividends can be reduced or stopped at any time.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How do I calculate dividend income?</summary><p>Multiply the number of shares you own by the dividend per share. Owning 500 shares that pay $0.60 per share each quarter gives $300 per quarter, or $1,200 per year, before taxes.</p></details>
+        <details class="faq-item"><summary>What is a good dividend yield?</summary><p>Many investors consider 2% to 5% a healthy range. Yields far above that can signal risk. A good yield also depends on dividend growth, payout ratio and the strength of the company.</p></details>
+        <details class="faq-item"><summary>Is it better to reinvest dividends or take cash?</summary><p>Reinvesting usually builds more wealth over the long term through compounding. Taking cash makes sense when you need the income now, such as in retirement. Use the DRIP option above to compare both outcomes.</p></details>
+        <details class="faq-item"><summary>How are dividends taxed in the U.S.?</summary><p>Qualified dividends are generally taxed at 0%, 15% or 20% depending on your taxable income, while ordinary dividends are taxed at your regular income tax rate. High earners may also owe a 3.8% net investment income tax. Dividends inside an IRA or 401(k) are not taxed until withdrawal, or never in a Roth.</p></details>
+        <details class="faq-item"><summary>What is yield on cost?</summary><p>Yield on cost compares your current yearly dividends to the total amount you invested. If you put in $20,000 and now receive $2,000 a year in dividends, your yield on cost is 10%, even if the stock's current yield is only 3%.</p></details>
+        <details class="faq-item"><summary>Can a company cut its dividend?</summary><p>Yes. Dividends are not guaranteed. A company can reduce, suspend or eliminate its dividend if profits fall, so treat projected income as an estimate.</p></details>
+      </div>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="investment-calculator.html">Investment Calculator</a></li><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li><li><a href="capital-gains-tax-calculator.html">Capital Gains Tax Calculator</a></li><li><a href="retirement-calculator.html">Retirement Calculator</a></li><li><a href="tax-bracket-calculator.html">Tax Bracket Calculator</a></li><li><a href="inflation-calculator.html">Inflation Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Projections are based on the assumptions you enter and are not guaranteed. Dividends can be cut or suspended and share prices can fall. This tool is for general information, not investment or tax advice.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Dividend Calculator | Investing Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

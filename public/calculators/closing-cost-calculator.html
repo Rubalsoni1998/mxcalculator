@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closing Cost Calculator for Home Buyers | Mx Calculator</title>
+  <meta name="description" content="Estimate closing costs for a US home purchase: lender fees, title and government charges, prepaids, FHA or VA fees and total cash to close.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/closing-cost-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Closing Cost Calculator for Home Buyers | Mx Calculator">
+  <meta property="og:description" content="Estimate closing costs for a US home purchase: lender fees, title and government charges, prepaids, FHA or VA fees and total cash to close.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/closing-cost-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Closing Cost Calculator for Home Buyers | Mx Calculator">
+  <meta name="twitter:description" content="Estimate closing costs for a US home purchase: lender fees, title and government charges, prepaids, FHA or VA fees and total cash to close.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Closing Cost Calculator","description":"Estimate closing costs for a US home purchase: lender fees, title and government charges, prepaids, FHA or VA fees and total cash to close.","url":"https://mxcalculator.com/calculators/closing-cost-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Closing Cost Calculator","item":"https://mxcalculator.com/calculators/closing-cost-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are closing costs?","acceptedAnswer":{"@type":"Answer","text":"Closing costs are the fees, taxes and prepaid items due at the end of a home purchase. They are separate from your down payment and include lender fees, title and settlement charges, government recording and transfer taxes, and prepaid insurance, property tax and interest."}},{"@type":"Question","name":"How much are closing costs for a buyer?","acceptedAnswer":{"@type":"Answer","text":"A common rule of thumb is 2% to 5% of the purchase price. Actual costs depend on your lender, loan type and state. High transfer-tax states such as Delaware, New York and Vermont cost much more than the national average."}},{"@type":"Question","name":"Who pays closing costs, the buyer or the seller?","acceptedAnswer":{"@type":"Answer","text":"Buyers usually pay most closing costs. Sellers typically pay agent commissions and, in many states, transfer taxes. You can negotiate for the seller to cover some of your costs as a credit."}},{"@type":"Question","name":"Are closing costs included in my down payment?","acceptedAnswer":{"@type":"Answer","text":"No. Your down payment goes toward the price of the home. Closing costs are paid separately, so your cash to close is the down payment plus closing costs, minus any seller credit."}},{"@type":"Question","name":"Can I roll closing costs into my loan?","acceptedAnswer":{"@type":"Answer","text":"Only some of them. FHA and VA upfront fees are commonly financed. For other costs, lenders may offer a no-closing-cost loan that charges a higher interest rate or builds the fees into the balance."}},{"@type":"Question","name":"When do I find out my exact closing costs?","acceptedAnswer":{"@type":"Answer","text":"Your lender must send a Loan Estimate within three business days of your application and a Closing Disclosure at least three days before closing. Compare them line by line."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#009999">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/closing-cost-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/closing-cost-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+        </div>
+        <div>
+          <h1>Closing Cost Calculator</h1>
+          <p>Estimate home buying closing costs and cash needed at closing</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p>Enter the home price and down payment to estimate closing costs by category and the total cash you need on closing day. Defaults use the Freddie Mac average 30-year rate of 7.28% (week of November 19, 2026).</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+            </div>
+            Purchase Details
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="form-grid-2"><div class="form-group"><label class="form-label" for="price">Home Price<span class="help-icon tooltip" data-tooltip="The purchase price of the home."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-wrapper input-icon-wrapper"><span class="input-icon">$</span><input type="number" id="price" class="has-icon" value="400000" min="0" step="1000" inputmode="decimal"></div></div><div class="form-group"><label class="form-label" for="downPct">Down Payment<span class="help-icon tooltip" data-tooltip="Percent of the price you pay up front."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="downPct" value="10" min="0" max="99" step="0.5" inputmode="decimal"><span>%</span></div></div></div><div class="form-grid-2"><div class="form-group"><label class="form-label" for="loanType">Loan Type<span class="help-icon tooltip" data-tooltip="FHA and VA loans charge an upfront mortgage insurance or funding fee."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><select id="loanType"><option value="conv" selected>Conventional</option><option value="fha">FHA</option><option value="va">VA (first use)</option></select></div><div class="form-group"><label class="form-label" for="rate">Interest Rate<span class="help-icon tooltip" data-tooltip="Used for prepaid interest. Default is the Freddie Mac 30-year average (7.28%, Nov 19, 2026)."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="rate" value="7.28" min="0" max="25" step="0.01" inputmode="decimal"><span>%</span></div></div></div><div class="form-section">Lender Fees</div><div class="form-grid-2"><div class="form-group"><label class="form-label" for="origPct">Origination &amp; Underwriting<span class="help-icon tooltip" data-tooltip="Lender charges as a percent of the loan. Many lenders charge about 0.5% to 1.5%."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="origPct" value="1.0" min="0" max="5" step="0.05" inputmode="decimal"><span>% of loan</span></div></div><div class="form-group"><label class="form-label" for="points">Discount Points<span class="help-icon tooltip" data-tooltip="Each point costs 1% of the loan and lowers your rate."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="points" value="0" min="0" max="5" step="0.25" inputmode="decimal"><span>points</span></div></div></div><div class="form-section">Third-Party, Title &amp; Government</div><div class="form-group"><label class="form-label" for="thirdParty">Appraisal, Credit, Inspection &amp; Survey<span class="help-icon tooltip" data-tooltip="Appraisals often run $300 to $500 or more. Add the home inspection, credit report and survey."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-wrapper input-icon-wrapper"><span class="input-icon">$</span><input type="number" id="thirdParty" class="has-icon" value="1500" min="0" step="50" inputmode="decimal"></div></div><div class="form-group"><label class="form-label" for="location">Title, Settlement &amp; Government Charges<span class="help-icon tooltip" data-tooltip="Average title insurance, settlement, recording and transfer tax as a percent of price, by location. Pick custom to enter your own."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><select id="location" onchange="onLocationChange()"><option value="1.0" selected>National average (about 1.0%)</option><option value="3.06">Delaware (3.06%)</option><option value="2.34">Vermont (2.34%)</option><option value="2.32">New York (2.32%)</option><option value="2.24">Washington, D.C. (2.24%)</option><option value="2.02">Maryland (2.02%)</option><option value="custom">Custom percent</option></select></div><div class="form-group"><label class="form-label" for="titlePct">Title &amp; Government Percent<span class="help-icon tooltip" data-tooltip="Percent of the purchase price for title, settlement, recording and transfer taxes."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="titlePct" value="1.0" min="0" max="6" step="0.01" inputmode="decimal"><span>% of price</span></div></div><div class="form-section">Prepaids &amp; Escrow</div><div class="form-grid-2"><div class="form-group"><label class="form-label" for="insurance">Homeowners Insurance (1 yr)<span class="help-icon tooltip" data-tooltip="Most lenders collect the first year of premiums at closing."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-wrapper input-icon-wrapper"><span class="input-icon">$</span><input type="number" id="insurance" class="has-icon" value="2000" min="0" step="50" inputmode="decimal"></div></div><div class="form-group"><label class="form-label" for="taxRate">Property Tax Rate<span class="help-icon tooltip" data-tooltip="Yearly property tax as a percent of price. State averages range from about 0.3% to 1.9%."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-row"><input type="number" id="taxRate" value="1.0" min="0" max="5" step="0.01" inputmode="decimal"><span>%</span></div></div></div><div class="form-grid-2"><div class="form-group"><label class="form-label" for="taxMonths">Tax Escrow Months<span class="help-icon tooltip" data-tooltip="Months of property tax your lender collects up front."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><input type="number" id="taxMonths" value="3" min="0" max="12" step="1" inputmode="numeric"></div><div class="form-group"><label class="form-label" for="interestDays">Prepaid Interest Days<span class="help-icon tooltip" data-tooltip="Days of interest from closing to the end of the month."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><input type="number" id="interestDays" value="15" min="0" max="31" step="1" inputmode="numeric"></div></div><div class="form-section">Credits</div><div class="form-group"><label class="form-label" for="sellerCredit">Seller Credit (optional)<span class="help-icon tooltip" data-tooltip="Money the seller agrees to put toward your closing costs."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label><div class="input-wrapper input-icon-wrapper"><span class="input-icon">$</span><input type="number" id="sellerCredit" class="has-icon" value="0" min="0" step="500" inputmode="decimal"></div></div><div class="form-group"><label class="check-label"><input type="checkbox" id="financeMI" checked> Finance the FHA/VA upfront fee into my loan</label></div>
+          <div class="note">This is an estimate. Your Loan Estimate and Closing Disclosure from the lender show the real numbers, and lenders must give you the Loan Estimate within three business days of applying.</div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"></path></svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line></svg>
+          </div>
+          <h3>Enter purchase details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+            <div class="result-subtitle" id="resultLabel">Result</div>
+            <div class="result-value" id="resultValueDisplay">–</div>
+            <div class="result-note" id="resultNote"></div>
+          </div>
+          <div id="warnBox" class="note warn" style="display:none;"></div>
+
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr><th>Item</th><th>Value</th></tr>
+                  </thead>
+                  <tbody id="breakdownTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card u-mt">
+            <div class="card-header">
+              <div class="card-title u-fs1">Closing Cost Breakdown</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="mainChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Closing Cost Calculator</h2>
+      <p>Closing costs are the fees and prepaid expenses due when you finish buying a home, on top of your down payment. They include lender charges, appraisal and inspection fees, title insurance, settlement or attorney fees, government recording and transfer taxes, and prepaid items such as insurance and property tax. This calculator estimates each category and gives you total closing costs and the <strong>cash to close</strong> you should plan for. Updated November 21, 2026.</p>
+
+      <h2>How Much Are Closing Costs?</h2>
+      <p>Estimates vary a lot by source because they count different things. Lenders and agents often quote a rule of thumb of <strong>2% to 5% of the purchase price</strong> for a buyer, and some quote 3% to 6% of the loan. Government and title data from LodeStar's 2026 report put the national average for title, settlement and government charges alone near <strong>1% of the sale price</strong>, with high-transfer-tax states costing much more. Lender fees, points and prepaid items sit on top of that, which is how the totals reach the 2% to 5% range.</p>
+      <div class="scroll-x"><table class="ref">
+        <thead><tr><th>Location</th><th>Title, settlement &amp; government charges (% of price)</th></tr></thead>
+        <tbody>
+          <tr><td>National average</td><td>About 1.0%</td></tr>
+          <tr><td>Delaware</td><td>3.06%</td></tr>
+          <tr><td>Vermont</td><td>2.34%</td></tr>
+          <tr><td>New York</td><td>2.32%</td></tr>
+          <tr><td>Washington, D.C.</td><td>2.24%</td></tr>
+          <tr><td>Maryland</td><td>2.02%</td></tr>
+        </tbody></table></div>
+      <p>These percentages cover title, settlement and government fees only. They do not include lender fees, points, prepaids or agent commissions. Transfer taxes cause most of the difference between states, and the seller pays them in many states.</p>
+
+      <h2>What Closing Costs Include</h2>
+      <ul>
+        <li><strong>Lender fees:</strong> Origination, underwriting and processing, plus discount points if you buy down your rate.</li>
+        <li><strong>Third-party fees:</strong> Appraisal, credit report, home inspection, survey and flood certification.</li>
+        <li><strong>Title and settlement:</strong> Title search, lender's title insurance, escrow or attorney fees.</li>
+        <li><strong>Government charges:</strong> Recording fees and state or local transfer taxes.</li>
+        <li><strong>Prepaids and escrow:</strong> The first year of homeowners insurance, a few months of property tax and interest from closing day to month end.</li>
+        <li><strong>Upfront mortgage insurance:</strong> FHA charges an upfront premium of 1.75% of the base loan. VA loans charge a funding fee of 2.15%, 1.5% or 1.25% for first use depending on your down payment (5%, 5%–10%, 10% or more). Both can usually be financed into the loan.</li>
+      </ul>
+      <div class="example">
+        <p><strong>Example:</strong> $400,000 home, 10% down, conventional loan at 7.28%.</p>
+        <p>The loan is $360,000. Lender origination at 1% is $3,600. Appraisal and other third-party fees are $1,500. Title and government charges at 1.0% are $4,000. Prepaids are $2,000 insurance, about $1,000 of tax escrow for three months and about $1,077 of interest for 15 days. Total closing costs come to about <strong>$13,200</strong> (3.3% of the price), and cash to close is that plus the $40,000 down payment.</p>
+      </div>
+
+      <h2>How to Lower Your Closing Costs</h2>
+      <ul>
+        <li><strong>Compare Loan Estimates</strong> from at least three lenders. Origination fees and title charges are often negotiable or shoppable.</li>
+        <li><strong>Ask for seller credits.</strong> In a slower market sellers may pay part of your costs.</li>
+        <li><strong>Close near the end of the month</strong> to cut prepaid interest.</li>
+        <li><strong>Skip discount points</strong> if you will not keep the loan long enough to recover their cost.</li>
+        <li><strong>Look for down payment and closing cost assistance</strong> from state housing agencies and some lenders.</li>
+      </ul>
+      <p>Sources: Freddie Mac Primary Mortgage Market Survey (30-year fixed rate 7.28% as of November 19, 2026), LodeStar Software Solutions closing cost data reports as published by Bankrate (November 2026) and the Consumer Financial Protection Bureau.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq"><details class="faq-item"><summary>What are closing costs?</summary><p>Closing costs are the fees, taxes and prepaid items due at the end of a home purchase. They are separate from your down payment and include lender fees, title and settlement charges, government recording and transfer taxes, and prepaid insurance, property tax and interest.</p></details><details class="faq-item"><summary>How much are closing costs for a buyer?</summary><p>A common rule of thumb is 2% to 5% of the purchase price. Actual costs depend on your lender, loan type and state. High transfer-tax states such as Delaware, New York and Vermont cost much more than the national average.</p></details><details class="faq-item"><summary>Who pays closing costs, the buyer or the seller?</summary><p>Buyers usually pay most closing costs. Sellers typically pay agent commissions and, in many states, transfer taxes. You can negotiate for the seller to cover some of your costs as a credit.</p></details><details class="faq-item"><summary>Are closing costs included in my down payment?</summary><p>No. Your down payment goes toward the price of the home. Closing costs are paid separately, so your cash to close is the down payment plus closing costs, minus any seller credit.</p></details><details class="faq-item"><summary>Can I roll closing costs into my loan?</summary><p>Only some of them. FHA and VA upfront fees are commonly financed. For other costs, lenders may offer a no-closing-cost loan that charges a higher interest rate or builds the fees into the balance.</p></details><details class="faq-item"><summary>When do I find out my exact closing costs?</summary><p>Your lender must send a Loan Estimate within three business days of your application and a Closing Disclosure at least three days before closing. Compare them line by line.</p></details></div>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="mortgage-calculator.html">Mortgage Calculator</a></li><li><a href="pmi-calculator.html">PMI Calculator</a></li><li><a href="property-tax-calculator.html">Property Tax Calculator</a></li><li><a href="amortization-calculator.html">Amortization Calculator</a></li><li><a href="cap-rate-calculator.html">Cap Rate Calculator</a></li><li><a href="interest-rate-calculator.html">Interest Rate Calculator</a></li><li><a href="../topics/home-buying-calculators.html">Home Buying Calculators</a></li></ul>
+      <p class="disclaimer">Estimates for general information. Closing costs differ by lender, county, loan program and negotiation. Title and government percentages are state averages, not quotes. Rely on your Loan Estimate and Closing Disclosure. This is not financial advice.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Closing Cost Calculator | Mortgage Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

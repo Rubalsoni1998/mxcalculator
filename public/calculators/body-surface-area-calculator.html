@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Body Surface Area (BSA) Calculator | Mx Calculator</title>
+  <meta name="description" content="Calculate body surface area in m² from height and weight using the Mosteller, DuBois, Haycock and other formulas used in clinical dosing.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/body-surface-area-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Body Surface Area (BSA) Calculator | Mx Calculator">
+  <meta property="og:description" content="Calculate body surface area in m² from height and weight using the Mosteller, DuBois, Haycock and other formulas used in clinical dosing.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/body-surface-area-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Body Surface Area (BSA) Calculator | Mx Calculator">
+  <meta name="twitter:description" content="Calculate body surface area in m² from height and weight using the Mosteller, DuBois, Haycock and other formulas used in clinical dosing.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Body Surface Area Calculator","description":"Calculate body surface area in m² from height and weight using the Mosteller, DuBois, Haycock and other formulas used in clinical dosing.","url":"https://mxcalculator.com/calculators/body-surface-area-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Body Surface Area Calculator","item":"https://mxcalculator.com/calculators/body-surface-area-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which BSA formula is best?","acceptedAnswer":{"@type":"Answer","text":"Mosteller is the most commonly used because it is simple and gives results close to the others. Hospitals may specify a preferred formula in their protocols."}},{"@type":"Question","name":"Why is BSA used for drug dosing?","acceptedAnswer":{"@type":"Answer","text":"Metabolism and blood volume scale with body size better than with weight alone, so BSA-based dosing gives more consistent drug exposure for certain medicines."}},{"@type":"Question","name":"What is a normal BSA?","acceptedAnswer":{"@type":"Answer","text":"About 1.6 to 1.9 m² for adults, depending on size and sex."}},{"@type":"Question","name":"Can I use this calculator for children?","acceptedAnswer":{"@type":"Answer","text":"The formulas work for children, but pediatric dosing should always be confirmed by a clinician."}},{"@type":"Question","name":"Is BSA the same as skin area?","acceptedAnswer":{"@type":"Answer","text":"It is an estimate of total skin surface from height and weight, not a direct measurement."}},{"@type":"Question","name":"What is a normal body surface area?","acceptedAnswer":{"@type":"Answer","text":"Average adults are often cited around 1.7 m² for women and 1.9 m² for men, but it varies with size."}},{"@type":"Question","name":"Which BSA formula is best?","acceptedAnswer":{"@type":"Answer","text":"Mosteller is the easiest and widely used. Differences between common formulas are typically small for average adults."}},{"@type":"Question","name":"Can I use this for medication doses?","acceptedAnswer":{"@type":"Answer","text":"No. Doses must be prescribed and checked by a clinician or pharmacist."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#25d0a5">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/health-calc.css">
+  <link rel="stylesheet" href="../assets/css/pages/body-surface-area-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/health-engine.js"></script>
+  <script defer src="../assets/js/pages/body-surface-area-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2M11.5 9.5l2-2M8.5 6.5l2-2M17.5 15.5l2-2"></path></svg>
+        </div>
+        <div>
+          <h1>Body Surface Area Calculator</h1>
+          <p>BSA with Mosteller, DuBois and more</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p>Body surface area is used by doctors to dose some medicines and to compare measures such as cardiac output between people of different sizes.</p>
+    </div>
+
+    <div class="main-grid">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2M11.5 9.5l2-2M8.5 6.5l2-2M17.5 15.5l2-2"></path></svg></div>
+            Your Details
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="tabs">
+            <button type="button" class="tab-btn active" id="tabUS" onclick="setUnits('us')">US Units</button>
+            <button type="button" class="tab-btn" id="tabMetric" onclick="setUnits('metric')">Metric Units</button>
+          </div>
+          <div class="form-group" data-kind="height" data-id="height"><label class="form-label" for="heightFt">Height</label>
+            <div class="input-row u-us"><div class="input-wrapper u-flex1"><input type="number" id="heightFt" value="5" min="0" max="8" step="1" inputmode="numeric"></div><span class="u-px5">ft</span><div class="input-wrapper u-flex1"><input type="number" id="heightIn" value="10" min="0" max="11.9" step="any" inputmode="decimal"></div><span class="u-px5">in</span></div>
+            <div class="input-row u-metric hidden"><div class="input-wrapper u-flex1"><input type="number" id="heightCm" step="any" inputmode="decimal"></div><span class="u-px5">cm</span></div>
+          </div>
+          <div class="form-group" data-kind="weight" data-id="weight"><label class="form-label" for="weight">Weight</label><div class="input-row"><div class="input-wrapper u-flex1"><input type="number" id="weight" value="160" step="any" inputmode="decimal"></div><span class="u-px5" data-us="pounds" data-metric="kg">pounds</span></div></div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+          <div class="form-err" id="formError" role="alert"></div>
+        </div>
+      </div>
+
+      <div id="resultsContainer" class="animate-slide-up" aria-live="polite">
+        <div id="resultsPlaceholder" class="card results-placeholder hidden">
+          <div class="results-placeholder-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path><path d="m14.5 12.5 2-2M11.5 9.5l2-2M8.5 6.5l2-2M17.5 15.5l2-2"></path></svg></div>
+          <h3>Enter your details</h3>
+          <p>Results will appear here</p>
+        </div>
+        <div id="resultsContent" class="hidden"></div>
+      </div>
+    </div>
+
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Body Surface Area Calculator</h2>
+      <p>Body surface area (BSA) is the measured or calculated surface area of the human body, usually shown in square metres. Clinicians use it to scale doses of some medicines such as chemotherapy, to size cardiac output, and to compare kidney function across body sizes.</p>
+      <p>Enter your height and weight and the calculator returns BSA using the Mosteller formula along with other accepted formulas, so you can compare the results.</p>
+      <h2>How to Use the Body Surface Area Calculator</h2>
+      <ol><li>Choose metric or US units.</li><li>Enter your height and weight.</li><li>Click <strong>Calculate</strong> to see BSA in m² from each formula.</li></ol>
+      <h2>BSA Formulas</h2>
+      <p><strong>Mosteller:</strong> <code>BSA (m²) = √(height(cm) × weight(kg) ÷ 3600)</code><br><strong>DuBois:</strong> <code>BSA = 0.007184 × weight^0.425 × height^0.725</code> (kg and cm).</p>
+      <div class="example"><p><strong>Example:</strong> For someone 170 cm tall who weighs 70 kg, Mosteller gives √(170 × 70 ÷ 3600) = √3.306 = <strong>1.82 m²</strong>.</p></div>
+      <h2>Typical BSA Values</h2>
+      <p>The average adult BSA is about 1.7 m², commonly about 1.9 m² for men and 1.6 m² for women. Newborns are near 0.25 m² and children range between that and the adult values.</p>
+      <!--seo:expanded-->
+      <h2>Worked Example: 170 cm and 70 kg</h2>
+<p>The Mosteller formula is √(height in cm × weight in kg ÷ 3600). For 170 cm and 70 kg that is √3.306, about <strong>1.82 m²</strong>. The DuBois formula gives about <strong>1.81 m²</strong>. The small difference is normal; formulas were derived differently.</p>
+<h2>Where BSA Is Used</h2>
+<p>Doctors use body surface area to dose some chemotherapy drugs, and to index measurements such as cardiac output or kidney function to body size. The calculator is for information only; clinical dosing must be set by the treating team.</p>
+<h2>Related Measures</h2>
+<ul><li>Kidney function is often reported per 1.73 m² of BSA; see the <a href="gfr-calculator.html">GFR calculator</a>.</li><li>For height-weight screening, use the <a href="bmi-calculator.html">BMI calculator</a>.</li></ul>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>Which BSA formula is best?</summary><p>Mosteller is the most commonly used because it is simple and gives results close to the others. Hospitals may specify a preferred formula in their protocols.</p></details>
+        <details class="faq-item"><summary>Why is BSA used for drug dosing?</summary><p>Metabolism and blood volume scale with body size better than with weight alone, so BSA-based dosing gives more consistent drug exposure for certain medicines.</p></details>
+        <details class="faq-item"><summary>What is a normal BSA?</summary><p>About 1.6 to 1.9 m² for adults, depending on size and sex.</p></details>
+        <details class="faq-item"><summary>Can I use this calculator for children?</summary><p>The formulas work for children, but pediatric dosing should always be confirmed by a clinician.</p></details>
+        <details class="faq-item"><summary>Is BSA the same as skin area?</summary><p>It is an estimate of total skin surface from height and weight, not a direct measurement.</p></details>
+      <details class="faq-item"><summary>What is a normal body surface area?</summary><p>Average adults are often cited around 1.7 m² for women and 1.9 m² for men, but it varies with size.</p></details><details class="faq-item"><summary>Which BSA formula is best?</summary><p>Mosteller is the easiest and widely used. Differences between common formulas are typically small for average adults.</p></details><details class="faq-item"><summary>Can I use this for medication doses?</summary><p>No. Doses must be prescribed and checked by a clinician or pharmacist.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.niddk.nih.gov/" rel="noopener" target="_blank">NIDDK: Kidney disease information</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="bmi-calculator.html">BMI Calculator</a></li><li><a href="gfr-calculator.html">GFR Calculator</a></li><li><a href="healthy-weight-calculator.html">Healthy Weight Calculator</a></li><li><a href="ideal-weight-calculator.html">Ideal Weight Calculator</a></li><li><a href="lean-body-mass-calculator.html">Lean Body Mass Calculator</a></li><li><a href="bmr-calculator.html">BMR Calculator</a></li><li><a href="../topics/health-and-fitness-calculators.html">Health & Fitness Calculators</a></li></ul>
+      <p class="disclaimer">This tool is for education only. Never use it to set a medicine dose. Dosing must be confirmed by a qualified clinician or pharmacist.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Body Surface Area Calculator | Health &amp; Fitness Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+</body>
+</html>

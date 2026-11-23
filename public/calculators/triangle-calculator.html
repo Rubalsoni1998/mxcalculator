@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triangle Calculator: Sides, Angles, Area | Mx Calculator</title>
+  <meta name="description" content="Solve for missing sides, angles, area and perimeter using the Pythagorean theorem, law of sines and law of cosines.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/triangle-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Triangle Calculator: Sides, Angles, Area | Mx Calculator">
+  <meta property="og:description" content="Solve for missing sides, angles, area and perimeter using the Pythagorean theorem, law of sines and law of cosines.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/triangle-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Triangle Calculator: Sides, Angles, Area | Mx Calculator">
+  <meta name="twitter:description" content="Solve for missing sides, angles, area and perimeter using the Pythagorean theorem, law of sines and law of cosines.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Triangle Calculator","description":"Solve for missing sides, angles, area and perimeter using the Pythagorean theorem, law of sines and law of cosines.","url":"https://mxcalculator.com/calculators/triangle-calculator.html","applicationCategory":"EducationApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Triangle Calculator","item":"https://mxcalculator.com/calculators/triangle-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I find the area of a triangle?","acceptedAnswer":{"@type":"Answer","text":"Half the base times the height, or Heron's formula when you only know the sides."}},{"@type":"Question","name":"How do I know if a triangle is right-angled?","acceptedAnswer":{"@type":"Answer","text":"If a² + b² = c²."}},{"@type":"Question","name":"Can any three lengths form a triangle?","acceptedAnswer":{"@type":"Answer","text":"No. The two shorter sides must add to more than the longest."}},{"@type":"Question","name":"What is the sum of the angles?","acceptedAnswer":{"@type":"Answer","text":"180 degrees."}},{"@type":"Question","name":"How do I find the area of a triangle with three sides?","acceptedAnswer":{"@type":"Answer","text":"Use Heron's formula: with s = (a + b + c) ÷ 2, area = √(s(s − a)(s − b)(s − c))."}},{"@type":"Question","name":"What is the Pythagorean theorem?","acceptedAnswer":{"@type":"Answer","text":"In a right triangle, a² + b² = c², where c is the hypotenuse."}},{"@type":"Question","name":"Why does my triangle have no solution?","acceptedAnswer":{"@type":"Answer","text":"The inputs may violate the triangle inequality or the angle sum, so no triangle can match them."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#0aa3c2">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/triangle-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/triangle-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 20h18L12 4z"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Triangle Calculator</h1>
+          <p>Solve sides, angles, area and perimeter</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Enter any 3 values (sides or angles) to calculate the rest. You need at least one side length.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path>
+              </svg>
+            </div>
+            Input Values
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Diagram -->
+          <div class="triangle-diagram">
+              <svg class="diagram-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Triangle -->
+                  <polygon points="50,150 250,150 150,20" fill="none" stroke="var(--primary)" stroke-width="3" />
+
+                  <!-- Sides Labels -->
+                  <text x="150" y="170" text-anchor="middle" class="label-text">a</text>
+                  <text x="80" y="80" text-anchor="end" class="label-text">b</text>
+                  <text x="220" y="80" text-anchor="start" class="label-text">c</text>
+
+                  <!-- Angles Labels -->
+                  <text x="150" y="50" text-anchor="middle" class="angle-text">A</text>
+                  <text x="80" y="140" text-anchor="end" class="angle-text">B</text>
+                  <text x="220" y="140" text-anchor="start" class="angle-text">C</text>
+              </svg>
+          </div>
+
+          <div class="input-row">
+             <div class="form-group u-flex1">
+                <label class="form-label" for="sideA">Side a</label>
+                <input type="number" id="sideA" placeholder="--">
+             </div>
+             <div class="form-group u-flex1">
+                <label class="form-label" for="angleA">Angle A <span>(deg)</span></label>
+                <input type="number" id="angleA" placeholder="--">
+             </div>
+          </div>
+
+          <div class="input-row">
+             <div class="form-group u-flex1">
+                <label class="form-label" for="sideB">Side b</label>
+                <input type="number" id="sideB" placeholder="--">
+             </div>
+             <div class="form-group u-flex1">
+                <label class="form-label" for="angleB">Angle B <span>(deg)</span></label>
+                <input type="number" id="angleB" placeholder="--">
+             </div>
+          </div>
+
+          <div class="input-row">
+             <div class="form-group u-flex1">
+                <label class="form-label" for="sideC">Side c</label>
+                <input type="number" id="sideC" placeholder="--">
+             </div>
+             <div class="form-group u-flex1">
+                <label class="form-label" for="angleC">Angle C <span>(deg)</span></label>
+                <input type="number" id="angleC" placeholder="--">
+             </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+             </svg>
+          </div>
+          <h3>Result preview</h3>
+          <p>Calculations will appear here</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+          <div class="results-hero">
+              <h3 style="margin-bottom:1rem; font-size:1.1rem; font-weight:600; color:var(--foreground)">Triangle Solved</h3>
+              <div class="result-grid">
+                  <div class="result-item">
+                      <div class="result-label">Side a</div>
+                      <div class="result-val" id="resSideA">--</div>
+                  </div>
+                  <div class="result-item">
+                      <div class="result-label">Angle A</div>
+                      <div class="result-val" id="resAngleA">--</div>
+                  </div>
+                  <div class="result-item">
+                      <div class="result-label">Side b</div>
+                      <div class="result-val" id="resSideB">--</div>
+                  </div>
+                  <div class="result-item">
+                      <div class="result-label">Angle B</div>
+                      <div class="result-val" id="resAngleB">--</div>
+                  </div>
+                  <div class="result-item">
+                      <div class="result-label">Side c</div>
+                      <div class="result-val" id="resSideC">--</div>
+                  </div>
+                  <div class="result-item">
+                      <div class="result-label">Angle C</div>
+                      <div class="result-val" id="resAngleC">--</div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Summary Table -->
+          <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Properties</div>
+            </div>
+            <div class="card-content">
+               <table class="breakdown-table">
+                  <tbody>
+                      <tr>
+                          <td>Area</td>
+                          <td id="resArea" style="font-weight:700">--</td>
+                      </tr>
+                      <tr>
+                          <td>Perimeter</td>
+                          <td id="resPerimeter" style="font-weight:700">--</td>
+                      </tr>
+                      <tr>
+                          <td>Semi-perimeter</td>
+                          <td id="resSemiP">--</td>
+                      </tr>
+                      <tr>
+                          <td>Triangle Type</td>
+                          <td id="resType">--</td>
+                      </tr>
+                  </tbody>
+               </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Triangle Calculator</h2>
+      <p>A triangle has three sides and three angles that add up to 180 degrees. If you know enough of them, you can find the rest. This triangle calculator solves for sides, angles, area, perimeter and more.</p>
+      <p>It supports right triangles and general triangles.</p>
+      <h2>How to Use the Triangle Calculator</h2>
+      <ol><li>Enter any three known values, such as three sides or two sides and an angle.</li><li>Click <strong>Calculate</strong>.</li><li>Read the missing sides, angles, area and perimeter.</li></ol>
+      <h2>Key Triangle Formulas</h2>
+      <p><strong>Pythagorean theorem:</strong> <code>a² + b² = c²</code>. <strong>Area (base and height):</strong> <code>½ × b × h</code>. <strong>Heron:</strong> <code>√(s(s−a)(s−b)(s−c))</code> with s the half-perimeter. <strong>Law of cosines:</strong> <code>c² = a² + b² − 2ab cos C</code>.</p>
+      <div class="example"><p><strong>Example:</strong> A triangle with sides 3, 4 and 5 has area <strong>6</strong>, perimeter <strong>12</strong> and angles of 36.87°, 53.13° and 90°.</p></div>
+      <!--seo:expanded-->
+      <h2>Worked Examples</h2>
+<div class="example"><p><strong>Law of cosines.</strong> Two sides of 7 and 9 with a 60° angle between them: c² = 7² + 9² − 2 × 7 × 9 × cos 60° = 67, so the third side is <strong>8.185</strong>.</p></div>
+<div class="example"><p><strong>Heron's formula.</strong> For sides 5, 6 and 7, s = 9 and the area is √(9 × 4 × 3 × 2) = <strong>14.70</strong> square units.</p></div>
+<div class="example"><p><strong>Right triangle.</strong> Legs of 3 and 4 give a hypotenuse of 5, an area of 6, and a perimeter of 12.</p></div>
+<h2>Which Rule to Use</h2>
+<ul><li>Right triangle with two sides known: Pythagorean theorem.</li><li>Two angles and a side (AAS or ASA): law of sines.</li><li>Three sides (SSS) or two sides and the angle between them (SAS): law of cosines.</li><li>Two sides and a non-included angle (SSA) can have 0, 1 or 2 solutions.</li></ul>
+<h2>Check Your Inputs</h2>
+<p>The sum of any two sides must exceed the third, and angles must add to 180°. See the <a href="scientific-calculator.html">scientific calculator</a> for trig functions and the <a href="concrete-calculator.html">concrete calculator</a> for a practical use of area and volume.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How do I find the area of a triangle?</summary><p>Half the base times the height, or Heron's formula when you only know the sides.</p></details>
+        <details class="faq-item"><summary>How do I know if a triangle is right-angled?</summary><p>If a² + b² = c².</p></details>
+        <details class="faq-item"><summary>Can any three lengths form a triangle?</summary><p>No. The two shorter sides must add to more than the longest.</p></details>
+        <details class="faq-item"><summary>What is the sum of the angles?</summary><p>180 degrees.</p></details>
+      <details class="faq-item"><summary>How do I find the area of a triangle with three sides?</summary><p>Use Heron&#x27;s formula: with s = (a + b + c) ÷ 2, area = √(s(s − a)(s − b)(s − c)).</p></details><details class="faq-item"><summary>What is the Pythagorean theorem?</summary><p>In a right triangle, a² + b² = c², where c is the hypotenuse.</p></details><details class="faq-item"><summary>Why does my triangle have no solution?</summary><p>The inputs may violate the triangle inequality or the angle sum, so no triangle can match them.</p></details></div>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="scientific-calculator.html">Scientific Calculator</a></li><li><a href="fraction-calculator.html">Fraction Calculator</a></li><li><a href="conversion-calculator.html">Conversion Calculator</a></li><li><a href="concrete-calculator.html">Concrete Calculator</a></li><li><a href="standard-deviation-calculator.html">Standard Deviation Calculator</a></li><li><a href="percent-calculator.html">Percentage Calculator</a></li><li><a href="../topics/everyday-calculators.html">Everyday Calculators</a></li></ul>
+      <p class="disclaimer">Results are calculated from the values you enter. Always double-check important figures.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Triangle Calculator | Geometry Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

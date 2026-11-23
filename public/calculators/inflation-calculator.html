@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inflation Calculator: Buying Power | Mx Calculator</title>
+  <meta name="description" content="See how inflation changes the buying power of money, and what a price today could cost in the future at the inflation rate you choose.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/inflation-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Inflation Calculator: Buying Power | Mx Calculator">
+  <meta property="og:description" content="See how inflation changes the buying power of money, and what a price today could cost in the future at the inflation rate you choose.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/inflation-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Inflation Calculator: Buying Power | Mx Calculator">
+  <meta name="twitter:description" content="See how inflation changes the buying power of money, and what a price today could cost in the future at the inflation rate you choose.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Inflation Calculator","description":"See how inflation changes the buying power of money, and what a price today could cost in the future at the inflation rate you choose.","url":"https://mxcalculator.com/calculators/inflation-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Inflation Calculator","item":"https://mxcalculator.com/calculators/inflation-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a normal inflation rate?","acceptedAnswer":{"@type":"Answer","text":"Many central banks target about 2 percent a year."}},{"@type":"Question","name":"How does inflation affect savings?","acceptedAnswer":{"@type":"Answer","text":"If your savings earn less than inflation, their real value falls."}},{"@type":"Question","name":"How can I protect against inflation?","acceptedAnswer":{"@type":"Answer","text":"Investments such as stocks, real estate, TIPS and inflation-linked bonds have historically helped."}},{"@type":"Question","name":"Which inflation rate should I use?","acceptedAnswer":{"@type":"Answer","text":"Use a long-term average, for example 2 to 3 percent, or a specific measure such as CPI."}},{"@type":"Question","name":"Where do official US inflation numbers come from?","acceptedAnswer":{"@type":"Answer","text":"The Bureau of Labor Statistics publishes the Consumer Price Index each month. Annual inflation is the percentage change in the CPI over 12 months."}},{"@type":"Question","name":"What is the formula for inflation?","acceptedAnswer":{"@type":"Answer","text":"Inflation rate = (new price level − old price level) ÷ old price level × 100. To project a future price, multiply today's price by (1 + rate) raised to the number of years."}},{"@type":"Question","name":"Does inflation affect savings?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your savings earn less than the inflation rate, their buying power shrinks even though the dollar balance grows."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#e92063">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/inflation-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/inflation-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h1>Inflation Calculator</h1>
+          <p>Calculate purchasing power over time</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Estimate how inflation erodes the value of money over time, or calculate future costs.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="1" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            Inflation Parameters
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Mode Toggle -->
+          <div class="toggle-group">
+             <button type="button" class="toggle-btn active" id="modeForward" onclick="setMode('forward')">Forward (Future)</button>
+             <button type="button" class="toggle-btn" id="modeBackward" onclick="setMode('backward')">Backward (Past)</button>
+          </div>
+
+          <!-- Starting Amount -->
+          <div class="form-group">
+            <label class="form-label" for="currentAmount">
+              <span id="amountLabel">Current Amount</span>
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="currentAmount" class="has-icon" value="100" placeholder="100">
+            </div>
+          </div>
+
+          <!-- Inflation Rate -->
+          <div class="form-group">
+            <label class="form-label">
+              Average Inflation Rate
+              <span class="help-icon tooltip" data-tooltip="The estimated average annual rate of inflation.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-row">
+              <input min="-50" max="100" type="number" id="inflationRate" value="3.5" step="0.1" placeholder="3.5">
+              <span>%</span>
+            </div>
+          </div>
+
+          <!-- Time Period -->
+          <div class="form-group">
+            <label class="form-label" for="years">
+              Time Period
+            </label>
+            <div class="input-row">
+                <input min="0" max="100" type="number" id="years" value="10" placeholder="10">
+                <span>years</span>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"></path>
+              <path d="m19 9-5 5-4-4-3 3"></path>
+            </svg>
+          </div>
+          <h3>Enter inflation details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Future Value</div>
+             <div class="result-value" id="resultValueDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Metric</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Line Chart -->
+           <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Purchasing Power Erosion</div>
+            </div>
+            <div class="card-content">
+              <div class="line-chart-container">
+                <canvas id="lineChart"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Schedule Table -->
+          <div class="schedule-table-wrapper">
+             <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Equivalent Value</th>
+                        <th>Inflation Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="scheduleTableBody">
+                    <!-- Dynamic -->
+                </tbody>
+             </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Inflation Calculator</h2>
+      <p>Inflation is the general rise in prices over time, which reduces what each dollar can buy. This calculator estimates the future cost of something worth a given amount today, and the buying power of that money later.</p>
+      <p>Enter the amount, an average inflation rate and the number of years.</p>
+      <h2>How to Use the Inflation Calculator</h2>
+      <ol><li>Enter the current amount.</li><li>Enter the average yearly inflation rate and number of years.</li><li>Click <strong>Calculate</strong> to see the future cost and lost buying power.</li></ol>
+      <h2>Inflation Formula</h2>
+      <p><code>Future cost = amount × (1 + inflation rate)^years</code>. Buying power = <code>amount ÷ (1 + inflation rate)^years</code>.</p>
+      <div class="example"><p><strong>Example:</strong> At 3 percent inflation, something that costs $100 today costs <strong>$134.39</strong> in 10 years, and $100 then buys only about $74.41 worth of today's goods.</p></div>
+      <!--seo:expanded-->
+      <h2>Worked Example: 3% Inflation for 20 Years</h2>
+<p>At a steady 3% a year, prices rise by a factor of 1.03<sup>20</sup> ≈ <strong>1.81</strong>. Something that costs $1,000 today would cost about <strong>$1,806</strong> in 20 years. Put the other way, $1,000 of cash would then buy only about <strong>$554</strong> of today's goods.</p>
+<div class="example"><p>The rule of 72 gives a quick check: divide 72 by the inflation rate to estimate the years it takes prices to double. At 3% that is about 24 years; at 4% it is about 18.</p></div>
+<h2>Why Your Own Inflation Rate Differs</h2>
+<p>The Consumer Price Index measures an average basket of goods. Your household may spend more on housing, health care, tuition or food than that average, so the inflation you feel can be higher or lower. Treat the calculator as a way to test scenarios, not to predict the future.</p>
+<h2>Using Inflation in Planning</h2>
+<ul><li>Judge a raise in real terms: a 3% raise during 3% inflation does not increase buying power.</li><li>Think about "real" returns: an investment earning 6% while inflation runs 3% grows buying power by about 3% a year. See the <a href="investment-calculator.html">investment calculator</a>.</li><li>Plan retirement spending in future dollars with the <a href="retirement-calculator.html">retirement calculator</a>.</li></ul>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What is a normal inflation rate?</summary><p>Many central banks target about 2 percent a year.</p></details>
+        <details class="faq-item"><summary>How does inflation affect savings?</summary><p>If your savings earn less than inflation, their real value falls.</p></details>
+        <details class="faq-item"><summary>How can I protect against inflation?</summary><p>Investments such as stocks, real estate, TIPS and inflation-linked bonds have historically helped.</p></details>
+        <details class="faq-item"><summary>Which inflation rate should I use?</summary><p>Use a long-term average, for example 2 to 3 percent, or a specific measure such as CPI.</p></details>
+      <details class="faq-item"><summary>Where do official US inflation numbers come from?</summary><p>The Bureau of Labor Statistics publishes the Consumer Price Index each month. Annual inflation is the percentage change in the CPI over 12 months.</p></details><details class="faq-item"><summary>What is the formula for inflation?</summary><p>Inflation rate = (new price level − old price level) ÷ old price level × 100. To project a future price, multiply today&#x27;s price by (1 + rate) raised to the number of years.</p></details><details class="faq-item"><summary>Does inflation affect savings?</summary><p>Yes. If your savings earn less than the inflation rate, their buying power shrinks even though the dollar balance grows.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.bls.gov/cpi/" rel="noopener" target="_blank">BLS: Consumer Price Index</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="retirement-calculator.html">Retirement Calculator</a></li><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li><li><a href="investment-calculator.html">Investment Calculator</a></li><li><a href="salary-calculator.html">Salary Calculator</a></li><li><a href="percent-change-calculator.html">Percent Change Calculator</a></li><li><a href="finance-calculator.html">Finance Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Results are estimates based on the figures you enter and are for general information only. This is not financial, tax or legal advice. Rates, fees and rules vary by lender and jurisdiction.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Inflation Calculator | Economic Planning Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

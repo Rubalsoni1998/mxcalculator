@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Loan Calculator with Tax &amp; Fees | Mx Calculator</title>
+  <meta name="description" content="Estimate your monthly car payment with down payment, trade-in, sales tax and fees, and see the total interest you will pay over the loan.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/auto-loan-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Auto Loan Calculator with Tax &amp; Fees | Mx Calculator">
+  <meta property="og:description" content="Estimate your monthly car payment with down payment, trade-in, sales tax and fees, and see the total interest you will pay over the loan.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/auto-loan-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Auto Loan Calculator with Tax &amp; Fees | Mx Calculator">
+  <meta name="twitter:description" content="Estimate your monthly car payment with down payment, trade-in, sales tax and fees, and see the total interest you will pay over the loan.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Auto Loan Calculator","description":"Estimate your monthly car payment with down payment, trade-in, sales tax and fees, and see the total interest you will pay over the loan.","url":"https://mxcalculator.com/calculators/auto-loan-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Auto Loan Calculator","item":"https://mxcalculator.com/calculators/auto-loan-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much should I put down on a car?","acceptedAnswer":{"@type":"Answer","text":"About 20 percent for a new car and 10 percent for a used one helps avoid owing more than the car is worth."}},{"@type":"Question","name":"Is a longer loan term better?","acceptedAnswer":{"@type":"Answer","text":"It lowers the payment but increases total interest and the risk of negative equity."}},{"@type":"Question","name":"Does trade-in reduce sales tax?","acceptedAnswer":{"@type":"Answer","text":"In many states, yes, but rules vary."}},{"@type":"Question","name":"What credit score gets the best rate?","acceptedAnswer":{"@type":"Answer","text":"Scores above about 720 usually qualify for the lowest rates."}},{"@type":"Question","name":"Should I get preapproved for a car loan before going to a dealer?","acceptedAnswer":{"@type":"Answer","text":"It is a good idea. A preapproval from a bank or credit union shows the rate and amount you qualify for, gives you a benchmark to compare against dealer financing, and lets you negotiate the price of the car separately from the financing."}},{"@type":"Question","name":"Can I pay off a car loan early?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. Most auto loans let you pay extra or pay off the balance early, but check your contract for a prepayment penalty. Also confirm that extra money is applied to principal rather than held as an advance on future payments."}},{"@type":"Question","name":"How much should I put down on a car?","acceptedAnswer":{"@type":"Answer","text":"A common guideline is 20 percent for a new car and at least 10 percent for a used one. A larger down payment lowers the amount financed and helps you avoid owing more than the car is worth early in the loan."}},{"@type":"Question","name":"Does a longer auto loan hurt me?","acceptedAnswer":{"@type":"Answer","text":"It lowers the monthly payment but increases total interest and the time you spend owing more than the car is worth. A 7-year loan on a $25,000 balance at 6 percent costs about $1,679 more in interest than a 5-year loan."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#7c3bed">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/auto-loan-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/auto-loan-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+            <circle cx="7" cy="17" r="2"></circle>
+            <path d="M9 17h6"></path>
+            <circle cx="17" cy="17" r="2"></circle>
+          </svg>
+        </div>
+        <div>
+          <h1>Auto Loan Calculator</h1>
+          <p>Calculate monthly payments for new or used car loans</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Enter the car price, trade-in value, and other fees to calculate your monthly payment</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                <circle cx="7" cy="17" r="2"></circle>
+                <circle cx="17" cy="17" r="2"></circle>
+              </svg>
+            </div>
+            Vehicle Details
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Auto Price -->
+          <div class="form-group">
+            <label class="form-label">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20"></path>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              Auto Price
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="autoPrice" class="has-icon" value="35000" placeholder="35,000">
+            </div>
+          </div>
+
+          <!-- Loan Term -->
+          <div class="form-group">
+            <label class="form-label">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
+              </svg>
+              Loan Term
+              <span class="help-icon tooltip" data-tooltip="The length of time to repay the loan. Typically 36-72 months for cars.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-row">
+              <input type="number" id="loanTerm" value="60" placeholder="60">
+              <span>months</span>
+            </div>
+          </div>
+
+          <!-- Interest Rate -->
+          <div class="form-group">
+            <label class="form-label">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" x2="5" y1="5" y2="19"></line>
+                <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                <circle cx="17.5" cy="17.5" r="2.5"></circle>
+              </svg>
+              Interest Rate
+              <span class="help-icon tooltip" data-tooltip="The annual interest rate (APR) for your auto loan.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-row">
+              <input min="0" max="100" type="number" id="interestRate" value="6.5" step="0.01" placeholder="6.5">
+              <span>%</span>
+            </div>
+          </div>
+
+          <!-- Down Payment -->
+          <div class="form-group">
+            <label class="form-label" for="downPayment">
+              Down Payment
+            </label>
+            <div class="input-row">
+              <input type="number" id="downPayment" value="0" placeholder="0">
+              <div class="toggle-group">
+                <button type="button" class="toggle-btn" id="downPaymentPercent" onclick="setDownPaymentType('percent')">%</button>
+                <button type="button" class="toggle-btn active dynamic-symbol-btn" id="downPaymentDollar" onclick="setDownPaymentType('dollar')">$</button>
+              </div>
+            </div>
+          </div>
+
+           <!-- Trade-in Value -->
+          <div class="form-group">
+            <label class="form-label" for="tradeInValue">Trade-in Value</label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="tradeInValue" class="has-icon" value="0" placeholder="0">
+            </div>
+          </div>
+
+           <!-- Sales Tax -->
+          <div class="form-group">
+            <label class="form-label" for="salesTax">Sales Tax</label>
+            <div class="input-row">
+              <input type="number" id="salesTax" value="0" step="0.01" placeholder="0">
+              <span>%</span>
+            </div>
+          </div>
+
+           <!-- Title & Reg Fees -->
+          <div class="form-group">
+            <label class="form-label" for="otherFees">Title, Registration & Other Fees</label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="otherFees" class="has-icon" value="0" placeholder="0">
+            </div>
+          </div>
+
+           <!-- Include Fees Checkbox -->
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="includeFeesInLoan" class="checkbox">
+            <label for="includeFeesInLoan" class="checkbox-label">Roll All Fees into Loan</label>
+          </div>
+
+          <!-- Start Date -->
+          <div class="form-group">
+            <label class="form-label" for="startMonth">Start Date</label>
+            <div class="input-row">
+              <select id="startMonth">
+                <option value="0">Jan</option>
+                <option value="1">Feb</option>
+                <option value="2">Mar</option>
+                <option value="3">Apr</option>
+                <option value="4">May</option>
+                <option value="5">Jun</option>
+                <option value="6">Jul</option>
+                <option value="7">Aug</option>
+                <option value="8">Sep</option>
+                <option value="9">Oct</option>
+                <option value="10">Nov</option>
+                <option value="11">Dec</option>
+              </select>
+              <select id="startYear"></select>
+            </div>
+          </div>
+
+          <!-- More Options -->
+          <button type="button" class="more-options-btn" id="moreOptionsBtn" onclick="toggleMoreOptions()">
+            <span>+ More Options</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <div id="moreOptionsContent" class="more-options-content">
+            <p class="extra-payments-title">Extra Payments</p>
+             <div class="form-group">
+              <label class="form-label" for="tradeInOwed">Amount Owed on Trade-in</label>
+              <div class="input-wrapper">
+                 <span class="input-icon dynamic-symbol">$</span>
+                 <input type="number" id="tradeInOwed" class="has-icon" value="0" placeholder="0">
+              </div>
+            </div>
+
+            <!-- Extra Monthly Payment -->
+            <div class="form-group">
+              <label class="form-label" for="extraMonthlyPayment">Extra Monthly Payment</label>
+              <div class="input-wrapper">
+                <span class="input-icon dynamic-symbol">$</span>
+                <input type="number" id="extraMonthlyPayment" class="has-icon" value="0" placeholder="0">
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+          </div>
+          <h3>Enter your car details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <!-- Monthly Payment Hero -->
+          <div class="payment-hero">
+            <div class="payment-hero-header">
+              <span class="payment-hero-label">Monthly Payment</span>
+              <button class="bookmark-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="payment-hero-amount" id="monthlyPaymentDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pie Chart -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+              </div>
+              <div class="chart-legend" id="chartLegend">
+                <!-- Dynamic legend -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Summary Stats -->
+          <div class="card u-mt">
+            <div class="card-content summary-stats u-pt" id="summaryStats">
+              <!-- Dynamic content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Amortization Section -->
+    <div id="amortizationSection" class="amortization-section" style="display: none;">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="schedule-header-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"></path>
+                <path d="m19 9-5 5-4-4-3 3"></path>
+              </svg>
+            </div>
+            Amortization Schedule
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Line Chart -->
+          <div class="line-chart-container">
+            <canvas id="lineChart"></canvas>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tabs">
+            <button type="button" class="tab-btn active" id="annualTab" onclick="setScheduleView('annual')">Annual Schedule</button>
+            <button type="button" class="tab-btn" id="monthlyTab" onclick="setScheduleView('monthly')">Monthly Schedule</button>
+          </div>
+
+          <!-- Schedule Table -->
+          <div class="schedule-table-wrapper">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th id="scheduleCol1">Year</th>
+                  <th>Date</th>
+                  <th>Interest</th>
+                  <th>Principal</th>
+                  <th>Ending Balance</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleTableBody">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Auto Loan Calculator</h2>
+      <p>An auto loan lets you buy a car and repay the cost in fixed monthly installments. The payment depends on the price, your down payment or trade-in, the interest rate and the term.</p>
+      <p>This auto loan calculator includes sales tax, fees and trade-in value so you can see the real monthly payment and total cost.</p>
+      <h2>How to Use the Auto Loan Calculator</h2>
+      <ol><li>Enter the vehicle price and your down payment and trade-in value.</li><li>Enter the loan term, interest rate, sales tax and fees.</li><li>Click <strong>Calculate</strong> to see the monthly payment and total interest.</li></ol>
+      <h2>Car Payment Formula</h2>
+      <p><code>Payment = P × r ÷ (1 − (1 + r)⁻ⁿ)</code>, with P the amount financed, r the monthly interest rate and n the number of months.</p>
+      <div class="example"><p><strong>Example:</strong> A $30,000 car with $5,000 down finances $25,000. At 6 percent for 60 months the payment is <strong>$483.32</strong> and total interest is about <strong>$3,999</strong>.</p></div>
+      <h2>The 20/4/10 Guideline</h2>
+      <p>A common rule of thumb: put 20 percent down, finance for no more than 4 years and keep total car costs (payment, insurance, fuel) under 10 percent of gross income.</p>
+      <!--seo:expanded-->
+      <h2>How Loan Length Changes the Cost</h2>
+<p>A longer term lowers the monthly payment but raises the total interest, and it keeps you owing money on a depreciating car for longer. Here is a $25,000 loan at 6 percent at different terms:</p>
+<table><thead><tr><th>Term</th><th>Monthly payment</th><th>Total interest</th></tr></thead><tbody>
+<tr><td>36 months</td><td>$760.55</td><td>$2,379.74</td></tr>
+<tr><td>48 months</td><td>$587.13</td><td>$3,182.03</td></tr>
+<tr><td>60 months</td><td>$483.32</td><td>$3,999.20</td></tr>
+<tr><td>72 months</td><td>$414.32</td><td>$4,831.20</td></tr>
+<tr><td>84 months</td><td>$365.21</td><td>$5,677.96</td></tr>
+</tbody></table>
+<p>Going from 60 to 84 months saves about $118 a month but adds roughly $1,679 in interest. Dealers often steer buyers toward the lowest payment, so compare the total cost, not just the monthly figure.</p>
+<h2>Worked Example: Price to Amount Financed</h2>
+<div class="example"><p><strong>Example:</strong> A $32,000 car with 6 percent sales tax and $500 in fees costs $33,920 plus $500, or $34,420. Subtract $6,000 from a down payment and trade-in and you finance <strong>$28,420</strong>. At 7 percent for 60 months the payment is about <strong>$562.75</strong>, and total interest is about <strong>$5,345</strong>.</p></div>
+<p>Sales tax rules vary by state. Some states tax the full price, while others tax only the price minus your trade-in value, so check yours with the <a href="car-sales-tax-calculator.html">car sales tax calculator</a>. Registration, title and documentation fees also differ by state and dealer.</p>
+<h2>Why the Rate Matters</h2>
+<p>On a $28,000 loan over 60 months, a 4.9 percent rate gives a payment of $527.11 and about $3,627 in interest. At 7.9 percent the payment is $566.40 and interest is about $5,984, a difference of roughly $2,357. Your credit history, the loan term, the vehicle's age and the down payment all influence the rate you are offered. Getting a quote from a bank or credit union before you visit a dealer gives you a number to compare against dealer financing.</p>
+<h3>Trade-in and down payment</h3><p>Every dollar of down payment or trade-in equity reduces the amount financed and the interest on it. A larger down payment also gives you a cushion against depreciation, since new cars typically lose value fastest in the first years. If your trade-in is worth less than the payoff on your old loan, enter only the positive equity in the calculator, and add any shortfall to the price you are financing.</p><h2>Common Mistakes to Avoid</h2>
+<ul>
+<li><strong>Rolling negative equity into a new loan.</strong> If you owe more than your trade-in is worth, the difference is added to the new balance and you pay interest on it.</li>
+<li><strong>Confusing the interest rate and APR.</strong> APR can include certain finance charges. Use the rate in the calculator, and ask for the APR in writing.</li>
+<li><strong>Skipping add-ons review.</strong> Extended warranties, GAP coverage and similar products are often financed into the loan. Decide whether you want them, and know what they add to the balance.</li>
+<li><strong>Ignoring running costs.</strong> Insurance, fuel and maintenance are not part of the loan payment. Test your budget with the <a href="car-affordability-calculator.html">car affordability calculator</a>.</li>
+<li><strong>Not checking the real rate.</strong> If you only know the payment, the <a href="interest-rate-calculator.html">interest rate calculator</a> can reveal the rate you are being charged.</li>
+</ul>
+<p>The Consumer Financial Protection Bureau publishes plain-language guidance on shopping for and financing a car, listed in the sources below.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How much should I put down on a car?</summary><p>About 20 percent for a new car and 10 percent for a used one helps avoid owing more than the car is worth.</p></details>
+        <details class="faq-item"><summary>Is a longer loan term better?</summary><p>It lowers the payment but increases total interest and the risk of negative equity.</p></details>
+        <details class="faq-item"><summary>Does trade-in reduce sales tax?</summary><p>In many states, yes, but rules vary.</p></details>
+        <details class="faq-item"><summary>What credit score gets the best rate?</summary><p>Scores above about 720 usually qualify for the lowest rates.</p></details>
+      <details class="faq-item"><summary>Should I get preapproved for a car loan before going to a dealer?</summary><p>It is a good idea. A preapproval from a bank or credit union shows the rate and amount you qualify for, gives you a benchmark to compare against dealer financing, and lets you negotiate the price of the car separately from the financing.</p></details><details class="faq-item"><summary>Can I pay off a car loan early?</summary><p>Usually yes. Most auto loans let you pay extra or pay off the balance early, but check your contract for a prepayment penalty. Also confirm that extra money is applied to principal rather than held as an advance on future payments.</p></details><details class="faq-item"><summary>How much should I put down on a car?</summary><p>A common guideline is 20 percent for a new car and at least 10 percent for a used one. A larger down payment lowers the amount financed and helps you avoid owing more than the car is worth early in the loan.</p></details><details class="faq-item"><summary>Does a longer auto loan hurt me?</summary><p>It lowers the monthly payment but increases total interest and the time you spend owing more than the car is worth. A 7-year loan on a $25,000 balance at 6 percent costs about $1,679 more in interest than a 5-year loan.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.consumerfinance.gov/consumer-tools/auto-loans/" rel="noopener" target="_blank">CFPB: Auto loans</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="car-affordability-calculator.html">Car Affordability Calculator</a></li><li><a href="car-sales-tax-calculator.html">Car Sales Tax Calculator</a></li><li><a href="loan-calculator.html">Loan Calculator</a></li><li><a href="payment-calculator.html">Payment Calculator</a></li><li><a href="interest-rate-calculator.html">Interest Rate Calculator</a></li><li><a href="amortization-calculator.html">Amortization Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Estimates only. Actual rates, fees and taxes depend on your lender and location.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>A comprehensive auto loan calculator with amortization schedule</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

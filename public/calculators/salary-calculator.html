@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary Calculator: Hourly to Annual | Mx Calculator</title>
+  <meta name="description" content="Convert pay between hourly, daily, weekly, bi-weekly, monthly and annual amounts, adjusting for hours, holidays and vacation.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/salary-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Salary Calculator: Hourly to Annual | Mx Calculator">
+  <meta property="og:description" content="Convert pay between hourly, daily, weekly, bi-weekly, monthly and annual amounts, adjusting for hours, holidays and vacation.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/salary-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Salary Calculator: Hourly to Annual | Mx Calculator">
+  <meta name="twitter:description" content="Convert pay between hourly, daily, weekly, bi-weekly, monthly and annual amounts, adjusting for hours, holidays and vacation.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Salary Calculator","description":"Convert pay between hourly, daily, weekly, bi-weekly, monthly and annual amounts, adjusting for hours, holidays and vacation.","url":"https://mxcalculator.com/calculators/salary-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Salary Calculator","item":"https://mxcalculator.com/calculators/salary-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert hourly pay to annual salary?","acceptedAnswer":{"@type":"Answer","text":"Multiply the hourly rate by hours per week and by 52."}},{"@type":"Question","name":"Does the result include taxes?","acceptedAnswer":{"@type":"Answer","text":"No, it shows gross pay. Use the tax calculator for take-home estimates."}},{"@type":"Question","name":"What if I take unpaid vacation?","acceptedAnswer":{"@type":"Answer","text":"Enter the unpaid days to reduce the working time."}},{"@type":"Question","name":"Why is monthly pay not weekly pay × 4?","acceptedAnswer":{"@type":"Answer","text":"Because a year has 52 weeks, not 48."}},{"@type":"Question","name":"How many working hours are in a year?","acceptedAnswer":{"@type":"Answer","text":"A standard full-time year has 2,080 hours: 40 hours a week times 52 weeks. After subtracting paid holidays and vacation, the hours actually worked are usually fewer, which raises the effective hourly rate for a salaried employee."}},{"@type":"Question","name":"Is $25 an hour a good salary?","acceptedAnswer":{"@type":"Answer","text":"At 40 hours a week for 52 weeks, $25 an hour equals $52,000 a year before taxes. Whether that is good depends on where you live, your benefits and your expenses. Compare it with local living costs rather than a national figure."}},{"@type":"Question","name":"How do I convert a salary to an hourly wage?","acceptedAnswer":{"@type":"Answer","text":"Divide your annual salary by the hours you work in a year. For a 40-hour week that is 2,080 hours. For example, $52,000 divided by 2,080 equals $25 an hour. Adjust the hours if you work more or take unpaid leave."}},{"@type":"Question","name":"Why is my paycheck smaller than my salary divided by pay periods?","acceptedAnswer":{"@type":"Answer","text":"Your salary is gross pay. Employers withhold federal income tax, Social Security and Medicare tax, usually state tax, and benefit deductions before paying you. The amount that reaches your account is called net or take-home pay."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#0da2e7">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/salary-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/salary-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="12" x="2" y="6" rx="2"></rect>
+            <circle cx="12" cy="12" r="2"></circle>
+            <path d="M6 12h.01M18 12h.01"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Salary Calculator</h1>
+          <p>Convert annual, monthly, weekly, and hourly pay</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Estimate your paycheck adjustments and see equivalent rates across different time periods.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="2" y2="22"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            Earnings Details
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Amount Input -->
+          <div class="form-group">
+            <label class="form-label" for="salaryAmount">
+              Salary Amount
+            </label>
+            <div class="input-row">
+               <div class="input-wrapper" style="flex:2">
+                  <span class="input-icon dynamic-symbol">$</span>
+                  <input type="number" id="salaryAmount" class="has-icon" value="50000" placeholder="50,000">
+               </div>
+               <div class="u-flex1">
+                   <select id="salaryFrequency">
+                       <option value="year" selected>Per Year</option>
+                       <option value="month">Per Month</option>
+                       <option value="biweekly">Bi-Weekly</option>
+                       <option value="week">Per Week</option>
+                       <option value="day">Per Day</option>
+                       <option value="hour">Per Hour</option>
+                   </select>
+               </div>
+            </div>
+          </div>
+
+          <!-- Work Schedule -->
+          <div class="form-group">
+             <div class="input-row">
+                <div class="u-flex1">
+                     <label class="form-label" for="hoursPerWeek">Hours per Week</label>
+                     <input type="number" id="hoursPerWeek" value="40">
+                </div>
+                 <div class="u-flex1">
+                     <label class="form-label" for="daysPerWeek">Days per Week</label>
+                     <input type="number" id="daysPerWeek" value="5">
+                </div>
+             </div>
+          </div>
+
+          <!-- More Options (Time Off) -->
+          <button type="button" class="more-options-btn" id="moreOptionsBtn" onclick="toggleMoreOptions()">
+            <span>+ Holidays & Vacation</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <div id="moreOptionsContent" class="more-options-content">
+             <div class="form-group">
+                <label class="form-label" for="holidays">Holidays per Year (Days)</label>
+                <input type="number" id="holidays" value="0">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="vacation">Vacation Days per Year</label>
+                <input type="number" id="vacation" value="0">
+            </div>
+             <p class="text-muted" style="font-size:0.8rem">These days will be subtracted from the "Adjusted" calculation.</p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20"></path>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Enter your salary details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Annual Salary</div>
+             <div class="result-value" id="resultValueDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Period</th>
+                      <th>Unadjusted</th>
+                      <th>Adjusted</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Chart -->
+           <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Annual Comparison</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="salaryChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Salary Calculator</h2>
+      <p>Job offers may be quoted per hour, per week or per year. This salary calculator converts between all of them so you can compare offers fairly.</p>
+      <p>You can adjust hours per week, days per week, holidays and vacation days to match your real schedule.</p>
+      <h2>How to Use the Salary Calculator</h2>
+      <ol><li>Enter your pay amount and choose its period.</li><li>Set hours per week, days per week, holidays and vacation days.</li><li>Click <strong>Calculate</strong> to see hourly, daily, weekly, bi-weekly, monthly and annual pay.</li></ol>
+      <h2>Conversion Formulas</h2>
+      <p><code>Hourly = annual salary ÷ (hours per week × 52)</code> (2,080 hours for a 40-hour week). Weekly = annual ÷ 52, bi-weekly = annual ÷ 26, monthly = annual ÷ 12.</p>
+      <div class="example"><p><strong>Example:</strong> A $60,000 salary is about <strong>$28.85 per hour</strong>, $1,153.85 per week, $2,307.69 bi-weekly and $5,000 per month before tax.</p></div>
+      <!--seo:expanded-->
+      <h2>Comparing Two Offers Fairly</h2>
+<p>A quoted rate only means something once you know the hours behind it. Take a $60,000 salary and a $30 hourly job. At 40 hours a week for 52 weeks, the hourly job pays 30 × 2,080 = <strong>$62,400</strong>. But if the salaried job is expected to run 45 hours a week, its real hourly rate is 60,000 ÷ (45 × 52) = <strong>$25.64</strong> rather than $28.85.</p>
+<div class="example"><p><strong>Paid time off matters too.</strong> A $60,000 salary with 10 holidays and 15 vacation days leaves 2,080 − 200 = 1,880 working hours. Dividing by hours actually worked gives about <strong>$31.91 an hour</strong>, versus $28.85 if you ignore time off.</p></div>
+<h2>Hourly Pay and Overtime in the U.S.</h2>
+<p>Under the federal Fair Labor Standards Act, most non-exempt hourly employees must be paid at least one and a half times their regular rate for hours over 40 in a workweek. Salaried workers are only exempt if they meet both a salary threshold and a duties test, so a salary alone does not remove overtime rights. Some states add their own rules, such as daily overtime. Check the U.S. Department of Labor or your state labor agency if you are unsure how you are classified.</p>
+<h2>Gross Pay Is Not Take-Home Pay</h2>
+<p>Every figure here is before taxes and deductions. Your paycheck is reduced by federal income tax withholding, Social Security and Medicare (FICA) payroll taxes, any state and local taxes, and deductions such as health insurance and retirement contributions. To estimate the tax portion, use the <a href="tax-calculator.html">federal income tax calculator</a>. For a quick check on how a raise changes your pay, the <a href="percent-change-calculator.html">percent change calculator</a> works well.</p>
+<h2>Factors That Change the Real Value of a Job</h2>
+<ul>
+<li><strong>Benefits:</strong> Employer health premiums, 401(k) matching and paid leave can be worth thousands of dollars a year.</li>
+<li><strong>Commute and unpaid time:</strong> Long commutes or unpaid lunch breaks lower your effective hourly rate.</li>
+<li><strong>Pay frequency:</strong> Bi-weekly pay means 26 checks a year, while semi-monthly means 24. Two extra bi-weekly checks fall in some months.</li>
+<li><strong>Cost of living:</strong> The same salary stretches differently in different cities, mostly because of housing.</li>
+</ul>
+<h2>Common Mistakes</h2>
+<p>Do not multiply an hourly rate by 52 weeks if you will take unpaid time off. Do not divide a monthly figure by 4 to get a weekly one, because a year has about 4.33 weeks per month. And remember that part-time hours change the annual total directly: $25 an hour at 30 hours a week is $39,000, not $52,000.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How do I convert hourly pay to annual salary?</summary><p>Multiply the hourly rate by hours per week and by 52.</p></details>
+        <details class="faq-item"><summary>Does the result include taxes?</summary><p>No, it shows gross pay. Use the tax calculator for take-home estimates.</p></details>
+        <details class="faq-item"><summary>What if I take unpaid vacation?</summary><p>Enter the unpaid days to reduce the working time.</p></details>
+        <details class="faq-item"><summary>Why is monthly pay not weekly pay × 4?</summary><p>Because a year has 52 weeks, not 48.</p></details>
+      <details class="faq-item"><summary>How many working hours are in a year?</summary><p>A standard full-time year has 2,080 hours: 40 hours a week times 52 weeks. After subtracting paid holidays and vacation, the hours actually worked are usually fewer, which raises the effective hourly rate for a salaried employee.</p></details><details class="faq-item"><summary>Is $25 an hour a good salary?</summary><p>At 40 hours a week for 52 weeks, $25 an hour equals $52,000 a year before taxes. Whether that is good depends on where you live, your benefits and your expenses. Compare it with local living costs rather than a national figure.</p></details><details class="faq-item"><summary>How do I convert a salary to an hourly wage?</summary><p>Divide your annual salary by the hours you work in a year. For a 40-hour week that is 2,080 hours. For example, $52,000 divided by 2,080 equals $25 an hour. Adjust the hours if you work more or take unpaid leave.</p></details><details class="faq-item"><summary>Why is my paycheck smaller than my salary divided by pay periods?</summary><p>Your salary is gross pay. Employers withhold federal income tax, Social Security and Medicare tax, usually state tax, and benefit deductions before paying you. The amount that reaches your account is called net or take-home pay.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.irs.gov/individuals" rel="noopener" target="_blank">IRS: Information for individuals</a></li><li><a href="https://www.ssa.gov/" rel="noopener" target="_blank">Social Security Administration</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="tax-calculator.html">Federal Income Tax Calculator</a></li><li><a href="tax-bracket-calculator.html">Tax Bracket Calculator</a></li><li><a href="hours-calculator.html">Hours Calculator</a></li><li><a href="retirement-calculator.html">Retirement Calculator</a></li><li><a href="tax-refund-estimator.html">Federal Tax Refund Estimator</a></li><li><a href="percent-change-calculator.html">Percent Change Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Figures are gross pay before tax and deductions.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Salary Calculator | Income Conversion Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Federal Income Tax Calculator 2026 (IRS Brackets)</title>
+  <meta name="description" content="Estimate your federal income tax, effective rate and marginal bracket using current IRS brackets and the standard or itemized deduction.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/tax-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Federal Income Tax Calculator 2026 (IRS Brackets)">
+  <meta property="og:description" content="Estimate your federal income tax, effective rate and marginal bracket using current IRS brackets and the standard or itemized deduction.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/tax-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Federal Income Tax Calculator 2026 (IRS Brackets)">
+  <meta name="twitter:description" content="Estimate your federal income tax, effective rate and marginal bracket using current IRS brackets and the standard or itemized deduction.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Federal Income Tax Calculator","description":"Estimate your federal income tax, effective rate and marginal bracket using current IRS brackets and the standard or itemized deduction.","url":"https://mxcalculator.com/calculators/tax-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Federal Income Tax Calculator","item":"https://mxcalculator.com/calculators/tax-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the standard deduction?","acceptedAnswer":{"@type":"Answer","text":"A fixed amount you subtract from income without listing expenses. It depends on filing status and year."}},{"@type":"Question","name":"Should I itemize?","acceptedAnswer":{"@type":"Answer","text":"Itemize only when your deductible expenses, such as mortgage interest and charity, exceed the standard deduction."}},{"@type":"Question","name":"Does this include state tax or FICA?","acceptedAnswer":{"@type":"Answer","text":"No. It estimates federal income tax only."}},{"@type":"Question","name":"Will I owe this exact amount?","acceptedAnswer":{"@type":"Answer","text":"No. Credits, other income and withholding change what you owe."}},{"@type":"Question","name":"What is the difference between gross income and taxable income?","acceptedAnswer":{"@type":"Answer","text":"Gross income is everything you earn before adjustments. Taxable income is what remains after subtracting adjustments and either the standard or itemized deduction. Income tax brackets apply to taxable income, not gross income."}},{"@type":"Question","name":"Do I pay the higher rate on all my income if I move up a bracket?","acceptedAnswer":{"@type":"Answer","text":"No. Only the portion of taxable income above the bracket threshold is taxed at the higher rate. Income below it is still taxed at the lower rates, so a raise never reduces your pay on income you already earned."}},{"@type":"Question","name":"How is the effective tax rate different from my bracket?","acceptedAnswer":{"@type":"Answer","text":"Your bracket is the marginal rate on your last dollar of income. Your effective rate is total tax divided by income, and it is lower because lower brackets apply to earlier dollars. It better describes your overall tax burden."}},{"@type":"Question","name":"Where do I find the current IRS tax brackets?","acceptedAnswer":{"@type":"Answer","text":"The IRS publishes brackets, standard deduction amounts and other limits each year on irs.gov, usually announced in the fall for the following tax year. Search for the annual inflation adjustments or the instructions for Form 1040."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#f97415">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/tax-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/tax-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20"></path>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Federal Income Tax Calculator</h1>
+          <p>Estimate your federal income tax using current IRS brackets (tax years 2025–2027)</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Estimate your federal income tax liability using the latest IRS brackets and standard deductions.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            Tax Details
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency (US federal tax is USD only) -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Tax Year -->
+          <div class="form-group">
+            <label class="form-label" for="taxYear">Tax Year</label>
+            <div class="input-row">
+              <select id="taxYear" onchange="calculate()">
+                <option value="2026" selected>2026 (filed in 2027)</option>
+                <option value="2027">2027 (filed in 2028)</option>
+                <option value="2025">2025 (filed in 2026)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Filing Status -->
+          <div class="form-group">
+             <label class="form-label" for="filingStatus">Filing Status</label>
+             <div class="input-row">
+                 <select id="filingStatus">
+                     <option value="single">Single</option>
+                     <option value="married_joint">Married Filing Jointly</option>
+                     <option value="married_separate">Married Filing Separately</option>
+                     <option value="head_household">Head of Household</option>
+                 </select>
+             </div>
+          </div>
+
+          <!-- Income -->
+          <div class="form-group">
+            <label class="form-label" for="grossIncome">
+              Gross Annual Income
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="grossIncome" class="has-icon" value="75000" placeholder="75,000">
+            </div>
+          </div>
+
+          <!-- Deductions -->
+          <div class="form-group">
+             <label class="form-label">Deduction Type</label>
+             <div class="toggle-group">
+                 <button type="button" class="toggle-btn active" id="deductionStandard" onclick="setDeductionType('standard')">Standard</button>
+                 <button type="button" class="toggle-btn" id="deductionItemized" onclick="setDeductionType('itemized')">Itemized</button>
+             </div>
+          </div>
+
+           <div class="form-group" id="itemizedInputGroup" style="display:none;">
+            <label class="form-label" for="itemizedAmount">
+              Total Itemized Deductions
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="itemizedAmount" class="has-icon" value="0" placeholder="0">
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20"></path>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Enter income details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Estimated Federal Tax</div>
+             <div class="result-value" id="resultValueDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Metric</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Pie Chart -->
+           <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Income Distribution</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tax Brackets Section (Replacing Amortization Schedule Style) -->
+    <div id="bracketsSection" class="amortization-section" style="display: none;">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="schedule-header-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" x2="21" y1="6" y2="6"></line>
+                <line x1="8" x2="21" y1="12" y2="12"></line>
+                <line x1="8" x2="21" y1="18" y2="18"></line>
+                <line x1="3" x2="3.01" y1="6" y2="6"></line>
+                <line x1="3" x2="3.01" y1="12" y2="12"></line>
+                <line x1="3" x2="3.01" y1="18" y2="18"></line>
+              </svg>
+            </div>
+            Tax Brackets Reference (<span id="bracketYearDisplay">2026</span>)
+          </div>
+        </div>
+        <div class="card-content">
+          <p style="margin-bottom:1rem; font-size:0.9rem; color:var(--muted-foreground);">Based on your filing status: <strong id="bracketStatusDisplay"></strong>. Source: <span id="bracketSourceDisplay">IRS Rev. Proc. 2025-32</span>.</p>
+
+          <!-- Schedule Table -->
+          <div class="schedule-table-wrapper">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Rate</th>
+                  <th>Taxable Income Range</th>
+                  <th>Tax Calculation</th>
+                </tr>
+              </thead>
+              <tbody id="bracketsTableBody">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Federal Income Tax Calculator</h2>
+      <p>The U.S. federal income tax is progressive: your income is divided into bands, and each band is taxed at its own rate. That means only the part of income inside a higher band is taxed at the higher rate.</p>
+      <p>This calculator applies the IRS brackets for your filing status and tax year, subtracts the standard or itemized deduction, and shows your estimated tax, marginal rate and effective rate.</p>
+      <h2>How to Use the Federal Income Tax Calculator</h2>
+      <ol><li>Select the tax year and your filing status.</li><li>Enter your gross annual income.</li><li>Choose standard or itemized deduction.</li><li>Click <strong>Calculate</strong> to see taxable income, tax owed and rates.</li></ol>
+      <h2>How Federal Income Tax Is Calculated</h2>
+      <p><code>Taxable income = gross income − deduction</code>. Tax is the sum of each bracket's taxable amount times its rate. <code>Effective rate = total tax ÷ gross income</code>.</p>
+      <div class="example"><p><strong>Example:</strong> Illustration: with brackets of 10% to $10,000 and 20% above, taxable income of $30,000 owes $1,000 + $4,000 = $5,000, an effective rate of 16.7 percent, even though the marginal rate is 20 percent.</p></div>
+      <h2>Marginal vs Effective Tax Rate</h2>
+      <p>The marginal rate is the rate on your next dollar of income. The effective rate is your total tax divided by total income and is always lower. Moving into a higher bracket never reduces your take-home pay on the income you already earned.</p>
+      <!--seo:expanded-->
+      <h2>A Worked Example With Illustrative Brackets</h2>
+<p>The numbers below are made up to show the method, not real IRS brackets. Assume 10 percent applies up to $12,000, 12 percent from $12,000 to $48,000, and 22 percent above $48,000, and that your taxable income is $70,000.</p>
+<ul>
+<li>10% × $12,000 = $1,200</li>
+<li>12% × $36,000 = $4,320</li>
+<li>22% × $22,000 = $4,840</li>
+</ul>
+<div class="example"><p>Total tax is <strong>$10,360</strong>. Your marginal rate is 22 percent, but your effective rate on taxable income is only 14.8 percent. Earning $1,000 more would add $220 of tax, not $10,360 × 22 percent.</p></div>
+<h2>Deductions Versus Credits</h2>
+<p>A deduction lowers taxable income, so its value depends on your bracket. A $1,000 deduction at a 22 percent marginal rate saves $220. A credit reduces the tax itself, dollar for dollar, so a $1,000 credit saves $1,000. Some credits are refundable, meaning they can produce a refund even if you owe no tax. To see how two popular credits work, try the <a href="child-tax-credit-calculator.html">child tax credit calculator</a> and the <a href="eitc-calculator.html">EITC calculator</a>.</p>
+<h2>Standard or Itemized Deduction</h2>
+<p>Most taxpayers take the standard deduction, which is a fixed amount set each year by filing status. You itemize only if your qualifying expenses, such as mortgage interest, state and local taxes up to the legal cap, and charitable gifts, add up to more. The amounts and brackets change every year, so use the tax year selector and confirm figures on IRS.gov.</p>
+<h2>What This Estimate Leaves Out</h2>
+<ul>
+<li><strong>Payroll taxes:</strong> Social Security and Medicare tax are separate from income tax.</li>
+<li><strong>State and local tax:</strong> Most states have their own income tax; some have none.</li>
+<li><strong>Special rates:</strong> Long-term capital gains and qualified dividends use different rates. See the <a href="capital-gains-tax-calculator.html">capital gains tax calculator</a>.</li>
+<li><strong>Adjustments and other taxes:</strong> Retirement contributions, student loan interest, self-employment tax and the alternative minimum tax can all change the final number.</li>
+</ul>
+<h2>Withholding Is Not Your Final Bill</h2>
+<p>Your employer withholds tax from each paycheck based on your Form W-4. When you file, your actual tax is compared with what was withheld. If more was withheld, you get a refund; if less, you owe the difference. A large refund simply means you lent money to the government interest-free during the year. The <a href="tax-refund-estimator.html">tax refund estimator</a> helps compare withholding against your calculated tax. For personal situations, a licensed tax professional or the IRS can give definitive answers.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What is the standard deduction?</summary><p>A fixed amount you subtract from income without listing expenses. It depends on filing status and year.</p></details>
+        <details class="faq-item"><summary>Should I itemize?</summary><p>Itemize only when your deductible expenses, such as mortgage interest and charity, exceed the standard deduction.</p></details>
+        <details class="faq-item"><summary>Does this include state tax or FICA?</summary><p>No. It estimates federal income tax only.</p></details>
+        <details class="faq-item"><summary>Will I owe this exact amount?</summary><p>No. Credits, other income and withholding change what you owe.</p></details>
+      <details class="faq-item"><summary>What is the difference between gross income and taxable income?</summary><p>Gross income is everything you earn before adjustments. Taxable income is what remains after subtracting adjustments and either the standard or itemized deduction. Income tax brackets apply to taxable income, not gross income.</p></details><details class="faq-item"><summary>Do I pay the higher rate on all my income if I move up a bracket?</summary><p>No. Only the portion of taxable income above the bracket threshold is taxed at the higher rate. Income below it is still taxed at the lower rates, so a raise never reduces your pay on income you already earned.</p></details><details class="faq-item"><summary>How is the effective tax rate different from my bracket?</summary><p>Your bracket is the marginal rate on your last dollar of income. Your effective rate is total tax divided by income, and it is lower because lower brackets apply to earlier dollars. It better describes your overall tax burden.</p></details><details class="faq-item"><summary>Where do I find the current IRS tax brackets?</summary><p>The IRS publishes brackets, standard deduction amounts and other limits each year on irs.gov, usually announced in the fall for the following tax year. Search for the annual inflation adjustments or the instructions for Form 1040.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.irs.gov/individuals" rel="noopener" target="_blank">IRS: Information for individuals</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="tax-bracket-calculator.html">Tax Bracket Calculator</a></li><li><a href="tax-refund-estimator.html">Federal Tax Refund Estimator</a></li><li><a href="child-tax-credit-calculator.html">Child Tax Credit Calculator</a></li><li><a href="eitc-calculator.html">Earned Income Tax Credit (EITC) Calculator</a></li><li><a href="capital-gains-tax-calculator.html">Capital Gains Tax Calculator</a></li><li><a href="salary-calculator.html">Salary Calculator</a></li><li><a href="../topics/tax-calculators.html">US Tax Calculators</a></li></ul>
+      <p class="disclaimer">Results are estimates based on the figures you enter and are for general information only. This is not financial, tax or legal advice. Rates, fees and rules vary by lender and jurisdiction.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Income Tax Calculator | Financial Planning Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interest Rate Calculator (Find the APR) | Mx Calculator</title>
+  <meta name="description" content="Find the annual interest rate (APR) of a loan from the loan amount, term and monthly payment, and see the total interest you will pay.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/interest-rate-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Interest Rate Calculator (Find the APR) | Mx Calculator">
+  <meta property="og:description" content="Find the annual interest rate (APR) of a loan from the loan amount, term and monthly payment, and see the total interest you will pay.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/interest-rate-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interest Rate Calculator (Find the APR) | Mx Calculator">
+  <meta name="twitter:description" content="Find the annual interest rate (APR) of a loan from the loan amount, term and monthly payment, and see the total interest you will pay.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Interest Rate Calculator","description":"Find the annual interest rate (APR) of a loan from the loan amount, term and monthly payment, and see the total interest you will pay.","url":"https://mxcalculator.com/calculators/interest-rate-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Interest Rate Calculator","item":"https://mxcalculator.com/calculators/interest-rate-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this the APR?","acceptedAnswer":{"@type":"Answer","text":"It is the nominal rate implied by the payment. APR can be slightly higher if fees are included."}},{"@type":"Question","name":"Why does my rate look higher than quoted?","acceptedAnswer":{"@type":"Answer","text":"Fees, add-ons or rounding can raise the effective rate."}},{"@type":"Question","name":"Can I use it for a mortgage or car loan?","acceptedAnswer":{"@type":"Answer","text":"Yes, for any fixed-rate installment loan."}},{"@type":"Question","name":"What is a good interest rate?","acceptedAnswer":{"@type":"Answer","text":"It depends on the loan type, your credit and the market. Compare several offers."}},{"@type":"Question","name":"How do I find the interest rate on a loan?","acceptedAnswer":{"@type":"Answer","text":"Enter the loan amount, the term and the monthly payment. The calculator solves for the annual rate that makes those payments repay the loan exactly."}},{"@type":"Question","name":"Is the rate shown the same as the APR?","acceptedAnswer":{"@type":"Answer","text":"It is the effective annual rate implied by the amount financed and the payments. If fees are included in the amount you enter, it behaves like an APR. Always compare with the lender's disclosed APR."}},{"@type":"Question","name":"Why is my calculated rate higher than the quoted one?","acceptedAnswer":{"@type":"Answer","text":"Fees, insurance or add-on products financed in the loan raise the payment, which raises the implied rate. Make sure the amount you enter matches what you actually receive."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#ee4b2b">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/interest-rate-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/interest-rate-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" x2="12" y1="2" y2="22"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Interest Rate Calculator</h1>
+          <p>Find the true annual interest rate (APR) of any loan</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Enter the loan amount, term, and monthly payment to discover the actual interest rate.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+              </svg>
+            </div>
+            Loan Parameters
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Loan Amount -->
+          <div class="form-group">
+            <label class="form-label" for="loanAmount">
+              Loan Amount
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="loanAmount" class="has-icon" value="10000" placeholder="10,000">
+            </div>
+          </div>
+
+          <!-- Loan Term -->
+          <div class="form-group">
+            <label class="form-label" for="termYears">
+              Loan Term
+            </label>
+            <div class="input-row">
+                <div class="input-wrapper u-flex1">
+                     <input type="number" id="termYears" value="5" placeholder="5">
+                </div>
+                <span class="u-px5">years</span>
+                <div class="input-wrapper u-flex1">
+                     <input type="number" id="termMonths" value="0" placeholder="0">
+                </div>
+                <span class="u-px5">months</span>
+            </div>
+          </div>
+
+          <!-- Monthly Payment -->
+          <div class="form-group">
+            <label class="form-label">
+              Monthly Payment
+              <span class="help-icon tooltip" data-tooltip="The fixed amount you pay every month.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+               <span class="input-icon dynamic-symbol">$</span>
+               <input type="number" id="monthlyPayment" class="has-icon" value="200">
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20"></path>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Enter loan details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Annual Interest Rate</div>
+             <div class="result-value" id="resultValueDisplay">0.00%</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Metric</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Pie Chart -->
+           <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Total Cost Breakdown</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Interest Rate Calculator</h2>
+      <p>Sometimes you know the loan amount and your monthly payment but not the interest rate. This calculator works backwards from your payment to find the annual rate you are being charged.</p>
+      <p>It is useful for checking dealer financing, comparing offers or confirming a lender's quoted rate.</p>
+      <h2>How to Use the Interest Rate Calculator</h2>
+      <ol><li>Enter the loan amount and term.</li><li>Enter the monthly payment.</li><li>Click <strong>Calculate</strong> to see the interest rate.</li></ol>
+      <h2>How the Rate Is Found</h2>
+      <p>The payment formula <code>M = P × r ÷ (1 − (1 + r)⁻ⁿ)</code> cannot be solved for r directly, so the calculator searches for the rate that produces your payment. The result is multiplied by 12 to give the annual rate.</p>
+      <div class="example"><p><strong>Example:</strong> A $20,000 loan over 60 months with a $386.66 payment has an annual interest rate of about <strong>6 percent</strong>.</p></div>
+      <!--seo:expanded-->
+      <h2>Worked Example: Finding the Rate You Are Really Paying</h2>
+<p>Suppose you borrow $20,000 and the lender asks for $400 a month for 60 months. The implied annual rate is about <strong>7.42%</strong>. A shorter case: $10,000 repaid at $300 a month for 36 months works out to about <strong>5.06%</strong>.</p>
+<div class="example"><p>There is no closed-form formula for the rate, so the calculator searches for the rate at which the payments exactly repay the loan. That is the same approach spreadsheets use in their RATE function.</p></div>
+<h2>When This Is Useful</h2>
+<ul><li><strong>Dealer financing.</strong> Dealers often quote only a payment. Enter the price, term and payment to see the actual rate.</li><li><strong>Buy-here-pay-here or store credit.</strong> Offers that advertise a low payment can hide a high rate.</li><li><strong>Checking a loan document.</strong> Confirm the stated APR matches the payments you are asked to make.</li></ul>
+<h2>Limits of the Result</h2>
+<p>Fees paid at closing, rolled-in costs and variable rates all change the effective cost. If the lender finances fees as part of the loan, enter the full amount financed. For an official figure, the lender's APR disclosure under the Truth in Lending Act is the number to compare. You can test different loans with the <a href="loan-calculator.html">loan calculator</a>.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>Is this the APR?</summary><p>It is the nominal rate implied by the payment. APR can be slightly higher if fees are included.</p></details>
+        <details class="faq-item"><summary>Why does my rate look higher than quoted?</summary><p>Fees, add-ons or rounding can raise the effective rate.</p></details>
+        <details class="faq-item"><summary>Can I use it for a mortgage or car loan?</summary><p>Yes, for any fixed-rate installment loan.</p></details>
+        <details class="faq-item"><summary>What is a good interest rate?</summary><p>It depends on the loan type, your credit and the market. Compare several offers.</p></details>
+      <details class="faq-item"><summary>How do I find the interest rate on a loan?</summary><p>Enter the loan amount, the term and the monthly payment. The calculator solves for the annual rate that makes those payments repay the loan exactly.</p></details><details class="faq-item"><summary>Is the rate shown the same as the APR?</summary><p>It is the effective annual rate implied by the amount financed and the payments. If fees are included in the amount you enter, it behaves like an APR. Always compare with the lender&#x27;s disclosed APR.</p></details><details class="faq-item"><summary>Why is my calculated rate higher than the quoted one?</summary><p>Fees, insurance or add-on products financed in the loan raise the payment, which raises the implied rate. Make sure the amount you enter matches what you actually receive.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.consumerfinance.gov/consumer-tools/auto-loans/" rel="noopener" target="_blank">CFPB: Consumer tools</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="loan-calculator.html">Loan Calculator</a></li><li><a href="mortgage-calculator.html">Mortgage Calculator</a></li><li><a href="payment-calculator.html">Payment Calculator</a></li><li><a href="amortization-calculator.html">Amortization Calculator</a></li><li><a href="finance-calculator.html">Finance Calculator</a></li><li><a href="interest-calculator.html">Interest Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Results are estimates based on the figures you enter and are for general information only. This is not financial, tax or legal advice. Rates, fees and rules vary by lender and jurisdiction.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Interest Rate Calculator | Financial Analysis Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hours Calculator for Timesheets | Mx Calculator</title>
+  <meta name="description" content="Add up work hours and minutes, subtract breaks and total your weekly timesheet quickly, with decimal hours for payroll.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/hours-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Hours Calculator for Timesheets | Mx Calculator">
+  <meta property="og:description" content="Add up work hours and minutes, subtract breaks and total your weekly timesheet quickly, with decimal hours for payroll.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/hours-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hours Calculator for Timesheets | Mx Calculator">
+  <meta name="twitter:description" content="Add up work hours and minutes, subtract breaks and total your weekly timesheet quickly, with decimal hours for payroll.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Hours Calculator","description":"Add up work hours and minutes, subtract breaks and total your weekly timesheet quickly, with decimal hours for payroll.","url":"https://mxcalculator.com/calculators/hours-calculator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Hours Calculator","item":"https://mxcalculator.com/calculators/hours-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I convert minutes to decimal hours?","acceptedAnswer":{"@type":"Answer","text":"Divide the minutes by 60."}},{"@type":"Question","name":"How do I calculate overtime?","acceptedAnswer":{"@type":"Answer","text":"Hours beyond the weekly or daily limit set by law or contract are overtime."}},{"@type":"Question","name":"Can I include shifts that pass midnight?","acceptedAnswer":{"@type":"Answer","text":"Yes, set the end time on the next day."}},{"@type":"Question","name":"Does it work for payroll?","acceptedAnswer":{"@type":"Answer","text":"It totals hours; multiply by the hourly rate to find pay."}},{"@type":"Question","name":"How do I calculate hours worked?","acceptedAnswer":{"@type":"Answer","text":"Subtract the start time from the end time, then subtract unpaid breaks. Convert minutes to decimals if you need payroll hours."}},{"@type":"Question","name":"How do I convert 7 hours 45 minutes to decimal?","acceptedAnswer":{"@type":"Answer","text":"45 ÷ 60 = 0.75, so 7 hours 45 minutes is 7.75 hours."}},{"@type":"Question","name":"When is overtime owed in the US?","acceptedAnswer":{"@type":"Answer","text":"Federal law requires overtime for covered, non-exempt employees after 40 hours in a workweek. Some states add daily limits."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#1162d4">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/hours-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/hours-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h1>Hours Calculator</h1>
+          <p>Track work hours and calculate wages</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <p>Enter start and end times for each day. The calculator handles breaks and total pay automatically.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+              </svg>
+            </div>
+            Weekly Timesheet
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="timesheet-header">
+              <div>Start Time</div>
+              <div>End Time</div>
+              <div>Break (min)</div>
+          </div>
+
+          <div id="timesheetRows">
+              <!-- JS will populate rows -->
+              <div class="timesheet-row">
+                  <span class="day-label">Monday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+              <div class="timesheet-row">
+                  <span class="day-label">Tuesday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+              <div class="timesheet-row">
+                  <span class="day-label">Wednesday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+              <div class="timesheet-row">
+                  <span class="day-label">Thursday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+              <div class="timesheet-row">
+                  <span class="day-label">Friday</span>
+                  <div style="grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 2fr 1.5fr; gap: 10px;">
+                      <input type="time" class="start-time" value="09:00">
+                      <input type="time" class="end-time" value="17:00">
+                      <input type="number" class="break-time" value="30" placeholder="0">
+                  </div>
+              </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+             <label class="form-label" for="hourlyRate">Hourly Rate (<span class="dynamic-symbol">$</span>)</label>
+             <input type="number" id="hourlyRate" placeholder="0.00" value="25.00">
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+               <path d="M12 20v-6M6 20V10M18 20V4"></path>
+             </svg>
+          </div>
+          <h3>Result preview</h3>
+          <p>Calculations will appear here</p>
+        </div>
+
+        <div id="resultsContent" class="hidden">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Total Pay</div>
+             <div class="result-value" id="totalPayDisplay">--</div>
+          </div>
+
+          <!-- Detailed Breakdown -->
+          <div class="breakdown-table-wrapper" id="breakdownGrid">
+               <table class="breakdown-table">
+                  <tbody id="breakdownBody">
+                      <tr>
+                          <td>Total Hours</td>
+                          <td id="totalHoursDisplay">--</td>
+                      </tr>
+                      <tr>
+                          <td>Decimal Hours</td>
+                          <td id="decimalHoursDisplay">--</td>
+                      </tr>
+                      <tr>
+                          <td>Total Minutes</td>
+                          <td id="totalMinutesDisplay">--</td>
+                      </tr>
+                  </tbody>
+               </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Hours Calculator</h2>
+      <p>Whether you are an employee tracking a timesheet or a manager preparing payroll, calculating hours worked by hand is error-prone. This hours calculator totals your time per day and per week.</p>
+      <p>Enter start and end times, subtract unpaid breaks and see total hours in both hours and minutes and decimal format.</p>
+      <h2>How to Use the Hours Calculator</h2>
+      <ol><li>Enter the start time, end time and break for each day.</li><li>Add as many rows as you need.</li><li>Click <strong>Calculate</strong> to see daily and weekly totals.</li></ol>
+      <h2>How Hours Are Calculated</h2>
+      <p><code>Hours worked = end time − start time − break</code>. To convert minutes into a decimal, divide by 60 (for example 45 minutes = 0.75 hours).</p>
+      <div class="example"><p><strong>Example:</strong> 9:00 AM to 5:30 PM with a 30-minute break is <strong>8 hours</strong> of work.</p></div>
+      <!--seo:expanded-->
+      <h2>Worked Example: A Shift With a Break</h2>
+<p>A shift from 9:15 AM to 5:45 PM is 8 hours 30 minutes. Subtract a 30-minute unpaid break and you get <strong>8 hours</strong>. A shift from 8:00 AM to 4:50 PM with a 30-minute break is 8 hours 20 minutes, which is <strong>8.33 decimal hours</strong> (20 ÷ 60 = 0.33). Five such days add up to 41.67 hours.</p>
+<h2>Converting Minutes to Decimals</h2>
+<p>Payroll often uses decimals: 15 minutes = 0.25, 30 minutes = 0.50, 45 minutes = 0.75. Divide minutes by 60 for any other value.</p>
+<h2>Overtime Basics</h2>
+<p>Under the federal Fair Labor Standards Act, most hourly employees are owed at least 1.5 times their regular rate for hours over 40 in a workweek. Some states have stricter daily rules. Confirm your own rules with the Department of Labor or your state agency. Turn hours into pay with the <a href="salary-calculator.html">salary calculator</a>, and add or subtract clock times with the <a href="time-calculator.html">time calculator</a>.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How do I convert minutes to decimal hours?</summary><p>Divide the minutes by 60.</p></details>
+        <details class="faq-item"><summary>How do I calculate overtime?</summary><p>Hours beyond the weekly or daily limit set by law or contract are overtime.</p></details>
+        <details class="faq-item"><summary>Can I include shifts that pass midnight?</summary><p>Yes, set the end time on the next day.</p></details>
+        <details class="faq-item"><summary>Does it work for payroll?</summary><p>It totals hours; multiply by the hourly rate to find pay.</p></details>
+      <details class="faq-item"><summary>How do I calculate hours worked?</summary><p>Subtract the start time from the end time, then subtract unpaid breaks. Convert minutes to decimals if you need payroll hours.</p></details><details class="faq-item"><summary>How do I convert 7 hours 45 minutes to decimal?</summary><p>45 ÷ 60 = 0.75, so 7 hours 45 minutes is 7.75 hours.</p></details><details class="faq-item"><summary>When is overtime owed in the US?</summary><p>Federal law requires overtime for covered, non-exempt employees after 40 hours in a workweek. Some states add daily limits.</p></details></div>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="time-calculator.html">Time Calculator</a></li><li><a href="salary-calculator.html">Salary Calculator</a></li><li><a href="date-calculator.html">Date Calculator</a></li><li><a href="tax-calculator.html">Federal Income Tax Calculator</a></li><li><a href="percent-calculator.html">Percentage Calculator</a></li><li><a href="age-calculator.html">Age Calculator</a></li><li><a href="../topics/everyday-calculators.html">Everyday Calculators</a></li></ul>
+      <p class="disclaimer">Results are calculated from the values you enter. Always double-check important figures.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Hours Calculator | Productivity Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

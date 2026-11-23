@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lean Body Mass Calculator (LBM) | Mx Calculator</title>
+  <meta name="description" content="Estimate lean body mass and fat mass from height, weight and sex using the Boer, James and Hume formulas.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/lean-body-mass-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Lean Body Mass Calculator (LBM) | Mx Calculator">
+  <meta property="og:description" content="Estimate lean body mass and fat mass from height, weight and sex using the Boer, James and Hume formulas.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/lean-body-mass-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lean Body Mass Calculator (LBM) | Mx Calculator">
+  <meta name="twitter:description" content="Estimate lean body mass and fat mass from height, weight and sex using the Boer, James and Hume formulas.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Lean Body Mass Calculator","description":"Estimate lean body mass and fat mass from height, weight and sex using the Boer, James and Hume formulas.","url":"https://mxcalculator.com/calculators/lean-body-mass-calculator.html","applicationCategory":"HealthApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Lean Body Mass Calculator","item":"https://mxcalculator.com/calculators/lean-body-mass-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is lean body mass the same as muscle mass?","acceptedAnswer":{"@type":"Answer","text":"No. LBM includes muscle, bone, organs and body water; muscle is only one part."}},{"@type":"Question","name":"How can I increase lean body mass?","acceptedAnswer":{"@type":"Answer","text":"Strength training, enough protein, adequate calories and good sleep."}},{"@type":"Question","name":"Which formula is most accurate?","acceptedAnswer":{"@type":"Answer","text":"They give similar values for average builds. Measured body fat gives better accuracy than any estimate."}},{"@type":"Question","name":"Can lean mass go up while weight stays the same?","acceptedAnswer":{"@type":"Answer","text":"Yes, when you build muscle and lose fat at the same time."}},{"@type":"Question","name":"What is lean body mass?","acceptedAnswer":{"@type":"Answer","text":"It is everything in your body except fat: muscle, bone, organs and water."}},{"@type":"Question","name":"How do I increase lean body mass?","acceptedAnswer":{"@type":"Answer","text":"Resistance training, enough protein and adequate calories and sleep support muscle gain. Results vary by person."}},{"@type":"Question","name":"Is lean body mass the same as muscle mass?","acceptedAnswer":{"@type":"Answer","text":"No. Lean body mass includes muscle plus bone, organs and body water."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#25c2d0">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/health-calc.css">
+  <link rel="stylesheet" href="../assets/css/pages/lean-body-mass-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/health-engine.js"></script>
+  <script defer src="../assets/js/pages/lean-body-mass-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path><path d="m18 22 4-4"></path><path d="m2 6 4-4"></path><path d="m3 10 7-7"></path><path d="m14 21 7-7"></path></svg>
+        </div>
+        <div>
+          <h1>Lean Body Mass Calculator</h1>
+          <p>Boer, James and Hume formulas</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p>Lean body mass is everything in your body except fat: muscle, bone, organs and water. Three common formulas are averaged here.</p>
+    </div>
+
+    <div class="main-grid">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path><path d="m18 22 4-4"></path><path d="m2 6 4-4"></path><path d="m3 10 7-7"></path><path d="m14 21 7-7"></path></svg></div>
+            Your Details
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="tabs">
+            <button type="button" class="tab-btn active" id="tabUS" onclick="setUnits('us')">US Units</button>
+            <button type="button" class="tab-btn" id="tabMetric" onclick="setUnits('metric')">Metric Units</button>
+          </div>
+          <div class="form-group"><label class="form-label" for="gender">Gender</label><select id="gender"><option value="male" selected>Male</option><option value="female">Female</option></select></div>
+          <div class="form-group" data-kind="height" data-id="height"><label class="form-label" for="heightFt">Height</label>
+            <div class="input-row u-us"><div class="input-wrapper u-flex1"><input type="number" id="heightFt" value="5" min="0" max="8" step="1" inputmode="numeric"></div><span class="u-px5">ft</span><div class="input-wrapper u-flex1"><input type="number" id="heightIn" value="10" min="0" max="11.9" step="any" inputmode="decimal"></div><span class="u-px5">in</span></div>
+            <div class="input-row u-metric hidden"><div class="input-wrapper u-flex1"><input type="number" id="heightCm" step="any" inputmode="decimal"></div><span class="u-px5">cm</span></div>
+          </div>
+          <div class="form-group" data-kind="weight" data-id="weight"><label class="form-label" for="weight">Weight</label><div class="input-row"><div class="input-wrapper u-flex1"><input type="number" id="weight" value="160" step="any" inputmode="decimal"></div><span class="u-px5" data-us="pounds" data-metric="kg">pounds</span></div></div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+          <div class="form-err" id="formError" role="alert"></div>
+        </div>
+      </div>
+
+      <div id="resultsContainer" class="animate-slide-up" aria-live="polite">
+        <div id="resultsPlaceholder" class="card results-placeholder hidden">
+          <div class="results-placeholder-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path><path d="m18 22 4-4"></path><path d="m2 6 4-4"></path><path d="m3 10 7-7"></path><path d="m14 21 7-7"></path></svg></div>
+          <h3>Enter your details</h3>
+          <p>Results will appear here</p>
+        </div>
+        <div id="resultsContent" class="hidden"></div>
+      </div>
+    </div>
+
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Lean Body Mass Calculator</h2>
+      <p>Lean body mass (LBM) is everything in your body that is not fat: muscle, bones, organs and water. Tracking it shows whether weight loss is coming from fat or from muscle.</p>
+      <p>This calculator estimates your LBM and fat mass from your height, weight and gender using several commonly used formulas.</p>
+      <h2>How to Use the Lean Body Mass Calculator</h2>
+      <ol><li>Select your gender.</li><li>Enter your height and weight.</li><li>Click <strong>Calculate</strong> to see lean body mass from each formula.</li></ol>
+      <h2>Formulas for Lean Body Mass</h2>
+      <p>If you know your body fat percentage: <code>LBM = weight × (1 − body fat %)</code>. Without it, regression formulas such as Boer, James and Hume estimate LBM from height and weight, with separate versions for men and women.</p>
+      <div class="example"><p><strong>Example:</strong> Someone who weighs 80 kg with 20 percent body fat has 80 × 0.80 = <strong>64 kg of lean mass</strong> and 16 kg of fat.</p></div>
+      <h2>Why Lean Mass Matters</h2>
+      <ul><li>It drives your resting metabolic rate.</li><li>It supports strength, mobility and healthy ageing.</li><li>It helps set protein and calorie targets.</li></ul>
+      <!--seo:expanded-->
+      <h2>Worked Example: Boer Formula</h2>
+<p>For a man who is 70 in (178 cm) and 180 lb (81.6 kg), the Boer formula (0.407 × weight + 0.267 × height − 19.2) gives a lean body mass of about <strong>61.5 kg (136 lb)</strong>. The rest, about 20.1 kg, is estimated fat mass, or roughly 25% of body weight.</p>
+<h2>Using Lean Mass</h2>
+<ul><li>Protein targets are often set per kilogram of lean mass. See the <a href="protein-calculator.html">protein calculator</a>.</li><li>Katch-McArdle BMR uses lean mass directly; see the <a href="bmr-calculator.html">BMR calculator</a>.</li><li>Track change over time rather than one reading.</li></ul>
+<h2>Accuracy</h2>
+<p>These formulas estimate from height, weight and sex, so they miss differences in muscle and bone. DEXA scans and other clinical methods measure more directly. Use the result as a rough guide.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>Is lean body mass the same as muscle mass?</summary><p>No. LBM includes muscle, bone, organs and body water; muscle is only one part.</p></details>
+        <details class="faq-item"><summary>How can I increase lean body mass?</summary><p>Strength training, enough protein, adequate calories and good sleep.</p></details>
+        <details class="faq-item"><summary>Which formula is most accurate?</summary><p>They give similar values for average builds. Measured body fat gives better accuracy than any estimate.</p></details>
+        <details class="faq-item"><summary>Can lean mass go up while weight stays the same?</summary><p>Yes, when you build muscle and lose fat at the same time.</p></details>
+      <details class="faq-item"><summary>What is lean body mass?</summary><p>It is everything in your body except fat: muscle, bone, organs and water.</p></details><details class="faq-item"><summary>How do I increase lean body mass?</summary><p>Resistance training, enough protein and adequate calories and sleep support muscle gain. Results vary by person.</p></details><details class="faq-item"><summary>Is lean body mass the same as muscle mass?</summary><p>No. Lean body mass includes muscle plus bone, organs and body water.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.niddk.nih.gov/" rel="noopener" target="_blank">NIDDK: Healthy living</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="body-fat-calculator.html">Body Fat Calculator</a></li><li><a href="protein-calculator.html">Protein Calculator</a></li><li><a href="bmr-calculator.html">BMR Calculator</a></li><li><a href="ideal-weight-calculator.html">Ideal Weight Calculator</a></li><li><a href="one-rep-max-calculator.html">One Rep Max Calculator</a></li><li><a href="macro-calculator.html">Macro Calculator</a></li><li><a href="../topics/health-and-fitness-calculators.html">Health & Fitness Calculators</a></li></ul>
+      <p class="disclaimer">This calculator provides general estimates and is not medical advice. Talk to a doctor or registered dietitian before making changes to your diet, exercise or health routine.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Lean Body Mass Calculator | Health &amp; Fitness Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+</body>
+</html>

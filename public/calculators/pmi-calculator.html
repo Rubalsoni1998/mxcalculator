@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PMI Calculator: Monthly Mortgage Insurance | Mx Calculator</title>
+  <meta name="description" content="Estimate monthly private mortgage insurance, your total payment with PMI, and when PMI can be removed at 80% and 78% loan-to-value.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/pmi-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="PMI Calculator: Monthly Mortgage Insurance | Mx Calculator">
+  <meta property="og:description" content="Estimate monthly private mortgage insurance, your total payment with PMI, and when PMI can be removed at 80% and 78% loan-to-value.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/pmi-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PMI Calculator: Monthly Mortgage Insurance | Mx Calculator">
+  <meta name="twitter:description" content="Estimate monthly private mortgage insurance, your total payment with PMI, and when PMI can be removed at 80% and 78% loan-to-value.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"PMI Calculator","description":"Estimate monthly private mortgage insurance, your total payment with PMI, and when PMI can be removed at 80% and 78% loan-to-value.","url":"https://mxcalculator.com/calculators/pmi-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"PMI Calculator","item":"https://mxcalculator.com/calculators/pmi-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is PMI and why do I have to pay it?","acceptedAnswer":{"@type":"Answer","text":"PMI stands for private mortgage insurance. Lenders require it on conventional loans with less than 20% down because a smaller down payment means more risk for them. The insurance repays the lender if you default. It does not protect you."}},{"@type":"Question","name":"How much is PMI per month?","acceptedAnswer":{"@type":"Answer","text":"PMI typically costs about 0.2% to 1.75% of the loan amount per year, depending on your credit score and down payment. On a $300,000 loan that is roughly $50 to $440 a month."}},{"@type":"Question","name":"Is PMI tax deductible?","acceptedAnswer":{"@type":"Answer","text":"Mortgage insurance premiums were deductible only in certain past years and under income limits. Tax rules change, so check current IRS guidance or ask a tax professional before counting on a deduction."}},{"@type":"Question","name":"When can I stop paying PMI?","acceptedAnswer":{"@type":"Answer","text":"You can ask your servicer to cancel once your balance reaches 80% of the home's original value. It must end automatically when the balance is scheduled to hit 78%, if you are current on payments."}},{"@type":"Question","name":"Does PMI apply to FHA, VA or USDA loans?","acceptedAnswer":{"@type":"Answer","text":"No. FHA loans charge a mortgage insurance premium (MIP), USDA loans charge a guarantee fee, and VA loans have no monthly mortgage insurance. This calculator covers conventional loan PMI only."}},{"@type":"Question","name":"Is it better to pay PMI or wait until I have 20% down?","acceptedAnswer":{"@type":"Answer","text":"It depends on home price trends, rent costs and how long it would take to save. Many buyers choose to pay PMI for a few years rather than wait, since PMI is temporary. Compare the total PMI cost shown here with the cost of waiting."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#009999">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/pmi-calculator.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/pmi-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+        </div>
+        <div>
+          <h1>PMI Calculator</h1>
+          <p>Estimate private mortgage insurance and when it ends</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg>
+      <p>Enter your home price, down payment and credit score to estimate monthly PMI and when you can drop it.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            Loan Details
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="homePrice">Home Price<span class="help-icon tooltip" data-tooltip="The purchase price of the home."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon">$</span>
+              <input type="number" id="homePrice" class="has-icon" value="350000" min="0" step="1000" inputmode="decimal">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="loanTerm">Loan Term<span class="help-icon tooltip" data-tooltip="Length of the mortgage in years."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="loanTerm" value="30" min="1" max="40" step="1" inputmode="decimal">
+              <span>years</span>
+            </div>
+          </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="downPayment">Down Payment<span class="help-icon tooltip" data-tooltip="Enter a dollar amount or a percent of the home price, then pick the unit."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="downPayment" value="10" min="0" step="0.01" inputmode="decimal">
+              <select id="downType" onchange="onDownTypeChange()"><option value="pct" selected>%</option><option value="amt">$</option></select>
+            </div>
+          </div>
+          <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="interestRate">Interest Rate (APR)<span class="help-icon tooltip" data-tooltip="Annual mortgage interest rate."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="interestRate" value="6.5" min="0" max="25" step="0.01" inputmode="decimal">
+              <span>%</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="creditScore">Credit Score<span class="help-icon tooltip" data-tooltip="Higher scores earn lower PMI rates."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <select id="creditScore"><option value="0">760 or higher</option><option value="1">740 – 759</option><option value="2">720 – 739</option><option value="3" selected>700 – 719</option><option value="4">680 – 699</option><option value="5">660 – 679</option><option value="6">640 – 659</option><option value="7">620 – 639</option></select>
+          </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="pmiOverride">PMI Rate Override (optional)<span class="help-icon tooltip" data-tooltip="Leave blank to use our estimate. Enter the yearly PMI rate from your lender quote to override it."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></span></label>
+            <div class="input-row">
+              <input type="number" id="pmiOverride" value="" min="0" max="5" step="0.01" inputmode="decimal">
+              <span>%</span>
+            </div>
+          </div>
+          <div class="note">PMI is only charged on conventional loans when you put down less than 20%. FHA loans use a different mortgage insurance (MIP) and are not covered here.</div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"></path></svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </div>
+          <h3>Enter loan details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+            <div class="result-subtitle" id="resultLabel">Result</div>
+            <div class="result-value" id="resultValueDisplay">–</div>
+            <div class="result-note" id="resultNote"></div>
+          </div>
+          <div id="warnBox" class="note warn" style="display:none;"></div>
+
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr><th>Item</th><th>Value</th></tr>
+                  </thead>
+                  <tbody id="breakdownTableBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card u-mt">
+            <div class="card-header">
+              <div class="card-title u-fs1">Monthly Payment Breakdown</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="mainChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the PMI Calculator</h2>
+      <p>Private mortgage insurance (PMI) is a monthly cost that lenders add to a conventional mortgage when the borrower puts down less than 20% of the home price. It protects the <em>lender</em>, not you, if the loan goes unpaid. This calculator estimates your monthly PMI, shows how it changes your total monthly payment, and tells you roughly when it can be removed.</p>
+      <p>Enter the home price, your down payment, interest rate, loan term and credit score range. The tool works out your loan-to-value ratio (LTV), picks an estimated PMI rate for your credit and LTV, and then walks through your amortization schedule to find the month your balance falls to 80% and 78% of the original home value. You can also type in a PMI rate from a real lender quote to see exact numbers.</p>
+
+      <h2>How PMI Is Calculated</h2>
+      <p>Most borrower-paid PMI is billed monthly as a small percentage of the original loan amount each year.</p>
+      <p><code>Loan Amount = Home Price − Down Payment</code><br>
+      <code>LTV = Loan Amount ÷ Home Price × 100</code><br>
+      <code>Monthly PMI = Loan Amount × Annual PMI Rate ÷ 12</code><br>
+      <code>Monthly P&amp;I = Loan × r ÷ (1 − (1 + r)<sup>−n</sup>)</code> &nbsp;where r is the monthly rate and n is the number of payments.</p>
+      <div class="example">
+        <p><strong>Example:</strong> You buy a $350,000 home with 10% down ($35,000). The loan is $315,000 and the LTV is 90%.</p>
+        <p>With a 700–719 credit score the estimated PMI rate is about 0.50% a year, so monthly PMI is $315,000 × 0.50% ÷ 12 ≈ <strong>$131</strong>. At 6.5% over 30 years, principal and interest is about $1,991, for a combined $2,122 a month before taxes and insurance.</p>
+      </div>
+
+      <h2>What Drives Your PMI Rate</h2>
+      <ul>
+        <li><strong>Credit score:</strong> This is the biggest factor. A borrower with a 760+ score can pay less than a third of what a 620–639 borrower pays.</li>
+        <li><strong>Loan-to-value ratio:</strong> The smaller your down payment, the higher the rate. Rates step up at 85%, 90%, 95% and 97% LTV.</li>
+        <li><strong>Loan term:</strong> Loans of 20 years or less usually carry lower PMI because the balance falls faster. This calculator applies a 25% reduction for terms of 20 years or fewer.</li>
+        <li><strong>Occupancy and loan type:</strong> Primary homes cost less to insure than second homes and investment properties. Fixed-rate loans are usually cheaper than adjustable-rate loans.</li>
+      </ul>
+      <table class="ref">
+        <thead><tr><th>Credit score</th><th>85% LTV</th><th>90% LTV</th><th>95% LTV</th><th>97% LTV</th></tr></thead>
+        <tbody>
+          <tr><td>760+</td><td>0.17%</td><td>0.23%</td><td>0.38%</td><td>0.55%</td></tr>
+          <tr><td>700 – 719</td><td>0.32%</td><td>0.50%</td><td>0.75%</td><td>0.95%</td></tr>
+          <tr><td>660 – 679</td><td>0.62%</td><td>0.90%</td><td>1.20%</td><td>1.40%</td></tr>
+          <tr><td>620 – 639</td><td>0.95%</td><td>1.25%</td><td>1.55%</td><td>1.75%</td></tr>
+        </tbody>
+      </table>
+      <p>These are typical yearly rates used by this estimator. Actual quotes vary by insurer, lender and loan details.</p>
+
+      <h2>How and When PMI Ends</h2>
+      <p>Under the federal Homeowners Protection Act, PMI on most conventional loans is removed in two ways:</p>
+      <ul>
+        <li><strong>You request cancellation</strong> once your loan balance reaches 80% of the home's original value, provided you are current on payments and have no second liens.</li>
+        <li><strong>Automatic termination</strong> happens when the balance is scheduled to reach 78% of the original value, as long as you are current.</li>
+      </ul>
+      <p>The calculator reports both dates based on your regular payment schedule. Paying extra principal brings them forward. If your home has gained value, some lenders also allow cancellation based on a new appraisal.</p>
+
+      <h2>Ways to Avoid or Reduce PMI</h2>
+      <ul>
+        <li><strong>Put 20% down.</strong> The results table shows exactly how much more you would need.</li>
+        <li><strong>Improve your credit score</strong> before applying. Moving up one tier can cut PMI noticeably.</li>
+        <li><strong>Ask about lender-paid PMI.</strong> The lender covers the insurance in exchange for a higher interest rate, which cannot be cancelled later.</li>
+        <li><strong>Consider a piggyback (80/10/10) loan</strong> or a VA loan, which has no monthly mortgage insurance for eligible veterans.</li>
+        <li><strong>Make extra principal payments</strong> to reach 80% LTV sooner.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What is PMI and why do I have to pay it?</summary><p>PMI stands for private mortgage insurance. Lenders require it on conventional loans with less than 20% down because a smaller down payment means more risk for them. The insurance repays the lender if you default. It does not protect you.</p></details>
+        <details class="faq-item"><summary>How much is PMI per month?</summary><p>PMI typically costs about 0.2% to 1.75% of the loan amount per year, depending on your credit score and down payment. On a $300,000 loan that is roughly $50 to $440 a month.</p></details>
+        <details class="faq-item"><summary>Is PMI tax deductible?</summary><p>Mortgage insurance premiums were deductible only in certain past years and under income limits. Tax rules change, so check current IRS guidance or ask a tax professional before counting on a deduction.</p></details>
+        <details class="faq-item"><summary>When can I stop paying PMI?</summary><p>You can ask your servicer to cancel once your balance reaches 80% of the home's original value. It must end automatically when the balance is scheduled to hit 78%, if you are current on payments.</p></details>
+        <details class="faq-item"><summary>Does PMI apply to FHA, VA or USDA loans?</summary><p>No. FHA loans charge a mortgage insurance premium (MIP), USDA loans charge a guarantee fee, and VA loans have no monthly mortgage insurance. This calculator covers conventional loan PMI only.</p></details>
+        <details class="faq-item"><summary>Is it better to pay PMI or wait until I have 20% down?</summary><p>It depends on home price trends, rent costs and how long it would take to save. Many buyers choose to pay PMI for a few years rather than wait, since PMI is temporary. Compare the total PMI cost shown here with the cost of waiting.</p></details>
+      </div>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="mortgage-calculator.html">Mortgage Calculator</a></li><li><a href="closing-cost-calculator.html">Closing Cost Calculator</a></li><li><a href="amortization-calculator.html">Amortization Calculator</a></li><li><a href="property-tax-calculator.html">Property Tax Calculator</a></li><li><a href="interest-rate-calculator.html">Interest Rate Calculator</a></li><li><a href="loan-calculator.html">Loan Calculator</a></li><li><a href="../topics/home-buying-calculators.html">Home Buying Calculators</a></li></ul>
+      <p class="disclaimer">Estimates use typical industry PMI rates and do not include property tax, homeowners insurance or HOA dues. Your lender's quote is the final word. This tool is for general information, not financial advice.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>PMI Calculator | Mortgage Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

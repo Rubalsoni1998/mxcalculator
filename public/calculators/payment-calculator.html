@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monthly Payment Calculator for Loans | Mx Calculator</title>
+  <meta name="description" content="Estimate the monthly payment on any fixed-rate loan, with total interest and a full amortization schedule.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/payment-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Monthly Payment Calculator for Loans | Mx Calculator">
+  <meta property="og:description" content="Estimate the monthly payment on any fixed-rate loan, with total interest and a full amortization schedule.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/payment-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Monthly Payment Calculator for Loans | Mx Calculator">
+  <meta name="twitter:description" content="Estimate the monthly payment on any fixed-rate loan, with total interest and a full amortization schedule.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Payment Calculator","description":"Estimate the monthly payment on any fixed-rate loan, with total interest and a full amortization schedule.","url":"https://mxcalculator.com/calculators/payment-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Payment Calculator","item":"https://mxcalculator.com/calculators/payment-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is a monthly payment calculated?","acceptedAnswer":{"@type":"Answer","text":"With the amortization formula using the loan amount, rate and number of payments."}},{"@type":"Question","name":"How can I lower my payment?","acceptedAnswer":{"@type":"Answer","text":"Borrow less, choose a longer term or find a lower rate, though a longer term raises total interest."}},{"@type":"Question","name":"What is the difference between payment and total cost?","acceptedAnswer":{"@type":"Answer","text":"Total cost includes all interest paid over the loan."}},{"@type":"Question","name":"Can I pay off early?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. Check for prepayment penalties first."}},{"@type":"Question","name":"How do I calculate a monthly payment without a calculator?","acceptedAnswer":{"@type":"Answer","text":"Use payment = P × r ÷ (1 − (1 + r)^−n). Divide the annual rate by 12 for r, and use the number of months for n. A spreadsheet PMT function does the same thing."}},{"@type":"Question","name":"Why does a longer loan cost more?","acceptedAnswer":{"@type":"Answer","text":"Interest accrues on the remaining balance each month. A longer term keeps a larger balance outstanding for longer, so more interest builds up even though each payment is smaller."}},{"@type":"Question","name":"Do extra payments lower my monthly payment?","acceptedAnswer":{"@type":"Answer","text":"Usually they shorten the loan instead. Extra principal reduces the balance, so you owe less interest each month and finish earlier, unless the lender recasts the loan."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#14aab8">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/payment-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/payment-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+            <line x1="2" x2="22" y1="10" y2="10"></line>
+          </svg>
+        </div>
+        <div>
+          <h1>Payment Calculator</h1>
+          <p>Estimate monthly payments for fixed-term loans</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Enter the loan details to calculate your monthly payment and interest.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20"></path>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            Loan Details
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Loan Amount -->
+          <div class="form-group">
+            <label class="form-label">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20"></path>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              Loan Amount
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="loanAmount" class="has-icon" value="10000" placeholder="10,000">
+            </div>
+          </div>
+
+          <!-- Loan Term -->
+          <div class="form-group">
+            <label class="form-label">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
+                <line x1="16" x2="16" y1="2" y2="6"></line>
+                <line x1="8" x2="8" y1="2" y2="6"></line>
+                <line x1="3" x2="21" y1="10" y2="10"></line>
+              </svg>
+              Loan Term
+              <span class="help-icon tooltip" data-tooltip="The total time to repay the loan.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-row">
+              <input min="0" max="100" type="number" id="loanTermYears" value="5" placeholder="5">
+              <span>years</span>
+              <input min="0" max="1200" type="number" id="loanTermMonths" value="0" placeholder="0">
+              <span>months</span>
+            </div>
+          </div>
+
+          <!-- Interest Rate -->
+          <div class="form-group">
+            <label class="form-label">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" x2="5" y1="5" y2="19"></line>
+                <circle cx="6.5" cy="6.5" r="2.5"></circle>
+                <circle cx="17.5" cy="17.5" r="2.5"></circle>
+              </svg>
+              Interest Rate
+              <span class="help-icon tooltip" data-tooltip="The annual interest rate of the loan.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-row">
+              <input min="0" max="100" type="number" id="interestRate" value="7.5" step="0.01" placeholder="7.5">
+              <span>%</span>
+            </div>
+          </div>
+
+          <!-- Start Date -->
+          <div class="form-group">
+            <label class="form-label" for="startMonth">Start Date</label>
+            <div class="input-row">
+              <select id="startMonth">
+                <option value="0">Jan</option>
+                <option value="1">Feb</option>
+                <option value="2">Mar</option>
+                <option value="3">Apr</option>
+                <option value="4">May</option>
+                <option value="5">Jun</option>
+                <option value="6">Jul</option>
+                <option value="7">Aug</option>
+                <option value="8">Sep</option>
+                <option value="9">Oct</option>
+                <option value="10">Nov</option>
+                <option value="11">Dec</option>
+              </select>
+              <select id="startYear"></select>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+          </div>
+          <h3>Enter your loan details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <!-- Monthly Payment Hero -->
+          <div class="payment-hero">
+            <div class="payment-hero-header">
+              <span class="payment-hero-label">Monthly Payment</span>
+              <button class="bookmark-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="payment-hero-amount" id="monthlyPaymentDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Category</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pie Chart -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+              </div>
+              <div class="chart-legend" id="chartLegend">
+                <!-- Dynamic legend -->
+              </div>
+            </div>
+          </div>
+
+           <!-- Summary Stats -->
+          <div class="card u-mt">
+            <div class="card-content summary-stats u-pt" id="summaryStats">
+              <!-- Dynamic content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Amortization Section -->
+    <div id="amortizationSection" class="amortization-section" style="display: none;">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="schedule-header-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"></path>
+                <path d="m19 9-5 5-4-4-3 3"></path>
+              </svg>
+            </div>
+            Amortization Schedule
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Line Chart -->
+          <div class="line-chart-container">
+            <canvas id="lineChart"></canvas>
+          </div>
+
+           <!-- Tabs -->
+           <div class="tabs">
+            <button type="button" class="tab-btn active" id="annualTab" onclick="setScheduleView('annual')">Annual Schedule</button>
+            <button type="button" class="tab-btn" id="monthlyTab" onclick="setScheduleView('monthly')">Monthly Schedule</button>
+          </div>
+
+          <!-- Schedule Table -->
+          <div class="schedule-table-wrapper">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th id="scheduleCol1">Year</th>
+                  <th>Date</th>
+                  <th>Interest</th>
+                  <th>Principal</th>
+                  <th>Ending Balance</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleTableBody">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Payment Calculator</h2>
+      <p>A fixed-rate loan is repaid with equal payments over a set term. This payment calculator finds that monthly amount from the loan size, rate and term, and shows how much goes to interest.</p>
+      <p>Use it to compare loan offers or decide what you can comfortably borrow.</p>
+      <h2>How to Use the Payment Calculator</h2>
+      <ol><li>Enter the loan amount and loan term.</li><li>Enter the interest rate and start date.</li><li>Click <strong>Calculate</strong> to see the payment and schedule.</li></ol>
+      <h2>Payment Formula</h2>
+      <p><code>M = P × r ÷ (1 − (1 + r)⁻ⁿ)</code> with r the monthly rate and n the number of months.</p>
+      <div class="example"><p><strong>Example:</strong> A $20,000 loan at 6 percent for 5 years has a monthly payment of <strong>$386.66</strong> and total interest of about <strong>$3,200</strong>.</p></div>
+      <!--seo:expanded-->
+      <h2>How Term Length Changes the Payment</h2>
+<p>For a $25,000 loan at 7% APR, here is how the monthly payment and total interest change with the term:</p>
+<table><thead><tr><th>Term</th><th>Monthly payment</th><th>Total interest</th></tr></thead><tbody><tr><td>36 months</td><td>$771.93</td><td>$2,789</td></tr><tr><td>48 months</td><td>$598.66</td><td>$3,735</td></tr><tr><td>60 months</td><td>$495.03</td><td>$4,702</td></tr><tr><td>72 months</td><td>$426.23</td><td>$5,688</td></tr></tbody></table>
+<p>Stretching the term lowers the payment but increases total interest. That trade-off is the main thing the calculator helps you see.</p>
+<h2>Checking the Result by Hand</h2>
+<p>The monthly rate is the APR divided by 12. For 7% that is 0.5833%. Multiply it by the balance to get the first month's interest, which on $25,000 is about $145.83. Whatever remains of the payment reduces principal, so each month a little more goes to principal and a little less to interest.</p>
+<h2>When a Payment Calculator Is Not Enough</h2>
+<ul><li>Loans with variable rates change the payment when the rate resets.</li><li>Interest-only periods and balloon payments do not follow the standard formula.</li><li>For a full month-by-month breakdown, use the <a href="amortization-calculator.html">amortization calculator</a>.</li></ul>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How is a monthly payment calculated?</summary><p>With the amortization formula using the loan amount, rate and number of payments.</p></details>
+        <details class="faq-item"><summary>How can I lower my payment?</summary><p>Borrow less, choose a longer term or find a lower rate, though a longer term raises total interest.</p></details>
+        <details class="faq-item"><summary>What is the difference between payment and total cost?</summary><p>Total cost includes all interest paid over the loan.</p></details>
+        <details class="faq-item"><summary>Can I pay off early?</summary><p>Usually yes. Check for prepayment penalties first.</p></details>
+      <details class="faq-item"><summary>How do I calculate a monthly payment without a calculator?</summary><p>Use payment = P × r ÷ (1 − (1 + r)^−n). Divide the annual rate by 12 for r, and use the number of months for n. A spreadsheet PMT function does the same thing.</p></details><details class="faq-item"><summary>Why does a longer loan cost more?</summary><p>Interest accrues on the remaining balance each month. A longer term keeps a larger balance outstanding for longer, so more interest builds up even though each payment is smaller.</p></details><details class="faq-item"><summary>Do extra payments lower my monthly payment?</summary><p>Usually they shorten the loan instead. Extra principal reduces the balance, so you owe less interest each month and finish earlier, unless the lender recasts the loan.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.consumerfinance.gov/consumer-tools/auto-loans/" rel="noopener" target="_blank">CFPB: Consumer tools</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="loan-calculator.html">Loan Calculator</a></li><li><a href="amortization-calculator.html">Amortization Calculator</a></li><li><a href="mortgage-calculator.html">Mortgage Calculator</a></li><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a></li><li><a href="interest-rate-calculator.html">Interest Rate Calculator</a></li><li><a href="finance-calculator.html">Finance Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Results are estimates based on the figures you enter and are for general information only. This is not financial, tax or legal advice. Rates, fees and rules vary by lender and jurisdiction.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>A comprehensive payment calculator for all loan types</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

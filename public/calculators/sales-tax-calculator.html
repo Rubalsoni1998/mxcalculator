@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Tax Calculator: Add or Remove Tax | Mx Calculator</title>
+  <meta name="description" content="Add sales tax to a price, or work backwards from a total to find the pre-tax price and the tax amount, for any rate you enter.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/sales-tax-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Sales Tax Calculator: Add or Remove Tax | Mx Calculator">
+  <meta property="og:description" content="Add sales tax to a price, or work backwards from a total to find the pre-tax price and the tax amount, for any rate you enter.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/sales-tax-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sales Tax Calculator: Add or Remove Tax | Mx Calculator">
+  <meta name="twitter:description" content="Add sales tax to a price, or work backwards from a total to find the pre-tax price and the tax amount, for any rate you enter.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Sales Tax Calculator","description":"Add sales tax to a price, or work backwards from a total to find the pre-tax price and the tax amount, for any rate you enter.","url":"https://mxcalculator.com/calculators/sales-tax-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Sales Tax Calculator","item":"https://mxcalculator.com/calculators/sales-tax-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate sales tax?","acceptedAnswer":{"@type":"Answer","text":"Multiply the price by the tax rate and add the result to the price."}},{"@type":"Question","name":"How do I find the price before tax?","acceptedAnswer":{"@type":"Answer","text":"Divide the total by one plus the tax rate."}},{"@type":"Question","name":"Are sales tax rates the same everywhere?","acceptedAnswer":{"@type":"Answer","text":"No. They vary by state, county and city."}},{"@type":"Question","name":"Is VAT the same as sales tax?","acceptedAnswer":{"@type":"Answer","text":"They are similar, but VAT is collected at each stage of production and is built into the price in many countries."}},{"@type":"Question","name":"Which states have no sales tax?","acceptedAnswer":{"@type":"Answer","text":"Alaska, Delaware, Montana, New Hampshire and Oregon do not have a statewide sales tax. Alaska allows local sales taxes in some areas, and Montana has local resort taxes. Rules change, so confirm with your state's revenue department."}},{"@type":"Question","name":"Is sales tax calculated before or after a discount?","acceptedAnswer":{"@type":"Answer","text":"In most cases tax is calculated on the discounted price, so a store discount lowers the tax too. Manufacturer coupons may be treated differently in some states. Check the receipt to see how the store applied it."}},{"@type":"Question","name":"How do I find the sales tax rate for my address?","acceptedAnswer":{"@type":"Answer","text":"Look at your state department of revenue website, many of which offer rate lookup tools by address. A recent receipt from a local store also shows the combined rate. Rates can differ by city, county and district."}},{"@type":"Question","name":"Do I pay sales tax on online orders?","acceptedAnswer":{"@type":"Answer","text":"Usually yes. Since a 2018 Supreme Court decision, most states require large online sellers to collect tax based on the delivery address. If a seller does not collect it, some states expect you to report use tax yourself."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#009999">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/sales-tax-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/sales-tax-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20"></path>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Sales Tax Calculator</h1>
+          <p>Quickly calculate tax and total price</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Enter the price and tax rate to see the total cost and tax amount.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                <line x1="2" x2="22" y1="10" y2="10"></line>
+                <path d="M12 15h.01"></path>
+              </svg>
+            </div>
+            Purchase Details
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Price Before Tax -->
+          <div class="form-group">
+            <label class="form-label" for="beforeTaxPrice">
+              Price Before Tax
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="beforeTaxPrice" class="has-icon" value="100" placeholder="100">
+            </div>
+          </div>
+
+          <!-- Sales Tax Rate -->
+          <div class="form-group">
+            <label class="form-label">
+              Sales Tax Rate
+              <span class="help-icon tooltip" data-tooltip="The percentage of tax applied to the purchase.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-row">
+              <input type="number" id="taxRate" value="7.25" step="0.01" placeholder="7.25">
+              <span>%</span>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20"></path>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Enter purchase details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Total Price (Post-Tax)</div>
+             <div class="result-value" id="resultValueDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Component</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Pie Chart -->
+           <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Cost Breakdown</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Sales Tax Calculator</h2>
+      <p>Sales tax is a percentage added to the price of goods and services. This calculator finds the tax and total for a purchase, or works backward from a tax-inclusive total.</p>
+      <p>It is handy for shopping, invoicing and bookkeeping.</p>
+      <h2>How to Use the Sales Tax Calculator</h2>
+      <ol><li>Enter the price or total and the tax rate.</li><li>Choose whether to add tax or remove tax.</li><li>Click <strong>Calculate</strong> to see the tax amount and total.</li></ol>
+      <h2>Sales Tax Formulas</h2>
+      <p><code>Tax = price × rate</code> and <code>Total = price × (1 + rate)</code>. Reverse: <code>Price = total ÷ (1 + rate)</code>.</p>
+      <div class="example"><p><strong>Example:</strong> An $80 item at 8.25 percent tax has $6.60 of tax and a total of <strong>$86.60</strong>. A $108 total at 8 percent comes from a pre-tax price of $100.</p></div>
+      <!--seo:expanded-->
+      <h2>Why the Rate on Your Receipt Is a Combined Rate</h2>
+<p>The United States has no federal sales tax. Sales tax is set by states, and many counties, cities and special districts add their own on top. The rate you pay is the sum of all of them, and it can differ between two addresses a few miles apart. Some states charge no statewide sales tax, though local taxes may still apply. For the exact rate, check your state revenue department, or look at a recent receipt from the same store.</p>
+<h2>Worked Examples</h2>
+<div class="example"><p><strong>Adding tax:</strong> A $249.99 item at 7.25 percent carries $18.12 of tax, so the total is <strong>$268.11</strong>. Sales tax is normally rounded to the nearest cent.</p></div>
+<div class="example"><p><strong>Working backward:</strong> You paid $53.70 and know the rate was 7.5 percent. The pre-tax price is 53.70 ÷ 1.075 = <strong>$49.95</strong>, and the tax was $3.75. Dividing by 1.075 is correct; subtracting 7.5 percent of $53.70 is not, because the tax was calculated on the smaller base.</p></div>
+<div class="example"><p><strong>Discount order:</strong> A $100 item at 20 percent off with 8.25 percent tax costs $80 + $6.60 = <strong>$86.60</strong>. Stores generally apply the store discount before tax, so the discount also reduces the tax.</p></div>
+<h2>What Is and Is Not Taxed</h2>
+<ul>
+<li><strong>Often exempt:</strong> Many states exempt groceries, prescription drugs or clothing, but the exact list varies widely.</li>
+<li><strong>Services:</strong> Some states tax certain services, others tax almost none.</li>
+<li><strong>Coupons and rebates:</strong> A store coupon usually lowers the taxable price. A manufacturer coupon may not, depending on state rules.</li>
+<li><strong>Online purchases:</strong> Most states now require online sellers to collect tax based on where the item is delivered.</li>
+</ul>
+<h2>Common Mistakes</h2>
+<p>Using the wrong rate is the biggest one. A state rate alone understates the total in most places. Another is forgetting that business buyers may be able to purchase tax-free for resale with a valid certificate. For vehicles, rules often differ, so see the <a href="car-sales-tax-calculator.html">car sales tax calculator</a>. For tax on property rather than purchases, use the <a href="property-tax-calculator.html">property tax calculator</a>. For a general discount, the <a href="percent-calculator.html">percentage calculator</a> is useful.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>How do I calculate sales tax?</summary><p>Multiply the price by the tax rate and add the result to the price.</p></details>
+        <details class="faq-item"><summary>How do I find the price before tax?</summary><p>Divide the total by one plus the tax rate.</p></details>
+        <details class="faq-item"><summary>Are sales tax rates the same everywhere?</summary><p>No. They vary by state, county and city.</p></details>
+        <details class="faq-item"><summary>Is VAT the same as sales tax?</summary><p>They are similar, but VAT is collected at each stage of production and is built into the price in many countries.</p></details>
+      <details class="faq-item"><summary>Which states have no sales tax?</summary><p>Alaska, Delaware, Montana, New Hampshire and Oregon do not have a statewide sales tax. Alaska allows local sales taxes in some areas, and Montana has local resort taxes. Rules change, so confirm with your state&#x27;s revenue department.</p></details><details class="faq-item"><summary>Is sales tax calculated before or after a discount?</summary><p>In most cases tax is calculated on the discounted price, so a store discount lowers the tax too. Manufacturer coupons may be treated differently in some states. Check the receipt to see how the store applied it.</p></details><details class="faq-item"><summary>How do I find the sales tax rate for my address?</summary><p>Look at your state department of revenue website, many of which offer rate lookup tools by address. A recent receipt from a local store also shows the combined rate. Rates can differ by city, county and district.</p></details><details class="faq-item"><summary>Do I pay sales tax on online orders?</summary><p>Usually yes. Since a 2018 Supreme Court decision, most states require large online sellers to collect tax based on the delivery address. If a seller does not collect it, some states expect you to report use tax yourself.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.census.gov/" rel="noopener" target="_blank">US Census Bureau</a></li><li><a href="https://www.irs.gov/individuals" rel="noopener" target="_blank">IRS: Information for individuals</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="car-sales-tax-calculator.html">Car Sales Tax Calculator</a></li><li><a href="property-tax-calculator.html">Property Tax Calculator</a></li><li><a href="percent-calculator.html">Percentage Calculator</a></li><li><a href="tax-calculator.html">Federal Income Tax Calculator</a></li><li><a href="salary-calculator.html">Salary Calculator</a></li><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a></li><li><a href="../states/sales-tax-by-state.html">Sales Tax by State</a></li><li><a href="../topics/tax-calculators.html">US Tax Calculators</a></li></ul>
+      <p class="disclaimer">Results are estimates based on the figures you enter and are for general information only. This is not financial, tax or legal advice. Rates, fees and rules vary by lender and jurisdiction.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Sales Tax Calculator | Financial Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

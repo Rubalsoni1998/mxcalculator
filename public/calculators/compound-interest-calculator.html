@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest Calculator with Deposits | Mx Calculator</title>
+  <meta name="description" content="See how savings grow with regular deposits and daily, monthly or yearly compounding, with the final balance and total interest earned.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/compound-interest-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Compound Interest Calculator with Deposits | Mx Calculator">
+  <meta property="og:description" content="See how savings grow with regular deposits and daily, monthly or yearly compounding, with the final balance and total interest earned.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/compound-interest-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Compound Interest Calculator with Deposits | Mx Calculator">
+  <meta name="twitter:description" content="See how savings grow with regular deposits and daily, monthly or yearly compounding, with the final balance and total interest earned.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Compound Interest Calculator","description":"See how savings grow with regular deposits and daily, monthly or yearly compounding, with the final balance and total interest earned.","url":"https://mxcalculator.com/calculators/compound-interest-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Compound Interest Calculator","item":"https://mxcalculator.com/calculators/compound-interest-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between simple and compound interest?","acceptedAnswer":{"@type":"Answer","text":"Simple interest is only on the principal. Compound interest also earns interest on previous interest."}},{"@type":"Question","name":"Does compounding frequency matter?","acceptedAnswer":{"@type":"Answer","text":"Yes, but only a little. Daily compounding earns slightly more than monthly, and monthly more than annual."}},{"@type":"Question","name":"How can I make compound interest work for me?","acceptedAnswer":{"@type":"Answer","text":"Start early, contribute regularly and leave earnings invested."}},{"@type":"Question","name":"What is APY?","acceptedAnswer":{"@type":"Answer","text":"Annual percentage yield is the effective annual rate after compounding."}},{"@type":"Question","name":"What is the difference between APR and APY?","acceptedAnswer":{"@type":"Answer","text":"APR is the stated annual rate without compounding, while APY includes the effect of compounding within the year. A 5 percent rate compounded monthly has an APY of about 5.12 percent. When comparing savings accounts, APY is the better number to use."}},{"@type":"Question","name":"How do I calculate compound interest with monthly deposits?","acceptedAnswer":{"@type":"Answer","text":"Add the future value of each deposit to the future value of your starting amount. The deposit formula is payment times ((1 + r) to the n, minus 1), divided by r, with r the rate per period. The calculator does this when you enter a regular contribution."}},{"@type":"Question","name":"Is compound interest taxable?","acceptedAnswer":{"@type":"Answer","text":"In most regular savings, CD and brokerage accounts, interest is taxable income in the year it is credited, even if you leave it in the account. Retirement accounts can defer or exempt that tax depending on type. Check IRS guidance or ask a tax professional."}},{"@type":"Question","name":"How long does it take to double money at 7 percent?","acceptedAnswer":{"@type":"Answer","text":"About 10 years. The Rule of 72 gives 72 divided by 7, or roughly 10.3 years, and the exact figure with annual compounding is about 10.24 years. This assumes the rate holds steady and no money is withdrawn."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#594ce6">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/compound-interest-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/compound-interest-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            <polyline points="17 6 23 6 23 12"></polyline>
+          </svg>
+        </div>
+        <div>
+          <h1>Compound Interest Calculator</h1>
+          <p>Calculate growth with compound interest</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>See how your money can grow over time with the power of compound interest.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="2" y2="22"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            Investment Parameters
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Base Amount -->
+          <div class="form-group">
+            <label class="form-label" for="baseAmount">
+              Base Amount (Principal)
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="baseAmount" class="has-icon" value="5000" placeholder="5,000">
+            </div>
+          </div>
+
+           <!-- Interest Rate -->
+          <div class="form-group">
+            <label class="form-label" for="interestRate">
+              Interest Rate
+            </label>
+            <div class="input-row">
+              <input min="0" max="100" type="number" id="interestRate" value="5" step="0.01" placeholder="5">
+              <span>%</span>
+            </div>
+          </div>
+
+           <!-- Years -->
+          <div class="form-group">
+            <label class="form-label" for="years">
+              Years to Grow
+            </label>
+            <div class="input-row">
+              <input min="0" max="100" type="number" id="years" value="10" placeholder="10">
+              <span>years</span>
+            </div>
+          </div>
+
+          <!-- Compound Freq -->
+           <div class="form-group">
+             <label class="form-label" for="compoundFreq">Compound Frequency</label>
+             <div class="input-row">
+                 <select id="compoundFreq">
+                     <option value="365">Daily</option>
+                     <option value="12" selected>Monthly</option>
+                     <option value="4">Quarterly</option>
+                     <option value="2">Semiannually</option>
+                     <option value="1">Annually</option>
+                 </select>
+             </div>
+          </div>
+
+           <!-- Regular Deposits -->
+           <div class="form-group">
+            <label class="form-label" for="monthlyDeposit">
+              Regular Monthly Deposit (Optional)
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="monthlyDeposit" class="has-icon" value="100" placeholder="0">
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20"></path>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <h3>Enter investment details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle" id="resultLabel">Future Value</div>
+             <div class="result-value" id="resultValueDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Metric</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Pie Chart -->
+           <div class="card u-mt">
+            <div class="card-header">
+                <div class="card-title u-fs1">Principal vs. Interest</div>
+            </div>
+            <div class="card-content">
+              <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graph & Schedule Section -->
+    <div id="graphSection" class="amortization-section" style="display: none;">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="schedule-header-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            Growth Over Time
+          </div>
+        </div>
+        <div class="card-content">
+           <div class="line-chart-container">
+               <canvas id="lineChart"></canvas>
+           </div>
+
+           <div class="schedule-table-wrapper">
+             <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Interest</th>
+                        <th>Total Interest</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="scheduleTableBody">
+                    <!-- Dynamic -->
+                </tbody>
+             </table>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Compound Interest Calculator</h2>
+      <p>Compound interest is interest earned on both your original money and the interest it has already earned. Over long periods it makes savings grow faster than simple interest, which is why starting early matters.</p>
+      <p>This calculator shows how an initial deposit and regular contributions grow over time at your chosen rate and compounding frequency.</p>
+      <h2>How to Use the Compound Interest Calculator</h2>
+      <ol><li>Enter the starting amount and annual interest rate.</li><li>Choose the time period and how often interest compounds.</li><li>Add any regular contribution, then click <strong>Calculate</strong>.</li></ol>
+      <h2>Compound Interest Formula</h2>
+      <p><code>A = P × (1 + r ÷ n)^(n × t)</code>, where P is the principal, r the annual rate, n the compounding periods per year and t the number of years.</p>
+      <div class="example"><p><strong>Example:</strong> $10,000 at 5 percent compounded annually for 10 years grows to <strong>$16,288.95</strong>, earning $6,288.95 in interest. With simple interest it would earn only $5,000.</p></div>
+      <h2>The Rule of 72</h2>
+      <p>Divide 72 by the annual rate to estimate how many years it takes to double your money. At 6 percent it takes about 12 years; at 8 percent about 9 years.</p>
+      <!--seo:expanded-->
+      <h2>How Compounding Frequency Changes the Result</h2>
+<p>The more often interest is added to the balance, the more it earns on itself. The effect is real but modest. Here is $10,000 at 5 percent for 10 years:</p>
+<table><thead><tr><th>Compounding</th><th>Ending balance</th><th>Effective annual yield</th></tr></thead><tbody>
+<tr><td>Annually</td><td>$16,288.95</td><td>5.000%</td></tr>
+<tr><td>Quarterly</td><td>$16,436.19</td><td>5.095%</td></tr>
+<tr><td>Monthly</td><td>$16,470.09</td><td>5.116%</td></tr>
+<tr><td>Daily</td><td>$16,486.65</td><td>5.127%</td></tr>
+</tbody></table>
+<p>Going from annual to daily compounding adds under $200 over a decade. The rate and the time horizon matter far more than the compounding schedule. The effective annual yield (often called APY on savings accounts) is the figure to compare between banks, because it already includes compounding.</p>
+<h2>Why Time Beats Almost Everything Else</h2>
+<p>Because growth builds on growth, the same deposit gains more in each later year. With no new deposits, $10,000 at 5 percent compounded annually becomes $16,288.95 after 10 years, $26,532.98 after 20 years and $43,219.42 after 30 years. The second decade adds about $10,244, and the third adds about $16,686.</p>
+<div class="example"><p><strong>Example:</strong> Suppose two people each save $200 a month and earn a hypothetical 7 percent, compounded monthly. One starts at 25 and stops at 65, investing $96,000 in total, and ends with about <strong>$524,963</strong>. The other starts at 35 and invests $72,000, ending with about <strong>$243,994</strong>. Ten extra years of contributions more than doubles the result.</p></div>
+<p>The 7 percent figure is an assumption, not a promise. Actual investment returns vary from year to year and can be negative, unlike a fixed-rate savings account. To model regular contributions alongside a lump sum, try the <a href="investment-calculator.html">investment calculator</a>.</p>
+<h2>What the Calculator Does Not Include</h2>
+<ul>
+<li><strong>Taxes.</strong> Interest in a regular savings or brokerage account is generally taxable in the year it is earned, which slows compounding. Tax-advantaged accounts work differently. See the IRS for current rules.</li>
+<li><strong>Inflation.</strong> A balance of $43,219 in 30 years buys less than $43,219 does today. Use the <a href="inflation-calculator.html">inflation calculator</a> to convert results into today's dollars.</li>
+<li><strong>Fees.</strong> Account and fund fees reduce your effective return. A one-point fee on a 7 percent return is a 6 percent return in practice.</li>
+<li><strong>Variable rates.</strong> Savings account rates change. The calculator assumes one fixed rate for the whole period.</li>
+</ul>
+<h2>Compound Interest Works Against Borrowers Too</h2>
+<p>The same math applies to debts. Credit card balances typically compound daily or monthly, so unpaid interest is added to what you owe and then charged interest itself. If you only need a quick comparison of simple and compound growth, the <a href="interest-calculator.html">interest calculator</a> shows both side by side.</p>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What is the difference between simple and compound interest?</summary><p>Simple interest is only on the principal. Compound interest also earns interest on previous interest.</p></details>
+        <details class="faq-item"><summary>Does compounding frequency matter?</summary><p>Yes, but only a little. Daily compounding earns slightly more than monthly, and monthly more than annual.</p></details>
+        <details class="faq-item"><summary>How can I make compound interest work for me?</summary><p>Start early, contribute regularly and leave earnings invested.</p></details>
+        <details class="faq-item"><summary>What is APY?</summary><p>Annual percentage yield is the effective annual rate after compounding.</p></details>
+      <details class="faq-item"><summary>What is the difference between APR and APY?</summary><p>APR is the stated annual rate without compounding, while APY includes the effect of compounding within the year. A 5 percent rate compounded monthly has an APY of about 5.12 percent. When comparing savings accounts, APY is the better number to use.</p></details><details class="faq-item"><summary>How do I calculate compound interest with monthly deposits?</summary><p>Add the future value of each deposit to the future value of your starting amount. The deposit formula is payment times ((1 + r) to the n, minus 1), divided by r, with r the rate per period. The calculator does this when you enter a regular contribution.</p></details><details class="faq-item"><summary>Is compound interest taxable?</summary><p>In most regular savings, CD and brokerage accounts, interest is taxable income in the year it is credited, even if you leave it in the account. Retirement accounts can defer or exempt that tax depending on type. Check IRS guidance or ask a tax professional.</p></details><details class="faq-item"><summary>How long does it take to double money at 7 percent?</summary><p>About 10 years. The Rule of 72 gives 72 divided by 7, or roughly 10.3 years, and the exact figure with annual compounding is about 10.24 years. This assumes the rate holds steady and no money is withdrawn.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound interest calculator</a></li><li><a href="https://www.irs.gov/individuals" rel="noopener" target="_blank">IRS: Individuals</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="investment-calculator.html">Investment Calculator</a></li><li><a href="interest-calculator.html">Interest Calculator</a></li><li><a href="retirement-calculator.html">Retirement Calculator</a></li><li><a href="dividend-calculator.html">Dividend Calculator</a></li><li><a href="inflation-calculator.html">Inflation Calculator</a></li><li><a href="finance-calculator.html">Finance Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Results are estimates based on the figures you enter and are for general information only. This is not financial, tax or legal advice. Rates, fees and rules vary by lender and jurisdiction.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Compound Interest Calculator | Financial Planning Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

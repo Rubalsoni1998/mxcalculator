@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP02WGF13D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YP02WGF13D');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Calculator: Future Value | Mx Calculator</title>
+  <meta name="description" content="Project the future value of an investment with regular contributions, compounding and an inflation adjustment.">
+  <link rel="canonical" href="https://mxcalculator.com/calculators/investment-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mx Calculator">
+  <meta property="og:title" content="Investment Calculator: Future Value | Mx Calculator">
+  <meta property="og:description" content="Project the future value of an investment with regular contributions, compounding and an inflation adjustment.">
+  <meta property="og:url" content="https://mxcalculator.com/calculators/investment-calculator.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Investment Calculator: Future Value | Mx Calculator">
+  <meta name="twitter:description" content="Project the future value of an investment with regular contributions, compounding and an inflation adjustment.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","dateModified":"2026-11-22","publisher":{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"},"name":"Investment Calculator","description":"Project the future value of an investment with regular contributions, compounding and an inflation adjustment.","url":"https://mxcalculator.com/calculators/investment-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Mx Calculator","item":"https://mxcalculator.com/"},{"@type":"ListItem","position":2,"name":"Investment Calculator","item":"https://mxcalculator.com/calculators/investment-calculator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What return rate should I assume?","acceptedAnswer":{"@type":"Answer","text":"Long-term stock market averages are often cited near 7 percent after inflation, but actual returns vary widely."}},{"@type":"Question","name":"Is it better to invest a lump sum or monthly?","acceptedAnswer":{"@type":"Answer","text":"Lump sums have more time to grow; monthly investing spreads out risk and fits a budget."}},{"@type":"Question","name":"How does inflation affect my results?","acceptedAnswer":{"@type":"Answer","text":"It reduces buying power. Use the inflation-adjusted figure to see future money in today's dollars."}},{"@type":"Question","name":"Does this guarantee my balance?","acceptedAnswer":{"@type":"Answer","text":"No. It is a projection, not a promise."}},{"@type":"Question","name":"How much will $500 a month grow to?","acceptedAnswer":{"@type":"Answer","text":"With monthly compounding at 7% for 20 years and no starting balance, $500 a month grows to about $260,463. Change the return, years and starting amount in the calculator to see your own figure."}},{"@type":"Question","name":"What return should I assume?","acceptedAnswer":{"@type":"Answer","text":"Use a range rather than one number, for example 4%, 6% and 8%. Long-term returns depend on what you hold, and past results do not guarantee future ones."}},{"@type":"Question","name":"Is the result before or after tax?","acceptedAnswer":{"@type":"Answer","text":"It is before tax unless you account for it. Taxes depend on the account type and your bracket, so treat the result as a pre-tax estimate."}}]}]}</script>
+  <meta property="og:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mx Calculator logo">
+  <meta name="twitter:image" content="https://mxcalculator.com/assets/img/og-image.png">
+  <meta name="twitter:image:alt" content="Mx Calculator logo">
+  <meta name="theme-color" content="#10b77f">
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/pages/investment-calculator.css">
+  <link rel="stylesheet" href="../assets/css/seo-content.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+  <script defer src="../assets/js/enhance.js"></script>
+  <script defer src="../assets/js/pages/investment-calculator.js"></script>
+  <script defer src="../assets/js/responsive.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="../index.html" class="back-link" aria-label="Back to all calculators"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg><span class="back-text">All calculators</span></a>
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20"></path>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1>Investment Calculator</h1>
+          <p>Estimate future value and investment growth</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Info Banner -->
+    <div class="info-banner">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" x2="12" y1="8" y2="12"></line>
+        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+      </svg>
+      <p>Calculate potential investment returns based on contributions, interest rate, and time.</p>
+    </div>
+
+    <div class="main-grid">
+      <!-- Form Card -->
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="card-title-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" x2="12" y1="1" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            Investment Parameters
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Currency Selection -->
+          <div class="form-group">
+            <label class="form-label" for="currencySelector">Currency</label>
+            <div class="input-row">
+              <select id="currencySelector" onchange="setCurrency(this.value)">
+                <option value="USD">USD ($)</option>
+                <option value="INR">INR (₹)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Starting Amount -->
+          <div class="form-group">
+            <label class="form-label" for="startAmount">
+              Starting Amount
+            </label>
+            <div class="input-wrapper input-icon-wrapper">
+              <span class="input-icon dynamic-symbol">$</span>
+              <input type="number" id="startAmount" class="has-icon" value="10000" placeholder="10,000">
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label class="form-label" for="investmentTerm">
+              After (Years)
+            </label>
+            <div class="input-row">
+                <input min="0" max="100" type="number" id="investmentTerm" value="10" placeholder="10">
+                <span>years</span>
+            </div>
+          </div>
+
+          <!-- Return Rate -->
+          <div class="form-group">
+            <label class="form-label">
+              Return Rate
+              <span class="help-icon tooltip" data-tooltip="Expected annual rate of return.">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  <path d="M12 17h.01"></path>
+                </svg>
+              </span>
+            </label>
+            <div class="input-row">
+              <input min="0" max="100" type="number" id="returnRate" value="6" step="0.01" placeholder="6">
+              <span>%</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+             <label class="form-label" for="compoundFreq">Compound Frequency</label>
+             <div class="input-row">
+                 <select id="compoundFreq">
+                     <option value="1">Annually</option>
+                     <option value="2">Semiannually</option>
+                     <option value="4">Quarterly</option>
+                     <option value="12" selected>Monthly</option>
+                     <option value="365">Daily</option>
+                 </select>
+             </div>
+          </div>
+
+          <!-- More Options -->
+          <button type="button" class="more-options-btn" id="moreOptionsBtn" onclick="toggleMoreOptions()">
+            <span>+ Contributions</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <div id="moreOptionsContent" class="more-options-content">
+             <div class="form-group">
+                <label class="form-label" for="additionalContrib">Additional Contribution</label>
+                <div class="input-wrapper input-icon-wrapper">
+                  <span class="input-icon dynamic-symbol">$</span>
+                  <input type="number" id="additionalContrib" class="has-icon" value="500">
+                </div>
+            </div>
+
+             <div class="form-group">
+                 <label class="form-label" for="contribFreq">Contribution Frequency</label>
+                 <div class="input-row">
+                     <select id="contribFreq">
+                         <option value="12" selected>Monthly</option>
+                         <option value="1">Annually</option>
+                         <option value="26">Bi-Weekly</option>
+                     </select>
+                 </div>
+              </div>
+
+               <div class="form-group">
+                 <label class="form-label">Contribute at</label>
+                 <div class="input-row">
+                     <div class="toggle-group" style="width: 100%;">
+                         <button type="button" class="toggle-btn active u-flex1" id="contribBeginning" onclick="setContribTiming('beginning')">Beginning</button>
+                         <button type="button" class="toggle-btn u-flex1" id="contribEnd" onclick="setContribTiming('end')">End</button>
+                     </div>
+                 </div>
+              </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" onclick="calculate()">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                <line x1="8" x2="16" y1="6" y2="6"></line>
+                <line x1="16" x2="16" y1="14" y2="18"></line>
+                <path d="M16 10h.01"></path>
+                <path d="M12 10h.01"></path>
+                <path d="M8 10h.01"></path>
+                <path d="M12 14h.01"></path>
+                <path d="M8 14h.01"></path>
+                <path d="M12 18h.01"></path>
+                <path d="M8 18h.01"></path>
+              </svg>
+              Calculate
+            </button>
+            <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Card -->
+      <div id="resultsContainer" class="animate-slide-up">
+        <div id="resultsPlaceholder" class="card results-placeholder">
+          <div class="results-placeholder-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+          <h3>Enter investment details</h3>
+          <p>Results will appear here</p>
+        </div>
+
+        <div id="resultsContent" style="display: none;">
+          <div class="results-hero">
+             <div class="result-subtitle">End Balance</div>
+             <div class="result-value" id="endBalanceDisplay">$0.00</div>
+          </div>
+
+          <!-- Breakdown Table -->
+          <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="u-frame">
+                <table class="breakdown-table">
+                  <thead>
+                    <tr>
+                      <th>Component</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody id="breakdownTableBody">
+                    <!-- Dynamic content -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+           <!-- Pie Chart -->
+           <div class="card u-mt">
+            <div class="card-content u-pt">
+              <div class="chart-container">
+                <canvas id="pieChart"></canvas>
+              </div>
+              <div class="chart-legend" id="chartLegend"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <!-- Amortization/Chart Section -->
+    <div id="amortizationSection" class="amortization-section" style="display: none;">
+      <div class="card animate-slide-up">
+        <div class="card-header">
+          <div class="card-title">
+            <div class="schedule-header-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                <polyline points="16 7 22 7 22 13"></polyline>
+              </svg>
+            </div>
+            Annual Growth Schedule
+          </div>
+        </div>
+        <div class="card-content">
+          <!-- Line Chart -->
+          <div class="line-chart-container">
+            <canvas id="lineChart"></canvas>
+          </div>
+
+          <!-- Schedule Table -->
+          <div class="schedule-table-wrapper u-mt">
+            <table class="schedule-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Interest</th>
+                  <th>Total Interest</th>
+                  <th>Balance</th>
+                </tr>
+              </thead>
+              <tbody id="scheduleTableBody">
+                <!-- Dynamic content -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Description Content -->
+    <div class="calc-description seo-content">
+      <p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · Last updated <time datetime="2026-11-22">November 22, 2026</time></p>
+      <h2>About the Investment Calculator</h2>
+      <p>Investing a lump sum and adding to it regularly lets compound growth do much of the work. This calculator shows how much an investment could grow over time at an assumed annual return.</p>
+      <p>Enter a starting amount, contribution schedule and expected return to see the future value, total contributions and growth.</p>
+      <h2>How to Use the Investment Calculator</h2>
+      <ol><li>Enter the starting amount, number of years and expected return rate.</li><li>Choose compounding frequency and enter regular contributions.</li><li>Click <strong>Calculate</strong> to see your projected balance.</li></ol>
+      <h2>Future Value Formula</h2>
+      <p><code>FV = P × (1 + r)ⁿ + PMT × ((1 + r)ⁿ − 1) ÷ r</code> where r is the rate per period and n is the number of periods.</p>
+      <div class="example"><p><strong>Example:</strong> $10,000 invested with $500 added monthly at 7 percent, compounded monthly for 20 years, grows to roughly <strong>$300,800</strong>, of which $130,000 is money you put in.</p></div>
+      <h2>Tips for Realistic Projections</h2>
+      <ul><li>Use a conservative return such as 5 to 7 percent for diversified stock portfolios.</li><li>Remember that returns vary year to year.</li><li>Check results in today's dollars by accounting for inflation.</li></ul>
+      <!--seo:expanded-->
+      <h2>Worked Example: $10,000 Plus $500 a Month</h2>
+<p>Start with $10,000 and add $500 every month for 20 years, with returns compounded monthly. Total contributions are $130,000. The ending balance depends heavily on the return you assume:</p>
+<table><thead><tr><th>Annual return</th><th>Ending balance</th><th>Growth beyond contributions</th></tr></thead><tbody><tr><td>5%</td><td>$232,643</td><td>$102,643</td></tr><tr><td>7%</td><td>$300,851</td><td>$170,851</td></tr><tr><td>9%</td><td>$394,035</td><td>$264,035</td></tr></tbody></table>
+<p>These are illustrations, not forecasts. Real returns vary from year to year and are never guaranteed.</p>
+<h2>Adjusting for Inflation</h2>
+<p>At a 7% nominal return and 3% inflation, the real return is about 3.9%, and the same plan is worth roughly <strong>$202,721</strong> in today's dollars. Use the inflation field in the calculator to see this directly, or read about the effect on the <a href="inflation-calculator.html">inflation calculator</a> page.</p>
+<h2>What Moves the Result Most</h2>
+<ul><li><strong>Time.</strong> Starting earlier does more than saving more later, because growth compounds on earlier growth.</li><li><strong>Contributions.</strong> Regular deposits are the part you control.</li><li><strong>Fees.</strong> A fund charging 1% a year takes a meaningful share of long-term growth.</li><li><strong>Taxes.</strong> Taxable accounts, 401(k)s and IRAs are taxed differently. See the <a href="capital-gains-tax-calculator.html">capital gains tax calculator</a> for taxable accounts.</li></ul>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <details class="faq-item"><summary>What return rate should I assume?</summary><p>Long-term stock market averages are often cited near 7 percent after inflation, but actual returns vary widely.</p></details>
+        <details class="faq-item"><summary>Is it better to invest a lump sum or monthly?</summary><p>Lump sums have more time to grow; monthly investing spreads out risk and fits a budget.</p></details>
+        <details class="faq-item"><summary>How does inflation affect my results?</summary><p>It reduces buying power. Use the inflation-adjusted figure to see future money in today's dollars.</p></details>
+        <details class="faq-item"><summary>Does this guarantee my balance?</summary><p>No. It is a projection, not a promise.</p></details>
+      <details class="faq-item"><summary>How much will $500 a month grow to?</summary><p>With monthly compounding at 7% for 20 years and no starting balance, $500 a month grows to about $260,463. Change the return, years and starting amount in the calculator to see your own figure.</p></details><details class="faq-item"><summary>What return should I assume?</summary><p>Use a range rather than one number, for example 4%, 6% and 8%. Long-term returns depend on what you hold, and past results do not guarantee future ones.</p></details><details class="faq-item"><summary>Is the result before or after tax?</summary><p>It is before tax unless you account for it. Taxes depend on the account type and your bracket, so treat the result as a pre-tax estimate.</p></details></div>
+      <h2>Sources</h2>
+      <ul class="sources"><li><a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound interest calculator</a></li></ul>
+      <h2>Related Calculators</h2>
+      <ul class="related-list"><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li><li><a href="retirement-calculator.html">Retirement Calculator</a></li><li><a href="dividend-calculator.html">Dividend Calculator</a></li><li><a href="capital-gains-tax-calculator.html">Capital Gains Tax Calculator</a></li><li><a href="inflation-calculator.html">Inflation Calculator</a></li><li><a href="finance-calculator.html">Finance Calculator</a></li><li><a href="../topics/loans-and-investing-calculators.html">Loan & Investing Calculators</a></li></ul>
+      <p class="disclaimer">Investments can lose value. Projections are illustrations, not guarantees, and not investment advice.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Investment Calculator | Financial Growth Tool</p>
+      <p><a class="footer-home" href="../index.html">&larr; All calculators</a></p>
+      <p class="footer-legal">Estimates for general information only, not professional advice. <a href="../privacy.html">Privacy</a> &middot; <a href="../terms.html">Terms</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
