@@ -1,0 +1,42 @@
+name = "mx-calculator"
+main = "src/worker.js"
+compatibility_date = "2026-11-01"
+
+# Static files (calculators, CSS, JS, images, legal pages) are served by Cloudflare for free,
+# without running any code. Only the paths below wake the Worker.
+[assets]
+directory = "./public"
+binding = "ASSETS"
+html_handling = "none"            # keep URLs exactly as written (e.g. /calculators/bmi-calculator.html)
+not_found_handling = "404-page"   # serves public/404.html
+run_worker_first = [
+  "/",
+  "/index.html",
+  "/calculators/*",
+  "/states/*",
+  "/topics/*",
+  "/sitemap.xml",
+  "/admin",
+  "/admin/*",
+  "/_mx/*"
+]
+
+# Custom domain (domain must be on Cloudflare). Uncomment, or add it in the dashboard under Workers > Settings > Domains.
+# routes = [
+#   { pattern = "mxcalculator.com", custom_domain = true },
+#   { pattern = "www.mxcalculator.com", custom_domain = true }
+# ]
+
+[vars]
+ADMIN_USER = "admin"
+# The admin password is a SECRET, not a var:  npx wrangler secret put ADMIN_PASSWORD
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mx-calculator"
+database_id = "PASTE-ID-FROM-wrangler-d1-create"
+migrations_dir = "migrations"
+
+# Daily housekeeping: retention cleanup, expired admin sessions.
+[triggers]
+crons = ["17 3 * * *"]

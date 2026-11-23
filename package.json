@@ -1,0 +1,18 @@
+{
+  "name": "mx-calculator",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Mx Calculator on Cloudflare Workers + D1: static site, calculator on/off toggles, first-party analytics, admin panel.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node scripts/build.js && wrangler dev",
+    "deploy": "node scripts/build.js && wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply mx-calculator --remote",
+    "db:migrate:local": "wrangler d1 migrations apply mx-calculator --local",
+    "test": "node scripts/build.js && node test/smoke.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}
