@@ -1,0 +1,97 @@
+/* Shared base styles (reset, header, cards, forms, buttons, footer). Page stylesheets add theme + page-specific rules. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.info-banner p {
+  font-size: 0.875rem;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+/* ---- SEO additions: byline + related calculators (apply to every calculator page) ---- */
+.byline { font-size: .82rem; color: var(--muted-foreground, #6b7280); margin: 0 0 1.25rem; }
+.byline time { font-weight: 600; }
+.calc-description .related-list { list-style: none; padding: 0; margin: .5rem 0 1.5rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.calc-description .related-list li { margin: 0; }
+.calc-description .related-list a { display: inline-block; padding: .4rem .8rem; border: 1px solid var(--border, #e5e7eb); border-radius: 999px; color: var(--foreground, #111827); text-decoration: none; font-size: .9rem; }
+.calc-description .related-list a:hover { border-color: var(--primary, #0e816a); color: var(--primary, #0e816a); }
