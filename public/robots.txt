@@ -2,4 +2,21 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
+# AI crawlers explicitly allowed
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /admin
+
 Sitemap: https://mxcalculator.com/sitemap.xml
