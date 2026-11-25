@@ -141,7 +141,7 @@ ok('admin browsing is not counted', !(await own.text()).includes('mx-pv'));
 console.log('Calculator toggles');
 const A = (url, init = {}) => call(url, { ...init, headers: { ...(init.headers || {}), ...admin } });
 let d = await (await A('/admin/api/calculators')).json();
-ok('lists all 75 calculators with categories', d.total === 75 && d.categories.length > 3 && d.disabled === 0);
+ok('lists all 92 calculators with categories', d.total === 92 && d.categories.length > 3 && d.disabled === 0);
 r = await post('/admin/api/calculators', { slugs: ['bmi-calculator', 'mortgage-calculator', 'not-real'], enabled: false }, admin);
 d = await r.json();
 ok('switch off 2 (unknown slug ignored)', d.changed === 2 && d.disabled.join() === 'bmi-calculator,mortgage-calculator');
