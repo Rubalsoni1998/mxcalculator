@@ -71,7 +71,7 @@ assert len(SALES) == 50
 NATIONAL_AVG = 7.53
 
 # property tax data comes from the existing calculator script so the site stays consistent
-js = open(f'{ROOT}/assets/js/pages/property-tax-calculator.js', encoding='utf8').read()
+js = open(f'{ROOT}/../assets-src/js/pages/property-tax-calculator.js', encoding='utf8').read()
 PROP = {}
 for n, r, v in re.findall(r"\['([A-Za-z ]+)', ([0-9.]+), (\d+)\]", js):
     PROP[n] = dict(rate=float(r), value=int(v))
@@ -208,8 +208,9 @@ def faq_block(faqs):
 def jsonld(name, desc, path, crumbs, faqs, app=True):
     g = []
     if app:
-        g.append({"@type": "WebApplication", "name": name, "description": desc, "url": f"{SITE}/{path}", "applicationCategory": "FinanceApplication",
-                  "operatingSystem": "Any", "dateModified": TODAY_ISO, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        # WebPage, not WebApplication: Google requires aggregateRating/review on app types and the site has no genuine ratings.
+        g.append({"@type": "WebPage", "name": name, "description": desc, "url": f"{SITE}/{path}", "inLanguage": "en-US",
+                  "dateModified": TODAY_ISO, "isPartOf": {"@type": "WebSite", "name": "Mx Calculator", "url": SITE + "/"},
                   "publisher": {"@type": "Organization", "name": "Mx Calculator", "url": SITE + "/"}})
     g.append({"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "name": n, "item": f"{SITE}/{p}"} for i, (n, p) in enumerate(crumbs)]})
@@ -499,19 +500,19 @@ TOPICS = {
    title='Loan & Investment Calculators: Payments, Interest, Retirement', h1='Loan & Investing Calculators', sub='Borrow smarter and plan how money grows',
    desc='Free loan and investment calculators: monthly payment, amortization, auto loan, compound interest, investment growth, dividends, retirement and inflation.',
    intro='Whether you are comparing loan offers or planning for retirement, the same ideas apply: interest, time and regular payments. These calculators show how those inputs change the result.',
-   groups=[('Loans and payments', ['loan-calculator', 'payment-calculator', 'amortization-calculator', 'auto-loan-calculator', 'car-affordability-calculator', 'interest-rate-calculator']), ('Saving and investing', ['compound-interest-calculator', 'investment-calculator', 'dividend-calculator', 'retirement-calculator']), ('Interest and inflation', ['interest-calculator', 'inflation-calculator', 'finance-calculator']), ('Income', ['salary-calculator'])],
+   groups=[('Loans and payments', ['loan-calculator', 'payment-calculator', 'amortization-calculator', 'auto-loan-calculator', 'car-affordability-calculator', 'interest-rate-calculator']), ('Saving and investing', ['compound-interest-calculator', 'investment-calculator', 'dividend-calculator', 'stock-profit-calculator', 'retirement-calculator', 'net-worth-calculator']), ('Interest and inflation', ['interest-calculator', 'inflation-calculator', 'finance-calculator']), ('Income', ['salary-calculator'])],
    tips=['Compare loans by total interest as well as monthly payment.', 'Small rate differences compound over long terms.', 'Test investment plans with a range of returns, not a single guess.'], extra=[]),
  'health-and-fitness-calculators': dict(
    title='Health & Fitness Calculators: BMI, Calories, Pregnancy', h1='Health & Fitness Calculators', sub='Body measures, nutrition, training and pregnancy',
    desc='Free health and fitness calculators: BMI, body fat, calories, TDEE, macros, heart rate, pace, one rep max, pregnancy due date and more.',
    intro='These calculators help you understand body measurements, set calorie and nutrition targets, plan training and track pregnancy dates. They give estimates for general information and do not replace advice from a clinician.',
-   groups=[('Body measurements', ['bmi-calculator', 'healthy-weight-calculator', 'ideal-weight-calculator', 'overweight-calculator', 'body-fat-calculator', 'army-body-fat-calculator', 'lean-body-mass-calculator', 'body-type-calculator', 'body-surface-area-calculator']), ('Energy and nutrition', ['bmr-calculator', 'tdee-calculator', 'calorie-calculator', 'calories-burned-calculator', 'macro-calculator', 'protein-calculator', 'carbohydrate-calculator', 'fat-intake-calculator']), ('Training', ['target-heart-rate-calculator', 'one-rep-max-calculator', 'pace-calculator']), ('Health checks', ['bac-calculator', 'gfr-calculator']), ('Pregnancy and cycles', ['pregnancy-calculator', 'due-date-calculator', 'conception-calculator', 'pregnancy-conception-calculator', 'ovulation-calculator', 'period-calculator', 'pregnancy-weight-gain-calculator'])],
+   groups=[('Body measurements', ['bmi-calculator', 'healthy-weight-calculator', 'ideal-weight-calculator', 'overweight-calculator', 'body-fat-calculator', 'army-body-fat-calculator', 'lean-body-mass-calculator', 'body-type-calculator', 'body-surface-area-calculator']), ('Energy and nutrition', ['bmr-calculator', 'tdee-calculator', 'calorie-calculator', 'weight-loss-calculator', 'water-intake-calculator', 'calories-burned-calculator', 'macro-calculator', 'protein-calculator', 'carbohydrate-calculator', 'fat-intake-calculator']), ('Training', ['target-heart-rate-calculator', 'one-rep-max-calculator', 'pace-calculator']), ('Health checks', ['bac-calculator', 'gfr-calculator']), ('Pregnancy and cycles', ['pregnancy-calculator', 'due-date-calculator', 'conception-calculator', 'pregnancy-conception-calculator', 'ovulation-calculator', 'period-calculator', 'pregnancy-weight-gain-calculator'])],
    tips=['Use BMI as a screening number, then look at waist size, fitness and lab results.', 'Start calorie targets from your TDEE and adjust based on real results.', 'Talk to your doctor before major changes to diet, exercise or pregnancy care.'], extra=[]),
  'everyday-calculators': dict(
    title='Everyday Calculators: Math, Time, School & DIY', h1='Everyday Calculators', sub='Math, dates, school and handy utilities',
    desc='Free everyday calculators: percentages, fractions, unit conversion, dates and time, GPA and grades, password generator, concrete and more.',
    intro='Quick answers to common everyday questions: percentages, dates, grades, unit conversions and small projects around the house.',
-   groups=[('Math', ['percent-calculator', 'percent-change-calculator', 'fraction-calculator', 'scientific-calculator', 'standard-deviation-calculator', 'triangle-calculator', 'conversion-calculator']), ('Dates and time', ['age-calculator', 'date-calculator', 'time-calculator', 'hours-calculator']), ('School', ['gpa-calculator', 'grade-calculator']), ('Tech and home', ['password-generator', 'random-number-generator', 'ip-subnet-calculator', 'concrete-calculator', 'turkey-cooking-time-calculator'])],
+   groups=[('Math', ['percent-calculator', 'percent-change-calculator', 'fraction-calculator', 'scientific-calculator', 'standard-deviation-calculator', 'triangle-calculator', 'conversion-calculator', 'temperature-converter', 'pounds-to-kg-converter', 'inches-to-cm-converter']), ('Dates and time', ['age-calculator', 'date-calculator', 'countdown-calculator', 'time-calculator', 'hours-calculator']), ('School', ['gpa-calculator', 'weighted-gpa-calculator', 'grade-calculator']), ('Tech and home', ['password-generator', 'random-number-generator', 'ip-subnet-calculator', 'concrete-calculator', 'cubic-yard-calculator', 'paint-calculator', 'flooring-calculator', 'dog-age-calculator', 'word-counter', 'cooking-measurement-converter', 'coin-flip', 'turkey-cooking-time-calculator']), ('Travel', ['road-trip-cost-calculator'])],
    tips=['Percent change and percent of a number are different questions; pick the right tool.', 'Check unit systems (US vs. metric) before converting.'], extra=[]),
 }
 

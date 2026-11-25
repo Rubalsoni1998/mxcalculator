@@ -52,9 +52,9 @@ for f in sorted(glob.glob(f'{ROOT}/calculators/*.html')):
         problems.append((slug, 'description not applied'))
     # ---- drop the keywords meta (ignored by Google and Bing)
     h = re.sub(r'\n?\s*<meta name="keywords" content=".*?">', '', h)
-    # ---- JSON-LD: modified date + publisher on the WebApplication node
+    # ---- JSON-LD: modified date + publisher on the WebPage node
     if '"dateModified"' not in h:
-        h = h.replace('"@type":"WebApplication",', f'"@type":"WebApplication","dateModified":"{UPDATED_ISO}","publisher":{{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"}},', 1)
+        h = h.replace('"@type":"WebPage",', f'"@type":"WebPage","dateModified":"{UPDATED_ISO}","publisher":{{"@type":"Organization","name":"Mx Calculator","url":"https://mxcalculator.com/"}},', 1)
     # ---- byline
     if '<!--seo:byline-->' not in h:
         byline = (f'<p class="byline"><!--seo:byline-->Maintained by the Mx Calculator editorial team · '
