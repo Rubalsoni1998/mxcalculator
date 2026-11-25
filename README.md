@@ -72,3 +72,13 @@ Bots count too (they are stored and flagged). Deleting rows (retention, purge) a
   Sales tax data: Tax Foundation, Midyear 2026 (rates as of July 1, 2026). Property tax data comes from `property-tax-calculator.js`.
 - `finalize.py` – home-page sections, hub links on calculator pages, sitemap.xml.
 All scripts are idempotent. After changing rates, edit `gen_states.py`, rerun it, then `finalize.py`.
+
+## SEO maintenance scripts
+
+- `python3 scripts/seo/fix_schema.py` converts any `WebApplication` JSON-LD node to `WebPage`. Google requires a rating or review on app types and the site has no genuine ratings, so pages use `WebPage` (Semrush "Invalid structured data items"). `gen_states.py` and `apply_step1.py` already emit `WebPage`.
+- `python3 scripts/seo/gen_llms.py` rebuilds `public/llms.txt` from the topic hubs and `meta.py`. Run it after adding calculators.
+- `Content-Signal` in the live `robots.txt` is injected by Cloudflare (managed robots.txt / AI Crawl Control), not by this repo. See `public/robots.txt` for the file the repo ships.
+
+## Assets: edit `assets-src/`, not `public/assets/`
+`assets-src/css` and `assets-src/js` hold the readable source. `scripts/minify.mjs` (run by `npm run build`, `dev`, `deploy`, `test`) writes
+the minified copies into `public/assets/`. Run `npm install` once so `esbuild` is available. This fixes Semrush "Unminified JavaScript and CSS files".
