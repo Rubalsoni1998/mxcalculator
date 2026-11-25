@@ -1,135 +1,14 @@
-// State
-let state = {
-  currency: 'USD',
-  locale: 'en-US',
-  pieChart: null
-};
-
-// Initialize
-document.addEventListener('DOMContentLoaded', function() {
-  calculate(); 
-});
-
-// Toggle functions
-function setCurrency(currency) {
-  state.currency = currency;
-  state.locale = currency === 'INR' ? 'en-IN' : 'en-US';
-  const symbol = currency === 'INR' ? '₹' : '$';
-
-  // Update Input Icons
-  document.querySelectorAll('.dynamic-symbol').forEach(el => {
-    el.textContent = symbol;
-  });
-  calculate();
-}
-
-// Calculation Logic
-function calculate() {
-    const price = parseFloat(document.getElementById('beforeTaxPrice').value) || 0;
-    const rate = parseFloat(document.getElementById('taxRate').value) || 0;
-
-    const taxAmount = price * (rate / 100);
-    const totalPrice = price + taxAmount;
-
-    state.results = {
-        price,
-        taxAmount,
-        totalPrice,
-        rate
-    };
-
-    renderResults();
-}
-
-function renderResults() {
-  if (!state.results) return;
-
-  document.getElementById('resultsPlaceholder').style.display = 'none';
-  document.getElementById('resultsContent').style.display = 'block';
-
-  const r = state.results;
-  document.getElementById('resultValueDisplay').textContent = formatCurrency(r.totalPrice);
-
-  // Breakdown table
-  const tableBody = document.getElementById('breakdownTableBody');
-  tableBody.innerHTML = `
+let state={currency:"USD",locale:"en-US",pieChart:null};document.addEventListener("DOMContentLoaded",function(){calculate()});function setCurrency(t){state.currency=t,state.locale=t==="INR"?"en-IN":"en-US";const n=t==="INR"?"\u20B9":"$";document.querySelectorAll(".dynamic-symbol").forEach(a=>{a.textContent=n}),calculate()}function calculate(){const t=parseFloat(document.getElementById("beforeTaxPrice").value)||0,n=parseFloat(document.getElementById("taxRate").value)||0,a=t*(n/100),e=t+a;state.results={price:t,taxAmount:a,totalPrice:e,rate:n},renderResults()}function renderResults(){if(!state.results)return;document.getElementById("resultsPlaceholder").style.display="none",document.getElementById("resultsContent").style.display="block";const t=state.results;document.getElementById("resultValueDisplay").textContent=formatCurrency(t.totalPrice);const n=document.getElementById("breakdownTableBody");n.innerHTML=`
     <tr>
         <td class="muted">Before Tax Price</td>
-        <td>${formatCurrency(r.price)}</td>
+        <td>${formatCurrency(t.price)}</td>
     </tr>
      <tr>
-        <td class="muted">Sales Tax (${r.rate}%)</td>
-        <td>${formatCurrency(r.taxAmount)}</td>
+        <td class="muted">Sales Tax (${t.rate}%)</td>
+        <td>${formatCurrency(t.taxAmount)}</td>
     </tr>
      <tr class="total-row">
         <td>Total Price</td>
-        <td>${formatCurrency(r.totalPrice)}</td>
+        <td>${formatCurrency(t.totalPrice)}</td>
     </tr>
-  `;
-
-  // Chart
-  renderPieChart();
-}
-
-function renderPieChart() {
-  const r = state.results;
-  const ctx = document.getElementById('pieChart').getContext('2d');
-
-  if (state.pieChart) {
-    state.pieChart.destroy();
-  }
-
-  const data = [
-      { label: 'Base Price', value: r.price, color: 'hsl(180, 60%, 80%)' }, // Light Teal
-      { label: 'Tax', value: r.taxAmount, color: 'hsl(180, 100%, 30%)' } // Primary Teal
-  ];
-
-  state.pieChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: data.map(d => d.label),
-      datasets: [{
-        data: data.map(d => d.value),
-        backgroundColor: data.map(d => d.color),
-        borderWidth: 0,
-        hoverOffset: 4
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      cutout: '60%',
-      plugins: {
-        legend: { display: true, position: 'bottom' },
-        tooltip: {
-           callbacks: {
-              label: function(context) {
-                 const total = context.dataset.data.reduce((a, b) => a + b, 0);
-                 const percentage = ((context.raw / total) * 100).toFixed(1);
-                 return `${context.label}: ${formatCurrency(context.raw)} (${percentage}%)`;
-              }
-           }
-        }
-      }
-    }
-  });
-}
-
-function clearForm() {
-  document.getElementById('beforeTaxPrice').value = "";
-  document.getElementById('taxRate').value = "";
-
-  document.getElementById('resultsContent').style.display = 'none';
-  document.getElementById('resultsPlaceholder').style.display = 'flex';
-}
-
-// Utility functions
-function formatCurrency(value) {
-  if (isNaN(value)) return "Error";
-  return new Intl.NumberFormat(state.locale, {
-    style: 'currency',
-    currency: state.currency,
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-  }).format(value);
-}
+  `,renderPieChart()}function renderPieChart(){const t=state.results,n=document.getElementById("pieChart").getContext("2d");state.pieChart&&state.pieChart.destroy();const a=[{label:"Base Price",value:t.price,color:"hsl(180, 60%, 80%)"},{label:"Tax",value:t.taxAmount,color:"hsl(180, 100%, 30%)"}];state.pieChart=new Chart(n,{type:"doughnut",data:{labels:a.map(e=>e.label),datasets:[{data:a.map(e=>e.value),backgroundColor:a.map(e=>e.color),borderWidth:0,hoverOffset:4}]},options:{responsive:!0,maintainAspectRatio:!1,cutout:"60%",plugins:{legend:{display:!0,position:"bottom"},tooltip:{callbacks:{label:function(e){const l=e.dataset.data.reduce((o,c)=>o+c,0),r=(e.raw/l*100).toFixed(1);return`${e.label}: ${formatCurrency(e.raw)} (${r}%)`}}}}}})}function clearForm(){document.getElementById("beforeTaxPrice").value="",document.getElementById("taxRate").value="",document.getElementById("resultsContent").style.display="none",document.getElementById("resultsPlaceholder").style.display="flex"}function formatCurrency(t){return isNaN(t)?"Error":new Intl.NumberFormat(state.locale,{style:"currency",currency:state.currency,minimumFractionDigits:2,maximumFractionDigits:2}).format(t)}

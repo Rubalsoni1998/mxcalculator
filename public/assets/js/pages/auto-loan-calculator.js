@@ -1,226 +1,21 @@
-// State
-let state = {
-  downPaymentType: 'dollar',
-  scheduleView: 'annual',
-  results: null,
-  pieChart: null,
-  lineChart: null,
-  currency: 'USD',
-  locale: 'en-US'
-};
-
-// Initialize
-document.addEventListener('DOMContentLoaded', function() {
-  initializeYearSelects();
-  initializeDateSelects();
-  calculate(); // Calculate on load
-});
-
-function initializeYearSelects() {
-  const currentYear = new Date().getFullYear();
-  const startYearSelect = document.getElementById('startYear');
-
-  for (let i = 0; i < 50; i++) {
-    const year = currentYear + i;
-    startYearSelect.add(new Option(year, year));
-  }
-}
-
-function initializeDateSelects() {
-  const currentDate = new Date();
-  document.getElementById('startMonth').value = currentDate.getMonth();
-  document.getElementById('startYear').value = currentDate.getFullYear();
-}
-
-// Toggle functions
-function setCurrency(currency) {
-  state.currency = currency;
-  state.locale = currency === 'INR' ? 'en-IN' : 'en-US';
-  const symbol = currency === 'INR' ? '₹' : '$';
-
-  // Update Input Icons
-  document.querySelectorAll('.dynamic-symbol').forEach(el => {
-    el.textContent = symbol;
-  });
-
-  // Update Toggle Buttons
-  document.querySelectorAll('.dynamic-symbol-btn').forEach(btn => {
-    btn.textContent = symbol;
-  });
-
-  // Re-calculate to update formatting
-  calculate();
-}
-
-function setDownPaymentType(type) {
-  state.downPaymentType = type;
-  document.getElementById('downPaymentPercent').classList.toggle('active', type === 'percent');
-  document.getElementById('downPaymentDollar').classList.toggle('active', type === 'dollar');
-}
-
-function toggleMoreOptions() {
-  const btn = document.getElementById('moreOptionsBtn');
-  const content = document.getElementById('moreOptionsContent');
-  btn.classList.toggle('open');
-  content.classList.toggle('open');
-}
-
-function setScheduleView(view) {
-  state.scheduleView = view;
-  document.getElementById('annualTab').classList.toggle('active', view === 'annual');
-  document.getElementById('monthlyTab').classList.toggle('active', view === 'monthly');
-  document.getElementById('scheduleCol1').textContent = view === 'annual' ? 'Year' : 'Month';
-  renderScheduleTable();
-}
-
-// Calculation
-function calculate() {
-  // Get Values
-  const autoPrice = parseFloat(document.getElementById('autoPrice').value) || 0;
-  const loanTermMonths = parseInt(document.getElementById('loanTerm').value) || 60;
-  const interestRate = parseFloat(document.getElementById('interestRate').value) || 0;
-  const downPaymentInput = parseFloat(document.getElementById('downPayment').value) || 0;
-  const tradeInValue = parseFloat(document.getElementById('tradeInValue').value) || 0;
-  const tradeInOwed = parseFloat(document.getElementById('tradeInOwed').value) || 0;
-  const salesTaxRate = parseFloat(document.getElementById('salesTax').value) || 0;
-  const otherFees = parseFloat(document.getElementById('otherFees').value) || 0;
-  const includeFees = document.getElementById('includeFeesInLoan').checked;
-  const extraMonthlyPayment = parseFloat(document.getElementById('extraMonthlyPayment').value) || 0;
-
-  const startMonth = parseInt(document.getElementById('startMonth').value);
-  const startYear = parseInt(document.getElementById('startYear').value);
-
-  // Calculations
-  let downPayment = state.downPaymentType === 'percent' 
-    ? autoPrice * (downPaymentInput / 100) 
-    : downPaymentInput;
-
-  // Net Trade In
-  const netTradeIn = tradeInValue - tradeInOwed;
-
-  // Sales Tax Calculation (Simple logic: Tax on Price - Trade In Value)
-  // Note: Tax laws vary by state, this is a general approximation
-  const taxableAmount = Math.max(0, autoPrice - tradeInValue);
-  const salesTaxAmount = taxableAmount * (salesTaxRate / 100);
-
-  // Total Upfront Costs (if not included in loan)
-  const upfrontFees = includeFees ? 0 : (salesTaxAmount + otherFees);
-
-  // Loan Amount Calculation
-  let loanAmount = autoPrice - downPayment - netTradeIn;
-  if (includeFees) {
-      loanAmount += salesTaxAmount + otherFees;
-  }
-
-  if (loanAmount < 0) loanAmount = 0;
-
-  const monthlyRate = interestRate / 100 / 12;
-  const totalPayments = loanTermMonths; // Input is in months
-
-  // Monthly payment
-  let monthlyPayment;
-  if (monthlyRate === 0) {
-    monthlyPayment = loanAmount / totalPayments;
-  } else {
-    monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, totalPayments)) /
-      (Math.pow(1 + monthlyRate, totalPayments) - 1);
-  }
-
-  // Amortization Schedule Generation
-  const schedule = [];
-  let balance = loanAmount;
-  let totalInterest = 0;
-  let totalLoanPayment = 0;
-  const startDate = new Date(startYear, startMonth);
-
-  for (let month = 1; month <= totalPayments && balance > 0; month++) {
-    const currentDate = new Date(startDate);
-    currentDate.setMonth(currentDate.getMonth() + month - 1);
-
-    const interestPayment = balance * monthlyRate;
-    let principalPayment = monthlyPayment - interestPayment;
-
-    // Apply extra monthly payment
-    const extra = extraMonthlyPayment;
-
-    const totalPrincipalPayment = Math.min(principalPayment + extra, balance);
-    const actualExtraPayment = Math.max(0, totalPrincipalPayment - principalPayment);
-    principalPayment = totalPrincipalPayment - actualExtraPayment;
-
-    balance -= totalPrincipalPayment;
-    totalInterest += interestPayment;
-    totalLoanPayment += monthlyPayment + actualExtraPayment;
-
-    schedule.push({
-      month,
-      date: new Date(currentDate),
-      payment: monthlyPayment + actualExtraPayment,
-      principal: principalPayment + actualExtraPayment,
-      interest: interestPayment,
-      balance: Math.max(0, balance),
-      extraPayment: actualExtraPayment
-    });
-
-    if (balance <= 0) break;
-  }
-
-  // Totals for Display
-  const totalCost = totalLoanPayment + downPayment + netTradeIn + (includeFees ? 0 : (salesTaxAmount + otherFees)); // Total cost of car
-  const totalTaxAndFees = salesTaxAmount + otherFees;
-
-  state.results = {
-    autoPrice,
-    loanAmount,
-    monthlyPayment,
-    totalLoanPayment,
-    totalInterest,
-    salesTaxAmount,
-    otherFees,
-    totalTaxAndFees,
-    downPayment,
-    tradeInValue,
-    payoffDate: schedule.length > 0 ? schedule[schedule.length - 1].date : startDate,
-    schedule
-  };
-
-  renderResults();
-}
-
-function renderResults() {
-  if (!state.results) return;
-
-  document.getElementById('resultsPlaceholder').style.display = 'none';
-  document.getElementById('resultsContent').style.display = 'block';
-  document.getElementById('amortizationSection').style.display = 'block';
-
-  // Monthly payment
-  document.getElementById('monthlyPaymentDisplay').textContent = formatCurrency(state.results.monthlyPayment);
-
-  // Breakdown table
-  const r = state.results;
-  let tableHTML = `
+let state={downPaymentType:"dollar",scheduleView:"annual",results:null,pieChart:null,lineChart:null,currency:"USD",locale:"en-US"};document.addEventListener("DOMContentLoaded",function(){initializeYearSelects(),initializeDateSelects(),calculate()});function initializeYearSelects(){const e=new Date().getFullYear(),s=document.getElementById("startYear");for(let a=0;a<50;a++){const o=e+a;s.add(new Option(o,o))}}function initializeDateSelects(){const e=new Date;document.getElementById("startMonth").value=e.getMonth(),document.getElementById("startYear").value=e.getFullYear()}function setCurrency(e){state.currency=e,state.locale=e==="INR"?"en-IN":"en-US";const s=e==="INR"?"\u20B9":"$";document.querySelectorAll(".dynamic-symbol").forEach(a=>{a.textContent=s}),document.querySelectorAll(".dynamic-symbol-btn").forEach(a=>{a.textContent=s}),calculate()}function setDownPaymentType(e){state.downPaymentType=e,document.getElementById("downPaymentPercent").classList.toggle("active",e==="percent"),document.getElementById("downPaymentDollar").classList.toggle("active",e==="dollar")}function toggleMoreOptions(){const e=document.getElementById("moreOptionsBtn"),s=document.getElementById("moreOptionsContent");e.classList.toggle("open"),s.classList.toggle("open")}function setScheduleView(e){state.scheduleView=e,document.getElementById("annualTab").classList.toggle("active",e==="annual"),document.getElementById("monthlyTab").classList.toggle("active",e==="monthly"),document.getElementById("scheduleCol1").textContent=e==="annual"?"Year":"Month",renderScheduleTable()}function calculate(){const e=parseFloat(document.getElementById("autoPrice").value)||0,s=parseInt(document.getElementById("loanTerm").value)||60,a=parseFloat(document.getElementById("interestRate").value)||0,o=parseFloat(document.getElementById("downPayment").value)||0,n=parseFloat(document.getElementById("tradeInValue").value)||0,r=parseFloat(document.getElementById("tradeInOwed").value)||0,d=parseFloat(document.getElementById("salesTax").value)||0,c=parseFloat(document.getElementById("otherFees").value)||0,t=document.getElementById("includeFeesInLoan").checked,l=parseFloat(document.getElementById("extraMonthlyPayment").value)||0,i=parseInt(document.getElementById("startMonth").value),u=parseInt(document.getElementById("startYear").value);let E=state.downPaymentType==="percent"?e*(o/100):o;const T=n-r,h=Math.max(0,e-n)*(d/100),D=t?0:h+c;let m=e-E-T;t&&(m+=h+c),m<0&&(m=0);const g=a/100/12,f=s;let y;g===0?y=m/f:y=m*(g*Math.pow(1+g,f))/(Math.pow(1+g,f)-1);const I=[];let p=m,M=0,w=0;const F=new Date(u,i);for(let v=1;v<=f&&p>0;v++){const P=new Date(F);P.setMonth(P.getMonth()+v-1);const x=p*g;let B=y-x;const C=Math.min(B+l,p),b=Math.max(0,C-B);if(B=C-b,p-=C,M+=x,w+=y+b,I.push({month:v,date:new Date(P),payment:y+b,principal:B+b,interest:x,balance:Math.max(0,p),extraPayment:b}),p<=0)break}const k=w+E+T+(t?0:h+c),L=h+c;state.results={autoPrice:e,loanAmount:m,monthlyPayment:y,totalLoanPayment:w,totalInterest:M,salesTaxAmount:h,otherFees:c,totalTaxAndFees:L,downPayment:E,tradeInValue:n,payoffDate:I.length>0?I[I.length-1].date:F,schedule:I},renderResults()}function renderResults(){if(!state.results)return;document.getElementById("resultsPlaceholder").style.display="none",document.getElementById("resultsContent").style.display="block",document.getElementById("amortizationSection").style.display="block",document.getElementById("monthlyPaymentDisplay").textContent=formatCurrency(state.results.monthlyPayment);const e=state.results;let s=`
     <tr>
       <td class="muted">Auto Price</td>
-      <td>${formatCurrency(r.autoPrice)}</td>
+      <td>${formatCurrency(e.autoPrice)}</td>
     </tr>
     <tr>
       <td class="muted">Sales Tax & Fees</td>
-      <td>${formatCurrency(r.totalTaxAndFees)}</td>
+      <td>${formatCurrency(e.totalTaxAndFees)}</td>
     </tr>
     <tr>
       <td class="muted">Total Interest</td>
-      <td>${formatCurrency(r.totalInterest)}</td>
+      <td>${formatCurrency(e.totalInterest)}</td>
     </tr>
     <tr class="total-row">
       <td>Total Loan Payments</td>
-      <td>${formatCurrency(r.totalLoanPayment)}</td>
+      <td>${formatCurrency(e.totalLoanPayment)}</td>
     </tr>
-  `;
-
-  document.getElementById('breakdownTableBody').innerHTML = tableHTML;
-
-  // Summary stats
-  const summaryHTML = `
+  `;document.getElementById("breakdownTableBody").innerHTML=s;const a=`
     <div class="stat-row">
       <span class="stat-label">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -229,15 +24,15 @@ function renderResults() {
         </svg>
         Loan Amount
       </span>
-      <span class="stat-value">${formatCurrency(r.loanAmount)}</span>
+      <span class="stat-value">${formatCurrency(e.loanAmount)}</span>
     </div>
     <div class="stat-row">
-      <span class="stat-label muted">Total of ${r.schedule.length} Payments</span>
-      <span class="stat-value">${formatCurrency(r.totalLoanPayment)}</span>
+      <span class="stat-label muted">Total of ${e.schedule.length} Payments</span>
+      <span class="stat-value">${formatCurrency(e.totalLoanPayment)}</span>
     </div>
     <div class="stat-row">
       <span class="stat-label muted">Total Interest</span>
-      <span class="stat-value rose">${formatCurrency(r.totalInterest)}</span>
+      <span class="stat-value rose">${formatCurrency(e.totalInterest)}</span>
     </div>
     <div class="stat-row">
       <span class="stat-label">
@@ -249,289 +44,27 @@ function renderResults() {
         </svg>
         Payoff Date
       </span>
-      <span class="stat-value">${formatDate(r.payoffDate)}</span>
+      <span class="stat-value">${formatDate(e.payoffDate)}</span>
     </div>
-  `;
-  document.getElementById('summaryStats').innerHTML = summaryHTML;
-
-  // Charts
-  renderPieChart();
-  renderLineChart();
-  renderScheduleTable();
-}
-
-function renderPieChart() {
-  const r = state.results;
-  const ctx = document.getElementById('pieChart').getContext('2d');
-
-  if (state.pieChart) {
-    state.pieChart.destroy();
-  }
-
-  const data = [
-    { label: 'Loan Principal', value: r.loanAmount, color: 'hsl(262, 83%, 58%)' },
-    { label: 'Total Interest', value: r.totalInterest, color: 'hsl(38, 92%, 50%)' }
-  ];
-
-  // If user paid significant down payment/trade in, maybe show that? 
-  // For standard view, Principal vs Interest is most common.
-  // Or Price vs Interest vs Tax. Let's do Price Breakdown components.
-
-  // Better Visual: Principal Loan vs Interest
-  // OR Total Cost Breakdown: Price, Tax, Interest.
-  // Let's stick to Loan Principal vs Interest for consistency with Loan Calc.
-
-  state.pieChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: data.map(d => d.label),
-      datasets: [{
-        data: data.map(d => d.value),
-        backgroundColor: data.map(d => d.color),
-        borderWidth: 0,
-        hoverOffset: 4
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      cutout: '60%',
-      plugins: {
-        legend: {
-          display: false
-        },
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              const total = context.dataset.data.reduce((a, b) => a + b, 0);
-              const percentage = ((context.raw / total) * 100).toFixed(0);
-              return `${context.label}: ${formatCurrency(context.raw)} (${percentage}%)`;
-            }
-          }
-        }
-      }
-    }
-  });
-
-  // Custom legend
-  const legendHTML = data.map(d => `
+  `;document.getElementById("summaryStats").innerHTML=a,renderPieChart(),renderLineChart(),renderScheduleTable()}function renderPieChart(){const e=state.results,s=document.getElementById("pieChart").getContext("2d");state.pieChart&&state.pieChart.destroy();const a=[{label:"Loan Principal",value:e.loanAmount,color:"hsl(262, 83%, 58%)"},{label:"Total Interest",value:e.totalInterest,color:"hsl(38, 92%, 50%)"}];state.pieChart=new Chart(s,{type:"doughnut",data:{labels:a.map(n=>n.label),datasets:[{data:a.map(n=>n.value),backgroundColor:a.map(n=>n.color),borderWidth:0,hoverOffset:4}]},options:{responsive:!0,maintainAspectRatio:!1,cutout:"60%",plugins:{legend:{display:!1},tooltip:{callbacks:{label:function(n){const r=n.dataset.data.reduce((c,t)=>c+t,0),d=(n.raw/r*100).toFixed(0);return`${n.label}: ${formatCurrency(n.raw)} (${d}%)`}}}}}});const o=a.map(n=>`
     <div class="legend-item">
-      <div class="legend-dot" style="background: ${d.color}"></div>
-      <span>${d.label}</span>
+      <div class="legend-dot" style="background: ${n.color}"></div>
+      <span>${n.label}</span>
     </div>
-  `).join('');
-  document.getElementById('chartLegend').innerHTML = legendHTML;
-}
-
-function renderLineChart() {
-  const r = state.results;
-  const ctx = document.getElementById('lineChart').getContext('2d');
-
-  if (state.lineChart) {
-    state.lineChart.destroy();
-  }
-
-  // Generate yearly data
-  const yearlyData = [];
-  let currentYear = r.schedule[0]?.date.getFullYear();
-  let yearlyInterest = 0;
-  let yearlyPrincipal = 0;
-  let yearCount = 1;
-
-  r.schedule.forEach((payment, index) => {
-    const paymentYear = payment.date.getFullYear();
-
-    if (paymentYear !== currentYear || index === r.schedule.length - 1) {
-      if (index === r.schedule.length - 1) {
-        yearlyInterest += payment.interest;
-        yearlyPrincipal += payment.principal;
-      }
-
-      yearlyData.push({
-        year: yearCount,
-        balance: index === r.schedule.length - 1 ? payment.balance : r.schedule[index - 1]?.balance || 0,
-        interest: yearlyInterest,
-        principal: yearlyPrincipal
-      });
-
-      yearCount++;
-      currentYear = paymentYear;
-      yearlyInterest = payment.interest;
-      yearlyPrincipal = payment.principal;
-    } else {
-      yearlyInterest += payment.interest;
-      yearlyPrincipal += payment.principal;
-    }
-  });
-
-  state.lineChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: yearlyData.map(d => d.year),
-      datasets: [
-        {
-          label: 'Balance',
-          data: yearlyData.map(d => d.balance),
-          borderColor: 'hsl(262, 83%, 58%)',
-          backgroundColor: 'hsla(262, 83%, 58%, 0.1)',
-          fill: true,
-          tension: 0.4
-        },
-        {
-          label: 'Interest',
-          data: yearlyData.map(d => d.interest),
-          borderColor: 'hsl(38, 92%, 50%)',
-          backgroundColor: 'hsla(38, 92%, 50%, 0.1)',
-          fill: true,
-          tension: 0.4
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      interaction: {
-        intersect: false,
-        mode: 'index'
-      },
-      plugins: {
-        legend: {
-          position: 'top'
-        },
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              return `${context.dataset.label}: ${formatCurrency(context.raw)}`;
-            }
-          }
-        }
-      },
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: 'Year'
-          },
-          grid: {
-            display: false
-          }
-        },
-        y: {
-          title: {
-            display: false
-          },
-          ticks: {
-            callback: function(value) {
-              return state.currency === 'INR' 
-                ? '₹' + (value / 1000).toFixed(0) + 'K'
-                : '$' + (value / 1000).toFixed(0) + 'K';
-            }
-          },
-          grid: {
-            color: 'hsl(210, 20%, 90%)'
-          }
-        }
-      }
-    }
-  });
-}
-
-function renderScheduleTable() {
-  const r = state.results;
-
-  if (state.scheduleView === 'annual') {
-    // Generate yearly summary
-    const yearlyData = [];
-    let currentYear = r.schedule[0]?.date.getFullYear();
-    let yearlyInterest = 0;
-    let yearlyPrincipal = 0;
-    let endingBalance = r.loanAmount;
-    let yearCount = 1;
-
-    r.schedule.forEach((payment, index) => {
-      const paymentYear = payment.date.getFullYear();
-
-      if (paymentYear !== currentYear || index === r.schedule.length - 1) {
-        if (index === r.schedule.length - 1) {
-          yearlyInterest += payment.interest;
-          yearlyPrincipal += payment.principal;
-          endingBalance = payment.balance;
-        }
-
-        yearlyData.push({
-          year: yearCount,
-          date: currentYear,
-          interest: yearlyInterest,
-          principal: yearlyPrincipal,
-          balance: index === r.schedule.length - 1 ? payment.balance : endingBalance
-        });
-
-        yearCount++;
-        currentYear = paymentYear;
-        yearlyInterest = payment.interest;
-        yearlyPrincipal = payment.principal;
-        endingBalance = payment.balance;
-      } else {
-        yearlyInterest += payment.interest;
-        yearlyPrincipal += payment.principal;
-        endingBalance = payment.balance;
-      }
-    });
-
-    const tableHTML = yearlyData.map(d => `
+  `).join("");document.getElementById("chartLegend").innerHTML=o}function renderLineChart(){var c;const e=state.results,s=document.getElementById("lineChart").getContext("2d");state.lineChart&&state.lineChart.destroy();const a=[];let o=(c=e.schedule[0])==null?void 0:c.date.getFullYear(),n=0,r=0,d=1;e.schedule.forEach((t,l)=>{var u;const i=t.date.getFullYear();i!==o||l===e.schedule.length-1?(l===e.schedule.length-1&&(n+=t.interest,r+=t.principal),a.push({year:d,balance:l===e.schedule.length-1?t.balance:((u=e.schedule[l-1])==null?void 0:u.balance)||0,interest:n,principal:r}),d++,o=i,n=t.interest,r=t.principal):(n+=t.interest,r+=t.principal)}),state.lineChart=new Chart(s,{type:"line",data:{labels:a.map(t=>t.year),datasets:[{label:"Balance",data:a.map(t=>t.balance),borderColor:"hsl(262, 83%, 58%)",backgroundColor:"hsla(262, 83%, 58%, 0.1)",fill:!0,tension:.4},{label:"Interest",data:a.map(t=>t.interest),borderColor:"hsl(38, 92%, 50%)",backgroundColor:"hsla(38, 92%, 50%, 0.1)",fill:!0,tension:.4}]},options:{responsive:!0,maintainAspectRatio:!1,interaction:{intersect:!1,mode:"index"},plugins:{legend:{position:"top"},tooltip:{callbacks:{label:function(t){return`${t.dataset.label}: ${formatCurrency(t.raw)}`}}}},scales:{x:{title:{display:!0,text:"Year"},grid:{display:!1}},y:{title:{display:!1},ticks:{callback:function(t){return state.currency==="INR"?"\u20B9"+(t/1e3).toFixed(0)+"K":"$"+(t/1e3).toFixed(0)+"K"}},grid:{color:"hsl(210, 20%, 90%)"}}}}})}function renderScheduleTable(){var s;const e=state.results;if(state.scheduleView==="annual"){const a=[];let o=(s=e.schedule[0])==null?void 0:s.date.getFullYear(),n=0,r=0,d=e.loanAmount,c=1;e.schedule.forEach((l,i)=>{const u=l.date.getFullYear();u!==o||i===e.schedule.length-1?(i===e.schedule.length-1&&(n+=l.interest,r+=l.principal,d=l.balance),a.push({year:c,date:o,interest:n,principal:r,balance:i===e.schedule.length-1?l.balance:d}),c++,o=u,n=l.interest,r=l.principal,d=l.balance):(n+=l.interest,r+=l.principal,d=l.balance)});const t=a.map(l=>`
       <tr>
-        <td>${d.year}</td>
-        <td>${d.date}</td>
-        <td>${formatCurrency(d.interest)}</td>
-        <td>${formatCurrency(d.principal)}</td>
-        <td>${formatCurrency(d.balance)}</td>
+        <td>${l.year}</td>
+        <td>${l.date}</td>
+        <td>${formatCurrency(l.interest)}</td>
+        <td>${formatCurrency(l.principal)}</td>
+        <td>${formatCurrency(l.balance)}</td>
       </tr>
-    `).join('');
-
-    document.getElementById('scheduleTableBody').innerHTML = tableHTML;
-  } else {
-    const tableHTML = r.schedule.map(d => `
+    `).join("");document.getElementById("scheduleTableBody").innerHTML=t}else{const a=e.schedule.map(o=>`
       <tr>
-        <td>${d.month}</td>
-        <td>${formatDate(d.date)}</td>
-        <td>${formatCurrency(d.interest)}</td>
-        <td>${formatCurrency(d.principal)}</td>
-        <td>${formatCurrency(d.balance)}</td>
+        <td>${o.month}</td>
+        <td>${formatDate(o.date)}</td>
+        <td>${formatCurrency(o.interest)}</td>
+        <td>${formatCurrency(o.principal)}</td>
+        <td>${formatCurrency(o.balance)}</td>
       </tr>
-    `).join('');
-
-    document.getElementById('scheduleTableBody').innerHTML = tableHTML;
-  }
-}
-
-function clearForm() {
-  document.getElementById('autoPrice').value = 35000;
-  document.getElementById('loanTerm').value = 60;
-  document.getElementById('interestRate').value = 6.5;
-  document.getElementById('downPayment').value = 0;
-  document.getElementById('tradeInValue').value = 0;
-  document.getElementById('tradeInOwed').value = 0;
-  document.getElementById('salesTax').value = 0;
-  document.getElementById('otherFees').value = 0;
-  document.getElementById('extraMonthlyPayment').value = 0;
-
-  setDownPaymentType('dollar');
-
-  document.getElementById('resultsContent').style.display = 'none';
-  document.getElementById('resultsPlaceholder').style.display = 'flex';
-  document.getElementById('amortizationSection').style.display = 'none';
-}
-
-// Utility functions
-function formatCurrency(value) {
-  return new Intl.NumberFormat(state.locale, {
-    style: 'currency',
-    currency: state.currency,
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2
-  }).format(value);
-}
-
-function formatDate(date) {
-  return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-}
+    `).join("");document.getElementById("scheduleTableBody").innerHTML=a}}function clearForm(){document.getElementById("autoPrice").value=35e3,document.getElementById("loanTerm").value=60,document.getElementById("interestRate").value=6.5,document.getElementById("downPayment").value=0,document.getElementById("tradeInValue").value=0,document.getElementById("tradeInOwed").value=0,document.getElementById("salesTax").value=0,document.getElementById("otherFees").value=0,document.getElementById("extraMonthlyPayment").value=0,setDownPaymentType("dollar"),document.getElementById("resultsContent").style.display="none",document.getElementById("resultsPlaceholder").style.display="flex",document.getElementById("amortizationSection").style.display="none"}function formatCurrency(e){return new Intl.NumberFormat(state.locale,{style:"currency",currency:state.currency,minimumFractionDigits:0,maximumFractionDigits:2}).format(e)}function formatDate(e){return e.toLocaleDateString("en-US",{month:"short",year:"numeric"})}

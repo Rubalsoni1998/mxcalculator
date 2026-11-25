@@ -1,14 +1,1 @@
-(function () {
-  'use strict';
-  var f = HC.fmt;
-  HC.init(function () {
-    var cm = HC.height('height'), kg = HC.weight('weight');
-    if (!(cm >= 40 && cm <= 250)) return HC.err('Enter a valid height.');
-    if (!(kg >= 2 && kg <= 400)) return HC.err('Enter a valid weight.');
-    var m = Math.sqrt(cm * kg / 3600), d = 0.007184 * Math.pow(kg, 0.425) * Math.pow(cm, 0.725), h = 0.024265 * Math.pow(kg, 0.5378) * Math.pow(cm, 0.3964),
-        g = 0.0235 * Math.pow(kg, 0.51456) * Math.pow(cm, 0.42246), fu = 0.008883 * Math.pow(kg, 0.444) * Math.pow(cm, 0.663);
-    return { hero: { label: 'Body surface area (Mosteller)', value: f(m, 2) + ' m²', sub: 'Typical adult: 1.6–1.9 m²' },
-      rowsTitle: 'By formula', rows: [['Mosteller', f(m, 2) + ' m²'], ['DuBois & DuBois', f(d, 2) + ' m²'], ['Haycock', f(h, 2) + ' m²'], ['Gehan & George', f(g, 2) + ' m²'], ['Fujimoto', f(fu, 2) + ' m²']],
-      note: 'The formulas agree within a few percent for most adults. Medicine doses must always be set by a clinician, not by this calculator.' };
-  });
-})();
+(function(){"use strict";var a=HC.fmt;HC.init(function(){var t=HC.height("height"),e=HC.weight("weight");if(!(t>=40&&t<=250))return HC.err("Enter a valid height.");if(!(e>=2&&e<=400))return HC.err("Enter a valid weight.");var r=Math.sqrt(t*e/3600),o=.007184*Math.pow(e,.425)*Math.pow(t,.725),i=.024265*Math.pow(e,.5378)*Math.pow(t,.3964),h=.0235*Math.pow(e,.51456)*Math.pow(t,.42246),s=.008883*Math.pow(e,.444)*Math.pow(t,.663);return{hero:{label:"Body surface area (Mosteller)",value:a(r,2)+" m\xB2",sub:"Typical adult: 1.6\u20131.9 m\xB2"},rowsTitle:"By formula",rows:[["Mosteller",a(r,2)+" m\xB2"],["DuBois & DuBois",a(o,2)+" m\xB2"],["Haycock",a(i,2)+" m\xB2"],["Gehan & George",a(h,2)+" m\xB2"],["Fujimoto",a(s,2)+" m\xB2"]],note:"The formulas agree within a few percent for most adults. Medicine doses must always be set by a clinician, not by this calculator."}})})();

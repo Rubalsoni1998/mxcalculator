@@ -1,18 +1,1 @@
-(function () {
-  'use strict';
-  var f = HC.fmt;
-  HC.init(function () {
-    var age = HC.num('age'), female = HC.val('gender') === 'female', scr = HC.creat('creat');
-    if (!(age >= 18 && age <= 110)) return HC.err('This calculator is for adults aged 18 or older.');
-    if (!(scr >= 0.2 && scr <= 20)) return HC.err('Enter a serum creatinine between 0.2 and 20 mg/dL (18–1,770 µmol/L).');
-    var k = female ? 0.7 : 0.9, a = female ? -0.241 : -0.302, r = scr / k;
-    var egfr = 142 * Math.pow(Math.min(r, 1), a) * Math.pow(Math.max(r, 1), -1.2) * Math.pow(0.9938, age) * (female ? 1.012 : 1);
-    var mdrd = 175 * Math.pow(scr, -1.154) * Math.pow(age, -0.203) * (female ? 0.742 : 1);
-    var st = [['G1', 'Normal or high', '90 or more'], ['G2', 'Mildly decreased', '60–89'], ['G3a', 'Mild to moderate decrease', '45–59'], ['G3b', 'Moderate to severe decrease', '30–44'], ['G4', 'Severely decreased', '15–29'], ['G5', 'Kidney failure', 'under 15']];
-    var i = egfr >= 90 ? 0 : egfr >= 60 ? 1 : egfr >= 45 ? 2 : egfr >= 30 ? 3 : egfr >= 15 ? 4 : 5;
-    return { hero: { label: 'eGFR (CKD-EPI 2021)', value: f(egfr, 0), category: 'Stage ' + st[i][0] + ': ' + st[i][1], sub: 'mL/min/1.73 m²' },
-      rowsTitle: 'Results', rows: [['CKD-EPI 2021', f(egfr, 1) + ' mL/min/1.73 m²'], ['MDRD (no race factor)', f(mdrd, 1) + ' mL/min/1.73 m²'], ['Creatinine used', f(scr, 2) + ' mg/dL']],
-      tables: [{ title: 'GFR categories', head: ['Stage', 'Description', 'eGFR'], rows: st.map(function (s) { return [s[0], s[1], s[2]]; }), active: i }],
-      note: 'This is an estimate, not a diagnosis. Kidney disease is confirmed with repeated tests over at least three months and other markers such as urine albumin. Discuss results with your doctor.' };
-  });
-})();
+(function(){"use strict";var a=HC.fmt;HC.init(function(){var t=HC.num("age"),i=HC.val("gender")==="female",r=HC.creat("creat");if(!(t>=18&&t<=110))return HC.err("This calculator is for adults aged 18 or older.");if(!(r>=.2&&r<=20))return HC.err("Enter a serum creatinine between 0.2 and 20 mg/dL (18\u20131,770 \xB5mol/L).");var m=i?.7:.9,c=i?-.241:-.302,d=r/m,e=142*Math.pow(Math.min(d,1),c)*Math.pow(Math.max(d,1),-1.2)*Math.pow(.9938,t)*(i?1.012:1),l=175*Math.pow(r,-1.154)*Math.pow(t,-.203)*(i?.742:1),s=[["G1","Normal or high","90 or more"],["G2","Mildly decreased","60\u201389"],["G3a","Mild to moderate decrease","45\u201359"],["G3b","Moderate to severe decrease","30\u201344"],["G4","Severely decreased","15\u201329"],["G5","Kidney failure","under 15"]],o=e>=90?0:e>=60?1:e>=45?2:e>=30?3:e>=15?4:5;return{hero:{label:"eGFR (CKD-EPI 2021)",value:a(e,0),category:"Stage "+s[o][0]+": "+s[o][1],sub:"mL/min/1.73 m\xB2"},rowsTitle:"Results",rows:[["CKD-EPI 2021",a(e,1)+" mL/min/1.73 m\xB2"],["MDRD (no race factor)",a(l,1)+" mL/min/1.73 m\xB2"],["Creatinine used",a(r,2)+" mg/dL"]],tables:[{title:"GFR categories",head:["Stage","Description","eGFR"],rows:s.map(function(n){return[n[0],n[1],n[2]]}),active:o}],note:"This is an estimate, not a diagnosis. Kidney disease is confirmed with repeated tests over at least three months and other markers such as urine albumin. Discuss results with your doctor."}})})();

@@ -1,120 +1,22 @@
-// Initialize
-document.addEventListener('DOMContentLoaded', function() {
-  // Set defaults
-  const today = new Date();
-  document.getElementById('targetDateInput').valueAsDate = today;
-  // Default DOB example (2000-01-01)
-  const defaultDob = new Date('2000-01-01');
-  document.getElementById('dobInput').valueAsDate = defaultDob;
-});
-
-// Calculation Logic
-function calculate() {
-    const dobStr = document.getElementById('dobInput').value;
-    const targetStr = document.getElementById('targetDateInput').value;
-
-    if (!dobStr || !targetStr) {
-        alert("Please enter valid dates.");
-        return;
-    }
-
-    const dob = new Date(dobStr);
-    const target = new Date(targetStr);
-
-    if (dob > target) {
-        alert("Date of Birth cannot be after the Target Date.");
-        return;
-    }
-
-    // Calculate Age (Years, Months, Days)
-    let years = target.getFullYear() - dob.getFullYear();
-    let months = target.getMonth() - dob.getMonth();
-    let days = target.getDate() - dob.getDate();
-
-    if (days < 0) {
-        months--;
-        // Get days in previous month
-        const prevMonth = new Date(target.getFullYear(), target.getMonth(), 0);
-        days += prevMonth.getDate();
-    }
-    if (months < 0) {
-        years--;
-        months += 12;
-    }
-
-    // Detailed Breakdown
-    const diffTime = Math.abs(target - dob);
-    const totalDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-    const totalWeeks = Math.floor(totalDays / 7);
-    const remDaysWeek = totalDays % 7;
-    const totalHours = totalDays * 24;
-    const totalMinutes = totalHours * 60;
-
-    // Next Birthday
-    const currentYear = target.getFullYear();
-    let nextBday = new Date(dob);
-    nextBday.setFullYear(currentYear);
-
-    if (nextBday < target) {
-        nextBday.setFullYear(currentYear + 1);
-    }
-
-    const diffBday = Math.ceil((nextBday - target) / (1000 * 60 * 60 * 24));
-    const nextBdayDayOfWeek = nextBday.toLocaleDateString('en-US', { weekday: 'long' });
-
-    // Render
-    document.getElementById('resultsPlaceholder').classList.add('hidden');
-    document.getElementById('resultsContent').classList.remove('hidden');
-
-    // Hero
-    document.getElementById('ageDisplay').textContent = `${years} years ${months} months ${days} days`;
-    document.getElementById('ageSubDisplay').textContent = `or ${years * 12 + months} months ${days} days`;
-
-    // Next Birthday
-    if (years > 0 || months > 0 || days > 0) {
-         document.getElementById('nextBdayDate').textContent = nextBday.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-
-         if (diffBday === 0) {
-             document.getElementById('nextBdayCounter').textContent = "Happy Birthday! It's today!";
-         } else {
-             document.getElementById('nextBdayCounter').textContent = `${diffBday} days remaining`;
-         }
-    } else {
-         // Born today
-         document.getElementById('nextBdayCounter').textContent = "Born today!";
-    }
-
-    // Table
-    const tbody = document.getElementById('breakdownBody');
-    tbody.innerHTML = `
+document.addEventListener("DOMContentLoaded",function(){const n=new Date;document.getElementById("targetDateInput").valueAsDate=n;const s=new Date("2000-01-01");document.getElementById("dobInput").valueAsDate=s});function calculate(){const n=document.getElementById("dobInput").value,s=document.getElementById("targetDateInput").value;if(!n||!s){alert("Please enter valid dates.");return}const a=new Date(n),t=new Date(s);if(a>t){alert("Date of Birth cannot be after the Target Date.");return}let l=t.getFullYear()-a.getFullYear(),e=t.getMonth()-a.getMonth(),o=t.getDate()-a.getDate();if(o<0){e--;const h=new Date(t.getFullYear(),t.getMonth(),0);o+=h.getDate()}e<0&&(l--,e+=12);const m=Math.abs(t-a),r=Math.floor(m/(1e3*60*60*24)),g=Math.floor(r/7),i=r%7,u=r*24,D=u*60,c=t.getFullYear();let d=new Date(a);d.setFullYear(c),d<t&&d.setFullYear(c+1);const y=Math.ceil((d-t)/(1e3*60*60*24)),I=d.toLocaleDateString("en-US",{weekday:"long"});document.getElementById("resultsPlaceholder").classList.add("hidden"),document.getElementById("resultsContent").classList.remove("hidden"),document.getElementById("ageDisplay").textContent=`${l} years ${e} months ${o} days`,document.getElementById("ageSubDisplay").textContent=`or ${l*12+e} months ${o} days`,l>0||e>0||o>0?(document.getElementById("nextBdayDate").textContent=d.toLocaleDateString("en-US",{weekday:"long",year:"numeric",month:"long",day:"numeric"}),y===0?document.getElementById("nextBdayCounter").textContent="Happy Birthday! It's today!":document.getElementById("nextBdayCounter").textContent=`${y} days remaining`):document.getElementById("nextBdayCounter").textContent="Born today!";const B=document.getElementById("breakdownBody");B.innerHTML=`
         <tr>
             <td>Total Months</td>
-            <td>${(years * 12) + months} months, ${days} days</td>
+            <td>${l*12+e} months, ${o} days</td>
         </tr>
         <tr>
             <td>Total Weeks</td>
-            <td>${totalWeeks.toLocaleString('en-US')} weeks, ${remDaysWeek} days</td>
+            <td>${g.toLocaleString("en-US")} weeks, ${i} days</td>
         </tr>
         <tr>
             <td>Total Days</td>
-            <td>${totalDays.toLocaleString('en-US')} days</td>
+            <td>${r.toLocaleString("en-US")} days</td>
         </tr>
         <tr>
             <td>Total Hours (approx)</td>
-            <td>${totalHours.toLocaleString('en-US')} hours</td>
+            <td>${u.toLocaleString("en-US")} hours</td>
         </tr>
         <tr>
             <td>Total Minutes (approx)</td>
-            <td>${totalMinutes.toLocaleString('en-US')} minutes</td>
+            <td>${D.toLocaleString("en-US")} minutes</td>
         </tr>
-    `;
-}
-
-function clearForm() {
-  const today = new Date();
-  document.getElementById('targetDateInput').valueAsDate = today;
-  document.getElementById('dobInput').value = "";
-
-  document.getElementById('resultsContent').classList.add('hidden');
-  document.getElementById('resultsPlaceholder').classList.remove('hidden');
-}
+    `}function clearForm(){const n=new Date;document.getElementById("targetDateInput").valueAsDate=n,document.getElementById("dobInput").value="",document.getElementById("resultsContent").classList.add("hidden"),document.getElementById("resultsPlaceholder").classList.remove("hidden")}

@@ -1,17 +1,1 @@
-(function () {
-  'use strict';
-  var f = HC.fmt;
-  HC.init(function () {
-    var age = HC.num('age'), sex = HC.val('gender'), cm = HC.height('height'), kg = HC.weight('weight');
-    if (!(age >= 15 && age <= 100)) return HC.err('Enter an age between 15 and 100.');
-    if (!(cm >= 100 && cm <= 250)) return HC.err('Enter a valid height.');
-    if (!(kg >= 30 && kg <= 400)) return HC.err('Enter a valid weight.');
-    var bmr = HC.mifflin(sex, kg, cm, age), tdee = bmr * parseFloat(HC.val('activity')), cal = tdee * (1 + parseFloat(HC.val('goal')));
-    var low = cal < (sex === 'male' ? 1500 : 1200) ? ' Your target is below the minimum usually advised without medical supervision, so consider a smaller calorie deficit.' : '';
-
-    var lo = cal * 0.45 / 4, hi = cal * 0.65 / 4;
-    return { hero: { label: 'Daily carbohydrates', value: f(lo, 0) + '–' + f(hi, 0) + ' g', sub: 'Based on ' + f(cal, 0) + ' kcal per day' },
-      rowsTitle: 'Breakdown', rows: [['Daily calories', f(cal, 0) + ' kcal'], ['Carbs at 45% of calories', f(lo, 0) + ' g'], ['Carbs at 65% of calories', f(hi, 0) + ' g'], ['Per meal (3 meals)', f(lo / 3, 0) + '–' + f(hi / 3, 0) + ' g'], ['Minimum recommended (RDA)', '130 g'], ['Fiber target', f(cal / 1000 * 14, 0) + ' g']],
-      note: 'The 45–65% range is the Acceptable Macronutrient Distribution Range from the Dietary Reference Intakes. People with diabetes or other conditions should follow their care team advice.' + low };
-  });
-})();
+(function(){"use strict";var e=HC.fmt;HC.init(function(){var r=HC.num("age"),n=HC.val("gender"),i=HC.height("height"),t=HC.weight("weight");if(!(r>=15&&r<=100))return HC.err("Enter an age between 15 and 100.");if(!(i>=100&&i<=250))return HC.err("Enter a valid height.");if(!(t>=30&&t<=400))return HC.err("Enter a valid weight.");var s=HC.mifflin(n,t,i,r),c=s*parseFloat(HC.val("activity")),a=c*(1+parseFloat(HC.val("goal"))),g=a<(n==="male"?1500:1200)?" Your target is below the minimum usually advised without medical supervision, so consider a smaller calorie deficit.":"",l=a*.45/4,o=a*.65/4;return{hero:{label:"Daily carbohydrates",value:e(l,0)+"\u2013"+e(o,0)+" g",sub:"Based on "+e(a,0)+" kcal per day"},rowsTitle:"Breakdown",rows:[["Daily calories",e(a,0)+" kcal"],["Carbs at 45% of calories",e(l,0)+" g"],["Carbs at 65% of calories",e(o,0)+" g"],["Per meal (3 meals)",e(l/3,0)+"\u2013"+e(o/3,0)+" g"],["Minimum recommended (RDA)","130 g"],["Fiber target",e(a/1e3*14,0)+" g"]],note:"The 45\u201365% range is the Acceptable Macronutrient Distribution Range from the Dietary Reference Intakes. People with diabetes or other conditions should follow their care team advice."+g}})})();

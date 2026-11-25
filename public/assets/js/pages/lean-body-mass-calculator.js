@@ -1,16 +1,1 @@
-(function () {
-  'use strict';
-  var f = HC.fmt;
-  HC.init(function () {
-    var m = HC.val('gender') === 'male', cm = HC.height('height'), kg = HC.weight('weight');
-    if (!(cm >= 100 && cm <= 250)) return HC.err('Enter a valid height.');
-    if (!(kg >= 30 && kg <= 400)) return HC.err('Enter a valid weight.');
-    var boer = m ? 0.407 * kg + 0.267 * cm - 19.2 : 0.252 * kg + 0.473 * cm - 48.3;
-    var james = m ? 1.1 * kg - 128 * Math.pow(kg / cm, 2) : 1.07 * kg - 148 * Math.pow(kg / cm, 2);
-    var hume = m ? 0.3281 * kg + 0.33929 * cm - 29.5336 : 0.29569 * kg + 0.41813 * cm - 43.2933;
-    var avg = (boer + james + hume) / 3, bf = Math.max(0, (1 - avg / kg) * 100);
-    return { hero: { label: 'Lean body mass (average)', value: HC.massText(avg), sub: 'About ' + f(100 - bf, 0) + '% of your body weight' },
-      rowsTitle: 'By formula', rows: [['Boer', HC.massText(boer)], ['James', HC.massText(james)], ['Hume', HC.massText(hume)], ['Estimated body fat mass', HC.massText(Math.max(0, kg - avg))], ['Estimated body fat', f(bf, 1) + '%']],
-      note: 'These formulas use only height, weight and sex, so they cannot tell muscle from fat directly. Body scans or skinfold measurements are more precise.' };
-  });
-})();
+(function(){"use strict";var s=HC.fmt;HC.init(function(){var t=HC.val("gender")==="male",a=HC.height("height"),e=HC.weight("weight");if(!(a>=100&&a<=250))return HC.err("Enter a valid height.");if(!(e>=30&&e<=400))return HC.err("Enter a valid weight.");var o=t?.407*e+.267*a-19.2:.252*e+.473*a-48.3,m=t?1.1*e-128*Math.pow(e/a,2):1.07*e-148*Math.pow(e/a,2),i=t?.3281*e+.33929*a-29.5336:.29569*e+.41813*a-43.2933,r=(o+m+i)/3,h=Math.max(0,(1-r/e)*100);return{hero:{label:"Lean body mass (average)",value:HC.massText(r),sub:"About "+s(100-h,0)+"% of your body weight"},rowsTitle:"By formula",rows:[["Boer",HC.massText(o)],["James",HC.massText(m)],["Hume",HC.massText(i)],["Estimated body fat mass",HC.massText(Math.max(0,e-r))],["Estimated body fat",s(h,1)+"%"]],note:"These formulas use only height, weight and sex, so they cannot tell muscle from fat directly. Body scans or skinfold measurements are more precise."}})})();
