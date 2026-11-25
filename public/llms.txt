@@ -1,0 +1,133 @@
+# Mx Calculator
+
+> Mx Calculator offers free, private online calculators for US users: tax, mortgage and loans, investing, health and fitness, pregnancy, math, dates and time, school, and everyday conversions. Calculations run in the browser and nothing is stored. Each page explains the formula, gives a worked example, answers common questions and cites its sources.
+
+Rates, tax brackets and limits are US figures and are labeled with their tax year. Results are estimates for general information, not financial, tax, legal or medical advice.
+
+## Calculator categories
+
+- [Everyday Calculators: Math, Time, School & DIY](https://mxcalculator.com/topics/everyday-calculators.html): Free everyday calculators: percentages, fractions, unit conversion, dates and time, GPA and grades, password generator, concrete and more.
+- [Health & Fitness Calculators: BMI, Calories, Pregnancy](https://mxcalculator.com/topics/health-and-fitness-calculators.html): Free health and fitness calculators: BMI, body fat, calories, TDEE, macros, heart rate, pace, one rep max, pregnancy due date and more.
+- [Home Buying Calculators: Mortgage, PMI & Closing Costs](https://mxcalculator.com/topics/home-buying-calculators.html): Free home buying calculators for US buyers: monthly mortgage payment, PMI, closing costs, property tax and rental cap rate.
+- [Loan & Investment Calculators: Payments, Interest, Retirement](https://mxcalculator.com/topics/loans-and-investing-calculators.html): Free loan and investment calculators: monthly payment, amortization, auto loan, compound interest, investment growth, dividends, retirement and inflation.
+- [US Tax Calculators 2026: Income, Credits & State Tax](https://mxcalculator.com/topics/tax-calculators.html): Free US tax calculators for 2026: federal income tax, tax brackets, refund, EITC, child tax credit, capital gains, sales tax and property tax by state.
+
+## Everyday Calculators: Math, Time, School & DIY
+
+- [Percentage Calculator: % of a Number](https://mxcalculator.com/calculators/percent-calculator.html): Find a percent of a number, what percent one number is of another, and percentage increase or decrease, with worked formulas.
+- [Percent Increase & Decrease Calculator](https://mxcalculator.com/calculators/percent-change-calculator.html): Find the percent increase or decrease between two numbers, or raise or lower a number by a percent. Includes formulas and examples.
+- [Fraction Calculator & Mixed Numbers](https://mxcalculator.com/calculators/fraction-calculator.html): Add, subtract, multiply and divide fractions and mixed numbers, with simplified answers and decimal equivalents.
+- [Online Scientific Calculator](https://mxcalculator.com/calculators/scientific-calculator.html): Free scientific calculator with trigonometry, logarithms, powers, roots, factorials and memory, in degree or radian mode.
+- [Standard Deviation Calculator with Steps](https://mxcalculator.com/calculators/standard-deviation-calculator.html): Enter a data set to get the mean, variance and sample or population standard deviation, with the working shown step by step.
+- [Triangle Calculator: Sides, Angles, Area](https://mxcalculator.com/calculators/triangle-calculator.html): Solve for missing sides, angles, area and perimeter using the Pythagorean theorem, law of sines and law of cosines.
+- [Unit Converter: Metric & US Units](https://mxcalculator.com/calculators/conversion-calculator.html): Convert length, weight, volume, area, temperature, speed and more between metric and US customary units instantly.
+- [Temperature Converter: Fahrenheit to Celsius & More](https://mxcalculator.com/calculators/temperature-converter.html): Convert temperatures between Fahrenheit, Celsius, Kelvin and Rankine instantly. See formulas, key reference points and a quick oven temperature chart.
+- [Pounds to Kilograms Converter (lb to kg)](https://mxcalculator.com/calculators/pounds-to-kg-converter.html): Convert pounds to kilograms and kilograms to pounds instantly. Also shows ounces, grams, stone and pounds and ounces, with exact factors and a chart.
+- [Inches to Centimeters Converter (in to cm)](https://mxcalculator.com/calculators/inches-to-cm-converter.html): Convert inches to centimeters and cm to inches instantly. Includes feet and inches mode, millimeters, meters and yards, plus a height chart in cm.
+- [Age Calculator: Years, Months & Days](https://mxcalculator.com/calculators/age-calculator.html): Find your exact age in years, months and days from your date of birth, plus how many days until your next birthday. Free and private.
+- [Date Calculator: Days Between Dates](https://mxcalculator.com/calculators/date-calculator.html): Find the number of days between two dates, or add and subtract days, weeks, months and years from any date.
+- [Countdown Calculator: Days Until Any Date](https://mxcalculator.com/calculators/countdown-calculator.html): Count the days, hours, minutes and seconds until any date or US holiday. Includes weeks, weekdays, a live timer and a list of upcoming holidays.
+- [Time Calculator: Add & Subtract Time](https://mxcalculator.com/calculators/time-calculator.html): Add or subtract hours, minutes and seconds, and find the exact duration between two times, with results in hours, minutes and decimals.
+- [Hours Calculator for Timesheets](https://mxcalculator.com/calculators/hours-calculator.html): Add up work hours and minutes, subtract breaks and total your weekly timesheet quickly, with decimal hours for payroll.
+- [GPA Calculator: 4.0 Scale](https://mxcalculator.com/calculators/gpa-calculator.html): Calculate your semester or cumulative grade point average on the 4.0 scale from course grades and credit hours.
+- [Weighted GPA Calculator: AP, Honors & Unweighted](https://mxcalculator.com/calculators/weighted-gpa-calculator.html): Calculate weighted and unweighted GPA with AP, IB, Honors and regular classes. Set your school bonus, add credits and see grade points per course.
+- [Grade Calculator: Final Exam Score Needed](https://mxcalculator.com/calculators/grade-calculator.html): Compute your weighted course grade and find the score you need on your final exam to reach the grade you want.
+- [Password Generator: Strong & Random](https://mxcalculator.com/calculators/password-generator.html): Create strong, random passwords with the length and characters you choose. Generated privately in your browser and never sent or stored.
+- [Random Number Generator](https://mxcalculator.com/calculators/random-number-generator.html): Pick random numbers in any range, choose how many, and avoid repeats. Uses your browser’s secure random source.
+- [IP Subnet Calculator (IPv4 CIDR)](https://mxcalculator.com/calculators/ip-subnet-calculator.html): Enter an IPv4 address and CIDR prefix to get the network address, broadcast address, usable host range, subnet mask and host count.
+- [Concrete Calculator: Cubic Yards & Bags](https://mxcalculator.com/calculators/concrete-calculator.html): Estimate cubic yards and the number of 40, 60 or 80 lb bags of concrete needed for slabs, footings, walls and columns.
+- [Cubic Yard Calculator: Mulch, Gravel & Soil](https://mxcalculator.com/calculators/cubic-yard-calculator.html): Calculate cubic yards for mulch, gravel, topsoil, sand or concrete from length, width and depth. Get cubic feet, tons, bags and cost in seconds.
+- [Paint Calculator: How Many Gallons Do I Need?](https://mxcalculator.com/calculators/paint-calculator.html): Find how many gallons of paint you need for walls and ceilings. Enter room size, doors, windows and coats to get gallons, primer and cost.
+- [Flooring Calculator: Square Feet & Boxes Needed](https://mxcalculator.com/calculators/flooring-calculator.html): Calculate how much flooring to buy. Enter room size and flooring type to get square feet with waste, boxes needed and total material cost.
+- [Dog Age Calculator: Dog Years to Human Years](https://mxcalculator.com/calculators/dog-age-calculator.html): Convert your dog's age to human years by size using the veterinary chart and the UC San Diego formula. See life stage and when your dog becomes a senior.
+- [Word Counter & Character Counter: Free Online Tool](https://mxcalculator.com/calculators/word-counter.html): Count words, characters, sentences and paragraphs as you type. See reading and speaking time, keyword density and character limits for posts and texts.
+- [Cooking Measurement Converter: Cups, Grams & More](https://mxcalculator.com/calculators/cooking-measurement-converter.html): Convert cups, tablespoons, teaspoons, ounces, milliliters and grams for cooking. Cups to grams for flour, sugar, butter and more, with charts.
+- [Coin Flip: Heads or Tails Online](https://mxcalculator.com/calculators/coin-flip.html): Flip a fair coin online. Flip once or up to 10,000 times, track heads and tails, streaks and your calls, and see how likely your results are.
+- [Turkey Cooking Time Calculator](https://mxcalculator.com/calculators/turkey-cooking-time-calculator.html): Get turkey roasting time by weight for fresh, thawed or frozen birds, stuffed or unstuffed, plus thawing time and when to start for dinner.
+- [Road Trip Cost Calculator: Gas, Hotels & Food](https://mxcalculator.com/calculators/road-trip-cost-calculator.html): Estimate total road trip cost with gas, diesel or EV charging, hotels, food, tolls and parking, plus cost per person, drive time and a per-mile comparison.
+
+## Health & Fitness Calculators: BMI, Calories, Pregnancy
+
+- [BMI Calculator: Adult Body Mass Index](https://mxcalculator.com/calculators/bmi-calculator.html): Enter height and weight in pounds and inches or metric to get your BMI, weight category and the healthy weight range for your height.
+- [Healthy Weight Calculator by Height](https://mxcalculator.com/calculators/healthy-weight-calculator.html): See the weight range that is healthy for your height, based on the normal BMI range of 18.5 to 24.9, in pounds or kilograms.
+- [Ideal Weight Calculator by Height](https://mxcalculator.com/calculators/ideal-weight-calculator.html): Get your ideal body weight by height and sex using the Devine, Robinson, Miller and Hamwi formulas, in pounds or kilograms, side by side.
+- [How Overweight Am I? Calculator](https://mxcalculator.com/calculators/overweight-calculator.html): Find out how many pounds or kilograms you are above the healthy BMI range for your height and how much it would take to reach it.
+- [Body Fat Calculator (US Navy Method)](https://mxcalculator.com/calculators/body-fat-calculator.html): Estimate body fat percentage with the US Navy tape method or BMI, and compare your result with healthy ranges for your age and sex.
+- [Army Body Fat Calculator (Tape Test)](https://mxcalculator.com/calculators/army-body-fat-calculator.html): Use the US Army tape test (neck, waist, hips) to estimate body fat and check whether you meet the standard for your age and sex.
+- [Lean Body Mass Calculator (LBM)](https://mxcalculator.com/calculators/lean-body-mass-calculator.html): Estimate lean body mass and fat mass from height, weight and sex using the Boer, James and Hume formulas.
+- [Body Type Calculator: Shape & WHR](https://mxcalculator.com/calculators/body-type-calculator.html): Find your body shape (apple, pear, hourglass or rectangle) from bust, waist and hip measurements and get your waist-to-hip ratio.
+- [Body Surface Area (BSA) Calculator](https://mxcalculator.com/calculators/body-surface-area-calculator.html): Calculate body surface area in m² from height and weight using the Mosteller, DuBois, Haycock and other formulas used in clinical dosing.
+- [BMR Calculator: Basal Metabolic Rate](https://mxcalculator.com/calculators/bmr-calculator.html): Estimate calories burned at rest with the Mifflin-St Jeor, Harris-Benedict or Katch-McArdle equation, then see what it means for your daily needs.
+- [TDEE Calculator: Daily Energy Needs](https://mxcalculator.com/calculators/tdee-calculator.html): Estimate your total daily energy expenditure and the calories to eat to lose, maintain or gain weight, based on your activity level.
+- [Calorie Calculator: Daily Calorie Needs](https://mxcalculator.com/calculators/calorie-calculator.html): Find how many calories you need per day to maintain, lose or gain weight, based on your age, height, weight and activity level.
+- [Weight Loss Calculator: Calorie Deficit & Timeline](https://mxcalculator.com/calculators/weight-loss-calculator.html): Find your daily calorie target and how long it takes to reach your goal weight. Uses Mifflin-St Jeor, safe 0.5 to 2 lb weekly loss and calorie floors.
+- [Water Intake Calculator: How Much to Drink Daily](https://mxcalculator.com/calculators/water-intake-calculator.html): Find how much water to drink each day based on sex, exercise, climate, pregnancy and breastfeeding, using National Academies guidelines in ounces and cups.
+- [Calories Burned Calculator by Activity](https://mxcalculator.com/calculators/calories-burned-calculator.html): Estimate calories burned walking, running, cycling, swimming and more, using MET values and your body weight and workout time.
+- [Macro Calculator: Protein, Carbs & Fat](https://mxcalculator.com/calculators/macro-calculator.html): Get daily grams of protein, carbohydrates and fat for weight loss, maintenance or muscle gain based on your calorie needs.
+- [Protein Calculator: Daily Grams You Need](https://mxcalculator.com/calculators/protein-calculator.html): Find how many grams of protein you need each day for general health, weight loss, muscle gain or athletic training.
+- [Carb Calculator: Daily Carbs in Grams](https://mxcalculator.com/calculators/carbohydrate-calculator.html): Find how many grams of carbohydrates to eat each day for weight loss, maintenance or gain, based on your daily calorie needs.
+- [Fat Intake Calculator: Daily Grams](https://mxcalculator.com/calculators/fat-intake-calculator.html): Work out how many grams of total and saturated fat to eat each day for your calorie level and goals.
+- [Target Heart Rate Calculator by Age](https://mxcalculator.com/calculators/target-heart-rate-calculator.html): Find your maximum heart rate and training zones by age using the standard and Karvonen heart rate reserve methods.
+- [One Rep Max (1RM) Calculator](https://mxcalculator.com/calculators/one-rep-max-calculator.html): Estimate the heaviest weight you can lift once from a lighter set using the Epley, Brzycki and other formulas, with training percentages.
+- [Running Pace Calculator: 5K to Marathon](https://mxcalculator.com/calculators/pace-calculator.html): Find your running pace per mile or kilometer, finish time or distance for a 5K, 10K, half marathon, marathon or custom run.
+- [BAC Calculator: Blood Alcohol Estimate](https://mxcalculator.com/calculators/bac-calculator.html): Estimate your blood alcohol content (BAC) from weight, sex, drinks and hours, and see roughly how long until it reaches zero. Never drive after drinking.
+- [GFR Calculator (CKD-EPI) for eGFR](https://mxcalculator.com/calculators/gfr-calculator.html): Estimate your glomerular filtration rate (eGFR) from serum creatinine, age and sex with the CKD-EPI equation and see the kidney disease stage.
+- [Pregnancy Calculator: Due Date & Week](https://mxcalculator.com/calculators/pregnancy-calculator.html): Find your due date, current week, trimester and key milestones from your last period, conception date or IVF date.
+- [Due Date Calculator: Estimate Your EDD](https://mxcalculator.com/calculators/due-date-calculator.html): Estimate your baby’s due date from your last menstrual period, conception date or IVF transfer date, and see how far along you are.
+- [Conception Calculator: When Did I Conceive?](https://mxcalculator.com/calculators/conception-calculator.html): Estimate when you conceived from your due date or last menstrual period, and see the most likely conception window and fertile days.
+- [Conception Date to Due Date Calculator](https://mxcalculator.com/calculators/pregnancy-conception-calculator.html): Work out your due date from a conception date, or estimate the conception date from a due date or pregnancy week.
+- [Ovulation Calculator: Fertile Window](https://mxcalculator.com/calculators/ovulation-calculator.html): Predict your ovulation day and fertile window from your cycle length and last period, with a calendar of your most fertile days.
+- [Period Calculator: Next Period Dates](https://mxcalculator.com/calculators/period-calculator.html): Predict your next period dates and see a calendar of upcoming cycles from your last period and average cycle length.
+- [Pregnancy Weight Gain Calculator](https://mxcalculator.com/calculators/pregnancy-weight-gain-calculator.html): Get recommended total and week-by-week pregnancy weight gain for singleton or twin pregnancies, based on your pre-pregnancy BMI.
+
+## Home Buying Calculators: Mortgage, PMI & Closing Costs
+
+- [Mortgage Calculator with Taxes & PMI](https://mxcalculator.com/calculators/mortgage-calculator.html): Estimate your monthly mortgage payment with property tax, insurance, PMI and HOA, view the amortization schedule and see how extra payments cut interest.
+- [Amortization Schedule Calculator](https://mxcalculator.com/calculators/amortization-calculator.html): See a payment-by-payment amortization schedule with principal, interest and remaining balance, and test how extra payments shorten your loan.
+- [PMI Calculator: Monthly Mortgage Insurance](https://mxcalculator.com/calculators/pmi-calculator.html): Estimate monthly private mortgage insurance, your total payment with PMI, and when PMI can be removed at 80% and 78% loan-to-value.
+- [Closing Cost Calculator for Home Buyers](https://mxcalculator.com/calculators/closing-cost-calculator.html): Estimate closing costs for a US home purchase: lender fees, title and government charges, prepaids, FHA or VA fees and total cash to close.
+- [Property Tax Calculator by State](https://mxcalculator.com/calculators/property-tax-calculator.html): Estimate annual and monthly property tax using US state effective rates, a local rate or mill rate, with exemptions and a 10-year projection.
+- [Cap Rate Calculator for Rental Property](https://mxcalculator.com/calculators/cap-rate-calculator.html): Calculate cap rate, net operating income, expense ratio and gross rent multiplier for a rental property, or find value from a target cap rate.
+- [Capital Gains Tax Calculator 2026](https://mxcalculator.com/calculators/capital-gains-tax-calculator.html): Estimate short-term and long-term capital gains tax with 2026 IRS rates, the 3.8% net investment income tax and state tax, and see profit after tax.
+
+## Loan & Investment Calculators: Payments, Interest, Retirement
+
+- [Loan Calculator: Payment & Interest](https://mxcalculator.com/calculators/loan-calculator.html): Calculate the monthly payment, total interest and amortization schedule for personal, auto or student loans, with extra payment options.
+- [Monthly Payment Calculator for Loans](https://mxcalculator.com/calculators/payment-calculator.html): Estimate the monthly payment on any fixed-rate loan, with total interest and a full amortization schedule.
+- [Amortization Schedule Calculator](https://mxcalculator.com/calculators/amortization-calculator.html): See a payment-by-payment amortization schedule with principal, interest and remaining balance, and test how extra payments shorten your loan.
+- [Auto Loan Calculator with Tax & Fees](https://mxcalculator.com/calculators/auto-loan-calculator.html): Estimate your monthly car payment with down payment, trade-in, sales tax and fees, and see the total interest you will pay over the loan.
+- [How Much Car Can I Afford? Calculator](https://mxcalculator.com/calculators/car-affordability-calculator.html): Find the car price you can afford using the 20/4/10 rule, a percent of income or a payment you choose, with 2026 auto loan rates by credit score.
+- [Interest Rate Calculator (Find the APR)](https://mxcalculator.com/calculators/interest-rate-calculator.html): Find the annual interest rate (APR) of a loan from the loan amount, term and monthly payment, and see the total interest you will pay.
+- [Compound Interest Calculator with Deposits](https://mxcalculator.com/calculators/compound-interest-calculator.html): See how savings grow with regular deposits and daily, monthly or yearly compounding, with the final balance and total interest earned.
+- [Investment Calculator: Future Value](https://mxcalculator.com/calculators/investment-calculator.html): Project the future value of an investment with regular contributions, compounding and an inflation adjustment.
+- [Dividend Calculator with DRIP](https://mxcalculator.com/calculators/dividend-calculator.html): Project dividend income, DRIP reinvestment, dividend growth, taxes and portfolio value year by year over any time period.
+- [Stock Profit Calculator: Gain, ROI & Tax](https://mxcalculator.com/calculators/stock-profit-calculator.html): Calculate stock profit or loss with fees and dividends, plus return on investment, annualized return, break-even price and 2026 federal capital gains tax.
+- [Retirement Calculator: How Much Do I Need?](https://mxcalculator.com/calculators/retirement-calculator.html): Find out whether your savings will last, how much you need to retire, and how much more to save each year, with 401(k) and IRA contributions.
+- [Net Worth Calculator: Assets Minus Debts](https://mxcalculator.com/calculators/net-worth-calculator.html): Add up your assets and debts to find your net worth, liquid net worth and home equity, and compare with 2025 Federal Reserve median net worth by age.
+- [Interest Calculator: Simple & Compound](https://mxcalculator.com/calculators/interest-calculator.html): Calculate simple or compound interest on savings or loans and see total interest earned or owed over any period.
+- [Inflation Calculator: Buying Power](https://mxcalculator.com/calculators/inflation-calculator.html): See how inflation changes the buying power of money, and what a price today could cost in the future at the inflation rate you choose.
+- [Finance Calculator: PV, FV, PMT, Rate](https://mxcalculator.com/calculators/finance-calculator.html): Solve time value of money problems: present value, future value, payment, interest rate or number of periods.
+- [Salary Calculator: Hourly to Annual](https://mxcalculator.com/calculators/salary-calculator.html): Convert pay between hourly, daily, weekly, bi-weekly, monthly and annual amounts, adjusting for hours, holidays and vacation.
+
+## US Tax Calculators 2026: Income, Credits & State Tax
+
+- [Federal Income Tax Calculator 2026 (IRS Brackets)](https://mxcalculator.com/calculators/tax-calculator.html): Estimate your federal income tax, effective rate and marginal bracket using current IRS brackets and the standard or itemized deduction.
+- [Tax Bracket Calculator 2026](https://mxcalculator.com/calculators/tax-bracket-calculator.html): Find your marginal and effective federal tax rate with 2026 and 2025 IRS brackets, tax owed in each bracket and income left before the next one.
+- [Federal Tax Refund Estimator 2026](https://mxcalculator.com/calculators/tax-refund-estimator.html): Estimate your federal refund for tax years 2026 and 2025 with IRS brackets, the standard deduction, Child Tax Credit and new tips and overtime deductions.
+- [EITC Calculator 2026: Earned Income Credit](https://mxcalculator.com/calculators/eitc-calculator.html): Estimate your Earned Income Tax Credit with 2026 IRS amounts by filing status, children, earned income and AGI, with a phase-in and phase-out chart.
+- [Child Tax Credit Calculator 2026](https://mxcalculator.com/calculators/child-tax-credit-calculator.html): Estimate your 2026 Child Tax Credit of up to $2,200 per child, the refundable portion (up to $1,700), income phase-outs and your refund.
+- [Capital Gains Tax Calculator 2026](https://mxcalculator.com/calculators/capital-gains-tax-calculator.html): Estimate short-term and long-term capital gains tax with 2026 IRS rates, the 3.8% net investment income tax and state tax, and see profit after tax.
+- [Lottery Tax Calculator 2026](https://mxcalculator.com/calculators/lottery-tax-calculator.html): See what you keep from a Powerball or Mega Millions jackpot, as a lump sum or annuity, after 2026 federal brackets and state tax.
+- [Sales Tax Calculator: Add or Remove Tax](https://mxcalculator.com/calculators/sales-tax-calculator.html): Add sales tax to a price, or work backwards from a total to find the pre-tax price and the tax amount, for any rate you enter.
+- [Car Sales Tax Calculator by State 2026](https://mxcalculator.com/calculators/car-sales-tax-calculator.html): Calculate car sales tax with 2026 rates for all 50 states, including trade-in credit rules, local tax and special state rules.
+- [Property Tax Calculator by State](https://mxcalculator.com/calculators/property-tax-calculator.html): Estimate annual and monthly property tax using US state effective rates, a local rate or mill rate, with exemptions and a 10-year projection.
+
+## State calculators
+
+- [Sales tax and property tax by state](https://mxcalculator.com/calculators/sales-tax-calculator.html): State pages for sales tax, property tax and car sales tax live under https://mxcalculator.com/states/ and are linked from the calculators above.
+
+## Optional
+
+- [Sitemap](https://mxcalculator.com/sitemap.xml): every public page
+- [Privacy policy](https://mxcalculator.com/privacy.html)
+- [Terms of use](https://mxcalculator.com/terms.html)
