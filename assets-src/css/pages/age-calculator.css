@@ -225,7 +225,7 @@ input:focus {
 .breakdown-table td:last-child {
     text-align: right;
     font-weight: 600;
-    font-family: 'Plus Jakarta Sans', monospace;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
 .next-birthday-card {

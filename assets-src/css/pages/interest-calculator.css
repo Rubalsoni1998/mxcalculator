@@ -361,7 +361,7 @@ input.has-icon {
 .payment-hero-amount {
   font-size: 2.5rem;
   font-weight: 700;
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   position: relative;
 }
 

@@ -5,7 +5,7 @@
 .st-result { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .75rem; margin-top: 1.25rem; padding: 1rem; border-radius: var(--radius, .75rem); background: var(--accent, #eefafa); }
 .st-result > div { display: flex; flex-direction: column; gap: .2rem; }
 .st-result .st-label { font-size: .8rem; color: var(--muted-foreground, #6b7280); }
-.st-result strong { font-size: 1.35rem; color: var(--accent-foreground, #0b4d4d); font-family: 'Plus Jakarta Sans', 'DM Sans', sans-serif; }
+.st-result strong { font-size: 1.35rem; color: var(--accent-foreground, #0b4d4d); font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; }
 .seo-content table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.25rem; font-size: .95rem; }
 .seo-content th, .seo-content td { padding: .55rem .7rem; border-bottom: 1px solid var(--border, #e5e7eb); text-align: left; }
 .seo-content th { background: var(--muted, #f1f5f9); }

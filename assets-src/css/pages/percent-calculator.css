@@ -239,7 +239,7 @@ input:focus {
   color: var(--primary);
   line-height: 1.2;
   margin: 0.5rem 0;
-  font-family: 'Plus Jakarta Sans', monospace;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
 .result-subtitle {
