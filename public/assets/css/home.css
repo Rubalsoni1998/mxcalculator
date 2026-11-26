@@ -543,23 +543,5 @@ footer {
     .search-btn { padding: 0 16px; }
 }
 
-/* --- Dark mode (follows device) --- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-        --primary: #3cc9ba;
-        --primary-dark: #2aa89a;
-        --bg-body: #0f1420;
-        --bg-surface: #171d2b;
-        --text-main: #e8ecf4;
-        --text-muted: #9aa4b8;
-        --border-light: #2a3245;
-        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
-        --shadow-md: 0 4px 10px -2px rgba(0, 0, 0, 0.5);
-        --shadow-lg: 0 10px 20px -4px rgba(0, 0, 0, 0.55);
-    }
-    .card-icon, .suggest-icon { background: rgba(60, 201, 186, 0.12); }
-    .suggest { box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.7); }
-    .suggest-item.active { background: rgba(60, 201, 186, 0.16); }
-    .all-tools-btn { color: var(--primary); }
-}
+/* Light theme only, whatever the device setting (stops browsers auto-darkening the page) */
+html { color-scheme: light; }
