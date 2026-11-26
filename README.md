@@ -82,3 +82,23 @@ All scripts are idempotent. After changing rates, edit `gen_states.py`, rerun it
 ## Assets: edit `assets-src/`, not `public/assets/`
 `assets-src/css` and `assets-src/js` hold the readable source. `scripts/minify.mjs` (run by `npm run build`, `dev`, `deploy`, `test`) writes
 the minified copies into `public/assets/`. Run `npm install` once so `esbuild` is available. This fixes Semrush "Unminified JavaScript and CSS files".
+
+## Speed architecture (static pages)
+
+Pages are plain static files served from Cloudflare's edge (no Worker, no database on page load).
+`npm run build` turns `public/` (what you edit) into `dist/` (what is deployed):
+
+- every page's CSS is inlined into one `<style>` (no render-blocking requests),
+- Google Analytics loads after the page has loaded,
+- JS files get a content hash (`enhance.1a2b3c4d.js`) and are cached for a year,
+- `_redirects` is generated (`/calculators/x` -> `/calculators/x.html`, `/index.html` -> `/`).
+
+The Worker now only runs for `/sitemap.xml`, `/admin*` and the beacon `/_mx/e`.
+`mx-core.js` (on home, calculator, state and topic pages) sends one beacon per page view; the server records
+the view and replies with the list of switched-off calculators, which the script hides (home-page links, or
+the whole page of a switched-off calculator). Consequences: visitors with JavaScript disabled are not counted,
+and a switched-off calculator can be visible for a split second before it is hidden. To remove one for good,
+delete its HTML file and redeploy.
+
+**One-time Cloudflare setup:** pages no longer pass through the Worker, so create a Redirect Rule
+(Rules > Redirect Rules) from `www.mxcalculator.com/*` to `https://mxcalculator.com/${1}` (301, keep query string).

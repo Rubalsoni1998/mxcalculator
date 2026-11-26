@@ -2,19 +2,15 @@ name = "mxcalculator"
 main = "src/worker.js"
 compatibility_date = "2026-11-01"
 
-# Static files (calculators, CSS, JS, images, legal pages) are served by Cloudflare for free,
-# without running any code. Only the paths below wake the Worker.
+# Static files (every page, JS, images, legal pages) are served straight from Cloudflare's edge
+# without running any code - that is what makes the site fast. dist/ is built from public/ by
+# `npm run build` (inlined CSS, fingerprinted JS, _redirects). Only the paths below wake the Worker.
 [assets]
-directory = "./public"
+directory = "./dist"
 binding = "ASSETS"
 html_handling = "none"            # keep URLs exactly as written (e.g. /calculators/bmi-calculator.html)
-not_found_handling = "404-page"   # serves public/404.html
+not_found_handling = "404-page"   # serves 404.html
 run_worker_first = [
-  "/",
-  "/index.html",
-  "/calculators/*",
-  "/states/*",
-  "/topics/*",
   "/sitemap.xml",
   "/admin",
   "/admin/*",

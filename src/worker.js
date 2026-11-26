@@ -1,7 +1,7 @@
 // Mx Calculator on Cloudflare Workers + D1.
-// Static files are served by Cloudflare itself (free, no code). This Worker only runs for the
-// paths listed under run_worker_first in wrangler.toml: home page, calculator pages, sitemap,
-// /admin and the /_mx/e tracking beacon.
+// Pages and assets are static files served by Cloudflare itself (cached, no code). This Worker only
+// runs for the paths listed under run_worker_first in wrangler.toml: sitemap.xml, /admin and the
+// tracking beacon /_mx/e (which also tells pages which calculators are switched off).
 import { ADMIN_FILES } from './generated.js';
 import * as db from './db.js';
 import * as reg from './registry.js';
@@ -11,7 +11,6 @@ import * as stats from './stats.js';
 import { clientIp, isIP, validTz, startOfDay } from './util.js';
 
 const COMMON = { 'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'strict-origin-when-cross-origin' };
-const HTML = 'text/html; charset=utf-8';
 const TEXT = 'text/plain; charset=utf-8';
 
 function respond(body, status, type, extra = {}) {
@@ -31,34 +30,6 @@ async function readJson(request, max = 16384) {
   return raw ? JSON.parse(raw) : {};
 }
 
-function messagePage(title, heading, text) {
-  return `<!DOCTYPE html><html lang="en-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title} | Mx Calculator</title><meta name="robots" content="noindex">
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f6f8fa;color:#1b2430}
-main{max-width:460px;padding:32px;text-align:center}h1{font-size:1.6rem;margin:0 0 10px}p{color:#5a6675;line-height:1.6;margin:0 0 22px}
-a{display:inline-block;background:#1dafa2;color:#fff;text-decoration:none;padding:11px 22px;border-radius:10px;font-weight:600}
-@media(prefers-color-scheme:dark){body{background:#12171d;color:#e8edf2}p{color:#9aa6b4}}</style></head>
-<body><main><h1>${heading}</h1><p>${text}</p><a href="/">Browse all calculators</a></main></body></html>`;
-}
-
-// ------------------------------------------------------------------ home page: hide disabled calculators
-const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-let hiddenCache = { key: '', html: '' };
-function hideDisabledLinks(html, off) {
-  if (!off.length) return html;
-  const key = off.join(',') + '|' + html.length;
-  if (hiddenCache.key === key) return hiddenCache.html;
-  let out = html;
-  for (const slug of off) {
-    const href = `href="(?:\\.\\./|/)?calculators/${esc(slug)}\\.html"`;
-    out = out.replace(new RegExp(`<li[^>]*>\\s*<a ${href}[^>]*>[\\s\\S]*?</a>\\s*</li>[ \\t]*\\n?`, 'g'), '');
-    out = out.replace(new RegExp(`<a ${href}[^>]*>[\\s\\S]*?</a>`, 'g'), '');
-  }
-  // a category card with no calculators left disappears too
-  out = out.replace(/<article class="card">[\s\S]*?<\/article>/g, (card) => (/<li[\s>]/.test(card) ? card : ''));
-  hiddenCache = { key, html: out };
-  return out;
-}
 function filterSitemap(xml, off) {
   if (!off.length) return xml;
   const set = new Set(off);
@@ -70,24 +41,6 @@ function filterSitemap(xml, off) {
 
 // Fetch a file from the static-assets store without conditional headers, so we always get the body.
 const asset = (env, url, path) => env.ASSETS.fetch(new Request(new URL(path, url.origin).toString()));
-
-async function servePage(env, ctx, request, url, assetPath, { hide }) {
-  const a = await asset(env, url, assetPath);
-  if (!a.ok) return a;
-  let html = await a.text();
-  if (hide) html = hideDisabledLinks(html, await reg.disabledSlugs());
-
-  const extra = { 'Cache-Control': 'private, no-cache' };
-  try {
-    if (request.method === 'GET' && await track.shouldTrackNavigation(env, request)) {
-      const rec = await track.prepareNavigation(request, url);
-      if (rec.cookies.length) extra['Set-Cookie'] = rec.cookies;
-      if (rec.write) ctx.waitUntil(rec.write().catch((e) => console.error('track write failed:', e && e.message)));
-      if (rec.pvId) html = html.replace(/<\/head>/i, `<meta name="mx-pv" content="${rec.pvId}"><script defer src="/assets/js/mx-core.js"></script></head>`);
-    }
-  } catch (e) { console.error('tracking skipped:', e && e.message); }   // never let analytics break a page
-  return respond(html, 200, HTML, extra);
-}
 
 // ------------------------------------------------------------------ admin
 const ADMIN_CSP = "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'";
@@ -230,34 +183,17 @@ async function handle(request, env, ctx) {
 
   if (request.method !== 'GET' && request.method !== 'HEAD') return respond('Method not allowed', 405, TEXT, { Allow: 'GET, HEAD' });
 
+  // www -> apex for the few paths that reach the Worker (page redirects live in public/_redirects; for the pages themselves add the
+  // www redirect rule in the Cloudflare dashboard, see README)
+  if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return redirect(url.toString()); }
+
   if (p === '/sitemap.xml') {
     const a = await asset(env, url, '/sitemap.xml');
     if (!a.ok) return a;
     return respond(filterSitemap(await a.text(), await reg.disabledSlugs()), 200, 'application/xml; charset=utf-8', { 'Cache-Control': 'no-cache' });
   }
 
-  // ---- SEO: one URL per page. www -> apex, /index.html -> /, extensionless calculator URLs -> .html
-  if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return redirect(url.toString()); }
-  if (p === '/index.html') return redirect(new URL('/' + url.search, url.origin).toString());
-  const bare = /^\/calculators\/([a-z0-9-]+)\/?$/i.exec(p);
-  if (bare) return redirect(new URL(`/calculators/${bare[1].toLowerCase()}.html${url.search}`, url.origin).toString());
-
-  if (p === '/') return servePage(env, ctx, request, url, '/index.html', { hide: true });
-
-  // Topic hubs and state pages are plain static HTML, served through the Worker only so visits are counted.
-  if (/^\/(states|topics)\/[a-z0-9-]+\.html$/.test(p)) return servePage(env, ctx, request, url, p, { hide: false });
-
-  // A disabled calculator is unreachable, not just unlisted.
-  const slug = reg.slugFromPath(p);
-  if (slug) {
-    if (await reg.isDisabled(slug)) {
-      return respond(
-        messagePage('Calculator unavailable', 'This calculator is temporarily unavailable', 'We have switched this tool off for now. Please check back soon, or try one of our other free calculators.'),
-        503, HTML, { 'Cache-Control': 'no-store', 'Retry-After': '3600' });
-    }
-    return servePage(env, ctx, request, url, `/calculators/${slug}.html`, { hide: false });
-  }
-  return env.ASSETS.fetch(request);     // anything else under /calculators/ -> static 404
+  return env.ASSETS.fetch(request);
 }
 
 export default {

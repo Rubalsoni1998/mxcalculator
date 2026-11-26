@@ -1,16 +1,19 @@
 /*
- * How tracking stays exact (same rules as the Node version)
- * ---------------------------------------------------------
- * 1. The Worker records a page view the moment it serves an HTML page, so visitors who block
- *    JavaScript or leave instantly are still counted. It skips prefetch/prerender, non-navigations
- *    (iframes, fetches), the admin and excluded IPs. Bots are stored but flagged is_bot=1.
- * 2. The browser script then confirms the view (js=1) and reports screen size, time zone, visible
- *    time and whether a control was used.
- * 3. Page-view ids are random and unique, so a retried beacon can never double count.
+ * How tracking works (static pages + beacon)
+ * ------------------------------------------
+ * Pages are plain static files served straight from Cloudflare's cache, so the Worker never sees
+ * them. Instead the tiny script /assets/js/mx-core.js (deferred, on every counted page) sends ONE
+ * "navigation" beacon (t:'n') as soon as the page has loaded. The Worker records the view from that
+ * beacon (IP, country, user agent and cookies come from the beacon request itself; path, referrer,
+ * UTM tags and screen size come from the browser) and answers with the list of switched-off
+ * calculators, which the script uses to hide them.
+ * 1. Prefetch/prerender and iframe loads are not counted (the script waits / does nothing).
+ * 2. Bots are stored but flagged is_bot=1; visitors that block JavaScript cannot be counted.
+ * 3. View ids are random and unique, so a retried beacon can never double count.
  * 4. Visitor = cookie mx_vid (2 years). Session = cookie mx_sid (30 minutes, renewed on every page).
  *
- * Tracking must never break the site: every database call here is wrapped by the caller so a
- * failure (for example the free daily write quota being used up) only loses the statistic.
+ * Tracking must never break the site: every database call here is wrapped so a failure (for
+ * example the free daily write quota being used up) only loses the statistic.
  */
 import * as db from './db.js';
 import * as reg from './registry.js';
@@ -34,36 +37,25 @@ function storedIp(ip, mode) {
   return ip;
 }
 
-// Is this request a real page navigation worth recording?
-export async function shouldTrackNavigation(env, request) {
-  const s = await db.getSettings();
-  if (!s.tracking_enabled) return false;
-  if (request.method !== 'GET') return false;
-  const h = request.headers;
-  const purpose = String(h.get('sec-purpose') || h.get('purpose') || h.get('x-moz') || '').toLowerCase();
-  if (purpose.includes('prefetch') || purpose.includes('prerender')) return false;
-  const dest = h.get('sec-fetch-dest');
-  if (dest && dest !== 'document') return false;
-  if (await auth.isAdmin(env, request)) return false;
-  return true;
-}
-
 const INSERT_SQL = `INSERT OR IGNORE INTO pageviews
   (id, ts, path, calc_slug, visitor_id, session_id, is_new_visitor, is_entry, ip, country, ua, browser, browser_ver, os, device, is_bot,
    referrer, ref_host, channel, utm_source, utm_medium, utm_campaign, lang, tz, screen_w, screen_h, vp_w, vp_h, js, last_seen)
   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`;
 
 /**
- * Prepare a page-view record for an HTML request. Nothing is written yet: the caller runs
- * `write()` in the background (ctx.waitUntil) so the page is never delayed by the database.
- * Returns { pvId, cookies[], write } - pvId is null when the view is not worth confirming (bot).
+ * Record a page view from a navigation beacon. Returns the cookies to set (a Set-Cookie list) and a
+ * write() to run in the background, or null when the view should not be counted.
  */
-export async function prepareNavigation(request, url) {
-  const settings = await db.getSettings();
-  const ip = clientIp(request);
-  if ((settings.exclude_ips || []).includes(ip)) return { pvId: null, cookies: [] };
+async function prepareNavigation(env, request, settings, b, ip) {
+  if ((settings.exclude_ips || []).includes(ip)) return null;
+  const p = String(b.path || '/');
+  if (!p.startsWith('/') || p.startsWith('//') || p.startsWith('/admin') || p.startsWith('/_mx')) return null;
+  const path = p.split('?')[0];
+  if (await auth.isAdmin(env, request)) return null;
+
   const ua = request.headers.get('user-agent') || '';
   const parsed = parseUA(ua);
+  const url = new URL(request.url);
   const secure = isSecure(request);
 
   const jar = parseCookies(request.headers.get('cookie'));
@@ -80,24 +72,31 @@ export async function prepareNavigation(request, url) {
     cookies.push(cookie(SID_COOKIE, sessionId, { maxAge: SESSION_S, secure, sameSite: 'Lax' }));   // renews the 30 minutes
   }
 
-  const q = url.searchParams;
+  let q;
+  try { q = new URLSearchParams(String(b.search || '').slice(0, 500)); } catch { q = new URLSearchParams(); }
   const utm = { source: clip(q.get('utm_source'), 100), medium: clip(q.get('utm_medium'), 100), campaign: clip(q.get('utm_campaign'), 150) };
-  const ref = classifyReferrer(request.headers.get('referer'), url.host, utm);
+  const referrer = clip(b.ref, 500) || null;
+  const ref = classifyReferrer(referrer, url.host, utm);
   const now = Date.now();
-  const pvId = rid(12);
   const sess = parsed.isBot ? { id: 'bot-' + rid(4), entry: true } : { id: sessionId, entry: !hadSession };
-  const country = countryFrom(request) || null;
+  const slug = reg.slugFromPath(path);
   const lang = clip(String(request.headers.get('accept-language') || '').split(',')[0], 20);
-  const slug = reg.slugFromPath(url.pathname);
+
+  // iPadOS pretends to be a Mac (touch support tells them apart); webdriver browsers are bots.
+  const touch = Number(b.tp) > 1;
+  let { os, device } = parsed;
+  if (touch && os === 'macOS') { os = 'iOS'; device = 'tablet'; }
+  const isBot = parsed.isBot || !!b.wd;
+  if (isBot) device = 'bot';
 
   const write = () => db.run(INSERT_SQL,
-    pvId, now, clip(url.pathname, 300), slug, visitorId, sess.id,
-    hadVisitor ? 0 : 1, sess.entry ? 1 : 0, storedIp(ip, settings.ip_mode), country, clip(ua, 400),
-    parsed.browser, parsed.browserVer, parsed.os, parsed.device, parsed.isBot ? 1 : 0,
-    clip(request.headers.get('referer'), 500), ref.host || null, ref.channel, utm.source, utm.medium, utm.campaign, lang,
-    null, null, null, null, null, 0, now);
+    clip(b.id, 24), now, clip(path, 300), slug, visitorId, sess.id,
+    hadVisitor ? 0 : 1, sess.entry ? 1 : 0, storedIp(ip, settings.ip_mode), countryFrom(request) || null, clip(ua, 400),
+    parsed.browser, parsed.browserVer, os, device, isBot ? 1 : 0,
+    referrer, ref.host || null, ref.channel, utm.source, utm.medium, utm.campaign, lang,
+    clip(b.tz, 60), int(b.w), int(b.h), int(b.vw), int(b.vh), 1, now);
 
-  return { pvId: parsed.isBot ? null : pvId, cookies, write };
+  return { cookies, write };
 }
 
 // ---------- beacon endpoint: POST /_mx/e ----------
@@ -109,12 +108,34 @@ export async function handleBeacon(env, request, ctx) {
   try {
     const ip = clientIp(request);
     if (!beaconLimit(ip)) return done(429);
-    const settings = await db.getSettings();
-    if (!settings.tracking_enabled) return done();
     const text = await request.text();
     if (text.length > 4096) return done();
     const b = JSON.parse(text);
     if (!b || !HEX24.test(b.id || '')) return done();
+
+    if (b.t === 'n') {
+      // Navigation: answer with the switched-off calculators (always, even when tracking is off), then record the view.
+      const off = await reg.disabledSlugs();
+      try {
+        const settings = await db.getSettings();
+        if (settings.tracking_enabled) {
+          const slug = reg.slugFromPath(String(b.path || '').split('?')[0]);
+          if (!(slug && off.includes(slug))) {        // views of switched-off calculators are not counted
+            const rec = await prepareNavigation(env, request, settings, b, ip);
+            if (rec) {
+              rec.cookies.forEach((c) => headers.append('Set-Cookie', c));
+              ctx.waitUntil(rec.write().catch((e) => console.error('track write failed:', e && e.message)));
+            }
+          }
+        }
+      } catch (e) { console.error('tracking skipped:', e && e.message); }   // never let analytics break a page
+      headers.set('Content-Type', 'application/json; charset=utf-8');
+      headers.set('Cache-Control', 'no-store');
+      return new Response(JSON.stringify({ off }), { status: 200, headers });
+    }
+
+    const settings = await db.getSettings();
+    if (!settings.tracking_enabled) return done();
     const now = Date.now();
 
     if (b.t === 'v') {
@@ -145,25 +166,13 @@ export async function handleBeacon(env, request, ctx) {
       return done();
     }
 
-    // Hello ('h') and heartbeat/end ('p') are each ONE update statement, no read first.
-    const wd = b.wd ? 1 : 0;
-    const touch = Number(b.tp) > 1 ? 1 : 0;       // iPadOS pretends to be a Mac; touch support tells them apart
-    if (b.t === 'h') {
-      await db.run(`UPDATE pageviews SET js = 1, tz = ?, screen_w = ?, screen_h = ?, vp_w = ?, vp_h = ?,
-          device = CASE WHEN is_bot = 1 OR ? = 1 THEN 'bot' WHEN os = 'macOS' AND ? = 1 THEN 'tablet' ELSE device END,
-          os = CASE WHEN os = 'macOS' AND ? = 1 THEN 'iOS' ELSE os END,
-          is_bot = CASE WHEN ? = 1 THEN 1 ELSE is_bot END,
-          last_seen = ?
-        WHERE id = ?`,
-      clip(b.tz, 60), int(b.w), int(b.h), int(b.vw), int(b.vh), wd, touch, touch, wd, now, b.id);
-    } else {
-      const d = int(b.d, 6 * 3600 * 1000) || 0;
-      await db.run(`UPDATE pageviews SET js = 1,
-          dur_ms = MAX(dur_ms, MIN(?, ? - ts + 5000)),
-          interacted = CASE WHEN ? = 1 THEN 1 ELSE interacted END,
-          last_seen = ?
-        WHERE id = ?`, d, now, b.i ? 1 : 0, now, b.id);
-    }
+    // Heartbeat/end ('p') is ONE update statement, no read first.
+    const d = int(b.d, 6 * 3600 * 1000) || 0;
+    await db.run(`UPDATE pageviews SET js = 1,
+        dur_ms = MAX(dur_ms, MIN(?, ? - ts + 5000)),
+        interacted = CASE WHEN ? = 1 THEN 1 ELSE interacted END,
+        last_seen = ?
+      WHERE id = ?`, d, now, b.i ? 1 : 0, now, b.id);
   } catch { /* malformed beacons and database hiccups are ignored */ }
   return done();
 }

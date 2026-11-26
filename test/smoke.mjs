@@ -30,7 +30,8 @@ const DB = {
     } catch (e) { sqlite.exec('ROLLBACK'); throw e; }
   },
 };
-const PUB = path.join(root, 'public');
+const PUB = path.join(root, 'dist');          // what Cloudflare serves (built by `npm run build`)
+if (!fs.existsSync(PUB)) throw new Error('dist/ is missing - run `npm run build` first');
 const ASSETS = {
   async fetch(req) {
     const u = new URL(typeof req === 'string' ? req : req.url);
@@ -61,60 +62,64 @@ const cookiesOf = (r) => r.headers.getSetCookie().map((c) => c.split(';')[0]).jo
 const CHROME = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
 const nav = (extra = {}) => ({ headers: { 'user-agent': CHROME, 'sec-fetch-dest': 'document', 'cf-connecting-ip': '203.0.113.9', 'cf-ipcountry': 'IN', ...extra } });
 
-console.log('Public pages');
-let r = await call('/', nav());
-let html = await r.text();
-ok('home page 200', r.status === 200);
-const pv = /name="mx-pv" content="([a-f0-9]{24})"/.exec(html);
-ok('tracking meta + script injected', !!pv && html.includes('/assets/js/mx-core.js'));
-ok('visitor + session cookies set', /mx_vid=/.test(cookiesOf(r)) && /mx_sid=/.test(cookiesOf(r)));
-let jar = cookiesOf(r);
-let row = sqlite.prepare('SELECT * FROM pageviews WHERE id = ?').get(pv[1]);
-ok('page view stored with country/IP/entry', row && row.country === 'IN' && row.ip === '203.0.113.9' && row.is_entry === 1 && row.is_new_visitor === 1);
+console.log('Static build (dist/)');
+const dist = (f) => fs.readFileSync(path.join(PUB, f), 'utf8');
+let html = dist('calculators/bmi-calculator.html');
+ok('calculator page: CSS inlined, no render-blocking stylesheet links', html.includes('<style>') && !/rel="stylesheet"/.test(html));
+ok('calculator page: Google Analytics loads after the page, not in <head> as a blocking tag', !html.includes('<script async src="https://www.googletagmanager.com') && html.includes("addEventListener('load'"));
+ok('calculator page: fingerprinted JS + tracking script', /src="\/assets\/js\/mx-core\.[a-f0-9]{8}\.js"/.test(html) && /assets\/js\/enhance\.[a-f0-9]{8}\.js/.test(html));
+ok('home page gets the tracking script too', /mx-core\.[a-f0-9]{8}\.js/.test(dist('index.html')));
+ok('legal/404 pages are not tracked', !dist('privacy.html').includes('mx-core') && !dist('404.html').includes('mx-core'));
+const redirects = dist('_redirects');
+ok('_redirects: extensionless calculator URLs + /index.html', redirects.includes('/calculators/bmi-calculator /calculators/bmi-calculator.html 301') && redirects.includes('/index.html / 301'));
+const wr = fs.readFileSync(path.join(root, 'wrangler.toml'), 'utf8');
+ok('Worker does not run for pages (only sitemap, admin, beacon)', !/"\/calculators\/\*"/.test(wr) && !/"\/"/.test(wr) && wr.includes('"/_mx/*"') && wr.includes('directory = "./dist"'));
 
-r = await call('/calculators/bmi-calculator.html', nav({ cookie: jar, referer: 'https://www.google.com/' }));
-html = await r.text();
-const pv2 = /name="mx-pv" content="([a-f0-9]{24})"/.exec(html);
-row = sqlite.prepare('SELECT * FROM pageviews WHERE id = ?').get(pv2[1]);
-ok('calculator page: same visitor, same session, not an entry', row.is_entry === 0 && row.calc_slug === 'bmi-calculator' && row.is_new_visitor === 0);
-{ const x = await call('/calculators/bmi-calculator', nav({ cookie: jar }));
-  ok('extensionless URL 301s to the .html page', x.status === 301 && x.headers.get('location') === 'https://mxcalculator.test/calculators/bmi-calculator.html'); }
-{ const x = await call('/index.html', nav({ cookie: jar }));
-  ok('/index.html 301s to /', x.status === 301 && x.headers.get('location') === 'https://mxcalculator.test/'); }
-{ const x = await worker.fetch(new Request('https://www.mxcalculator.test/calculators/bmi-calculator.html', nav()), env, ctx);
-  ok('www host 301s to apex', x.status === 301 && x.headers.get('location') === 'https://mxcalculator.test/calculators/bmi-calculator.html'); }
-r = await call('/calculators/does-not-exist.html', nav());
-ok('unknown calculator -> 404', r.status === 404);
-r = await call('/calculators/bmi-calculator.html', { headers: { 'user-agent': 'Mozilla/5.0 (compatible; Googlebot/2.1)', 'sec-fetch-dest': 'document' } });
-html = await r.text();
-ok('bot served the page but not given the beacon', r.status === 200 && !html.includes('mx-pv'));
-ok('bot stored flagged is_bot=1', sqlite.prepare("SELECT COUNT(*) n FROM pageviews WHERE is_bot = 1").get().n === 1);
-await call('/', { headers: { 'user-agent': CHROME, 'sec-fetch-dest': 'document', purpose: 'prefetch' } });
-await call('/', { headers: { 'user-agent': CHROME, 'sec-fetch-dest': 'iframe' } });
-ok('prefetch and iframe loads are not counted', sqlite.prepare('SELECT COUNT(*) n FROM pageviews').get().n === 3);   // home + 1 calculator load + 1 bot (the extensionless request is now a redirect, not a view)
+console.log('Navigation beacons (page views)');
+const beacon = (o, extra = {}) => call('/_mx/e', { method: 'POST', body: JSON.stringify(o), headers: { 'user-agent': CHROME, 'cf-connecting-ip': '203.0.113.9', 'cf-ipcountry': 'IN', ...extra } });
+const nb = (id, p, o = {}, extra = {}) => beacon({ t: 'n', id, path: p, search: '', ref: '', tz: 'Asia/Kolkata', w: 1920, h: 1080, vw: 1200, vh: 800, tp: 0, wd: 0, d: 0, ...o }, extra);
+const count = () => sqlite.prepare('SELECT COUNT(*) n FROM pageviews').get().n;
+const get = (id) => sqlite.prepare('SELECT * FROM pageviews WHERE id = ?').get(id);
+const ID1 = '1'.repeat(24), pv2 = [null, '2'.repeat(24)];
+let r = await nb(ID1, '/');
+ok('navigation beacon -> 200 JSON with the switched-off list', r.status === 200 && r.headers.get('cache-control') === 'no-store' && Array.isArray((await r.json()).off));
+const jar = cookiesOf(r);
+ok('visitor + session cookies set', /mx_vid=/.test(jar) && /mx_sid=/.test(jar));
+let row = get(ID1);
+ok('page view stored with country/IP/entry/screen/tz', row && row.country === 'IN' && row.ip === '203.0.113.9' && row.is_entry === 1 && row.is_new_visitor === 1 && row.js === 1 && row.screen_w === 1920 && row.tz === 'Asia/Kolkata' && row.path === '/' && row.channel === 'direct');
+r = await nb(pv2[1], '/calculators/bmi-calculator.html', { ref: 'https://www.google.com/', search: '?utm_source=news&utm_medium=email' }, { cookie: jar });
+row = get(pv2[1]);
+ok('calculator view: same visitor, same session, not an entry, slug set', row.is_entry === 0 && row.calc_slug === 'bmi-calculator' && row.is_new_visitor === 0 && row.visitor_id === get(ID1).visitor_id && row.session_id === get(ID1).session_id);
+ok('UTM tags stored and win over the referrer', row.utm_source === 'news' && row.utm_medium === 'email' && row.channel === 'campaign' && row.referrer === 'https://www.google.com/');
+r = await nb('3'.repeat(24), '/states/texas.html', { ref: 'https://www.google.com/search?q=x' }, { cookie: jar });
+ok('search referrer classified', get('3'.repeat(24)).channel === 'search' && get('3'.repeat(24)).ref_host === 'google.com');
+r = await nb('4'.repeat(24), '/calculators/loan-calculator.html', { ref: 'https://mxcalculator.test/' }, { cookie: jar });
+ok('internal navigation classified', get('4'.repeat(24)).channel === 'internal');
+await nb(ID1, '/');
+ok('same view id never double counts', count() === 4);
+r = await nb('5'.repeat(24), '/calculators/loan-calculator.html', {}, { 'user-agent': 'Mozilla/5.0 (compatible; Googlebot/2.1)' });
+ok('bot stored flagged is_bot=1, no cookies', get('5'.repeat(24)).is_bot === 1 && r.headers.getSetCookie().length === 0);
+await nb('6'.repeat(24), '/', { wd: 1 });
+ok('webdriver browser is a bot', get('6'.repeat(24)).is_bot === 1 && get('6'.repeat(24)).device === 'bot');
+await nb('7'.repeat(24), '/', { tp: 5 }, { 'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15' });
+ok('iPad posing as a Mac is detected via touch points', get('7'.repeat(24)).os === 'iOS' && get('7'.repeat(24)).device === 'tablet');
+const before0 = count();
+await nb('8'.repeat(24), '/admin/x'); await nb('9'.repeat(24), '//evil.example/'); await nb('a1'.repeat(12), 'calculators/x.html');
+ok('admin / protocol-relative / relative paths are not counted', count() === before0);
 
-console.log('Beacons');
-const beacon = (o, extra = {}) => call('/_mx/e', { method: 'POST', body: JSON.stringify(o), headers: { 'user-agent': CHROME, 'cf-connecting-ip': '203.0.113.9', ...extra } });
-r = await beacon({ t: 'h', id: pv2[1], tz: 'Asia/Kolkata', w: 1920, h: 1080, vw: 1200, vh: 800, tp: 0, wd: 0, d: 0 });
-ok('hello beacon 204', r.status === 204);
-row = sqlite.prepare('SELECT * FROM pageviews WHERE id = ?').get(pv2[1]);
-ok('hello confirms view + stores screen/tz', row.js === 1 && row.tz === 'Asia/Kolkata' && row.screen_w === 1920);
+console.log('Heartbeats + bfcache');
 await new Promise((res) => setTimeout(res, 30));
 await beacon({ t: 'p', id: pv2[1], d: 20, i: 1 });
-row = sqlite.prepare('SELECT * FROM pageviews WHERE id = ?').get(pv2[1]);
+row = get(pv2[1]);
 ok('heartbeat stores duration (capped by elapsed time) + interaction', row.interacted === 1 && row.dur_ms > 0 && row.dur_ms <= 20);
-await beacon({ t: 'h', id: pv2[1], wd: 1 });
-row = sqlite.prepare('SELECT * FROM pageviews WHERE id = ?').get(pv2[1]);
-ok('webdriver flag turns a view into a bot', row.is_bot === 1 && row.device === 'bot');
-await beacon({ t: 'h', id: pv2[1], wd: 0 }); // can't un-bot
-ok('bot flag is sticky', sqlite.prepare('SELECT is_bot FROM pageviews WHERE id = ?').get(pv2[1]).is_bot === 1);
+r = await beacon({ t: 'p', id: 'b'.repeat(24), d: 5 });
+ok('beacon for unknown id is harmless', r.status === 204);
 const newId = 'a'.repeat(24);
 r = await beacon({ t: 'v', id: newId, path: '/calculators/bmi-calculator.html', tz: 'UTC', w: 1, h: 1, vw: 1, vh: 1 }, { cookie: jar });
 ok('bfcache view creates a row', sqlite.prepare('SELECT COUNT(*) n FROM pageviews WHERE id = ?').get(newId).n === 1 && r.headers.getSetCookie().some((c) => c.startsWith('mx_sid=')));
 await beacon({ t: 'v', id: newId, path: '/' }, { cookie: jar });
-ok('same view id never double counts', sqlite.prepare('SELECT COUNT(*) n FROM pageviews WHERE id = ?').get(newId).n === 1);
-r = await beacon({ t: 'p', id: 'b'.repeat(24), d: 5 });
-ok('beacon for unknown id is harmless', r.status === 204);
+ok('same bfcache id never double counts', sqlite.prepare('SELECT COUNT(*) n FROM pageviews WHERE id = ?').get(newId).n === 1);
+ok('www host 301s to apex (sitemap/admin paths)', (await worker.fetch(new Request('https://www.mxcalculator.test/sitemap.xml'), env, ctx)).status === 301);
 
 console.log('Admin sign-in');
 r = await call('/admin');
@@ -135,8 +140,9 @@ ok('/admin shows the panel when signed in', (await r.text()).includes('Admin pan
 ok('admin pages carry CSP + noindex', (await call('/admin', { headers: admin })).headers.get('content-security-policy').includes("frame-ancestors 'none'"));
 for (let i = 0; i < 8; i++) await post('/admin/api/login', { username: 'admin', password: 'x' + i }, { 'cf-connecting-ip': '192.0.2.77' });
 ok('brute force is rate limited (429)', (await post('/admin/api/login', { username: 'admin', password: env.ADMIN_PASSWORD }, { 'cf-connecting-ip': '192.0.2.77' })).status === 429);
-const own = await call('/', nav({ cookie: jar + '; ' + admin.cookie }));
-ok('admin browsing is not counted', !(await own.text()).includes('mx-pv'));
+const nOwn = count();
+await nb('c1'.repeat(12), '/', {}, { cookie: jar + '; ' + admin.cookie });
+ok('admin browsing is not counted', count() === nOwn);
 
 console.log('Calculator toggles');
 const A = (url, init = {}) => call(url, { ...init, headers: { ...(init.headers || {}), ...admin } });
@@ -145,20 +151,18 @@ ok('lists all 92 calculators with categories', d.total === 92 && d.categories.le
 r = await post('/admin/api/calculators', { slugs: ['bmi-calculator', 'mortgage-calculator', 'not-real'], enabled: false }, admin);
 d = await r.json();
 ok('switch off 2 (unknown slug ignored)', d.changed === 2 && d.disabled.join() === 'bmi-calculator,mortgage-calculator');
-r = await call('/calculators/bmi-calculator.html', nav());
-ok('disabled calculator -> 503 page', r.status === 503 && (await r.text()).includes('temporarily unavailable'));
-{ const x = await call('/calculators/bmi-calculator', nav());
-  ok('disabled calculator without .html redirects to the (blocked) .html URL', x.status === 301 && x.headers.get('location').endsWith('/calculators/bmi-calculator.html')); }
-ok('other calculators unaffected', (await call('/calculators/loan-calculator.html', nav())).status === 200);
-html = await (await call('/', nav())).text();
-ok('home page no longer links to it', !html.includes('calculators/bmi-calculator.html') && !html.includes('calculators/mortgage-calculator.html') && html.includes('calculators/loan-calculator.html'));
+r = await nb('d1'.repeat(12), '/');
+ok('beacon response lists the switched-off calculators', (await r.json()).off.join() === 'bmi-calculator,mortgage-calculator');
+const before = count();
+r = await nb('d2'.repeat(12), '/calculators/bmi-calculator.html', {}, { cookie: jar });
+ok('views of a switched-off calculator are not counted (page is hidden by mx-core.js)', count() === before && (await r.json()).off.includes('bmi-calculator'));
+await nb('d3'.repeat(12), '/calculators/loan-calculator.html', {}, { cookie: jar });
+ok('other calculators unaffected and counted', count() === before + 1);
 const sm = await (await call('/sitemap.xml')).text();
 ok('sitemap drops it', !sm.includes('bmi-calculator') && sm.includes('loan-calculator'));
-const before = sqlite.prepare('SELECT COUNT(*) n FROM pageviews').get().n;
-await call('/calculators/bmi-calculator.html', nav());
-ok('503 hits are not counted as visits', sqlite.prepare('SELECT COUNT(*) n FROM pageviews').get().n === before);
 await post('/admin/api/calculators', { slugs: ['bmi-calculator', 'mortgage-calculator'], enabled: true }, admin);
-ok('switching back on restores it', (await call('/calculators/bmi-calculator.html', nav())).status === 200);
+r = await nb('d4'.repeat(12), '/calculators/bmi-calculator.html', {}, { cookie: jar });
+ok('switching back on restores it', (await r.json()).off.length === 0 && get('d4'.repeat(12)));
 
 console.log('Analytics endpoints');
 // make some history on earlier days so the multi-day chart has something to show
@@ -194,16 +198,16 @@ r = await post('/admin/api/settings', { tracking_enabled: true, ip_mode: 'trunca
 d = await r.json();
 ok('settings saved', r.status === 200 && d.settings.ip_mode === 'truncated' && d.settings.exclude_ips.length === 2 && d.settings.retention_days === 90);
 ok('bad IP rejected', (await post('/admin/api/settings', { exclude_ips: 'not-an-ip' }, admin)).status === 400);
-r = await call('/', nav({ cookie: '', 'cf-connecting-ip': '203.0.113.50' }));
-const id3 = /content="([a-f0-9]{24})"/.exec(await r.text())[1];
+const id3 = 'e1'.repeat(12);
+await nb(id3, '/', {}, { 'cf-connecting-ip': '203.0.113.50' });
 ok('truncated IP mode is applied', sqlite.prepare('SELECT ip FROM pageviews WHERE id = ?').get(id3).ip === '203.0.113.0');
 const n0 = sqlite.prepare('SELECT COUNT(*) n FROM pageviews').get().n;
 await post('/admin/api/settings', { exclude_ips: '203.0.113.50' }, admin);
-await call('/', nav({ 'cf-connecting-ip': '203.0.113.50' }));
+await nb('e2'.repeat(12), '/', {}, { 'cf-connecting-ip': '203.0.113.50' });
 ok('excluded IP is not recorded', sqlite.prepare('SELECT COUNT(*) n FROM pageviews').get().n === n0);
 await post('/admin/api/settings', { tracking_enabled: false }, admin);
-r = await call('/', nav({ 'cf-connecting-ip': '203.0.113.77' }));
-ok('tracking off: page works, nothing recorded', r.status === 200 && !(await r.text()).includes('mx-pv') && sqlite.prepare('SELECT COUNT(*) n FROM pageviews').get().n === n0);
+r = await nb('e3'.repeat(12), '/', {}, { 'cf-connecting-ip': '203.0.113.77' });
+ok('tracking off: beacon still answers, nothing recorded, no cookies', r.status === 200 && r.headers.getSetCookie().length === 0 && sqlite.prepare('SELECT COUNT(*) n FROM pageviews').get().n === n0);
 await post('/admin/api/settings', { tracking_enabled: true, exclude_ips: '' }, admin);
 ok('password change is refused (it is a secret)', (await post('/admin/api/password', { current: 'a', new: 'bbbbbbbbbbbb' }, admin)).status === 400);
 
@@ -237,9 +241,8 @@ const dbmod = await import('../src/db.js');
 dbmod.cache.clear();
 const goodDB = env.DB;
 env.DB = { prepare: () => ({ bind: () => ({ all: async () => { throw new Error('D1 quota'); }, first: async () => { throw new Error('D1 quota'); }, run: async () => { throw new Error('D1 quota'); } }) }), batch: async () => { throw new Error('D1 quota'); } };
-r = await call('/calculators/loan-calculator.html', nav());
-ok('calculator page still served (fails open, untracked)', r.status === 200 && (await r.text()).includes('<html'));
-ok('home page still served', (await call('/', nav())).status === 200);
+r = await nb('f1'.repeat(12), '/calculators/loan-calculator.html');
+ok('navigation beacon still answers (fails open: nothing switched off, untracked)', r.status === 200 && (await r.json()).off.length === 0);
 ok('beacons are swallowed quietly', (await beacon({ t: 'p', id: 'a'.repeat(24), d: 1 })).status === 204);
 ok('sitemap still served', (await call('/sitemap.xml')).status === 200);
 r = await post('/admin/api/login', { username: 'admin', password: env.ADMIN_PASSWORD });
