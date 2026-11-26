@@ -1,8 +1,13 @@
-# Cloudflare static-asset headers. HTML is served by the Worker (it injects the visit id), so it is not listed here.
-# Assets are not fingerprinted, so keep the cache short enough that a deploy reaches visitors within the hour.
-/assets/css/*
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+# Cloudflare static-asset headers (copied into dist/ by the build).
+# HTML pages use Cloudflare's default (revalidate with ETag at the edge, answered as 304 without any code),
+# so a deploy reaches visitors immediately and old pages never point at deleted fingerprinted files.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+# JS file names contain a content hash (build-dist.mjs), so they can be cached for a year.
 /assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+/assets/css/*
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 /assets/vendor/*
   Cache-Control: public, max-age=31536000, immutable

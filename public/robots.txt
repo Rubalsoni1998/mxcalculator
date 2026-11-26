@@ -3,19 +3,101 @@ Allow: /
 Disallow: /admin
 
 # AI crawlers explicitly allowed
+
+# OpenAI
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+
+# Anthropic
 User-agent: anthropic-ai
-Allow: /
-Disallow: /admin
-
 User-agent: ClaudeBot
-Allow: /
-Disallow: /admin
-
 User-agent: Claude-Web
+User-agent: Claude-User
+User-agent: Claude-SearchBot
 Allow: /
 Disallow: /admin
 
+# Google (Gemini / AI training control token)
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: Google-CloudVertexBot
+Allow: /
+Disallow: /admin
+
+# Microsoft (Bing / Copilot)
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin
+
+# Apple (Siri / Apple Intelligence)
+User-agent: Applebot
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin
+
+# Meta
+User-agent: meta-externalagent
+User-agent: meta-externalfetcher
+User-agent: FacebookBot
+Allow: /
+Disallow: /admin
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin
+
+# Cohere
 User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+Allow: /
+Disallow: /admin
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+Disallow: /admin
+
+# DuckDuckGo AI
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /admin
+
+# You.com
+User-agent: YouBot
+Allow: /
+Disallow: /admin
+
+# ByteDance
+User-agent: Bytespider
+Allow: /
+Disallow: /admin
+
+# Common Crawl (used to train many models)
+User-agent: CCBot
+Allow: /
+Disallow: /admin
+
+# Allen Institute for AI
+User-agent: AI2Bot
+User-agent: Ai2Bot-Dolma
+Allow: /
+Disallow: /admin
+
+# Other AI / data crawlers
+User-agent: Diffbot
+User-agent: Omgilibot
+User-agent: Timpibot
+User-agent: PetalBot
 Allow: /
 Disallow: /admin
 
