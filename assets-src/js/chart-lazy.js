@@ -10,7 +10,10 @@
   var LOCAL = self ? self.replace(/js\/chart-lazy[^\/]*$/, 'vendor/chart-' + VERSION + '.umd.js') : '';
   var CDN = 'https://cdn.jsdelivr.net/npm/chart.js@' + VERSION + '/dist/chart.umd.js';
 
-  var Real = null, loading = null, defaults = {};
+  var Real = null, loading = null;
+  // Charts are rebuilt on every Calculate click; Chart.js's default 1 s animation keeps the page busy, so use a short one.
+  var calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var defaults = { animation: { duration: calm ? 0 : 250 } };
 
   function inject(src) {
     return new Promise(function (resolve, reject) {

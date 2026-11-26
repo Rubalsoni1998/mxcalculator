@@ -11,17 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Toggle functions
-function setCurrency(currency) {
-  state.currency = currency;
-  state.locale = currency === 'INR' ? 'en-IN' : 'en-US';
-  const symbol = currency === 'INR' ? '₹' : '$';
-
-  // Update Input Icons
-  document.querySelectorAll('.dynamic-symbol').forEach(el => {
-    el.textContent = symbol;
-  });
-  calculate();
-}
 
 // Calculation Logic
 function calculate() {

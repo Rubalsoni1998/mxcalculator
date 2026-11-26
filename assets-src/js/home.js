@@ -356,3 +356,15 @@ function calcFunc(fn) {
         io.observe(el);
     });
 })();
+
+
+// Preferred currency: saved in the browser and read by the calculators when they open (USD by default).
+(function () {
+    var pick = document.getElementById('currencyPick');
+    if (!pick) return;
+    try { var saved = localStorage.getItem('mx:currency'); if (saved) pick.value = saved; } catch (e) { /* private mode */ }
+    if (!pick.value) pick.value = 'USD';           // a saved code that is no longer offered
+    pick.addEventListener('change', function () {
+        try { localStorage.setItem('mx:currency', pick.value); } catch (e) { /* private mode */ }
+    });
+})();

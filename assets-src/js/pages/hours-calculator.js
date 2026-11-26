@@ -1,30 +1,24 @@
+// Currency comes from the visitor's choice on the home page (kept in the browser; USD by default).
+const mxCur = (window.mxCurrency && window.mxCurrency.get()) || { code: 'USD', locale: 'en-US', symbol: '$' };
 // State
 let state = {
-  currency: 'USD',
-  locale: 'en-US'
+  currency: mxCur.code,
+  locale: mxCur.locale
 };
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
-   setCurrency('USD'); // Default
 });
 
 // Toggle functions
-function setCurrency(currency) {
-  state.currency = currency;
-  state.locale = currency === 'INR' ? 'en-IN' : 'en-US';
-  const symbol = currency === 'INR' ? '₹' : '$';
-
-  // Update Input Icons/Labels
-  document.querySelectorAll('.dynamic-symbol').forEach(el => {
-    el.textContent = symbol;
+// Currency symbols in the inputs. USD is already in the HTML, so the default case does no work at all.
+function applyCurrencySymbols() {
+  if (mxCur.code === 'USD') return;
+  document.querySelectorAll('.dynamic-symbol, .dynamic-symbol-btn').forEach(el => {
+    el.textContent = mxCur.symbol;
   });
-
-  // Recalculate if values exist
-  if(document.getElementById('totalPayDisplay').textContent !== '--') {
-      calculate();
-  }
 }
+applyCurrencySymbols();
 
 // Calculation Logic
 function calculate() {

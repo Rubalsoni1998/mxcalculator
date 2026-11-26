@@ -1,3 +1,5 @@
+// Currency comes from the visitor's choice on the home page (kept in the browser; USD by default).
+const mxCur = (window.mxCurrency && window.mxCurrency.get()) || { code: 'USD', locale: 'en-US', symbol: '$' };
 // State
 let state = {
   downPaymentType: 'dollar',
@@ -5,8 +7,8 @@ let state = {
   results: null,
   pieChart: null,
   lineChart: null,
-  currency: 'USD',
-  locale: 'en-US'
+  currency: mxCur.code,
+  locale: mxCur.locale
 };
 
 // Initialize
@@ -33,24 +35,14 @@ function initializeDateSelects() {
 }
 
 // Toggle functions
-function setCurrency(currency) {
-  state.currency = currency;
-  state.locale = currency === 'INR' ? 'en-IN' : 'en-US';
-  const symbol = currency === 'INR' ? '₹' : '$';
-
-  // Update Input Icons
-  document.querySelectorAll('.dynamic-symbol').forEach(el => {
-    el.textContent = symbol;
+// Currency symbols in the inputs. USD is already in the HTML, so the default case does no work at all.
+function applyCurrencySymbols() {
+  if (mxCur.code === 'USD') return;
+  document.querySelectorAll('.dynamic-symbol, .dynamic-symbol-btn').forEach(el => {
+    el.textContent = mxCur.symbol;
   });
-
-  // Update Toggle Buttons
-  document.querySelectorAll('.dynamic-symbol-btn').forEach(btn => {
-    btn.textContent = symbol;
-  });
-
-  // Re-calculate to update formatting
-  calculate();
 }
+applyCurrencySymbols();
 
 function setDownPaymentType(type) {
   state.downPaymentType = type;
@@ -422,9 +414,7 @@ function renderLineChart() {
           },
           ticks: {
             callback: function(value) {
-              return state.currency === 'INR' 
-                ? '₹' + (value / 1000).toFixed(0) + 'K'
-                : '$' + (value / 1000).toFixed(0) + 'K';
+              return mxCur.symbol + (value / 1000).toFixed(0) + 'K';
             }
           },
           grid: {

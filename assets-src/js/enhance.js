@@ -1,3 +1,19 @@
+/* Currency preference. The visitor picks it once on the home page; it is saved in localStorage ('mx:currency').
+   Calculators read it synchronously at start-up: no network request, no extra file. USD when nothing is saved.
+   To offer another currency: add it here AND as an <option> in index.html. */
+window.mxCurrency = (function () {
+  var LOCALES = { USD: 'en-US', INR: 'en-IN', EUR: 'en-IE', GBP: 'en-GB', CAD: 'en-CA', AUD: 'en-AU' };
+  var code = 'USD';
+  try { var saved = localStorage.getItem('mx:currency'); if (saved && LOCALES[saved]) code = saved; } catch (e) { /* private mode */ }
+  var symbol = '$';
+  try {
+    var parts = new Intl.NumberFormat(LOCALES[code], { style: 'currency', currency: code, currencyDisplay: 'narrowSymbol' }).formatToParts(0);
+    for (var i = 0; i < parts.length; i++) if (parts[i].type === 'currency') symbol = parts[i].value;
+  } catch (e) { symbol = code; }
+  var info = { code: code, locale: LOCALES[code], symbol: symbol };
+  return { get: function () { return info; } };
+})();
+
 /* Shared enhancements, loaded on every calculator page (deferred):
    1. remembers the last inputs (localStorage) and restores them next visit
    2. "Share" button that copies a link containing the current values
