@@ -103,7 +103,8 @@ for (const file of walk(DIST).filter((f) => f.endsWith('.html'))) {
 
 // ---- 3. redirects
 const slugs = fs.readdirSync(path.join(DIST, 'calculators')).filter((f) => f.endsWith('.html')).map((f) => f.slice(0, -5)).sort();
-const lines = ['/index.html / 301'];
+// No '/index.html -> /' rule: the Worker serves '/' by fetching /index.html, so that rule would loop.
+const lines = [];
 for (const s of slugs) lines.push(`/calculators/${s} /calculators/${s}.html 301`, `/calculators/${s}/ /calculators/${s}.html 301`);
 fs.writeFileSync(path.join(DIST, '_redirects'), lines.join('\n') + '\n');
 
@@ -121,4 +122,4 @@ for (const file of walk(DIST).filter((f) => f.endsWith('.html'))) {
 if (missing.length) { console.error('build-dist: missing files:\n  ' + [...new Set(missing)].slice(0, 20).join('\n  ')); process.exit(1); }
 
 console.log(`build-dist: ${stats.pages} pages (CSS inlined in ${stats.inlined}, kept as links in ${stats.kept}), gtag deferred in ${stats.gtag}, ` +
-  `tracking script added to ${stats.core}, ${jsMap.size} JS files fingerprinted, ${slugs.length * 2 + 1} redirects -> dist/`);
+  `tracking script added to ${stats.core}, ${jsMap.size} JS files fingerprinted, ${slugs.length * 2} redirects -> dist/`);

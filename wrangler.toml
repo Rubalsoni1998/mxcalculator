@@ -11,6 +11,7 @@ binding = "ASSETS"
 html_handling = "none"            # keep URLs exactly as written (e.g. /calculators/bmi-calculator.html)
 not_found_handling = "404-page"   # serves 404.html
 run_worker_first = [
+  "/",                             # html_handling = "none" does not map "/" to index.html, so the Worker does it
   "/sitemap.xml",
   "/admin",
   "/admin/*",

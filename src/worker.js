@@ -1,6 +1,6 @@
 // Mx Calculator on Cloudflare Workers + D1.
 // Pages and assets are static files served by Cloudflare itself (cached, no code). This Worker only
-// runs for the paths listed under run_worker_first in wrangler.toml: sitemap.xml, /admin and the
+// runs for the paths listed under run_worker_first in wrangler.toml: / (home page), sitemap.xml, /admin and the
 // tracking beacon /_mx/e (which also tells pages which calculators are switched off).
 import { ADMIN_FILES } from './generated.js';
 import * as db from './db.js';
@@ -186,6 +186,12 @@ async function handle(request, env, ctx) {
   // www -> apex for the few paths that reach the Worker (page redirects live in public/_redirects; for the pages themselves add the
   // www redirect rule in the Cloudflare dashboard, see README)
   if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return redirect(url.toString()); }
+
+  // Home page: with html_handling = "none" the assets store does not serve index.html for "/".
+  if (p === '/') {
+    const a = await env.ASSETS.fetch(new Request(new URL('/index.html', url.origin).toString(), request));
+    return a;
+  }
 
   if (p === '/sitemap.xml') {
     const a = await asset(env, url, '/sitemap.xml');
