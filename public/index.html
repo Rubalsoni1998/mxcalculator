@@ -52,6 +52,17 @@
                 <span class="logo-name"><strong>Mx Calculator</strong><small>Calculate Everything</small></span>
             </a>
             <nav>
+                <label class="currency-pick" for="currencyPick">
+                    <span class="currency-pick-text">Currency</span>
+                    <select id="currencyPick" aria-label="Preferred currency for all calculators">
+                        <option value="USD">USD ($)</option>
+                        <option value="INR">INR (₹)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="GBP">GBP (£)</option>
+                        <option value="CAD">CAD ($)</option>
+                        <option value="AUD">AUD ($)</option>
+                    </select>
+                </label>
                 <a href="#categories" class="nav-link" onclick="toggleModal(); return false;">All calculators</a>
             </nav>
         </div>
