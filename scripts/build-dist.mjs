@@ -16,6 +16,8 @@ const DIST = path.join(root, 'dist');
 const MAX_INLINE_CSS = 80 * 1024;     // a page whose CSS is bigger than this keeps <link> tags
 const COUNTED = /^(index\.html|calculators\/[^/]+\.html|states\/[^/]+\.html|topics\/[^/]+\.html)$/;
 
+const SPECULATE = '<script type="speculationrules">' + JSON.stringify({ prefetch: [{ where: { and: [{ href_matches: '/*' }, { not: { href_matches: ['/admin*', '/_mx/*', '/*.xml', '/*.txt'] } }] }, eagerness: 'moderate' }] }) + '</script>';
+
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.cpSync(PUBLIC, DIST, { recursive: true });
 
@@ -89,6 +91,11 @@ for (const file of walk(DIST).filter((f) => f.endsWith('.html'))) {
   }
 
   // 2c2. light theme only (browsers must not auto-darken the page)
+  // Instant navigation: Chrome fetches a page's HTML as soon as the visitor hovers/presses a link to it (HTML only, no scripts run,
+  // so statistics are unaffected). Other browsers ignore this block.
+  if (COUNTED.test(r) && !html.includes('speculationrules')) {
+    html = html.replace(/<\/head>/i, SPECULATE + '</head>');
+  }
   if (!/name="color-scheme"/.test(html)) html = html.replace(/<\/head>/i, '<meta name="color-scheme" content="light"></head>');
 
   // 2d. script src -> fingerprinted name
