@@ -102,3 +102,16 @@ delete its HTML file and redeploy.
 
 **One-time Cloudflare setup:** pages no longer pass through the Worker, so create a Redirect Rule
 (Rules > Redirect Rules) from `www.mxcalculator.com/*` to `https://mxcalculator.com/${1}` (301, keep query string).
+
+## Currency preference
+Calculators have no currency dropdown. Visitors pick a currency once in the home-page header; it is saved in the browser
+(`localStorage` key `mx:currency`, USD when empty) and read by `window.mxCurrency` in `assets-src/js/enhance.js` when a calculator opens.
+No network request is involved. Sales tax and Tax (US) always use USD.
+- Add/remove a currency: edit `LOCALES` in `enhance.js` and the `<option>`s in `public/index.html` (`#currencyPick`).
+- Make another calculator follow the choice: copy the `mxCur` header + `applyCurrencySymbols()` pattern from `assets-src/js/pages/loan-calculator.js`.
+
+## Smoothness notes
+- `responsive.js` only re-processes tables that changed, and only at phone width (the only place its output is used).
+- `chart-lazy.js` sets Chart.js's animation to 250 ms (0 with "reduce motion") instead of 1 s; charts are rebuilt on every Calculate.
+- `seo-content.css`: the long article and FAQ use `content-visibility: auto` (laid out only when near the screen).
+- `build-dist.mjs` adds a Speculation Rules block: Chrome prefetches a page's HTML when a link is hovered/pressed. No scripts run, so statistics are unaffected.
