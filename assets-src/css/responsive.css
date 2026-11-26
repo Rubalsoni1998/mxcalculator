@@ -248,45 +248,7 @@ input[aria-invalid="true"], select[aria-invalid="true"] { border-color: #dc2626 
 .field-error { margin-top: 0.25rem; font-size: 0.8125rem; font-weight: 500; color: #dc2626; }
 .mx-toast.error { background: #b91c1c; max-width: min(90vw, 28rem); text-align: center; }
 
-/* ==========================================================================
-   Dark mode (follows the device setting). Pages keep their own theme colour (--primary).
-   ========================================================================== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --background: hsl(222, 24%, 8%);
-    --foreground: hsl(210, 20%, 94%);
-    --card: hsl(222, 22%, 12%);
-    --card-foreground: hsl(210, 20%, 94%);
-    --secondary: hsl(222, 20%, 16%);
-    --muted: hsl(222, 18%, 18%);
-    --muted-foreground: hsl(215, 14%, 68%);
-    --border: hsl(222, 16%, 24%);
-    --accent: color-mix(in srgb, var(--primary) 20%, hsl(222, 22%, 12%));
-    --accent-foreground: color-mix(in srgb, var(--primary) 40%, white);
-    --shadow-md: 0 4px 10px -2px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 10px 20px -4px rgba(0, 0, 0, 0.55);
-    --shadow-glow: 0 0 40px color-mix(in srgb, var(--primary) 25%, transparent);
-    /* scientific calculator keys */
-    --key-bg: hsl(222, 18%, 20%);
-    --key-hover: hsl(222, 18%, 26%);
-    --key-operator: hsl(225, 40%, 24%);
-    --key-operator-text: hsl(225, 90%, 82%);
-    --key-action: hsl(350, 40%, 24%);
-    --key-action-text: hsl(350, 90%, 80%);
-  }
-  .header { background: hsla(222, 24%, 9%, 0.85); }
-  .footer { background: hsla(222, 22%, 12%, 0.6); }
-  .results-hero { background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 18%, var(--card)) 0%, var(--secondary) 100%); }
-  .breakdown-table thead { background: hsla(222, 18%, 22%, 0.7); }
-  .breakdown-table tr:hover, .schedule-table tbody tr:hover { background: hsla(222, 18%, 22%, 0.5); }
-  .result-equation { background: hsla(222, 18%, 22%, 0.6); }
-  .remove-btn:hover { background: hsl(0, 40%, 20%); }
-  table.rt-stack tr { background: rgba(255, 255, 255, 0.03); }
-  .mx-toast { background: #e5e7eb; color: #111827; }
-  .mx-toast.error { background: #b91c1c; color: #fff; }
-  img, svg:not([stroke]) { opacity: 1; }
-}
+
 
 /* ==========================================================================
    Print: clean results, no chrome
@@ -305,3 +267,6 @@ input[aria-invalid="true"], select[aria-invalid="true"] { border-color: #dc2626 
   canvas { max-width: 100% !important; }
   a[href]::after { content: none !important; }
 }
+
+/* Light theme only, whatever the device setting (stops browsers auto-darkening the page) */
+html { color-scheme: light; }
