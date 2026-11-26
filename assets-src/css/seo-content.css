@@ -17,3 +17,7 @@
 .seo-content .related-list a { display: inline-block; padding: .4rem .8rem; border: 1px solid var(--border); border-radius: 999px; color: var(--foreground); text-decoration: none; font-size: .9rem; }
 .seo-content .related-list a:hover { border-color: var(--primary, #e23670); }
 .seo-content .disclaimer { font-size: .8rem; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--border); }
+
+/* The long article and FAQ sit below the calculator: let the browser skip laying them out until they are near the screen
+   (still indexable, searchable with Ctrl+F, and anchor links still work). */
+.seo-content, .faq { content-visibility: auto; contain-intrinsic-size: auto 900px; }

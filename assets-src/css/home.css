@@ -86,6 +86,18 @@ header {
 }
 .nav-link:hover { color: var(--primary); }
 
+nav { display: flex; align-items: center; gap: clamp(12px, 2vw, 24px); }
+
+/* Preferred-currency picker (home page header) */
+.currency-pick { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 0.875rem; color: var(--text-muted); white-space: nowrap; }
+.currency-pick select {
+    font: inherit; font-weight: 600; color: var(--text-main);
+    background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: 8px;
+    padding: 6px 8px; min-height: 36px; cursor: pointer;
+}
+.currency-pick select:hover { border-color: var(--primary); }
+.currency-pick select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
 /* --- Main Layout --- */
 .container {
     max-width: 1300px;
@@ -532,6 +544,11 @@ footer {
     .logo-name strong { font-size: 1.1rem; }
     .logo-name small { font-size: 0.75rem; }
     .nav-link { font-size: 0.875rem; }
+    /* phones: the nav (currency + All calculators) gets its own row so nothing is squeezed */
+    .header-inner { flex-wrap: wrap; row-gap: 6px; }
+    header { padding: 0.5rem 0; }
+    nav { width: 100%; justify-content: space-between; }
+    .currency-pick select { min-height: 34px; font-size: 0.85rem; }
     .calc-wrapper { padding: 12px; }
     .btn { font-size: 0.9rem; }
     .btn.func { font-size: 0.78rem; }
