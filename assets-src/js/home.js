@@ -228,6 +228,7 @@ function calcFunc(fn) {
         }
         function render() {
             var q = input.value.trim();
+            if (!q) { lastQuery = ''; list.innerHTML = ''; close(); return; }   /* nothing typed -> no dropdown */
             if (q === lastQuery && !list.hidden) return;
             lastQuery = q;
             var tokens = q.toLowerCase().split(/\s+/).filter(Boolean);

@@ -1,18 +1,9 @@
 /* Shared enhancements, loaded on every calculator page (deferred):
-   1. dark-mode defaults for Chart.js
-   2. remembers the last inputs (localStorage) and restores them next visit
-   3. "Share" button that copies a link containing the current values
-   4. range validation for number inputs that declare min / max */
+   1. remembers the last inputs (localStorage) and restores them next visit
+   2. "Share" button that copies a link containing the current values
+   3. range validation for number inputs that declare min / max */
 (function () {
   'use strict';
-
-  /* 1. Chart.js colours in dark mode (must run before the page script builds its charts) */
-  if (window.Chart && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) {
-    try {
-      Chart.defaults.color = '#cbd5e1';
-      Chart.defaults.borderColor = 'rgba(148, 163, 184, 0.2)';
-    } catch (e) { /* ignore */ }
-  }
 
   var page = location.pathname.split('/').pop().replace('.html', '') || 'index';
   var KEY = 'mxc:' + page;
